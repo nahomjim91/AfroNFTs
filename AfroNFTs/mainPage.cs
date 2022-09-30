@@ -4,22 +4,34 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading.Tasks; 
 using System.Windows.Forms;
+using AfroNFTs.View;
 using FontAwesome.Sharp;
+
+
 
 namespace AfroNFTs
 {
     public partial class mainPage : Form
-    {
+    {   
+        public static List<string> colorList = new List<string>()
+        {
+            "#064663","#041c32","#04293a","#160040","#1c0c5b","#4E1A6C","#56103C",
+            "#56171F  "
+        };
+
         private IconButton currentBtn;
         private Panel leftBorderBtn;
+        private Form activeForm;
         public mainPage()
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea ;
         }
         //Stracte
         private struct RGBcolors 
@@ -31,11 +43,15 @@ namespace AfroNFTs
             public static Color color5 = Color.FromArgb(249, 88, 155);
         }
         //IMethods
-        private void ActivateButton(object senderBtn, Color color)
-        { 
+        private void ActivateButton(object senderBtn)
+        {   
+
+
             if (senderBtn != null)
             {
-                DisableButton();
+                Color color = SelectColorSelection();
+               
+                DisableButton(); //return to default
                 currentBtn = (IconButton)senderBtn;
                 currentBtn.BackColor = Color.FromArgb(37, 36, 81);
                 currentBtn.ForeColor = color;
@@ -50,8 +66,9 @@ namespace AfroNFTs
                 leftBorderBtn.BringToFront();
 
                 iconPic_current.IconChar = currentBtn.IconChar;
-                iconPic_current.IconColor = color;
+                iconPic_current.IconColor = Color.Black;
                 CurrntPage.Text = currentBtn.Text;
+                Headerpan.BackColor = color;
             }
         }
         private void DisableButton()
@@ -68,31 +85,86 @@ namespace AfroNFTs
             }
         }
 
+        private Color SelectColorSelection() // rondom color selection
+        {   
+            Random ren = new Random();
+            int index = ren.Next(colorList.Count);
+            string color = colorList[index];
+
+            return ColorTranslator.FromHtml(color);
+        }
+        private void OpenchildFrom(Form childForm , object btnSender)
+        {
+            if(activeForm != null)
+                activeForm.Close();
+            ActivateButton(btnSender );
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.dashbord_pan.Controls.Add(childForm);
+            this.dashbord_pan.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+
+        }
        
 
         private void Dashboardbtn_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender,RGBcolors.color1);
+            OpenchildFrom( new UserDashBord(),  sender);
         }
 
         private void postbtn_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBcolors.color2);
+            OpenchildFrom(new AddNfts(), sender);
         }
 
         private void Buybtn_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBcolors.color3);
+            OpenchildFrom(new SellORBuyPage(), sender);
         }
 
         private void accoubtbtn_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBcolors.color4);
+             OpenchildFrom(new Profiel(), sender);
         }
 
         private void aboutbtn_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBcolors.color5);
+            ActivateButton(sender);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }
+
+        private void Reset()
+        {
+            DisableButton();
+            leftBorderBtn.Visible = false;
+            iconPic_current.IconChar = IconChar.Home;
+            iconPic_current.IconColor = Color.IndianRed;
+           // OpenchildFrom(new Form1());
+        
+            CurrntPage.Text = "Home";
+            Headerpan.BackColor = Color.FromArgb(47, 4, 47);
+        }
+
+        [DllImport("user32.dll", EntryPoint = "ReleaseCaptuer")]
+        private  extern static void ReleaseCaptuer();
+
+        [DllImport("user32.dll", EntryPoint = "SendMessage")]
+        private extern static  void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void dashbord_pan_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCaptuer();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);   
         }
     }
 }

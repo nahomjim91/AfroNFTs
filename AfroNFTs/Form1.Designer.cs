@@ -50,7 +50,7 @@ namespace AfroNFTs
             // 
             this.FirstNamelab.AutoSize = true;
             this.FirstNamelab.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstNamelab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(158)))), ((int)(((byte)(198)))));
+            this.FirstNamelab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
             this.FirstNamelab.Location = new System.Drawing.Point(84, 123);
             this.FirstNamelab.Name = "FirstNamelab";
             this.FirstNamelab.Size = new System.Drawing.Size(105, 24);
@@ -61,7 +61,7 @@ namespace AfroNFTs
             // 
             this.LastNamelab.AutoSize = true;
             this.LastNamelab.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastNamelab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(158)))), ((int)(((byte)(198)))));
+            this.LastNamelab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
             this.LastNamelab.Location = new System.Drawing.Point(86, 147);
             this.LastNamelab.Name = "LastNamelab";
             this.LastNamelab.Size = new System.Drawing.Size(103, 24);
@@ -72,7 +72,7 @@ namespace AfroNFTs
             // 
             this.Emaillab.AutoSize = true;
             this.Emaillab.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Emaillab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(158)))), ((int)(((byte)(198)))));
+            this.Emaillab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
             this.Emaillab.Location = new System.Drawing.Point(122, 175);
             this.Emaillab.Name = "Emaillab";
             this.Emaillab.Size = new System.Drawing.Size(67, 24);
@@ -83,7 +83,7 @@ namespace AfroNFTs
             // 
             this.Pswordlab.AutoSize = true;
             this.Pswordlab.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pswordlab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(158)))), ((int)(((byte)(198)))));
+            this.Pswordlab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
             this.Pswordlab.Location = new System.Drawing.Point(95, 204);
             this.Pswordlab.Name = "Pswordlab";
             this.Pswordlab.Size = new System.Drawing.Size(94, 24);
@@ -94,7 +94,7 @@ namespace AfroNFTs
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(158)))), ((int)(((byte)(198)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
             this.label1.Location = new System.Drawing.Point(24, 228);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(167, 24);

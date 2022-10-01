@@ -93,11 +93,17 @@ namespace AfroNFTs
 
             return ColorTranslator.FromHtml(color);
         }
+
+        
         private void OpenchildFrom(Form childForm , object btnSender)
         {
             if(activeForm != null)
                 activeForm.Close();
             ActivateButton(btnSender );
+            this.dashbord_pan.AutoScroll = true;
+            Size damintion = new Size(663, 490);
+            this.dashbord_pan.AutoScrollMargin = damintion;
+            this.dashbord_pan.AutoScrollMinSize = new Size(5, 5);
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
@@ -150,8 +156,6 @@ namespace AfroNFTs
             leftBorderBtn.Visible = false;
             iconPic_current.IconChar = IconChar.Home;
             iconPic_current.IconColor = Color.IndianRed;
-           // OpenchildFrom(new Form1());
-        
             CurrntPage.Text = "Home";
             Headerpan.BackColor = Color.FromArgb(47, 4, 47);
         }
@@ -163,8 +167,13 @@ namespace AfroNFTs
         private extern static  void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         private void dashbord_pan_MouseDown(object sender, MouseEventArgs e)
         {
-            ReleaseCaptuer();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);   
+               
+        }
+
+        private void Headerpan_Paint(object sender, PaintEventArgs e)
+        {
+            //ReleaseCaptuer();
+            //SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

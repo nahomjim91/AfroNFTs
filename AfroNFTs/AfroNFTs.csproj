@@ -85,6 +85,12 @@
     <Compile Include="View\AdminDashBord.Designer.cs">
       <DependentUpon>AdminDashBord.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\NFTs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\NFTs.Designer.cs">
+      <DependentUpon>NFTs.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Profiel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     <EmbeddedResource Include="View\AdminDashBord.resx">
       <DependentUpon>AdminDashBord.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\NFTs.resx">
+      <DependentUpon>NFTs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Profiel.resx">
       <DependentUpon>Profiel.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +171,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\th %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-insert-raster-image-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-insert-raster-image-481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gettyimages-165604915-170667a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

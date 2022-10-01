@@ -108,7 +108,7 @@
             // 
             this.Pswordlab.AutoSize = true;
             this.Pswordlab.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pswordlab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(158)))), ((int)(((byte)(198)))));
+            this.Pswordlab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
             this.Pswordlab.Location = new System.Drawing.Point(67, 213);
             this.Pswordlab.Name = "Pswordlab";
             this.Pswordlab.Size = new System.Drawing.Size(94, 24);
@@ -119,7 +119,7 @@
             // 
             this.Emaillab.AutoSize = true;
             this.Emaillab.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Emaillab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(158)))), ((int)(((byte)(198)))));
+            this.Emaillab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
             this.Emaillab.Location = new System.Drawing.Point(94, 180);
             this.Emaillab.Name = "Emaillab";
             this.Emaillab.Size = new System.Drawing.Size(67, 24);

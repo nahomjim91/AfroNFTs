@@ -26,5 +26,15 @@ namespace AfroNFTs.View
              * 
              * */
         }
+
+        private void sellOrBuyBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void descriptionNFTs1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

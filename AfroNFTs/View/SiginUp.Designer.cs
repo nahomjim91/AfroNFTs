@@ -108,6 +108,7 @@ namespace AfroNFTs
             this.Siginupbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
             this.Siginupbtn.CausesValidation = false;
             this.Siginupbtn.FlatAppearance.BorderSize = 0;
+            this.Siginupbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Siginupbtn.Font = new System.Drawing.Font("Modern No. 20", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Siginupbtn.ForeColor = System.Drawing.Color.Snow;
             this.Siginupbtn.Location = new System.Drawing.Point(45, 341);
@@ -162,6 +163,7 @@ namespace AfroNFTs
             this.Clearbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
             this.Clearbtn.CausesValidation = false;
             this.Clearbtn.FlatAppearance.BorderSize = 0;
+            this.Clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Clearbtn.Font = new System.Drawing.Font("Modern No. 20", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Clearbtn.ForeColor = System.Drawing.Color.Snow;
             this.Clearbtn.Location = new System.Drawing.Point(279, 341);

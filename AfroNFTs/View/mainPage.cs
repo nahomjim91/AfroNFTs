@@ -26,6 +26,7 @@ namespace AfroNFTs
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form activeForm;
+         
         public mainPage()
         {
             InitializeComponent();
@@ -122,6 +123,7 @@ namespace AfroNFTs
 
         private void postbtn_Click(object sender, EventArgs e)
         {
+           
             OpenchildFrom(new AddNfts(), sender);
         }
 
@@ -130,19 +132,11 @@ namespace AfroNFTs
             OpenchildFrom(new BuyPage(), sender);
         }
 
-        private void accoubtbtn_Click(object sender, EventArgs e)
-        {
-             OpenchildFrom(new Profiel(), sender);
-        }
+        
 
         private void aboutbtn_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            OpenchildFrom(new PreposOfPage(), sender);
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -174,6 +168,16 @@ namespace AfroNFTs
         {
             //ReleaseCaptuer();
             //SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void selltbtn_Click(object sender, EventArgs e)
+        {
+            OpenchildFrom(new SellPage(), sender);
+        }
+
+        private void accountBtn_Click(object sender, EventArgs e)
+        {
+            OpenchildFrom(new SearchNFTs(), sender);
         }
     }
 }

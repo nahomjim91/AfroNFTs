@@ -34,7 +34,6 @@
             this.descriptionLabel = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.rateLabel = new System.Windows.Forms.Label();
-            this.commentBtn = new FontAwesome.Sharp.IconButton();
             this.NFTsiconPictureBox = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.NFTsiconPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -126,22 +125,6 @@
             this.rateLabel.TabIndex = 6;
             this.rateLabel.Text = "label1";
             // 
-            // commentBtn
-            // 
-            this.commentBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(37)))), ((int)(((byte)(98)))));
-            this.commentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.commentBtn.Font = new System.Drawing.Font("Palatino Linotype", 13F);
-            this.commentBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.commentBtn.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.commentBtn.IconColor = System.Drawing.Color.Black;
-            this.commentBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.commentBtn.Location = new System.Drawing.Point(22, 508);
-            this.commentBtn.Name = "commentBtn";
-            this.commentBtn.Size = new System.Drawing.Size(111, 32);
-            this.commentBtn.TabIndex = 7;
-            this.commentBtn.Text = "Comments";
-            this.commentBtn.UseVisualStyleBackColor = false;
-            // 
             // NFTsiconPictureBox
             // 
             this.NFTsiconPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(4)))), ((int)(((byte)(16)))));
@@ -161,7 +144,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(4)))), ((int)(((byte)(16)))));
-            this.Controls.Add(this.commentBtn);
             this.Controls.Add(this.rateLabel);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.descriptionLabel);
@@ -172,7 +154,7 @@
             this.MaximumSize = new System.Drawing.Size(635, 555);
             this.MinimumSize = new System.Drawing.Size(435, 355);
             this.Name = "DescriptionNFTs";
-            this.Size = new System.Drawing.Size(535, 555);
+            this.Size = new System.Drawing.Size(535, 519);
             ((System.ComponentModel.ISupportInitialize)(this.NFTsiconPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -188,6 +170,5 @@
         private System.Windows.Forms.Label descriptionLabel;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label rateLabel;
-        private FontAwesome.Sharp.IconButton commentBtn;
     }
 }

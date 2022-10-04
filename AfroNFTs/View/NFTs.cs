@@ -12,7 +12,15 @@ using System.Windows.Forms;
 namespace AfroNFTs.View
 {
     public partial class NFTs : UserControl
+
     {
+        public event EventHandler NFTsDetail ;
+
+        protected virtual void OnClickNFTs(EventArgs e)
+        {
+            NFTsDetail.Invoke(this, e);
+        }
+
         private Image _NftsPicture;
 
         public Image NftsPicture

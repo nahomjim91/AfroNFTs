@@ -44,8 +44,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(767, 451);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(783, 490);
+            this.MinimumSize = new System.Drawing.Size(783, 490);
             this.Name = "SearchNFTs";
             this.Text = "SearchNFTs";
             this.ResumeLayout(false);

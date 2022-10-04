@@ -35,8 +35,8 @@
             this.CBGroup = new System.Windows.Forms.ComboBox();
             this.CBRate = new System.Windows.Forms.ComboBox();
             this.CBPrice = new System.Windows.Forms.ComboBox();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.txtSerachNFTS = new System.Windows.Forms.TextBox();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -45,9 +45,9 @@
             this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Gray;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 159);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 214);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(786, 279);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(762, 279);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // comboBox1
@@ -57,7 +57,7 @@
             "Ape",
             "car",
             "dog"});
-            this.comboBox1.Location = new System.Drawing.Point(125, 132);
+            this.comboBox1.Location = new System.Drawing.Point(126, 165);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(107, 21);
             this.comboBox1.TabIndex = 4;
@@ -69,7 +69,7 @@
             "Ape",
             "car",
             "dog"});
-            this.CBGroup.Location = new System.Drawing.Point(12, 132);
+            this.CBGroup.Location = new System.Drawing.Point(13, 165);
             this.CBGroup.Name = "CBGroup";
             this.CBGroup.Size = new System.Drawing.Size(107, 21);
             this.CBGroup.TabIndex = 5;
@@ -81,7 +81,7 @@
             "Ape",
             "car",
             "dog"});
-            this.CBRate.Location = new System.Drawing.Point(578, 132);
+            this.CBRate.Location = new System.Drawing.Point(541, 165);
             this.CBRate.Name = "CBRate";
             this.CBRate.Size = new System.Drawing.Size(107, 21);
             this.CBRate.TabIndex = 6;
@@ -93,10 +93,21 @@
             "Ape",
             "car",
             "dog"});
-            this.CBPrice.Location = new System.Drawing.Point(691, 132);
+            this.CBPrice.Location = new System.Drawing.Point(654, 165);
             this.CBPrice.Name = "CBPrice";
             this.CBPrice.Size = new System.Drawing.Size(107, 21);
             this.CBPrice.TabIndex = 7;
+            // 
+            // txtSerachNFTS
+            // 
+            this.txtSerachNFTS.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtSerachNFTS.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSerachNFTS.Location = new System.Drawing.Point(13, 95);
+            this.txtSerachNFTS.MaximumSize = new System.Drawing.Size(192, 26);
+            this.txtSerachNFTS.MinimumSize = new System.Drawing.Size(91, 26);
+            this.txtSerachNFTS.Name = "txtSerachNFTS";
+            this.txtSerachNFTS.Size = new System.Drawing.Size(192, 26);
+            this.txtSerachNFTS.TabIndex = 21;
             // 
             // iconButton1
             // 
@@ -110,7 +121,7 @@
             this.iconButton1.IconColor = System.Drawing.Color.IndianRed;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 26;
-            this.iconButton1.Location = new System.Drawing.Point(210, 62);
+            this.iconButton1.Location = new System.Drawing.Point(211, 95);
             this.iconButton1.MaximumSize = new System.Drawing.Size(43, 26);
             this.iconButton1.MinimumSize = new System.Drawing.Size(43, 26);
             this.iconButton1.Name = "iconButton1";
@@ -118,25 +129,12 @@
             this.iconButton1.TabIndex = 22;
             this.iconButton1.UseVisualStyleBackColor = true;
             // 
-            // txtSerachNFTS
-            // 
-            this.txtSerachNFTS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSerachNFTS.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtSerachNFTS.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSerachNFTS.Location = new System.Drawing.Point(12, 62);
-            this.txtSerachNFTS.MaximumSize = new System.Drawing.Size(192, 26);
-            this.txtSerachNFTS.MinimumSize = new System.Drawing.Size(91, 26);
-            this.txtSerachNFTS.Name = "txtSerachNFTS";
-            this.txtSerachNFTS.Size = new System.Drawing.Size(192, 26);
-            this.txtSerachNFTS.TabIndex = 21;
-            // 
             // BuyPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(7)))), ((int)(((byte)(38)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(778, 519);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.txtSerachNFTS);
             this.Controls.Add(this.CBPrice);

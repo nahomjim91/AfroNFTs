@@ -90,10 +90,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanelTreading.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(18)))), ((int)(((byte)(109)))));
             this.flowLayoutPanelTreading.Location = new System.Drawing.Point(12, 368);
-            this.flowLayoutPanelTreading.MaximumSize = new System.Drawing.Size(720, 250);
+            this.flowLayoutPanelTreading.MaximumSize = new System.Drawing.Size(760, 250);
             this.flowLayoutPanelTreading.MinimumSize = new System.Drawing.Size(236, 25);
             this.flowLayoutPanelTreading.Name = "flowLayoutPanelTreading";
-            this.flowLayoutPanelTreading.Size = new System.Drawing.Size(720, 139);
+            this.flowLayoutPanelTreading.Size = new System.Drawing.Size(750, 139);
             this.flowLayoutPanelTreading.TabIndex = 26;
             // 
             // btnTopTreadind
@@ -154,8 +154,7 @@
             // 
             // UserDashBord
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(10)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(778, 519);
             this.Controls.Add(this.flowLayoutPanelTreading);

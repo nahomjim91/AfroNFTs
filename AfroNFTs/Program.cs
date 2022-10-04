@@ -11,14 +11,18 @@ namespace AfroNFTs
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        [STAThread]
+        static mainPage main;
+
+       [STAThread]
         static void Main()
         {
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //  Application.Run(new Form1());//calling sigin up
             //  Application.Run(new Login());//calling login
-                Application.Run(new mainPage());
+            main = new mainPage();
+            Application.Run(main);
 
         }
     }

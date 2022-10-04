@@ -39,7 +39,7 @@
             this.txtGroupNFTs = new System.Windows.Forms.TextBox();
             this.txtDescriptionNFTs = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.Siginupbtn = new System.Windows.Forms.Button();
+            this.submitteBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.NFTSpic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,7 +136,7 @@
             this.txtDescriptionNFTs.MaximumSize = new System.Drawing.Size(518, 111);
             this.txtDescriptionNFTs.Multiline = true;
             this.txtDescriptionNFTs.Name = "txtDescriptionNFTs";
-            this.txtDescriptionNFTs.Size = new System.Drawing.Size(213, 111);
+            this.txtDescriptionNFTs.Size = new System.Drawing.Size(344, 111);
             this.txtDescriptionNFTs.TabIndex = 8;
             // 
             // contextMenuStrip1
@@ -144,27 +144,28 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // Siginupbtn
+            // submitteBtn
             // 
-            this.Siginupbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
-            this.Siginupbtn.CausesValidation = false;
-            this.Siginupbtn.FlatAppearance.BorderSize = 0;
-            this.Siginupbtn.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Siginupbtn.ForeColor = System.Drawing.Color.Snow;
-            this.Siginupbtn.Location = new System.Drawing.Point(367, 141);
-            this.Siginupbtn.Name = "Siginupbtn";
-            this.Siginupbtn.Size = new System.Drawing.Size(126, 37);
-            this.Siginupbtn.TabIndex = 18;
-            this.Siginupbtn.Text = "Submitte";
-            this.Siginupbtn.UseVisualStyleBackColor = false;
+            this.submitteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
+            this.submitteBtn.CausesValidation = false;
+            this.submitteBtn.FlatAppearance.BorderSize = 0;
+            this.submitteBtn.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submitteBtn.ForeColor = System.Drawing.Color.Snow;
+            this.submitteBtn.Location = new System.Drawing.Point(367, 141);
+            this.submitteBtn.Name = "submitteBtn";
+            this.submitteBtn.Size = new System.Drawing.Size(126, 37);
+            this.submitteBtn.TabIndex = 18;
+            this.submitteBtn.Text = "Submitte";
+            this.submitteBtn.UseVisualStyleBackColor = false;
+            this.submitteBtn.Click += new System.EventHandler(this.submitteBtn_Click);
             // 
             // AddNfts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(10)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(647, 451);
-            this.Controls.Add(this.Siginupbtn);
+            this.ClientSize = new System.Drawing.Size(778, 519);
+            this.Controls.Add(this.submitteBtn);
             this.Controls.Add(this.txtDescriptionNFTs);
             this.Controls.Add(this.txtGroupNFTs);
             this.Controls.Add(this.txtPriceNFTs);
@@ -194,6 +195,6 @@
         private System.Windows.Forms.TextBox txtGroupNFTs;
         private System.Windows.Forms.TextBox txtDescriptionNFTs;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Button Siginupbtn;
+        private System.Windows.Forms.Button submitteBtn;
     }
 }

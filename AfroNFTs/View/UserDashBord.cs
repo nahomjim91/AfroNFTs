@@ -16,11 +16,17 @@ namespace AfroNFTs
         public UserDashBord()
         {
             InitializeComponent();
+
             flowLayoutPanel1.Controls.Clear();
-            for(int i = 0; i < 3; i++)
+            //for test 
+            foreach (var item in NFTsClass.getAllNFTs())
             {
                 NFTs nfts = new NFTs();
-                nfts.Click += Deitail_click;
+                nfts.NftsPicture = item.NftsPicture;
+                nfts.NFTsName = item.NFTsName;
+                nfts.NFTsRate = item.NFTsRate;
+                nfts.NFTsprice = item.NFTsprice;
+                nfts.Click += new System.EventHandler(Deitail_click);
                 flowLayoutPanel1.Controls.Add(nfts);
 
             }

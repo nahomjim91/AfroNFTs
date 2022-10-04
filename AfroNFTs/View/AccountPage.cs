@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AfroNFTs.View
 {
-    public partial class Profiel : Form
+    public partial class AccountPage : Form
     {
-        public Profiel()
+        public AccountPage()
         {
             InitializeComponent();
         }

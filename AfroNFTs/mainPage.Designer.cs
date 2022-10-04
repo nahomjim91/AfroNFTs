@@ -170,6 +170,7 @@
             this.Dashboardbtn.Text = "Dashboard";
             this.Dashboardbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Dashboardbtn.UseVisualStyleBackColor = true;
+            this.Dashboardbtn.UseWaitCursor = true;
             this.Dashboardbtn.Click += new System.EventHandler(this.Dashboardbtn_Click);
             // 
             // Logpanel

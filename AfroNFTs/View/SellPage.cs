@@ -8,17 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AfroNFTs
+namespace AfroNFTs.View
 {
-    public partial class Form1 : Form
+    public partial class SellPage : Form
     {
-        public Form1()
+        public SellPage()
         {
             InitializeComponent();
         }
-
-        
-
-        
     }
 }

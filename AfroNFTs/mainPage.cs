@@ -95,7 +95,7 @@ namespace AfroNFTs
         }
 
         
-        private void OpenchildFrom(Form childForm , object btnSender)
+        public  void OpenchildFrom(Form childForm , object btnSender)
         {
             if(activeForm != null)
                 activeForm.Close();
@@ -127,7 +127,7 @@ namespace AfroNFTs
 
         private void Buybtn_Click(object sender, EventArgs e)
         {
-            OpenchildFrom(new SellORBuyPage(), sender);
+            OpenchildFrom(new BuyPage(), sender);
         }
 
         private void accoubtbtn_Click(object sender, EventArgs e)

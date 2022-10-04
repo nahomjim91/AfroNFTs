@@ -20,10 +20,17 @@ namespace AfroNFTs
             for(int i = 0; i < 3; i++)
             {
                 NFTs nfts = new NFTs();
+                nfts.Click += Deitail_click;
                 flowLayoutPanel1.Controls.Add(nfts);
+
             }
 
 
+        }
+
+       public void Deitail_click(object sender, EventArgs e)
+        {
+            MessageBox.Show("clicked");
         }
 
     }

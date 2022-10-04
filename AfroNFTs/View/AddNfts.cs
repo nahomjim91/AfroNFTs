@@ -23,7 +23,7 @@ namespace AfroNFTs.View
         {
                 string sFile;
                 OpenFileDialog openFileDialog1 = new OpenFileDialog();
-                byte[] imgByte = null;
+                imgByte = null;
                 openFileDialog1.Filter = "Image File (*.jpg;*.bmp;*.gif)|*.jpg;*.bmp;*.gif";
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {

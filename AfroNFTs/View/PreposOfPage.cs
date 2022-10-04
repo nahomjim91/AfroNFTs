@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace AfroNFTs.View
 {
-    public partial class AdminDashBord : Form
+    public partial class PreposOfPage : Form
     {
-        public AdminDashBord()
+        public PreposOfPage()
         {
             InitializeComponent();
+
+            /*
+             *
+            if(sellPage){
+            funcBtn.text = "Sell";
+            typeOfuserLabel.visable = fales;
+            editBtn.visable = true ; 
+            } 
+             * 
+             * */
         }
     }
 }

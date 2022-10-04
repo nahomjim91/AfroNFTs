@@ -2,7 +2,7 @@
 
 namespace AfroNFTs
 {
-    partial class Form1
+    partial class SiginUp
     {
         /// <summary>
         /// Required designer variable.
@@ -44,6 +44,8 @@ namespace AfroNFTs
             this.Clearbtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.radioBtnAdmin = new System.Windows.Forms.RadioButton();
+            this.radioBtnUser = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // FirstNamelab
@@ -51,7 +53,7 @@ namespace AfroNFTs
             this.FirstNamelab.AutoSize = true;
             this.FirstNamelab.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstNamelab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.FirstNamelab.Location = new System.Drawing.Point(84, 123);
+            this.FirstNamelab.Location = new System.Drawing.Point(83, 159);
             this.FirstNamelab.Name = "FirstNamelab";
             this.FirstNamelab.Size = new System.Drawing.Size(105, 24);
             this.FirstNamelab.TabIndex = 0;
@@ -62,7 +64,7 @@ namespace AfroNFTs
             this.LastNamelab.AutoSize = true;
             this.LastNamelab.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastNamelab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.LastNamelab.Location = new System.Drawing.Point(86, 147);
+            this.LastNamelab.Location = new System.Drawing.Point(85, 183);
             this.LastNamelab.Name = "LastNamelab";
             this.LastNamelab.Size = new System.Drawing.Size(103, 24);
             this.LastNamelab.TabIndex = 1;
@@ -73,7 +75,7 @@ namespace AfroNFTs
             this.Emaillab.AutoSize = true;
             this.Emaillab.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Emaillab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.Emaillab.Location = new System.Drawing.Point(122, 175);
+            this.Emaillab.Location = new System.Drawing.Point(121, 211);
             this.Emaillab.Name = "Emaillab";
             this.Emaillab.Size = new System.Drawing.Size(67, 24);
             this.Emaillab.TabIndex = 2;
@@ -84,7 +86,7 @@ namespace AfroNFTs
             this.Pswordlab.AutoSize = true;
             this.Pswordlab.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pswordlab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.Pswordlab.Location = new System.Drawing.Point(95, 204);
+            this.Pswordlab.Location = new System.Drawing.Point(94, 240);
             this.Pswordlab.Name = "Pswordlab";
             this.Pswordlab.Size = new System.Drawing.Size(94, 24);
             this.Pswordlab.TabIndex = 3;
@@ -95,7 +97,7 @@ namespace AfroNFTs
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.label1.Location = new System.Drawing.Point(24, 228);
+            this.label1.Location = new System.Drawing.Point(23, 264);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(167, 24);
             this.label1.TabIndex = 4;
@@ -108,7 +110,7 @@ namespace AfroNFTs
             this.Siginupbtn.FlatAppearance.BorderSize = 0;
             this.Siginupbtn.Font = new System.Drawing.Font("Modern No. 20", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Siginupbtn.ForeColor = System.Drawing.Color.Snow;
-            this.Siginupbtn.Location = new System.Drawing.Point(49, 278);
+            this.Siginupbtn.Location = new System.Drawing.Point(45, 341);
             this.Siginupbtn.Name = "Siginupbtn";
             this.Siginupbtn.Size = new System.Drawing.Size(126, 37);
             this.Siginupbtn.TabIndex = 5;
@@ -118,7 +120,7 @@ namespace AfroNFTs
             // Fnametxt
             // 
             this.Fnametxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
-            this.Fnametxt.Location = new System.Drawing.Point(195, 127);
+            this.Fnametxt.Location = new System.Drawing.Point(194, 163);
             this.Fnametxt.Name = "Fnametxt";
             this.Fnametxt.Size = new System.Drawing.Size(159, 20);
             this.Fnametxt.TabIndex = 6;
@@ -126,7 +128,7 @@ namespace AfroNFTs
             // LNametxt
             // 
             this.LNametxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
-            this.LNametxt.Location = new System.Drawing.Point(195, 153);
+            this.LNametxt.Location = new System.Drawing.Point(194, 189);
             this.LNametxt.Name = "LNametxt";
             this.LNametxt.Size = new System.Drawing.Size(159, 20);
             this.LNametxt.TabIndex = 7;
@@ -134,7 +136,7 @@ namespace AfroNFTs
             // Emailtxt
             // 
             this.Emailtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
-            this.Emailtxt.Location = new System.Drawing.Point(195, 179);
+            this.Emailtxt.Location = new System.Drawing.Point(194, 215);
             this.Emailtxt.Name = "Emailtxt";
             this.Emailtxt.Size = new System.Drawing.Size(159, 20);
             this.Emailtxt.TabIndex = 8;
@@ -142,7 +144,7 @@ namespace AfroNFTs
             // Pswordtxt
             // 
             this.Pswordtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
-            this.Pswordtxt.Location = new System.Drawing.Point(195, 205);
+            this.Pswordtxt.Location = new System.Drawing.Point(194, 241);
             this.Pswordtxt.Name = "Pswordtxt";
             this.Pswordtxt.Size = new System.Drawing.Size(159, 20);
             this.Pswordtxt.TabIndex = 9;
@@ -150,7 +152,7 @@ namespace AfroNFTs
             // ConfirmPswordtxt
             // 
             this.ConfirmPswordtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
-            this.ConfirmPswordtxt.Location = new System.Drawing.Point(195, 232);
+            this.ConfirmPswordtxt.Location = new System.Drawing.Point(194, 268);
             this.ConfirmPswordtxt.Name = "ConfirmPswordtxt";
             this.ConfirmPswordtxt.Size = new System.Drawing.Size(159, 20);
             this.ConfirmPswordtxt.TabIndex = 10;
@@ -162,7 +164,7 @@ namespace AfroNFTs
             this.Clearbtn.FlatAppearance.BorderSize = 0;
             this.Clearbtn.Font = new System.Drawing.Font("Modern No. 20", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Clearbtn.ForeColor = System.Drawing.Color.Snow;
-            this.Clearbtn.Location = new System.Drawing.Point(288, 278);
+            this.Clearbtn.Location = new System.Drawing.Point(279, 341);
             this.Clearbtn.Name = "Clearbtn";
             this.Clearbtn.Size = new System.Drawing.Size(126, 37);
             this.Clearbtn.TabIndex = 11;
@@ -191,12 +193,40 @@ namespace AfroNFTs
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Sigin in";
             // 
-            // Form1
+            // radioBtnAdmin
+            // 
+            this.radioBtnAdmin.AutoSize = true;
+            this.radioBtnAdmin.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioBtnAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
+            this.radioBtnAdmin.Location = new System.Drawing.Point(217, 309);
+            this.radioBtnAdmin.Name = "radioBtnAdmin";
+            this.radioBtnAdmin.Size = new System.Drawing.Size(84, 26);
+            this.radioBtnAdmin.TabIndex = 27;
+            this.radioBtnAdmin.TabStop = true;
+            this.radioBtnAdmin.Text = "ADMIN";
+            this.radioBtnAdmin.UseVisualStyleBackColor = true;
+            // 
+            // radioBtnUser
+            // 
+            this.radioBtnUser.AutoSize = true;
+            this.radioBtnUser.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioBtnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
+            this.radioBtnUser.Location = new System.Drawing.Point(125, 309);
+            this.radioBtnUser.Name = "radioBtnUser";
+            this.radioBtnUser.Size = new System.Drawing.Size(70, 26);
+            this.radioBtnUser.TabIndex = 26;
+            this.radioBtnUser.TabStop = true;
+            this.radioBtnUser.Text = "USER";
+            this.radioBtnUser.UseVisualStyleBackColor = true;
+            // 
+            // SiginUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(4)))), ((int)(((byte)(47)))));
             this.ClientSize = new System.Drawing.Size(454, 526);
+            this.Controls.Add(this.radioBtnAdmin);
+            this.Controls.Add(this.radioBtnUser);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Clearbtn);
@@ -211,7 +241,7 @@ namespace AfroNFTs
             this.Controls.Add(this.Emaillab);
             this.Controls.Add(this.LastNamelab);
             this.Controls.Add(this.FirstNamelab);
-            this.Name = "Form1";
+            this.Name = "SiginUp";
             this.Text = "AfroNFTs";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -234,6 +264,8 @@ namespace AfroNFTs
         private System.Windows.Forms.Button Clearbtn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.RadioButton radioBtnAdmin;
+        private System.Windows.Forms.RadioButton radioBtnUser;
     }
 }
 

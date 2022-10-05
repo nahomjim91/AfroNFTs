@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks; 
 using System.Windows.Forms;
 using AfroNFTs.View;
+using AfroNFTs;
 using FontAwesome.Sharp;
 
 
@@ -115,17 +116,15 @@ namespace AfroNFTs
 
         }
        
-
+        public void GoToDashbord()
+        {
+            Dashboardbtn_Click(Dashboardbtn, EventArgs.Empty);
+        }
         private void Dashboardbtn_Click(object sender, EventArgs e)
         {
             OpenchildFrom( new UserDashBord(),  sender);
         }
 
-        private void postbtn_Click(object sender, EventArgs e)
-        {
-           
-            OpenchildFrom(new AddNfts(), sender);
-        }
 
         private void Buybtn_Click(object sender, EventArgs e)
         {
@@ -134,10 +133,6 @@ namespace AfroNFTs
 
         
 
-        private void aboutbtn_Click(object sender, EventArgs e)
-        {
-            OpenchildFrom(new PreposOfPage(), sender);
-        }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
@@ -154,11 +149,6 @@ namespace AfroNFTs
             Headerpan.BackColor = Color.FromArgb(47, 4, 47);
         }
 
-        [DllImport("user32.dll", EntryPoint = "ReleaseCaptuer")]
-        private  extern static void ReleaseCaptuer();
-
-        [DllImport("user32.dll", EntryPoint = "SendMessage")]
-        private extern static  void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         private void dashbord_pan_MouseDown(object sender, MouseEventArgs e)
         {
                
@@ -178,6 +168,52 @@ namespace AfroNFTs
         private void accountBtn_Click(object sender, EventArgs e)
         {
             OpenchildFrom(new SearchNFTs(), sender);
+        }
+
+        
+
+        private void aboutbtn_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void postbtn_Click_1(object sender, EventArgs e)
+        {
+            OpenchildFrom(new AddNfts(), sender);
+        }
+    
+
+        private void Siginupb_Click(object sender, EventArgs e)
+        {
+            OpenchildFrom(new SiginUp(), sender);
+            /*
+             if(admin) 
+                postbtn.visble = true
+             */
+            aboutbtn.Visible = true;
+            accountBtn.Visible = true;
+            selltbtn.Visible = true;
+            Buybtn.Visible = true;
+            Dashboardbtn.Visible = true;
+            iconPic_current.Visible = true;
+            CurrntPage.Visible = true;
+            popChar.Visible = true;
+            
+        }
+
+        private void Loginbtn_Click_1(object sender, EventArgs e)
+        {
+            OpenchildFrom(new Login(), sender);
+            Dashboardbtn.Visible = true;
+            accountBtn.Visible = true;
+            Buybtn.Visible = true;
+            selltbtn.Visible = true;
+            aboutbtn.Visible = true;
+            /*
+             if(admin) 
+                postbtn.visble = true
+             */
+
         }
     }
 }

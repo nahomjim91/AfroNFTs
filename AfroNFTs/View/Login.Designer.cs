@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label2 = new System.Windows.Forms.Label();
             this.Clearbtn = new System.Windows.Forms.Button();
             this.Pswordtxt = new System.Windows.Forms.TextBox();
             this.Emailtxt = new System.Windows.Forms.TextBox();
@@ -39,28 +37,6 @@
             this.radioBtnUser = new System.Windows.Forms.RadioButton();
             this.radioBtnAdmin = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(238, 428);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(55, 16);
-            this.linkLabel1.TabIndex = 23;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Sigin up";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(122, 428);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 16);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Create account ? ";
             // 
             // Clearbtn
             // 
@@ -161,8 +137,6 @@
             this.ClientSize = new System.Drawing.Size(442, 512);
             this.Controls.Add(this.radioBtnAdmin);
             this.Controls.Add(this.radioBtnUser);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.Clearbtn);
             this.Controls.Add(this.Pswordtxt);
             this.Controls.Add(this.Emailtxt);
@@ -177,9 +151,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Clearbtn;
         private System.Windows.Forms.TextBox Pswordtxt;
         private System.Windows.Forms.TextBox Emailtxt;

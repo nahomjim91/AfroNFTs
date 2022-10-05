@@ -42,8 +42,6 @@ namespace AfroNFTs
             this.Pswordtxt = new System.Windows.Forms.TextBox();
             this.ConfirmPswordtxt = new System.Windows.Forms.TextBox();
             this.Clearbtn = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.radioBtnAdmin = new System.Windows.Forms.RadioButton();
             this.radioBtnUser = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
@@ -117,6 +115,7 @@ namespace AfroNFTs
             this.Siginupbtn.TabIndex = 5;
             this.Siginupbtn.Text = "Sigin up";
             this.Siginupbtn.UseVisualStyleBackColor = false;
+            this.Siginupbtn.Click += new System.EventHandler(this.Siginupbtn_Click);
             // 
             // Fnametxt
             // 
@@ -173,28 +172,6 @@ namespace AfroNFTs
             this.Clearbtn.Text = "Clear";
             this.Clearbtn.UseVisualStyleBackColor = false;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(67, 450);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 16);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Alrady have account ";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(205, 450);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(50, 16);
-            this.linkLabel1.TabIndex = 13;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Sigin in";
-            // 
             // radioBtnAdmin
             // 
             this.radioBtnAdmin.AutoSize = true;
@@ -229,8 +206,6 @@ namespace AfroNFTs
             this.ClientSize = new System.Drawing.Size(454, 526);
             this.Controls.Add(this.radioBtnAdmin);
             this.Controls.Add(this.radioBtnUser);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.Clearbtn);
             this.Controls.Add(this.ConfirmPswordtxt);
             this.Controls.Add(this.Pswordtxt);
@@ -264,8 +239,6 @@ namespace AfroNFTs
         private System.Windows.Forms.TextBox Pswordtxt;
         private System.Windows.Forms.TextBox ConfirmPswordtxt;
         private System.Windows.Forms.Button Clearbtn;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.RadioButton radioBtnAdmin;
         private System.Windows.Forms.RadioButton radioBtnUser;
     }

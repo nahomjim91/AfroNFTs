@@ -11,7 +11,7 @@ namespace AfroNFTs
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        static mainPage main;
+        public static mainPage main;
 
        [STAThread]
         static void Main()

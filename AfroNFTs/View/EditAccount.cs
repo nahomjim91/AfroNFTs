@@ -12,8 +12,10 @@ namespace AfroNFTs.View
 {
     public partial class EditAccount : Form
     {
-        public EditAccount()
+        bool pageType;
+        public EditAccount(bool pageType)
         {
+            this.pageType = pageType;   
             InitializeComponent();
         }
     }

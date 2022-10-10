@@ -12,8 +12,10 @@ namespace AfroNFTs.View
 {
     public partial class SearchNFTs : Form
     {
-        public SearchNFTs()
+        bool pageType;
+        public SearchNFTs(bool pageType)
         {
+            this.pageType = pageType;
             InitializeComponent();
         }
     }

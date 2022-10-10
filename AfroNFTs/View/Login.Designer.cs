@@ -34,8 +34,10 @@
             this.Siginupbtn = new System.Windows.Forms.Button();
             this.Pswordlab = new System.Windows.Forms.Label();
             this.Emaillab = new System.Windows.Forms.Label();
-            this.radioBtnUser = new System.Windows.Forms.RadioButton();
-            this.radioBtnAdmin = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Clearbtn
@@ -81,6 +83,7 @@
             this.Siginupbtn.TabIndex = 17;
             this.Siginupbtn.Text = "Log in";
             this.Siginupbtn.UseVisualStyleBackColor = false;
+            this.Siginupbtn.Click += new System.EventHandler(this.Siginupbtn_Click);
             // 
             // Pswordlab
             // 
@@ -104,39 +107,50 @@
             this.Emaillab.TabIndex = 14;
             this.Emaillab.Text = "Email :";
             // 
-            // radioBtnUser
+            // groupBox1
             // 
-            this.radioBtnUser.AutoSize = true;
-            this.radioBtnUser.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.radioBtnUser.Location = new System.Drawing.Point(86, 259);
-            this.radioBtnUser.Name = "radioBtnUser";
-            this.radioBtnUser.Size = new System.Drawing.Size(70, 26);
-            this.radioBtnUser.TabIndex = 24;
-            this.radioBtnUser.TabStop = true;
-            this.radioBtnUser.Text = "USER";
-            this.radioBtnUser.UseVisualStyleBackColor = true;
+            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Location = new System.Drawing.Point(82, 243);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(276, 49);
+            this.groupBox1.TabIndex = 29;
+            this.groupBox1.TabStop = false;
             // 
-            // radioBtnAdmin
+            // radioButton1
             // 
-            this.radioBtnAdmin.AutoSize = true;
-            this.radioBtnAdmin.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtnAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.radioBtnAdmin.Location = new System.Drawing.Point(178, 259);
-            this.radioBtnAdmin.Name = "radioBtnAdmin";
-            this.radioBtnAdmin.Size = new System.Drawing.Size(84, 26);
-            this.radioBtnAdmin.TabIndex = 25;
-            this.radioBtnAdmin.TabStop = true;
-            this.radioBtnAdmin.Text = "ADMIN";
-            this.radioBtnAdmin.UseVisualStyleBackColor = true;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
+            this.radioButton1.Location = new System.Drawing.Point(48, 17);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(70, 26);
+            this.radioButton1.TabIndex = 26;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "USER";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
+            this.radioButton2.Location = new System.Drawing.Point(140, 17);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(84, 26);
+            this.radioButton2.TabIndex = 27;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "ADMIN";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // Login
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(4)))), ((int)(((byte)(47)))));
             this.ClientSize = new System.Drawing.Size(442, 512);
-            this.Controls.Add(this.radioBtnAdmin);
-            this.Controls.Add(this.radioBtnUser);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Clearbtn);
             this.Controls.Add(this.Pswordtxt);
             this.Controls.Add(this.Emailtxt);
@@ -145,6 +159,8 @@
             this.Controls.Add(this.Emaillab);
             this.Name = "Login";
             this.Text = "AfroNFTs";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,7 +173,8 @@
         private System.Windows.Forms.Button Siginupbtn;
         private System.Windows.Forms.Label Pswordlab;
         private System.Windows.Forms.Label Emaillab;
-        private System.Windows.Forms.RadioButton radioBtnUser;
-        private System.Windows.Forms.RadioButton radioBtnAdmin;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
     }
 }

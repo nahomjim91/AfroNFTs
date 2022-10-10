@@ -44,6 +44,8 @@ namespace AfroNFTs
             this.Clearbtn = new System.Windows.Forms.Button();
             this.radioBtnAdmin = new System.Windows.Forms.RadioButton();
             this.radioBtnUser = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // FirstNamelab
@@ -177,7 +179,7 @@ namespace AfroNFTs
             this.radioBtnAdmin.AutoSize = true;
             this.radioBtnAdmin.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioBtnAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.radioBtnAdmin.Location = new System.Drawing.Point(217, 309);
+            this.radioBtnAdmin.Location = new System.Drawing.Point(140, 17);
             this.radioBtnAdmin.Name = "radioBtnAdmin";
             this.radioBtnAdmin.Size = new System.Drawing.Size(84, 26);
             this.radioBtnAdmin.TabIndex = 27;
@@ -190,7 +192,7 @@ namespace AfroNFTs
             this.radioBtnUser.AutoSize = true;
             this.radioBtnUser.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioBtnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.radioBtnUser.Location = new System.Drawing.Point(125, 309);
+            this.radioBtnUser.Location = new System.Drawing.Point(48, 17);
             this.radioBtnUser.Name = "radioBtnUser";
             this.radioBtnUser.Size = new System.Drawing.Size(70, 26);
             this.radioBtnUser.TabIndex = 26;
@@ -198,14 +200,25 @@ namespace AfroNFTs
             this.radioBtnUser.Text = "USER";
             this.radioBtnUser.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox1.Controls.Add(this.radioBtnUser);
+            this.groupBox1.Controls.Add(this.radioBtnAdmin);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Location = new System.Drawing.Point(77, 294);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(276, 49);
+            this.groupBox1.TabIndex = 28;
+            this.groupBox1.TabStop = false;
+            // 
             // SiginUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(4)))), ((int)(((byte)(47)))));
             this.ClientSize = new System.Drawing.Size(454, 526);
-            this.Controls.Add(this.radioBtnAdmin);
-            this.Controls.Add(this.radioBtnUser);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Clearbtn);
             this.Controls.Add(this.ConfirmPswordtxt);
             this.Controls.Add(this.Pswordtxt);
@@ -218,8 +231,11 @@ namespace AfroNFTs
             this.Controls.Add(this.Emaillab);
             this.Controls.Add(this.LastNamelab);
             this.Controls.Add(this.FirstNamelab);
+            this.DoubleBuffered = true;
             this.Name = "SiginUp";
             this.Text = "AfroNFTs";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,6 +257,7 @@ namespace AfroNFTs
         private System.Windows.Forms.Button Clearbtn;
         private System.Windows.Forms.RadioButton radioBtnAdmin;
         private System.Windows.Forms.RadioButton radioBtnUser;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

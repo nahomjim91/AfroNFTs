@@ -49,11 +49,19 @@ namespace AfroNFTs.View
             MessageBox.Show(str);
         }
 
+        public byte[] ImageToByteArray(System.Drawing.Image imageIn)
+        {
+            using (var ms = new MemoryStream())
+            {
+                imageIn.Save(ms, imageIn.RawFormat);
+                return ms.ToArray();
+            }
+        }
         private void submitteBtn_Click(object sender, EventArgs e)
         {
 
             NFTsClass nfts = new NFTsClass();
-           // nfts.NftsPicture = this.NFTSpic.Image;
+            nfts.NftsPicture = ImageToByteArray( this.NFTSpic.Image);
             nfts.IDNFTs = IDNFTs;
             nfts.description = this.txtDescriptionNFTs.Text;
             nfts.NFTsName = this.txtNameNFTS.Text;

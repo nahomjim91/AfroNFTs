@@ -12,8 +12,10 @@ namespace AfroNFTs.View
 {
     public partial class BuyPage : Form
     {
-        public BuyPage()
+        bool pageType;
+        public BuyPage(bool pageType)
         {
+            this.pageType = pageType;
             InitializeComponent();
         }
 

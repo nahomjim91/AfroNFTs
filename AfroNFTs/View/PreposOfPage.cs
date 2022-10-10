@@ -12,8 +12,10 @@ namespace AfroNFTs.View
 {
     public partial class PreposOfPage : Form
     {
-        public PreposOfPage()
+        bool pageType;
+        public PreposOfPage(bool pageType)
         {
+            this.pageType = pageType;
             InitializeComponent();
 
             /*

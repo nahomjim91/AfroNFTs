@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,16 +15,27 @@ namespace AfroNFTs
 {
     public partial class UserDashBord : Form
     {
-        public UserDashBord()
+        bool pageType;
+        public Image byteArrayToImage(byte[] bytesArr)
         {
+            using (MemoryStream memstr = new MemoryStream(bytesArr))
+            {
+                Image img = Image.FromStream(memstr);
+                return img;
+            }
+        }
+        public UserDashBord(bool pageType)
+        {
+            MessageBox.Show(pageType.ToString());
             InitializeComponent();
+            this.pageType = pageType;
 
             flowLayoutPanel1.Controls.Clear();
             //for test 
             foreach (var item in NFTsClass.getAllNFTs())
             {
                 NFTs nfts = new NFTs();
-                //nfts.NftsPicture = item.NftsPicture.;
+                nfts.NftsPicture = byteArrayToImage(item.NftsPicture);
                 nfts.NFTsName = item.NFTsName;
                 nfts.NFTsRate = item.NFTsRate;
                 nfts.NFTsprice = item.NFTsprice;

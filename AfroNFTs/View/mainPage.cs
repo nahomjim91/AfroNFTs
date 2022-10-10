@@ -27,6 +27,7 @@ namespace AfroNFTs
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form activeForm;
+        bool PageType = false; //by defualt user
          
         public mainPage()
         {
@@ -116,19 +117,30 @@ namespace AfroNFTs
 
         }
        
-        public void GoToDashbord()
+        public void GoToDashbord(bool pageType)
         {
+            this.PageType = pageType;
+            if (PageType)
+                postbtn.Visible = true;
+            aboutbtn.Visible = true;
+            accountBtn.Visible = true;
+            selltbtn.Visible = true;
+            Buybtn.Visible = true;
+            Dashboardbtn.Visible = true;
+            iconPic_current.Visible = true;
+            CurrntPage.Visible = true;
+            popChar.Visible = true;
             Dashboardbtn_Click(Dashboardbtn, EventArgs.Empty);
         }
         private void Dashboardbtn_Click(object sender, EventArgs e)
         {
-            OpenchildFrom( new UserDashBord(),  sender);
+            OpenchildFrom( new UserDashBord(PageType),  sender);
         }
 
 
         private void Buybtn_Click(object sender, EventArgs e)
         {
-            OpenchildFrom(new BuyPage(), sender);
+            OpenchildFrom(new BuyPage(PageType), sender);
         }
 
         
@@ -162,12 +174,12 @@ namespace AfroNFTs
 
         private void selltbtn_Click(object sender, EventArgs e)
         {
-            OpenchildFrom(new SellPage(), sender);
+            OpenchildFrom(new SellPage(PageType), sender);
         }
 
         private void accountBtn_Click(object sender, EventArgs e)
         {
-            OpenchildFrom(new SearchNFTs(), sender);
+            OpenchildFrom(new AccountPage(), sender);
         }
 
         
@@ -181,38 +193,38 @@ namespace AfroNFTs
         {
             OpenchildFrom(new AddNfts(), sender);
         }
-    
+
+        //public delegate void MainPageEventHandler(object sender, EventArgs args);
+
+        //public event MainPageEventHandler 
 
         private void Siginupb_Click(object sender, EventArgs e)
         {
             OpenchildFrom(new SiginUp(), sender);
-            /*
-             if(admin) 
-                postbtn.visble = true
-             */
-            aboutbtn.Visible = true;
-            accountBtn.Visible = true;
-            selltbtn.Visible = true;
-            Buybtn.Visible = true;
-            Dashboardbtn.Visible = true;
-            iconPic_current.Visible = true;
-            CurrntPage.Visible = true;
-            popChar.Visible = true;
-            
+            aboutbtn.Visible = false;
+            accountBtn.Visible = false;
+            selltbtn.Visible = false;
+            Buybtn.Visible = false;
+            Dashboardbtn.Visible = false;
+            iconPic_current.Visible = false;
+            CurrntPage.Visible = false;
+            popChar.Visible = false;
+            postbtn.Visible = false;
+
         }
 
         private void Loginbtn_Click_1(object sender, EventArgs e)
         {
             OpenchildFrom(new Login(), sender);
-            Dashboardbtn.Visible = true;
-            accountBtn.Visible = true;
-            Buybtn.Visible = true;
-            selltbtn.Visible = true;
-            aboutbtn.Visible = true;
-            /*
-             if(admin) 
-                postbtn.visble = true
-             */
+            aboutbtn.Visible = false;
+            accountBtn.Visible = false;
+            selltbtn.Visible = false;
+            Buybtn.Visible = false;
+            Dashboardbtn.Visible = false;
+            iconPic_current.Visible = false;
+            CurrntPage.Visible = false;
+            popChar.Visible = false;
+            postbtn.Visible = false;
 
         }
     }

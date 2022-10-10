@@ -9,9 +9,9 @@ namespace AfroNFTs.Models
     internal class Page
 
     {
-        public int id;
-        public string title;
-        public string description;
-       
+        public int PageId { get; set; }
+        public string title { get; set; }
+        public string description { get; set; }
+
     }
 }

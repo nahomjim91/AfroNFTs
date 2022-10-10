@@ -11,11 +11,11 @@ namespace AfroNFTs.Models
     
     internal class NFTsClass
     {
-        static int IdNFTs = 0;
+        public int NFtsClassId { get; set; }
 
-        private Image _NftsPicture;
+        private byte[] _NftsPicture;
 
-        public Image NftsPicture
+        public byte[] NftsPicture
         {
             get { return _NftsPicture; }
             set { _NftsPicture = value;  }
@@ -83,7 +83,7 @@ namespace AfroNFTs.Models
 
        public NFTsClass()
         {
-            IdNFTs++;
+            //IdNFTs++;
         }
        private static List<NFTsClass> _nftsClass = new List<NFTsClass>();
         public void save ()

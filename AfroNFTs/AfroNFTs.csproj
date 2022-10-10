@@ -67,6 +67,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\202210100810111_Admin_NFTsClass_NormalUser_Page.cs" />
+    <Compile Include="Migrations\202210100810111_Admin_NFTsClass_NormalUser_Page.designer.cs">
+      <DependentUpon>202210100810111_Admin_NFTsClass_NormalUser_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\DbService.cs" />
     <Compile Include="Models\NFTsClass.cs" />
@@ -153,6 +158,9 @@
     <Compile Include="View\UserDashBord.Designer.cs">
       <DependentUpon>UserDashBord.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Migrations\202210100810111_Admin_NFTsClass_NormalUser_Page.resx">
+      <DependentUpon>202210100810111_Admin_NFTsClass_NormalUser_Page.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\SiginUp.resx">
       <DependentUpon>SiginUp.cs</DependentUpon>
     </EmbeddedResource>

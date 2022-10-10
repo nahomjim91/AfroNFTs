@@ -1,4 +1,5 @@
-﻿using AfroNFTs.View;
+﻿using AfroNFTs.Models;
+using AfroNFTs.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

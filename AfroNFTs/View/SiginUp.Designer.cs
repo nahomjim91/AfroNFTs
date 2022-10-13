@@ -30,6 +30,7 @@ namespace AfroNFTs
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.FirstNamelab = new System.Windows.Forms.Label();
             this.LastNamelab = new System.Windows.Forms.Label();
             this.Emaillab = new System.Windows.Forms.Label();
@@ -45,7 +46,9 @@ namespace AfroNFTs
             this.radioBtnAdmin = new System.Windows.Forms.RadioButton();
             this.radioBtnUser = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.errorProviderSignUP = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderSignUP)).BeginInit();
             this.SuspendLayout();
             // 
             // FirstNamelab
@@ -212,6 +215,10 @@ namespace AfroNFTs
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             // 
+            // errorProviderSignUP
+            // 
+            this.errorProviderSignUP.ContainerControl = this;
+            // 
             // SiginUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,6 +243,7 @@ namespace AfroNFTs
             this.Text = "AfroNFTs";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderSignUP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,6 +266,7 @@ namespace AfroNFTs
         private System.Windows.Forms.RadioButton radioBtnAdmin;
         private System.Windows.Forms.RadioButton radioBtnUser;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ErrorProvider errorProviderSignUP;
     }
 }
 

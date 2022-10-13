@@ -11,8 +11,7 @@ using System.Windows.Forms;
 using AfroNFTs.View;
 using AfroNFTs;
 using FontAwesome.Sharp;
-
-
+using AfroNFTs.Models;
 
 namespace AfroNFTs
 {
@@ -28,6 +27,7 @@ namespace AfroNFTs
         private Panel leftBorderBtn;
         private Form activeForm;
         bool PageType = false; //by defualt user
+        public static int userID;
          
         public mainPage()
         {
@@ -46,7 +46,7 @@ namespace AfroNFTs
             public static Color color5 = Color.FromArgb(249, 88, 155);
         }
         //IMethods
-        private void ActivateButton(object senderBtn)
+        private void ActivateButton(object senderBtn )
         {   
 
 
@@ -225,6 +225,11 @@ namespace AfroNFTs
             CurrntPage.Visible = false;
             popChar.Visible = false;
             postbtn.Visible = false;
+
+        }
+
+        private void dashbord_pan_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

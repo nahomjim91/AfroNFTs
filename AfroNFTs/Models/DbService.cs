@@ -10,10 +10,10 @@ namespace AfroNFTs.Models
 {
     internal class DbService : DbContext
     {
-        DbSet<NFTsClass> nftTB { get; set; }    
-        DbSet<Admin> adminTB { get; set; }
-        DbSet<Page> pageTB { get; set; }
-        DbSet<NormalUser> normalUserTB { get; set; }
+       public DbSet<NFTsClass> nftTB { get; set; }    
+       public DbSet<Admin> adminTB { get; set; }
+       public DbSet<Page> pageTB { get; set; }
+       public DbSet<NormalUser> normalUserTB { get; set; }
 
     }
 }

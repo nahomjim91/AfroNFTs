@@ -40,16 +40,16 @@
             this.Logpanel = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.Headerpan = new System.Windows.Forms.Panel();
+            this.popChar = new FontAwesome.Sharp.IconPictureBox();
             this.CurrntPage = new System.Windows.Forms.Label();
             this.iconPic_current = new FontAwesome.Sharp.IconPictureBox();
             this.dashbord_pan = new System.Windows.Forms.Panel();
-            this.popChar = new FontAwesome.Sharp.IconPictureBox();
             this.Menupanel.SuspendLayout();
             this.Logpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.Headerpan.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPic_current)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popChar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPic_current)).BeginInit();
             this.SuspendLayout();
             // 
             // Menupanel
@@ -278,6 +278,20 @@
             this.Headerpan.TabIndex = 1;
             this.Headerpan.Paint += new System.Windows.Forms.PaintEventHandler(this.Headerpan_Paint);
             // 
+            // popChar
+            // 
+            this.popChar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(4)))), ((int)(((byte)(47)))));
+            this.popChar.ForeColor = System.Drawing.Color.IndianRed;
+            this.popChar.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.popChar.IconColor = System.Drawing.Color.IndianRed;
+            this.popChar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.popChar.Location = new System.Drawing.Point(492, 16);
+            this.popChar.Name = "popChar";
+            this.popChar.Size = new System.Drawing.Size(32, 32);
+            this.popChar.TabIndex = 2;
+            this.popChar.TabStop = false;
+            this.popChar.Visible = false;
+            // 
             // CurrntPage
             // 
             this.CurrntPage.AutoSize = true;
@@ -312,21 +326,8 @@
             this.dashbord_pan.Name = "dashbord_pan";
             this.dashbord_pan.Size = new System.Drawing.Size(779, 529);
             this.dashbord_pan.TabIndex = 2;
+            this.dashbord_pan.Paint += new System.Windows.Forms.PaintEventHandler(this.dashbord_pan_Paint);
             this.dashbord_pan.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dashbord_pan_MouseDown);
-            // 
-            // popChar
-            // 
-            this.popChar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(4)))), ((int)(((byte)(47)))));
-            this.popChar.ForeColor = System.Drawing.Color.IndianRed;
-            this.popChar.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.popChar.IconColor = System.Drawing.Color.IndianRed;
-            this.popChar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.popChar.Location = new System.Drawing.Point(492, 16);
-            this.popChar.Name = "popChar";
-            this.popChar.Size = new System.Drawing.Size(32, 32);
-            this.popChar.TabIndex = 2;
-            this.popChar.TabStop = false;
-            this.popChar.Visible = false;
             // 
             // mainPage
             // 
@@ -344,8 +345,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             this.Headerpan.ResumeLayout(false);
             this.Headerpan.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPic_current)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popChar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPic_current)).EndInit();
             this.ResumeLayout(false);
 
         }

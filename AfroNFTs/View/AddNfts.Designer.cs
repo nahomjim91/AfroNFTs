@@ -40,7 +40,9 @@
             this.txtDescriptionNFTs = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.submitteBtn = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.NFTSpic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // NFTSpic
@@ -159,6 +161,10 @@
             this.submitteBtn.UseVisualStyleBackColor = false;
             this.submitteBtn.Click += new System.EventHandler(this.submitteBtn_Click);
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // AddNfts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,6 +184,7 @@
             this.Name = "AddNfts";
             this.Text = "AddNfts";
             ((System.ComponentModel.ISupportInitialize)(this.NFTSpic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,5 +203,6 @@
         private System.Windows.Forms.TextBox txtDescriptionNFTs;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button submitteBtn;
+        public System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

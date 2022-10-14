@@ -11,6 +11,7 @@ namespace AfroNFTs.Models
     
     internal class NFTsClass
     {
+        public string userType { get; set; }
         public int NFtsClassId { get; set; }
 
         private byte[] _NftsPicture;
@@ -90,6 +91,9 @@ namespace AfroNFTs.Models
         {
             _nftsClass.Add(this);
             MessageBox.Show("save");
+            DbService dbService = new DbService();
+            dbService.nftTB.Add(this);
+            dbService.SaveChanges();
         }
         public static List<NFTsClass> getAllNFTs()
         {

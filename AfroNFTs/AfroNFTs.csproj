@@ -71,6 +71,10 @@
     <Compile Include="Migrations\202210100810111_Admin_NFTsClass_NormalUser_Page.designer.cs">
       <DependentUpon>202210100810111_Admin_NFTsClass_NormalUser_Page.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202210140924004_userTypeaddtoNFTsClass.cs" />
+    <Compile Include="Migrations\202210140924004_userTypeaddtoNFTsClass.designer.cs">
+      <DependentUpon>202210140924004_userTypeaddtoNFTsClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\DbService.cs" />
@@ -160,6 +164,9 @@
     </Compile>
     <EmbeddedResource Include="Migrations\202210100810111_Admin_NFTsClass_NormalUser_Page.resx">
       <DependentUpon>202210100810111_Admin_NFTsClass_NormalUser_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210140924004_userTypeaddtoNFTsClass.resx">
+      <DependentUpon>202210140924004_userTypeaddtoNFTsClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\SiginUp.resx">
       <DependentUpon>SiginUp.cs</DependentUpon>

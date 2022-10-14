@@ -117,18 +117,11 @@ namespace AfroNFTs
                     A_user.firstName = Fnametxt.Text;
                     A_user.lastName = LNametxt.Text;
                     A_user.email = Emailtxt.Text;
-                    if (Pswordtxt.Text == ConfirmPswordtxt.Text)
-                    {
                         A_user.password = Pswordtxt.Text;
                         serviceComtext.adminTB.Add(A_user);
                         serviceComtext.SaveChanges();
                         int ID = serviceComtext.adminTB.Count();
                         mainPage.userID = ID;
-                    }
-                    else
-                    {
-                        MessageBox.Show("wrong password");
-                    }
 
                 }
                 else

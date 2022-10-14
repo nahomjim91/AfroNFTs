@@ -5,9 +5,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -25,6 +25,37 @@ namespace AfroNFTs.View
             InitializeComponent();
             IDNFTs++;   
 
+        }
+
+        public bool hasError()
+        {
+            bool hasError = true;
+            if (string.IsNullOrEmpty(txtNameNFTS.Text))
+            {
+                errorProvider.SetError(txtNameNFTS, "Required");
+                hasError = false;
+            }
+            if (string.IsNullOrEmpty(txtDescriptionNFTs.Text))
+            {
+                errorProvider.SetError(txtDescriptionNFTs, "Required");
+                hasError = false;
+            }
+            if (string.IsNullOrEmpty(txtGroupNFTs.Text))
+            {
+                errorProvider.SetError(txtGroupNFTs, "Required");
+                hasError = false;
+            }
+            if (string.IsNullOrEmpty(txtPriceNFTs.Text))
+            {
+                errorProvider.SetError(txtPriceNFTs, "Required");
+                return false;
+            }
+            if (double.Parse(txtPriceNFTs.Text) < 0)
+            {
+                errorProvider.SetError(txtPriceNFTs, "Required");
+                hasError = false;
+            }
+            return hasError;
         }
 
         private void NFTSpic_Click(object sender, EventArgs e)
@@ -59,16 +90,26 @@ namespace AfroNFTs.View
         }
         private void submitteBtn_Click(object sender, EventArgs e)
         {
+            errorProvider.Clear();  
+            if (hasError())
+            {
 
-            NFTsClass nfts = new NFTsClass();
-            nfts.NftsPicture = ImageToByteArray( this.NFTSpic.Image);
-            nfts.IDNFTs = IDNFTs;
-            nfts.description = this.txtDescriptionNFTs.Text;
-            nfts.NFTsName = this.txtNameNFTS.Text;
-            nfts.NFTsprice = double.Parse(this.txtPriceNFTs.Text);
-            nfts.Group = this.txtGroupNFTs.Text;
+            }
+            else
+            {
 
-            nfts.save();
+
+                NFTsClass nfts = new NFTsClass();
+                nfts.NftsPicture = ImageToByteArray(this.NFTSpic.Image);
+                nfts.IDNFTs = IDNFTs;
+                nfts.description = this.txtDescriptionNFTs.Text;
+                nfts.NFTsName = this.txtNameNFTS.Text;
+                nfts.NFTsprice = double.Parse(this.txtPriceNFTs.Text);
+                nfts.Group = this.txtGroupNFTs.Text;
+                nfts.OwnerID = mainPage.userID;
+                nfts.userType = "Admin";
+                nfts.save();
+            }
         }
     }
 }

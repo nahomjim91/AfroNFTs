@@ -67,11 +67,6 @@ namespace AfroNFTs
                 errorProviderSignUP.SetError(ConfirmPswordtxt, "Required");
                 hasError = false;
             }
-
-
-
-
-
                 return hasError;
         }
         private void Siginupbtn_Click(object sender, EventArgs e)
@@ -87,14 +82,9 @@ namespace AfroNFTs
                 DbService serviceComtext = new DbService();
                 NormalUser N_user = new NormalUser();
                 Admin A_user = new Admin();
-
-                
-
-                char c = Fnametxt.Text[0];
                 bool b =  false;
                 RadioButton  checed = new RadioButton();
                 
-               
                    checed = groupBox1.Controls.OfType<RadioButton>().
                                             FirstOrDefault(r => { return r.Checked == true; });
                     if (checed == null) {
@@ -115,39 +105,27 @@ namespace AfroNFTs
 
                 if (b)
                 {
-                    A_user.balance = 100;
-                    A_user.firstName = Fnametxt.Text;
-                    A_user.lastName = LNametxt.Text;
-                    A_user.email = Emailtxt.Text;
-                        A_user.password = Pswordtxt.Text;
-                        serviceComtext.adminTB.Add(A_user);
-                        serviceComtext.SaveChanges();
-                        int ID = serviceComtext.adminTB.Count();
-                        mainPage.userID = ID;
+                    UserService.registerAdminUser(
+                        Fnametxt.Text,
+                        LNametxt.Text,
+                        Emailtxt.Text,
+                        Pswordtxt.Text
+                     );
+                    int ID = serviceComtext.adminTB.Count();
+                    mainPage.userID = ID;
 
                 }
                 else
                 {
-                    //N_user.balance = 100;
-                    //N_user.email = Emailtxt.Text;
-                    //N_user.firstName = Fnametxt.Text;
-                    //N_user.lastName = LNametxt.Text;
-
-                    //    A_user.password = Pswordtxt.Text;
-                    //    serviceComtext.normalUserTB.Add(N_user);
-                    //    serviceComtext.SaveChanges();
-                    
                     UserService.registerNormalUser(
                         Fnametxt.Text,
                         LNametxt.Text,
                         Emailtxt.Text,
                         Pswordtxt.Text
-
                     );
 
                     int ID = serviceComtext.normalUserTB.Count();
                     mainPage.userID = ID;
-                    MessageBox.Show("Check#1");
                 }
                 Program.main.popChar.IconChar = IconChar.A;
                 Program.main.GoToDashbord(b);

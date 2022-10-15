@@ -16,13 +16,18 @@ namespace AfroNFTs
        [STAThread]
         static void Main()
         {
-            
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            //  Application.Run(new Form1());//calling sigin up
-            //  Application.Run(new Login());//calling login
-            main = new mainPage();
-            Application.Run(main);
+            try
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                //  Application.Run(new Form1());//calling sigin up
+                //  Application.Run(new Login());//calling login
+                main = new mainPage();
+                Application.Run(main);
+            }catch(NFTAppException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
     }

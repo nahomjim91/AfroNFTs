@@ -21,5 +21,13 @@ namespace AfroNFTs.Utils
             }
             return hashedString;
         }
+        public static bool isPasswordCorrect(string givenPassword, string hashedPassword)
+        {
+            string hashedInput = HashPassword(givenPassword);
+            StringComparer comparer = StringComparer.OrdinalIgnoreCase;
+
+            if (0 == comparer.Compare(hashedInput, hashedPassword)) return true;
+            else return false;
+        }
     }
 }

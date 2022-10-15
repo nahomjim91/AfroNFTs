@@ -82,6 +82,7 @@
     <Compile Include="Models\NormalUser.cs" />
     <Compile Include="Models\Page.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="NFtAppExeception.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="View\SiginUp.cs">
       <SubType>Form</SubType>

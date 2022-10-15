@@ -13,6 +13,8 @@ using System.Text.RegularExpressions;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Windows.Media.Animation;
 
+using AfroNFTs.Services;
+
 namespace AfroNFTs
 {
     public partial class SiginUp : Form
@@ -126,17 +128,26 @@ namespace AfroNFTs
                 }
                 else
                 {
-                    N_user.balance = 100;
-                    N_user.email = Emailtxt.Text;
-                    N_user.firstName = Fnametxt.Text;
-                    N_user.lastName = LNametxt.Text;
+                    //N_user.balance = 100;
+                    //N_user.email = Emailtxt.Text;
+                    //N_user.firstName = Fnametxt.Text;
+                    //N_user.lastName = LNametxt.Text;
 
-                        A_user.password = Pswordtxt.Text;
-                        serviceComtext.normalUserTB.Add(N_user);
-                        serviceComtext.SaveChanges();
-                        int ID = serviceComtext.normalUserTB.Count();
-                        mainPage.userID = ID;
+                    //    A_user.password = Pswordtxt.Text;
+                    //    serviceComtext.normalUserTB.Add(N_user);
+                    //    serviceComtext.SaveChanges();
                     
+                    UserService.registerNormalUser(
+                        Fnametxt.Text,
+                        LNametxt.Text,
+                        Emailtxt.Text,
+                        Pswordtxt.Text
+
+                    );
+
+                    int ID = serviceComtext.normalUserTB.Count();
+                    mainPage.userID = ID;
+                    MessageBox.Show("Check#1");
                 }
                 Program.main.popChar.IconChar = IconChar.A;
                 Program.main.GoToDashbord(b);

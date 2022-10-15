@@ -91,7 +91,7 @@ namespace AfroNFTs.View
         private void submitteBtn_Click(object sender, EventArgs e)
         {
             errorProvider.Clear();  
-            if (hasError())
+            if (!hasError())
             {
 
             }

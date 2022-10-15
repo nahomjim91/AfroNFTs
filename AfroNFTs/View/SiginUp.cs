@@ -19,7 +19,7 @@ namespace AfroNFTs
 {
     public partial class SiginUp : Form
     {
-        
+
         public SiginUp()
         {
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace AfroNFTs
 
         public bool hasError()
         {
-            Regex emailtxtReg = new Regex( @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
+            Regex emailtxtReg = new Regex(@"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
             bool hasError = true;
             if (string.IsNullOrEmpty(Emailtxt.Text))
             {
@@ -72,14 +72,14 @@ namespace AfroNFTs
 
 
 
-                return hasError;
+            return hasError;
         }
         private void Siginupbtn_Click(object sender, EventArgs e)
         {
-            errorProviderSignUP.Clear();    
-            if (!hasError() )
+            errorProviderSignUP.Clear();
+            if (!hasError())
             {
-                
+
             }
             else
             {
@@ -87,67 +87,51 @@ namespace AfroNFTs
                 DbService serviceComtext = new DbService();
                 NormalUser N_user = new NormalUser();
                 Admin A_user = new Admin();
+                bool b = false;
+                RadioButton checed = new RadioButton();
 
-                
-
-                char c = Fnametxt.Text[0];
-                bool b =  false;
-                RadioButton  checed = new RadioButton();
-                
-               
-                   checed = groupBox1.Controls.OfType<RadioButton>().
-                                            FirstOrDefault(r => { return r.Checked == true; });
-                    if (checed == null) {
-                        checed = new RadioButton();
-                        checed.Text = "USER"; 
-                    }
-               // b = checed.Text == "ADMIN" ? true : false;
-                var result = MessageBox.Show("Are you Admin?", "yes or no", MessageBoxButtons.YesNo);
-                    if(result == DialogResult.Yes)
-                    {
-                        b = true;
-                    }
-                    else{
-                        b = false;
-                    }
-                
-               
-
-                if (b)
+                checed = groupBox1.Controls.OfType<RadioButton>().
+                                         FirstOrDefault(r => { return r.Checked == true; });
+                if (checed == null)
                 {
-                    A_user.balance = 100;
-                    A_user.firstName = Fnametxt.Text;
-                    A_user.lastName = LNametxt.Text;
-                    A_user.email = Emailtxt.Text;
-                        A_user.password = Pswordtxt.Text;
-                        serviceComtext.adminTB.Add(A_user);
-                        serviceComtext.SaveChanges();
-                        int ID = serviceComtext.adminTB.Count();
-                        mainPage.userID = ID;
-
+                    checed = new RadioButton();
+                    checed.Text = "USER";
+                }
+                // b = checed.Text == "ADMIN" ? true : false;
+                var result = MessageBox.Show("Are you Admin?", "yes or no", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    b = true;
                 }
                 else
                 {
-                    //N_user.balance = 100;
-                    //N_user.email = Emailtxt.Text;
-                    //N_user.firstName = Fnametxt.Text;
-                    //N_user.lastName = LNametxt.Text;
+                    b = false;
+                }
 
-                    //    A_user.password = Pswordtxt.Text;
-                    //    serviceComtext.normalUserTB.Add(N_user);
-                    //    serviceComtext.SaveChanges();
-                    
+
+
+                if (b)
+                {
+                    UserService.registerAdminUser(
+                        Fnametxt.Text,
+                        LNametxt.Text,
+                        Emailtxt.Text,
+                        Pswordtxt.Text
+                     );
+                    int ID = serviceComtext.adminTB.Count();
+                    mainPage.userID = ID;
+                }
+                else
+                {
                     UserService.registerNormalUser(
                         Fnametxt.Text,
                         LNametxt.Text,
                         Emailtxt.Text,
                         Pswordtxt.Text
-
                     );
 
                     int ID = serviceComtext.normalUserTB.Count();
                     mainPage.userID = ID;
-                    MessageBox.Show("Check#1");
                 }
                 Program.main.popChar.IconChar = IconChar.A;
                 Program.main.GoToDashbord(b);

@@ -14,7 +14,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Windows.Media.Animation;
 
 using AfroNFTs.Services;
-
+using AfroNFTs.Utils;
 namespace AfroNFTs
 {
     public partial class SiginUp : Form
@@ -23,6 +23,7 @@ namespace AfroNFTs
         public SiginUp()
         {
             InitializeComponent();
+          
         }
 
         public bool hasError()
@@ -71,7 +72,9 @@ namespace AfroNFTs
         }
         private void Siginupbtn_Click(object sender, EventArgs e)
         {
-            errorProviderSignUP.Clear();    
+            errorProviderSignUP.Clear();
+           // MessageBox.Show("Hello");
+           // AppEventUtils.ShowInfoMessage(this, "This is a test");
             if (!hasError() )
             {
                 

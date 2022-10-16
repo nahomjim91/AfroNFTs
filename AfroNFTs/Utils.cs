@@ -5,9 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 
+using System.Windows.Forms;
 
 namespace AfroNFTs.Utils
 {
+    public class AppEventUtils
+    {
+        public delegate void AppEventHandler(object sender, string e);
+
+        public static event AppEventHandler ShowInfoMessageEvent;
+
+        public static void ShowInfoMessage(object sender, string message)
+        {
+           // MessageBox.Show(message);
+            if (ShowInfoMessageEvent != null)
+                ShowInfoMessageEvent(sender, message);
+        }
+    }
+    
     public static class PasswordUtils
     {
         public static string HashPassword(string password)

@@ -55,7 +55,7 @@ namespace AfroNFTs
                 errorProviderSignUP.SetError(ConfirmPswordtxt, "Required");
                 hasError = false;
             }
-            if (emailtxtReg.IsMatch(Emailtxt.Text))
+            if (!emailtxtReg.IsMatch(Emailtxt.Text))
             {
                 MessageBox.Show("sorry!! sir. your email is not valid");
                 errorProviderSignUP.SetError(Emailtxt, "Required");
@@ -85,28 +85,21 @@ namespace AfroNFTs
                 DbService serviceComtext = new DbService();
                 NormalUser N_user = new NormalUser();
                 Admin A_user = new Admin();
-                bool b =  false;
-                RadioButton  checed = new RadioButton();
-                
-                   checed = groupBox1.Controls.OfType<RadioButton>().
-                                            FirstOrDefault(r => { return r.Checked == true; });
-                    if (checed == null) {
-                        checed = new RadioButton();
-                        checed.Text = "USER"; 
-                    }
-               // b = checed.Text == "ADMIN" ? true : false;
-                var result = MessageBox.Show("Are you Admin?", "yes or no", MessageBoxButtons.YesNo);
-                    if(result == DialogResult.Yes)
-                    {
-                        b = true;
-                    }
-                    else{
-                        b = false;
-                    }
-                
+                bool isAdmin =  false;
                
 
-                if (b)
+                
+                //This checks if the user is an admin
+                if (adminCheckBox.Checked)
+                {
+                    isAdmin = true;
+                }
+                else
+                {
+                    isAdmin = false;
+                }
+
+                if (isAdmin)
                 {
                     UserService.registerAdminUser(
                         Fnametxt.Text,
@@ -131,7 +124,7 @@ namespace AfroNFTs
                     mainPage.userID = ID;
                 }
                 Program.main.popChar.IconChar = IconChar.A;
-                Program.main.GoToDashbord(b);
+                Program.main.GoToDashbord(isAdmin);
             }
         }
     }

@@ -115,8 +115,21 @@ namespace AfroNFTs
                         Emailtxt.Text,
                         Pswordtxt.Text
                      );
-                    int ID = serviceComtext.adminTB.Count();
-                    mainPage.userID = ID;
+                    //   int ID = serviceComtext.adminTB.Count();
+                    // mainPage.userID = ID;
+                    try
+                    {
+                        using (var ctx = new DbService())
+                        {
+                            var user = ctx.adminTB.Single(normalUser => normalUser.email == Emailtxt.Text.Trim());
+                            mainPage.userID = user.Id;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        AppEventUtils.ShowInfoMessage(this, ex.Message);
+                        throw new NFTAppException("Error #1");
+                    }
 
                 }
                 else
@@ -128,8 +141,21 @@ namespace AfroNFTs
                         Pswordtxt.Text
                     );
 
-                    int ID = serviceComtext.normalUserTB.Count();
-                    mainPage.userID = ID;
+                    try
+                    {
+                        using (var ctx = new DbService())
+                        {
+                            var user = ctx.normalUserTB.Single(normalUser =>  normalUser.email == Emailtxt.Text.Trim());
+                            mainPage.userID = user.Id;
+                        }
+                    }
+                    catch(Exception ex)
+                    {
+                        AppEventUtils.ShowInfoMessage(this, ex.Message);
+                        throw new NFTAppException("Error #2");
+                    }
+                    //int ID = serviceComtext.normalUserTB.Count();
+                    //mainPage.userID = ID;
                 }
                 if (isAllowed)
                 {

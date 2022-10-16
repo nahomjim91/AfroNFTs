@@ -13,6 +13,8 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using AfroNFTs.Services;
+
 namespace AfroNFTs
 {
     public partial class Login : Form
@@ -51,21 +53,12 @@ namespace AfroNFTs
             }
             else{
                errorProviderLogin.Clear();
-                var checed = groupBox1.Controls.OfType<RadioButton>().
-                                       FirstOrDefault(r => { return r.Checked == true; });
+             
               // b = checed.Text == "ADMIN" ? true : false;
                 DbService dbService = new DbService();
                 Admin admin = new Admin();
                 NormalUser normalUser = new NormalUser();
-                var result = MessageBox.Show("Are you Admin?", "yes or no", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
-                {
-                    b = true;
-                }
-                else
-                {
-                    b = false;
-                }
+                b = isAdminCheckBox.Checked;
 
                 if (b)
                 {
@@ -115,6 +108,25 @@ namespace AfroNFTs
                 Program.main.GoToDashbord(b);
             }
            
+        }
+
+        private void showPasswordButton_Click(object sender, EventArgs e)
+        {
+            if (Pswordtxt.PasswordChar == '*')
+                Pswordtxt.PasswordChar = '\0';
+            else Pswordtxt.PasswordChar = '*';
+        }
+
+        private void forgottenPasswordButton_Click(object sender, EventArgs e)
+        {
+            var result = EmailService.sendMail(
+                "ebenezertesfaye@yahoo.com",
+                "ebenezertesfaye@yahoo.com",
+                "ebenezertesfaye@yahoo.com",
+                "ebenezertesfaye@yahoo.com"
+
+            );
+            AppEventUtils.ShowInfoMessage(this, result.ToString());
         }
     }
 }

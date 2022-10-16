@@ -30,6 +30,7 @@ namespace AfroNFTs
 
         public bool hasError()
         {
+            Regex strongPassword = new Regex(@"^(?=(.*[a-z]){1,})(?=(.*[A-Z]){1,})(?=(.*[0-9]){1,})(?=(.*[!@#$%^&*()\-__+.]){1,}).{8,}$");
             Regex emailtxtReg = new Regex( @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
             bool hasError = true;
             if (string.IsNullOrEmpty(Emailtxt.Text))
@@ -68,6 +69,13 @@ namespace AfroNFTs
                 MessageBox.Show("sorry!! sir. your password is not the same");
                 errorProviderSignUP.SetError(Pswordtxt, "Required");
                 errorProviderSignUP.SetError(ConfirmPswordtxt, "Required");
+                hasError = false;
+            }
+            if (!strongPassword.IsMatch(Pswordtxt.Text))
+            {
+                AppEventUtils.ShowInfoMessage(this, "Password must contain an uppercase, a lowercase and special characters while being at least 8 chars long");
+                errorProviderSignUP.SetError(Pswordtxt, "Password must contain an uppercase, a lowercase and special characters while being at least 8 chars long");
+
                 hasError = false;
             }
                 return hasError;

@@ -43,14 +43,12 @@ namespace AfroNFTs
             this.Pswordtxt = new System.Windows.Forms.TextBox();
             this.ConfirmPswordtxt = new System.Windows.Forms.TextBox();
             this.Clearbtn = new System.Windows.Forms.Button();
-            this.radioBtnAdmin = new System.Windows.Forms.RadioButton();
-            this.radioBtnUser = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.errorProviderSignUP = new System.Windows.Forms.ErrorProvider(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.adminCheckBox = new System.Windows.Forms.CheckBox();
             this.termsCheckBox = new System.Windows.Forms.CheckBox();
+            this.showConfirm = new FontAwesome.Sharp.IconButton();
+            this.showPassword = new FontAwesome.Sharp.IconButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderSignUP)).BeginInit();
             this.SuspendLayout();
@@ -60,7 +58,7 @@ namespace AfroNFTs
             this.FirstNamelab.AutoSize = true;
             this.FirstNamelab.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstNamelab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.FirstNamelab.Location = new System.Drawing.Point(33, 196);
+            this.FirstNamelab.Location = new System.Drawing.Point(33, 68);
             this.FirstNamelab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.FirstNamelab.Name = "FirstNamelab";
             this.FirstNamelab.Size = new System.Drawing.Size(131, 29);
@@ -72,7 +70,7 @@ namespace AfroNFTs
             this.LastNamelab.AutoSize = true;
             this.LastNamelab.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastNamelab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.LastNamelab.Location = new System.Drawing.Point(33, 225);
+            this.LastNamelab.Location = new System.Drawing.Point(33, 142);
             this.LastNamelab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LastNamelab.Name = "LastNamelab";
             this.LastNamelab.Size = new System.Drawing.Size(128, 29);
@@ -84,7 +82,7 @@ namespace AfroNFTs
             this.Emaillab.AutoSize = true;
             this.Emaillab.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Emaillab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.Emaillab.Location = new System.Drawing.Point(33, 265);
+            this.Emaillab.Location = new System.Drawing.Point(33, 204);
             this.Emaillab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Emaillab.Name = "Emaillab";
             this.Emaillab.Size = new System.Drawing.Size(81, 29);
@@ -96,7 +94,7 @@ namespace AfroNFTs
             this.Pswordlab.AutoSize = true;
             this.Pswordlab.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pswordlab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.Pswordlab.Location = new System.Drawing.Point(33, 297);
+            this.Pswordlab.Location = new System.Drawing.Point(33, 262);
             this.Pswordlab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Pswordlab.Name = "Pswordlab";
             this.Pswordlab.Size = new System.Drawing.Size(120, 29);
@@ -123,19 +121,19 @@ namespace AfroNFTs
             this.Siginupbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Siginupbtn.Font = new System.Drawing.Font("Modern No. 20", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Siginupbtn.ForeColor = System.Drawing.Color.Snow;
-            this.Siginupbtn.Location = new System.Drawing.Point(38, 505);
+            this.Siginupbtn.Location = new System.Drawing.Point(36, 550);
             this.Siginupbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Siginupbtn.Name = "Siginupbtn";
             this.Siginupbtn.Size = new System.Drawing.Size(168, 46);
             this.Siginupbtn.TabIndex = 5;
-            this.Siginupbtn.Text = "Sigin up";
+            this.Siginupbtn.Text = "Sign Up";
             this.Siginupbtn.UseVisualStyleBackColor = false;
             this.Siginupbtn.Click += new System.EventHandler(this.Siginupbtn_Click);
             // 
             // Fnametxt
             // 
             this.Fnametxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
-            this.Fnametxt.Location = new System.Drawing.Point(259, 201);
+            this.Fnametxt.Location = new System.Drawing.Point(247, 75);
             this.Fnametxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Fnametxt.Name = "Fnametxt";
             this.Fnametxt.Size = new System.Drawing.Size(211, 22);
@@ -144,7 +142,7 @@ namespace AfroNFTs
             // LNametxt
             // 
             this.LNametxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
-            this.LNametxt.Location = new System.Drawing.Point(259, 233);
+            this.LNametxt.Location = new System.Drawing.Point(247, 149);
             this.LNametxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LNametxt.Name = "LNametxt";
             this.LNametxt.Size = new System.Drawing.Size(211, 22);
@@ -153,7 +151,7 @@ namespace AfroNFTs
             // Emailtxt
             // 
             this.Emailtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
-            this.Emailtxt.Location = new System.Drawing.Point(259, 265);
+            this.Emailtxt.Location = new System.Drawing.Point(247, 211);
             this.Emailtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Emailtxt.Name = "Emailtxt";
             this.Emailtxt.Size = new System.Drawing.Size(211, 22);
@@ -162,18 +160,20 @@ namespace AfroNFTs
             // Pswordtxt
             // 
             this.Pswordtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
-            this.Pswordtxt.Location = new System.Drawing.Point(259, 297);
+            this.Pswordtxt.Location = new System.Drawing.Point(247, 269);
             this.Pswordtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Pswordtxt.Name = "Pswordtxt";
+            this.Pswordtxt.PasswordChar = '*';
             this.Pswordtxt.Size = new System.Drawing.Size(211, 22);
             this.Pswordtxt.TabIndex = 9;
             // 
             // ConfirmPswordtxt
             // 
             this.ConfirmPswordtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
-            this.ConfirmPswordtxt.Location = new System.Drawing.Point(259, 330);
+            this.ConfirmPswordtxt.Location = new System.Drawing.Point(248, 332);
             this.ConfirmPswordtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ConfirmPswordtxt.Name = "ConfirmPswordtxt";
+            this.ConfirmPswordtxt.PasswordChar = '*';
             this.ConfirmPswordtxt.Size = new System.Drawing.Size(211, 22);
             this.ConfirmPswordtxt.TabIndex = 10;
             // 
@@ -185,7 +185,7 @@ namespace AfroNFTs
             this.Clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Clearbtn.Font = new System.Drawing.Font("Modern No. 20", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Clearbtn.ForeColor = System.Drawing.Color.Snow;
-            this.Clearbtn.Location = new System.Drawing.Point(390, 505);
+            this.Clearbtn.Location = new System.Drawing.Point(398, 550);
             this.Clearbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Clearbtn.Name = "Clearbtn";
             this.Clearbtn.Size = new System.Drawing.Size(168, 46);
@@ -193,72 +193,23 @@ namespace AfroNFTs
             this.Clearbtn.Text = "Clear";
             this.Clearbtn.UseVisualStyleBackColor = false;
             // 
-            // radioBtnAdmin
-            // 
-            this.radioBtnAdmin.AutoSize = true;
-            this.radioBtnAdmin.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtnAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.radioBtnAdmin.Location = new System.Drawing.Point(317, 559);
-            this.radioBtnAdmin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.radioBtnAdmin.Name = "radioBtnAdmin";
-            this.radioBtnAdmin.Size = new System.Drawing.Size(108, 31);
-            this.radioBtnAdmin.TabIndex = 27;
-            this.radioBtnAdmin.TabStop = true;
-            this.radioBtnAdmin.Text = "ADMIN";
-            this.radioBtnAdmin.UseVisualStyleBackColor = true;
-            // 
-            // radioBtnUser
-            // 
-            this.radioBtnUser.AutoSize = true;
-            this.radioBtnUser.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.radioBtnUser.Location = new System.Drawing.Point(156, 559);
-            this.radioBtnUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.radioBtnUser.Name = "radioBtnUser";
-            this.radioBtnUser.Size = new System.Drawing.Size(84, 31);
-            this.radioBtnUser.TabIndex = 26;
-            this.radioBtnUser.TabStop = true;
-            this.radioBtnUser.Text = "USER";
-            this.radioBtnUser.UseVisualStyleBackColor = true;
-            // 
             // groupBox1
             // 
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.groupBox1.Controls.Add(this.termsCheckBox);
             this.groupBox1.Controls.Add(this.adminCheckBox);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(38, 372);
+            this.groupBox1.Location = new System.Drawing.Point(36, 372);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(554, 113);
+            this.groupBox1.Size = new System.Drawing.Size(556, 113);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             // 
             // errorProviderSignUP
             // 
             this.errorProviderSignUP.ContainerControl = this;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
-            this.textBox1.Location = new System.Drawing.Point(259, 171);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(211, 22);
-            this.textBox1.TabIndex = 30;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.label2.Location = new System.Drawing.Point(33, 164);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 29);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "Frist name :";
             // 
             // adminCheckBox
             // 
@@ -280,16 +231,40 @@ namespace AfroNFTs
             this.termsCheckBox.Text = "I accepts the terms and conditions";
             this.termsCheckBox.UseVisualStyleBackColor = true;
             // 
+            // showConfirm
+            // 
+            this.showConfirm.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.showConfirm.IconColor = System.Drawing.Color.Black;
+            this.showConfirm.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.showConfirm.Location = new System.Drawing.Point(491, 331);
+            this.showConfirm.Name = "showConfirm";
+            this.showConfirm.Size = new System.Drawing.Size(75, 23);
+            this.showConfirm.TabIndex = 29;
+            this.showConfirm.Text = "Show";
+            this.showConfirm.UseVisualStyleBackColor = true;
+            this.showConfirm.Click += new System.EventHandler(this.showConfirm_Click);
+            // 
+            // showPassword
+            // 
+            this.showPassword.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.showPassword.IconColor = System.Drawing.Color.Black;
+            this.showPassword.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.showPassword.Location = new System.Drawing.Point(491, 269);
+            this.showPassword.Name = "showPassword";
+            this.showPassword.Size = new System.Drawing.Size(75, 23);
+            this.showPassword.TabIndex = 30;
+            this.showPassword.Text = "Show";
+            this.showPassword.UseVisualStyleBackColor = true;
+            this.showPassword.Click += new System.EventHandler(this.showPassword_Click);
+            // 
             // SiginUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(4)))), ((int)(((byte)(47)))));
             this.ClientSize = new System.Drawing.Size(605, 647);
-            this.Controls.Add(this.radioBtnUser);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.radioBtnAdmin);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.showPassword);
+            this.Controls.Add(this.showConfirm);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Clearbtn);
             this.Controls.Add(this.ConfirmPswordtxt);
@@ -329,14 +304,12 @@ namespace AfroNFTs
         private System.Windows.Forms.TextBox Pswordtxt;
         private System.Windows.Forms.TextBox ConfirmPswordtxt;
         private System.Windows.Forms.Button Clearbtn;
-        private System.Windows.Forms.RadioButton radioBtnAdmin;
-        private System.Windows.Forms.RadioButton radioBtnUser;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ErrorProvider errorProviderSignUP;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox adminCheckBox;
         private System.Windows.Forms.CheckBox termsCheckBox;
+        private FontAwesome.Sharp.IconButton showPassword;
+        private FontAwesome.Sharp.IconButton showConfirm;
     }
 }
 

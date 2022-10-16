@@ -41,7 +41,7 @@ namespace AfroNFTs.Services
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Error" + ex.Message);
+                AppEventUtils.ShowInfoMessage("", "Sorry This email is taken");
                 return false;
             }
         }
@@ -75,7 +75,7 @@ namespace AfroNFTs.Services
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error" + ex.Message);
+                 AppEventUtils.ShowInfoMessage("", "Sorry This is taken");
                 return false;
             }
         }

@@ -20,10 +20,12 @@ namespace AfroNFTs
     public partial class SiginUp : Form
     {
         
+
+        
         public SiginUp()
         {
             InitializeComponent();
-          
+            
         }
 
         public bool hasError()
@@ -72,6 +74,12 @@ namespace AfroNFTs
         }
         private void Siginupbtn_Click(object sender, EventArgs e)
         {
+            if (!termsCheckBox.Checked)
+            {
+                AppEventUtils.ShowInfoMessage(this, "Please Accept terms to continue");
+                errorProviderSignUP.SetError(termsCheckBox, "Check this!");
+                return;
+            }
             errorProviderSignUP.Clear();
            // MessageBox.Show("Hello");
            // AppEventUtils.ShowInfoMessage(this, "This is a test");
@@ -98,10 +106,10 @@ namespace AfroNFTs
                 {
                     isAdmin = false;
                 }
-
+                bool isAllowed = false;
                 if (isAdmin)
                 {
-                    UserService.registerAdminUser(
+                    isAllowed = UserService.registerAdminUser(
                         Fnametxt.Text,
                         LNametxt.Text,
                         Emailtxt.Text,
@@ -113,7 +121,7 @@ namespace AfroNFTs
                 }
                 else
                 {
-                    UserService.registerNormalUser(
+                    isAllowed= UserService.registerNormalUser(
                         Fnametxt.Text,
                         LNametxt.Text,
                         Emailtxt.Text,
@@ -123,9 +131,29 @@ namespace AfroNFTs
                     int ID = serviceComtext.normalUserTB.Count();
                     mainPage.userID = ID;
                 }
-                Program.main.popChar.IconChar = IconChar.A;
-                Program.main.GoToDashbord(isAdmin);
+                if (isAllowed)
+                {
+                    //Check if the user is allowed after signing up
+                    Program.main.popChar.IconChar = IconChar.A;
+                    Program.main.GoToDashbord(isAdmin);
+                }
             }
+        }
+
+        private void showPassword_Click(object sender, EventArgs e)
+        {
+            if(Pswordtxt.PasswordChar == '*')
+            {
+                Pswordtxt.PasswordChar = '\0';
+            }
+            else Pswordtxt.PasswordChar= '*';
+        }
+
+        private void showConfirm_Click(object sender, EventArgs e)
+        {
+            if (ConfirmPswordtxt.PasswordChar == '*')
+                ConfirmPswordtxt.PasswordChar = '\0';
+            else ConfirmPswordtxt.PasswordChar = '*';
         }
     }
 }

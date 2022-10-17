@@ -14,6 +14,11 @@ namespace AfroNFTs.Models
        public DbSet<Admin> adminTB { get; set; }
        public DbSet<Page> pageTB { get; set; }
        public DbSet<NormalUser> normalUserTB { get; set; }
-
+       
+        protected override void OnModelCreating(DbModelBuilder builder)
+        {
+            builder.Entity<Admin>().HasIndex(u => u.email).IsUnique();
+            builder.Entity<NormalUser>().HasIndex(u => u.email).IsUnique();
+        }
     }
 }

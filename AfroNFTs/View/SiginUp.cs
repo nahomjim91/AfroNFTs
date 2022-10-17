@@ -14,20 +14,28 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Windows.Media.Animation;
 
 using AfroNFTs.Services;
-
+using AfroNFTs.Utils;
 namespace AfroNFTs
 {
     public partial class SiginUp : Form
     {
 
+        
+
+        
+
         public SiginUp()
         {
             InitializeComponent();
+            
         }
 
         public bool hasError()
         {
-            Regex emailtxtReg = new Regex(@"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
+
+            Regex strongPassword = new Regex(@"^(?=(.*[a-z]){1,})(?=(.*[A-Z]){1,})(?=(.*[0-9]){1,})(?=(.*[!@#$%^&*()\-__+.]){1,}).{8,}$");
+            Regex emailtxtReg = new Regex( @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
+
             bool hasError = true;
             if (string.IsNullOrEmpty(Emailtxt.Text))
             {
@@ -54,7 +62,7 @@ namespace AfroNFTs
                 errorProviderSignUP.SetError(ConfirmPswordtxt, "Required");
                 hasError = false;
             }
-            if (emailtxtReg.IsMatch(Emailtxt.Text))
+            if (!emailtxtReg.IsMatch(Emailtxt.Text))
             {
                 MessageBox.Show("sorry!! sir. your email is not valid");
                 errorProviderSignUP.SetError(Emailtxt, "Required");
@@ -67,17 +75,29 @@ namespace AfroNFTs
                 errorProviderSignUP.SetError(ConfirmPswordtxt, "Required");
                 hasError = false;
             }
+            if (!strongPassword.IsMatch(Pswordtxt.Text))
+            {
+                AppEventUtils.ShowInfoMessage(this, "Password must contain an uppercase, a lowercase and special characters while being at least 8 chars long");
+                errorProviderSignUP.SetError(Pswordtxt, "Password must contain an uppercase, a lowercase and special characters while being at least 8 chars long");
 
 
-
-
-
-            return hasError;
+                hasError = false;
+            }
+                return hasError;
         }
         private void Siginupbtn_Click(object sender, EventArgs e)
         {
+            if (!termsCheckBox.Checked)
+            {
+                AppEventUtils.ShowInfoMessage(this, "Please Accept terms to continue");
+                errorProviderSignUP.SetError(termsCheckBox, "Check this!");
+                return;
+            }
             errorProviderSignUP.Clear();
-            if (!hasError())
+           // MessageBox.Show("Hello");
+           // AppEventUtils.ShowInfoMessage(this, "This is a test");
+            if (!hasError() )
+
             {
 
             }
@@ -87,55 +107,100 @@ namespace AfroNFTs
                 DbService serviceComtext = new DbService();
                 NormalUser N_user = new NormalUser();
                 Admin A_user = new Admin();
-                bool b = false;
-                RadioButton checed = new RadioButton();
 
-                checed = groupBox1.Controls.OfType<RadioButton>().
-                                         FirstOrDefault(r => { return r.Checked == true; });
-                if (checed == null)
+                bool isAdmin =  false;
+               
+
+                
+                //This checks if the user is an admin
+                if (adminCheckBox.Checked)
                 {
-                    checed = new RadioButton();
-                    checed.Text = "USER";
-                }
-                // b = checed.Text == "ADMIN" ? true : false;
-                var result = MessageBox.Show("Are you Admin?", "yes or no", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
-                {
-                    b = true;
+                    isAdmin = true;
                 }
                 else
                 {
-                    b = false;
+                    isAdmin = false;
                 }
-
-
-
-                if (b)
+                bool isAllowed = false;
+                if (isAdmin)
                 {
-                    UserService.registerAdminUser(
+                    isAllowed = UserService.registerAdminUser(
+
+
                         Fnametxt.Text,
                         LNametxt.Text,
                         Emailtxt.Text,
                         Pswordtxt.Text
                      );
-                    int ID = serviceComtext.adminTB.Count();
-                    mainPage.userID = ID;
+
+                    //   int ID = serviceComtext.adminTB.Count();
+                    // mainPage.userID = ID;
+                    try
+                    {
+                        using (var ctx = new DbService())
+                        {
+                            var user = ctx.adminTB.Single(normalUser => normalUser.email == Emailtxt.Text.Trim());
+                            mainPage.userID = user.Id;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        AppEventUtils.ShowInfoMessage(this, ex.Message);
+                        throw new NFTAppException("Error #1");
+                    }
+
                 }
                 else
                 {
-                    UserService.registerNormalUser(
+                    isAllowed= UserService.registerNormalUser(
+
                         Fnametxt.Text,
                         LNametxt.Text,
                         Emailtxt.Text,
                         Pswordtxt.Text
                     );
 
-                    int ID = serviceComtext.normalUserTB.Count();
-                    mainPage.userID = ID;
+
+                    try
+                    {
+                        using (var ctx = new DbService())
+                        {
+                            var user = ctx.normalUserTB.Single(normalUser =>  normalUser.email == Emailtxt.Text.Trim());
+                            mainPage.userID = user.Id;
+                        }
+                    }
+                    catch(Exception ex)
+                    {
+                        AppEventUtils.ShowInfoMessage(this, ex.Message);
+                        throw new NFTAppException("Error #2");
+                    }
+                    //int ID = serviceComtext.normalUserTB.Count();
+                    //mainPage.userID = ID;
                 }
-                Program.main.popChar.IconChar = IconChar.A;
-                Program.main.GoToDashbord(b);
+                if (isAllowed)
+                {
+                    //Check if the user is allowed after signing up
+                    Program.main.popChar.IconChar = IconChar.A;
+                    Program.main.GoToDashbord(isAdmin);
+
+                }
             }
+        }
+
+        private void showPassword_Click(object sender, EventArgs e)
+        {
+            if(Pswordtxt.PasswordChar == '*')
+            {
+                Pswordtxt.PasswordChar = '\0';
+            }
+            else Pswordtxt.PasswordChar= '*';
+        }
+
+        private void showConfirm_Click(object sender, EventArgs e)
+        {
+            if (ConfirmPswordtxt.PasswordChar == '*')
+                ConfirmPswordtxt.PasswordChar = '\0';
+            else ConfirmPswordtxt.PasswordChar = '*';
         }
     }
 }

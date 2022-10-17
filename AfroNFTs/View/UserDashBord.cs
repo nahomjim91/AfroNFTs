@@ -27,6 +27,7 @@ namespace AfroNFTs
         public UserDashBord(bool pageType)
         {
             MessageBox.Show(pageType.ToString());
+            MessageBox.Show(mainPage.userID.ToString());
             InitializeComponent();
             this.pageType = pageType;
 

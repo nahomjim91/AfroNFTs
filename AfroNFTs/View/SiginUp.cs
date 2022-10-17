@@ -19,9 +19,11 @@ namespace AfroNFTs
 {
     public partial class SiginUp : Form
     {
+
         
 
         
+
         public SiginUp()
         {
             InitializeComponent();
@@ -30,8 +32,10 @@ namespace AfroNFTs
 
         public bool hasError()
         {
+
             Regex strongPassword = new Regex(@"^(?=(.*[a-z]){1,})(?=(.*[A-Z]){1,})(?=(.*[0-9]){1,})(?=(.*[!@#$%^&*()\-__+.]){1,}).{8,}$");
             Regex emailtxtReg = new Regex( @"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$");
+
             bool hasError = true;
             if (string.IsNullOrEmpty(Emailtxt.Text))
             {
@@ -76,6 +80,7 @@ namespace AfroNFTs
                 AppEventUtils.ShowInfoMessage(this, "Password must contain an uppercase, a lowercase and special characters while being at least 8 chars long");
                 errorProviderSignUP.SetError(Pswordtxt, "Password must contain an uppercase, a lowercase and special characters while being at least 8 chars long");
 
+
                 hasError = false;
             }
                 return hasError;
@@ -92,8 +97,9 @@ namespace AfroNFTs
            // MessageBox.Show("Hello");
            // AppEventUtils.ShowInfoMessage(this, "This is a test");
             if (!hasError() )
+
             {
-                
+
             }
             else
             {
@@ -101,6 +107,7 @@ namespace AfroNFTs
                 DbService serviceComtext = new DbService();
                 NormalUser N_user = new NormalUser();
                 Admin A_user = new Admin();
+
                 bool isAdmin =  false;
                
 
@@ -118,11 +125,14 @@ namespace AfroNFTs
                 if (isAdmin)
                 {
                     isAllowed = UserService.registerAdminUser(
+
+
                         Fnametxt.Text,
                         LNametxt.Text,
                         Emailtxt.Text,
                         Pswordtxt.Text
                      );
+
                     //   int ID = serviceComtext.adminTB.Count();
                     // mainPage.userID = ID;
                     try
@@ -143,11 +153,13 @@ namespace AfroNFTs
                 else
                 {
                     isAllowed= UserService.registerNormalUser(
+
                         Fnametxt.Text,
                         LNametxt.Text,
                         Emailtxt.Text,
                         Pswordtxt.Text
                     );
+
 
                     try
                     {
@@ -170,6 +182,7 @@ namespace AfroNFTs
                     //Check if the user is allowed after signing up
                     Program.main.popChar.IconChar = IconChar.A;
                     Program.main.GoToDashbord(isAdmin);
+
                 }
             }
         }

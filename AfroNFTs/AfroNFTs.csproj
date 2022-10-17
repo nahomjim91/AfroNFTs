@@ -80,8 +80,12 @@
     <Compile Include="Models\NormalUser.cs" />
     <Compile Include="Models\Page.cs" />
     <Compile Include="Models\User.cs" />
+
     <Compile Include="NFTAppException.cs" />
     <Compile Include="Services\EmailService.cs" />
+
+   
+
     <Compile Include="Utils.cs" />
     <Compile Include="View\SiginUp.cs">
       <SubType>Form</SubType>

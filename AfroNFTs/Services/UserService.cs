@@ -18,7 +18,8 @@ namespace AfroNFTs.Services
                string lastName,
                string email,
                string password
-            ) {
+            )
+        {
             try
             {
                 using (var dbService = new DbService())
@@ -27,8 +28,10 @@ namespace AfroNFTs.Services
                     {
                         firstName = firstName,
                         lastName = lastName,
+
                         email= email,
                         password =PasswordUtils.HashPassword (password),
+
                         balance = 100
                     };
                     dbService.normalUserTB.Add(normalUser);
@@ -39,7 +42,41 @@ namespace AfroNFTs.Services
                 }
                 return true;
             }
-            catch(Exception ex)
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+                return false;
+            }
+        }
+        public static bool registerAdminUser(
+              string firstName,
+              string lastName,
+              string email,
+              string password
+           )
+        {
+            try
+            {
+                using (var dbService = new DbService())
+                {
+                    var admin = new Admin()
+                    {
+                        firstName = firstName,
+                        lastName = lastName,
+                        email = email,
+                        password = PasswordUtils.HashPassword(password),
+                        balance = 100,
+
+                    };
+                    dbService.adminTB.Add(admin);
+
+                    dbService.SaveChanges();
+
+
+                }
+                return true;
+            }
+            catch (Exception ex)
             {
                 AppEventUtils.ShowInfoMessage("", "Sorry This email is taken");
                 return false;

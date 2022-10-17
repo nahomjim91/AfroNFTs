@@ -44,9 +44,9 @@ namespace AfroNFTs
             this.ConfirmPswordtxt = new System.Windows.Forms.TextBox();
             this.Clearbtn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.errorProviderSignUP = new System.Windows.Forms.ErrorProvider(this.components);
-            this.adminCheckBox = new System.Windows.Forms.CheckBox();
             this.termsCheckBox = new System.Windows.Forms.CheckBox();
+            this.adminCheckBox = new System.Windows.Forms.CheckBox();
+            this.errorProviderSignUP = new System.Windows.Forms.ErrorProvider(this.components);
             this.showConfirm = new FontAwesome.Sharp.IconButton();
             this.showPassword = new FontAwesome.Sharp.IconButton();
             this.groupBox1.SuspendLayout();
@@ -58,7 +58,7 @@ namespace AfroNFTs
             this.FirstNamelab.AutoSize = true;
             this.FirstNamelab.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstNamelab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.FirstNamelab.Location = new System.Drawing.Point(33, 68);
+            this.FirstNamelab.Location = new System.Drawing.Point(33, 113);
             this.FirstNamelab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.FirstNamelab.Name = "FirstNamelab";
             this.FirstNamelab.Size = new System.Drawing.Size(131, 29);
@@ -122,7 +122,7 @@ namespace AfroNFTs
             this.Siginupbtn.Font = new System.Drawing.Font("Modern No. 20", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Siginupbtn.ForeColor = System.Drawing.Color.Snow;
             this.Siginupbtn.Location = new System.Drawing.Point(36, 550);
-            this.Siginupbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Siginupbtn.Margin = new System.Windows.Forms.Padding(4);
             this.Siginupbtn.Name = "Siginupbtn";
             this.Siginupbtn.Size = new System.Drawing.Size(168, 46);
             this.Siginupbtn.TabIndex = 5;
@@ -133,8 +133,8 @@ namespace AfroNFTs
             // Fnametxt
             // 
             this.Fnametxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
-            this.Fnametxt.Location = new System.Drawing.Point(247, 75);
-            this.Fnametxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Fnametxt.Location = new System.Drawing.Point(247, 120);
+            this.Fnametxt.Margin = new System.Windows.Forms.Padding(4);
             this.Fnametxt.Name = "Fnametxt";
             this.Fnametxt.Size = new System.Drawing.Size(211, 22);
             this.Fnametxt.TabIndex = 6;
@@ -143,7 +143,7 @@ namespace AfroNFTs
             // 
             this.LNametxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
             this.LNametxt.Location = new System.Drawing.Point(247, 149);
-            this.LNametxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LNametxt.Margin = new System.Windows.Forms.Padding(4);
             this.LNametxt.Name = "LNametxt";
             this.LNametxt.Size = new System.Drawing.Size(211, 22);
             this.LNametxt.TabIndex = 7;
@@ -152,7 +152,7 @@ namespace AfroNFTs
             // 
             this.Emailtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
             this.Emailtxt.Location = new System.Drawing.Point(247, 211);
-            this.Emailtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Emailtxt.Margin = new System.Windows.Forms.Padding(4);
             this.Emailtxt.Name = "Emailtxt";
             this.Emailtxt.Size = new System.Drawing.Size(211, 22);
             this.Emailtxt.TabIndex = 8;
@@ -161,7 +161,7 @@ namespace AfroNFTs
             // 
             this.Pswordtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
             this.Pswordtxt.Location = new System.Drawing.Point(247, 269);
-            this.Pswordtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Pswordtxt.Margin = new System.Windows.Forms.Padding(4);
             this.Pswordtxt.Name = "Pswordtxt";
             this.Pswordtxt.PasswordChar = '*';
             this.Pswordtxt.Size = new System.Drawing.Size(211, 22);
@@ -171,7 +171,7 @@ namespace AfroNFTs
             // 
             this.ConfirmPswordtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
             this.ConfirmPswordtxt.Location = new System.Drawing.Point(248, 332);
-            this.ConfirmPswordtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ConfirmPswordtxt.Margin = new System.Windows.Forms.Padding(4);
             this.ConfirmPswordtxt.Name = "ConfirmPswordtxt";
             this.ConfirmPswordtxt.PasswordChar = '*';
             this.ConfirmPswordtxt.Size = new System.Drawing.Size(211, 22);
@@ -186,7 +186,7 @@ namespace AfroNFTs
             this.Clearbtn.Font = new System.Drawing.Font("Modern No. 20", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Clearbtn.ForeColor = System.Drawing.Color.Snow;
             this.Clearbtn.Location = new System.Drawing.Point(398, 550);
-            this.Clearbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Clearbtn.Margin = new System.Windows.Forms.Padding(4);
             this.Clearbtn.Name = "Clearbtn";
             this.Clearbtn.Size = new System.Drawing.Size(168, 46);
             this.Clearbtn.TabIndex = 11;
@@ -200,16 +200,22 @@ namespace AfroNFTs
             this.groupBox1.Controls.Add(this.adminCheckBox);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Location = new System.Drawing.Point(36, 372);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(556, 113);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             // 
-            // errorProviderSignUP
+            // termsCheckBox
             // 
-            this.errorProviderSignUP.ContainerControl = this;
+            this.termsCheckBox.AutoSize = true;
+            this.termsCheckBox.Location = new System.Drawing.Point(15, 87);
+            this.termsCheckBox.Name = "termsCheckBox";
+            this.termsCheckBox.Size = new System.Drawing.Size(230, 20);
+            this.termsCheckBox.TabIndex = 1;
+            this.termsCheckBox.Text = "I accepts the terms and conditions";
+            this.termsCheckBox.UseVisualStyleBackColor = true;
             // 
             // adminCheckBox
             // 
@@ -221,15 +227,9 @@ namespace AfroNFTs
             this.adminCheckBox.Text = "I want to be an admin";
             this.adminCheckBox.UseVisualStyleBackColor = true;
             // 
-            // termsCheckBox
+            // errorProviderSignUP
             // 
-            this.termsCheckBox.AutoSize = true;
-            this.termsCheckBox.Location = new System.Drawing.Point(15, 87);
-            this.termsCheckBox.Name = "termsCheckBox";
-            this.termsCheckBox.Size = new System.Drawing.Size(230, 20);
-            this.termsCheckBox.TabIndex = 1;
-            this.termsCheckBox.Text = "I accepts the terms and conditions";
-            this.termsCheckBox.UseVisualStyleBackColor = true;
+            this.errorProviderSignUP.ContainerControl = this;
             // 
             // showConfirm
             // 
@@ -279,7 +279,7 @@ namespace AfroNFTs
             this.Controls.Add(this.LastNamelab);
             this.Controls.Add(this.FirstNamelab);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SiginUp";
             this.Text = "AfroNFTs";
             this.groupBox1.ResumeLayout(false);

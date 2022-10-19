@@ -70,5 +70,6 @@ namespace AfroNFTs.View
                 MessageBox.Show(ex.Message);
             }
         }
+
     }
 }

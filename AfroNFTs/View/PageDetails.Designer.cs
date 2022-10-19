@@ -35,9 +35,10 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, -1);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 3);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(690, 449);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(516, 361);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // DeleteBtn
@@ -48,10 +49,9 @@
             this.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteBtn.Font = new System.Drawing.Font("Modern No. 20", 10F);
             this.DeleteBtn.ForeColor = System.Drawing.Color.Snow;
-            this.DeleteBtn.Location = new System.Drawing.Point(697, 77);
-            this.DeleteBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.DeleteBtn.Location = new System.Drawing.Point(523, 63);
             this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(113, 39);
+            this.DeleteBtn.Size = new System.Drawing.Size(85, 32);
             this.DeleteBtn.TabIndex = 40;
             this.DeleteBtn.Text = "Delete Page";
             this.DeleteBtn.UseVisualStyleBackColor = false;
@@ -64,10 +64,9 @@
             this.AddNFTsbtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddNFTsbtn1.Font = new System.Drawing.Font("Modern No. 20", 10F);
             this.AddNFTsbtn1.ForeColor = System.Drawing.Color.Snow;
-            this.AddNFTsbtn1.Location = new System.Drawing.Point(700, 206);
-            this.AddNFTsbtn1.Margin = new System.Windows.Forms.Padding(4);
+            this.AddNFTsbtn1.Location = new System.Drawing.Point(525, 167);
             this.AddNFTsbtn1.Name = "AddNFTsbtn1";
-            this.AddNFTsbtn1.Size = new System.Drawing.Size(113, 39);
+            this.AddNFTsbtn1.Size = new System.Drawing.Size(85, 32);
             this.AddNFTsbtn1.TabIndex = 41;
             this.AddNFTsbtn1.Text = "Add NFTs";
             this.AddNFTsbtn1.UseVisualStyleBackColor = false;
@@ -75,12 +74,14 @@
             // 
             // PageDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(826, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(10)))), ((int)(((byte)(66)))));
+            this.ClientSize = new System.Drawing.Size(620, 366);
             this.Controls.Add(this.AddNFTsbtn1);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PageDetails";
             this.Text = "PageDetails";
             this.ResumeLayout(false);

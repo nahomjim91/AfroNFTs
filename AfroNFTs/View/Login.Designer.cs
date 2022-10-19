@@ -59,18 +59,18 @@
             // Pswordtxt
             // 
             this.Pswordtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
-            this.Pswordtxt.Location = new System.Drawing.Point(177, 219);
+            this.Pswordtxt.Location = new System.Drawing.Point(170, 245);
             this.Pswordtxt.Name = "Pswordtxt";
             this.Pswordtxt.PasswordChar = '*';
-            this.Pswordtxt.Size = new System.Drawing.Size(159, 22);
+            this.Pswordtxt.Size = new System.Drawing.Size(159, 20);
             this.Pswordtxt.TabIndex = 19;
             // 
             // Emailtxt
             // 
             this.Emailtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
-            this.Emailtxt.Location = new System.Drawing.Point(177, 182);
+            this.Emailtxt.Location = new System.Drawing.Point(170, 208);
             this.Emailtxt.Name = "Emailtxt";
-            this.Emailtxt.Size = new System.Drawing.Size(159, 22);
+            this.Emailtxt.Size = new System.Drawing.Size(159, 20);
             this.Emailtxt.TabIndex = 18;
             this.Emailtxt.TextChanged += new System.EventHandler(this.Emailtxt_TextChanged);
             // 
@@ -94,9 +94,9 @@
             this.Pswordlab.AutoSize = true;
             this.Pswordlab.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pswordlab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.Pswordlab.Location = new System.Drawing.Point(28, 211);
+            this.Pswordlab.Location = new System.Drawing.Point(21, 237);
             this.Pswordlab.Name = "Pswordlab";
-            this.Pswordlab.Size = new System.Drawing.Size(120, 29);
+            this.Pswordlab.Size = new System.Drawing.Size(94, 24);
             this.Pswordlab.TabIndex = 15;
             this.Pswordlab.Text = "Password :";
             // 
@@ -105,9 +105,9 @@
             this.Emaillab.AutoSize = true;
             this.Emaillab.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Emaillab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.Emaillab.Location = new System.Drawing.Point(57, 182);
+            this.Emaillab.Location = new System.Drawing.Point(50, 208);
             this.Emaillab.Name = "Emaillab";
-            this.Emaillab.Size = new System.Drawing.Size(81, 29);
+            this.Emaillab.Size = new System.Drawing.Size(67, 24);
             this.Emaillab.TabIndex = 14;
             this.Emaillab.Text = "Email :";
             this.Emaillab.Click += new System.EventHandler(this.Emaillab_Click);
@@ -120,9 +120,9 @@
             // 
             this.isAdminCheckBox.AutoSize = true;
             this.isAdminCheckBox.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.isAdminCheckBox.Location = new System.Drawing.Point(35, 316);
+            this.isAdminCheckBox.Location = new System.Drawing.Point(28, 342);
             this.isAdminCheckBox.Name = "isAdminCheckBox";
-            this.isAdminCheckBox.Size = new System.Drawing.Size(113, 20);
+            this.isAdminCheckBox.Size = new System.Drawing.Size(93, 17);
             this.isAdminCheckBox.TabIndex = 28;
             this.isAdminCheckBox.Text = "I am an Admin";
             this.isAdminCheckBox.UseVisualStyleBackColor = true;
@@ -133,7 +133,7 @@
             this.forgottenPasswordButton.IconChar = FontAwesome.Sharp.IconChar.None;
             this.forgottenPasswordButton.IconColor = System.Drawing.Color.LightSeaGreen;
             this.forgottenPasswordButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.forgottenPasswordButton.Location = new System.Drawing.Point(177, 257);
+            this.forgottenPasswordButton.Location = new System.Drawing.Point(170, 283);
             this.forgottenPasswordButton.Name = "forgottenPasswordButton";
             this.forgottenPasswordButton.Size = new System.Drawing.Size(159, 35);
             this.forgottenPasswordButton.TabIndex = 29;
@@ -143,14 +143,15 @@
             // 
             // showPasswordButton
             // 
-            this.showPasswordButton.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.showPasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showPasswordButton.IconChar = FontAwesome.Sharp.IconChar.Eye;
             this.showPasswordButton.IconColor = System.Drawing.Color.Black;
-            this.showPasswordButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.showPasswordButton.Location = new System.Drawing.Point(355, 219);
+            this.showPasswordButton.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.showPasswordButton.IconSize = 30;
+            this.showPasswordButton.Location = new System.Drawing.Point(335, 245);
             this.showPasswordButton.Name = "showPasswordButton";
-            this.showPasswordButton.Size = new System.Drawing.Size(75, 23);
+            this.showPasswordButton.Size = new System.Drawing.Size(32, 20);
             this.showPasswordButton.TabIndex = 30;
-            this.showPasswordButton.Text = "Show";
             this.showPasswordButton.UseVisualStyleBackColor = true;
             this.showPasswordButton.Click += new System.EventHandler(this.showPasswordButton_Click);
             // 

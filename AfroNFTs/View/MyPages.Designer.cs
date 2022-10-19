@@ -33,17 +33,20 @@
             // 
             // FL
             // 
-            this.FL.Location = new System.Drawing.Point(12, 12);
+            this.FL.Location = new System.Drawing.Point(11, 11);
+            this.FL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.FL.Name = "FL";
-            this.FL.Size = new System.Drawing.Size(761, 426);
+            this.FL.Size = new System.Drawing.Size(756, 497);
             this.FL.TabIndex = 0;
             // 
             // MyPages
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(10)))), ((int)(((byte)(66)))));
+            this.ClientSize = new System.Drawing.Size(778, 519);
             this.Controls.Add(this.FL);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MyPages";
             this.Text = "MyPages";
             this.ResumeLayout(false);

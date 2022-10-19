@@ -109,6 +109,7 @@ namespace AfroNFTs.View
                 nfts.OwnerID = mainPage.userID;
                 nfts.userType = "Admin";
                 nfts.save();
+                Program.main.dashbord_pan.Controls.Add(new PageDetails());
             }
         }
     }

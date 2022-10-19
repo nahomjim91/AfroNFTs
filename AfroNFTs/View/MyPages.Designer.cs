@@ -33,8 +33,9 @@
             // 
             // FL
             // 
+            this.FL.AutoScroll = true;
             this.FL.Location = new System.Drawing.Point(11, 11);
-            this.FL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FL.Margin = new System.Windows.Forms.Padding(2);
             this.FL.Name = "FL";
             this.FL.Size = new System.Drawing.Size(756, 497);
             this.FL.TabIndex = 0;
@@ -46,7 +47,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(10)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(778, 519);
             this.Controls.Add(this.FL);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MyPages";
             this.Text = "MyPages";
             this.ResumeLayout(false);

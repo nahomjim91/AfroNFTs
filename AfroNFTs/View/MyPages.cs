@@ -44,10 +44,7 @@ namespace AfroNFTs.View
                             var p = new NFTPage();
                             p.NftsPicture = null;
                             p.NFTsName = reader["title"].ToString();
-                            p.Click += (object sender, EventArgs a) =>
-                            {
-                                Program.main.dashbord_pan.Controls.Add(new PageDetails());
-                            };
+                            p.Click += PageDetialClicked;
 
                             FL.Controls.Add(p);
                         }
@@ -70,6 +67,11 @@ namespace AfroNFTs.View
                 MessageBox.Show(ex.Message);
             }
         }
+        public void PageDetialClicked(object sender, EventArgs a) 
+        {
+            MessageBox.Show("hello");
+            //Program.main.dashbord_pan.Controls.Add(new PageDetails());
+        }
 
-    }
+}
 }

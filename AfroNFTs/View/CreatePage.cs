@@ -43,12 +43,16 @@ namespace AfroNFTs.View
                     admin.pages.Add(page);
 
                     ctx.SaveChanges();
+                    
+
                 }
-            }catch(Exception ex)
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                return;
             }
-
+            Program.main.dashbord_pan.Controls.Add(new MyPages());
         }
     }
 }

@@ -151,11 +151,12 @@
             this.submitteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
             this.submitteBtn.CausesValidation = false;
             this.submitteBtn.FlatAppearance.BorderSize = 0;
+            this.submitteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitteBtn.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitteBtn.ForeColor = System.Drawing.Color.Snow;
             this.submitteBtn.Location = new System.Drawing.Point(367, 141);
             this.submitteBtn.Name = "submitteBtn";
-            this.submitteBtn.Size = new System.Drawing.Size(126, 37);
+            this.submitteBtn.Size = new System.Drawing.Size(101, 33);
             this.submitteBtn.TabIndex = 18;
             this.submitteBtn.Text = "Submitte";
             this.submitteBtn.UseVisualStyleBackColor = false;

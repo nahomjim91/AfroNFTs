@@ -53,5 +53,9 @@ namespace AfroNFTs
             MessageBox.Show("clicked");
         }
 
+        private void UserDashBord_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

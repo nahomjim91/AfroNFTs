@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.Menupanel = new System.Windows.Forms.Panel();
+            this.MyPagebtn = new FontAwesome.Sharp.IconButton();
             this.Loginbtn = new FontAwesome.Sharp.IconButton();
             this.Siginupb = new FontAwesome.Sharp.IconButton();
-            this.postbtn = new FontAwesome.Sharp.IconButton();
+            this.Creatpagebtn = new FontAwesome.Sharp.IconButton();
             this.aboutbtn = new FontAwesome.Sharp.IconButton();
             this.accountBtn = new FontAwesome.Sharp.IconButton();
             this.selltbtn = new FontAwesome.Sharp.IconButton();
@@ -55,9 +56,10 @@
             // Menupanel
             // 
             this.Menupanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(11)))), ((int)(((byte)(45)))));
+            this.Menupanel.Controls.Add(this.MyPagebtn);
             this.Menupanel.Controls.Add(this.Loginbtn);
             this.Menupanel.Controls.Add(this.Siginupb);
-            this.Menupanel.Controls.Add(this.postbtn);
+            this.Menupanel.Controls.Add(this.Creatpagebtn);
             this.Menupanel.Controls.Add(this.aboutbtn);
             this.Menupanel.Controls.Add(this.accountBtn);
             this.Menupanel.Controls.Add(this.selltbtn);
@@ -66,9 +68,34 @@
             this.Menupanel.Controls.Add(this.Logpanel);
             this.Menupanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.Menupanel.Location = new System.Drawing.Point(0, 0);
+            this.Menupanel.Margin = new System.Windows.Forms.Padding(4);
             this.Menupanel.Name = "Menupanel";
-            this.Menupanel.Size = new System.Drawing.Size(151, 577);
+            this.Menupanel.Size = new System.Drawing.Size(201, 700);
             this.Menupanel.TabIndex = 0;
+            // 
+            // MyPagebtn
+            // 
+            this.MyPagebtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.MyPagebtn.FlatAppearance.BorderSize = 0;
+            this.MyPagebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MyPagebtn.Font = new System.Drawing.Font("Rockwell", 12F);
+            this.MyPagebtn.ForeColor = System.Drawing.Color.IndianRed;
+            this.MyPagebtn.IconChar = FontAwesome.Sharp.IconChar.P;
+            this.MyPagebtn.IconColor = System.Drawing.Color.IndianRed;
+            this.MyPagebtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.MyPagebtn.IconSize = 32;
+            this.MyPagebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MyPagebtn.Location = new System.Drawing.Point(0, 449);
+            this.MyPagebtn.Margin = new System.Windows.Forms.Padding(4);
+            this.MyPagebtn.Name = "MyPagebtn";
+            this.MyPagebtn.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
+            this.MyPagebtn.Size = new System.Drawing.Size(201, 53);
+            this.MyPagebtn.TabIndex = 13;
+            this.MyPagebtn.Text = "MyPages";
+            this.MyPagebtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.MyPagebtn.UseVisualStyleBackColor = true;
+            this.MyPagebtn.Visible = false;
+            this.MyPagebtn.Click += new System.EventHandler(this.MyPagebtn_Click);
             // 
             // Loginbtn
             // 
@@ -80,9 +107,10 @@
             this.Loginbtn.IconColor = System.Drawing.Color.Black;
             this.Loginbtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Loginbtn.IconSize = 5;
-            this.Loginbtn.Location = new System.Drawing.Point(81, 504);
+            this.Loginbtn.Location = new System.Drawing.Point(108, 620);
+            this.Loginbtn.Margin = new System.Windows.Forms.Padding(4);
             this.Loginbtn.Name = "Loginbtn";
-            this.Loginbtn.Size = new System.Drawing.Size(67, 29);
+            this.Loginbtn.Size = new System.Drawing.Size(89, 36);
             this.Loginbtn.TabIndex = 12;
             this.Loginbtn.Text = "Log in";
             this.Loginbtn.UseVisualStyleBackColor = false;
@@ -98,36 +126,38 @@
             this.Siginupb.IconColor = System.Drawing.Color.Black;
             this.Siginupb.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Siginupb.IconSize = 5;
-            this.Siginupb.Location = new System.Drawing.Point(0, 504);
+            this.Siginupb.Location = new System.Drawing.Point(0, 620);
+            this.Siginupb.Margin = new System.Windows.Forms.Padding(4);
             this.Siginupb.Name = "Siginupb";
-            this.Siginupb.Size = new System.Drawing.Size(75, 29);
+            this.Siginupb.Size = new System.Drawing.Size(100, 36);
             this.Siginupb.TabIndex = 11;
             this.Siginupb.Text = "Sigin up";
             this.Siginupb.UseVisualStyleBackColor = false;
             this.Siginupb.Click += new System.EventHandler(this.Siginupb_Click);
             // 
-            // postbtn
+            // Creatpagebtn
             // 
-            this.postbtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.postbtn.FlatAppearance.BorderSize = 0;
-            this.postbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.postbtn.Font = new System.Drawing.Font("Rockwell", 12F);
-            this.postbtn.ForeColor = System.Drawing.Color.IndianRed;
-            this.postbtn.IconChar = FontAwesome.Sharp.IconChar.P;
-            this.postbtn.IconColor = System.Drawing.Color.IndianRed;
-            this.postbtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.postbtn.IconSize = 32;
-            this.postbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.postbtn.Location = new System.Drawing.Point(0, 321);
-            this.postbtn.Name = "postbtn";
-            this.postbtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.postbtn.Size = new System.Drawing.Size(151, 43);
-            this.postbtn.TabIndex = 10;
-            this.postbtn.Text = "Post";
-            this.postbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.postbtn.UseVisualStyleBackColor = true;
-            this.postbtn.Visible = false;
-            this.postbtn.Click += new System.EventHandler(this.postbtn_Click_1);
+            this.Creatpagebtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Creatpagebtn.FlatAppearance.BorderSize = 0;
+            this.Creatpagebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Creatpagebtn.Font = new System.Drawing.Font("Rockwell", 12F);
+            this.Creatpagebtn.ForeColor = System.Drawing.Color.IndianRed;
+            this.Creatpagebtn.IconChar = FontAwesome.Sharp.IconChar.P;
+            this.Creatpagebtn.IconColor = System.Drawing.Color.IndianRed;
+            this.Creatpagebtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Creatpagebtn.IconSize = 32;
+            this.Creatpagebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Creatpagebtn.Location = new System.Drawing.Point(0, 396);
+            this.Creatpagebtn.Margin = new System.Windows.Forms.Padding(4);
+            this.Creatpagebtn.Name = "Creatpagebtn";
+            this.Creatpagebtn.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
+            this.Creatpagebtn.Size = new System.Drawing.Size(201, 53);
+            this.Creatpagebtn.TabIndex = 10;
+            this.Creatpagebtn.Text = "CreatPage";
+            this.Creatpagebtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Creatpagebtn.UseVisualStyleBackColor = true;
+            this.Creatpagebtn.Visible = false;
+            this.Creatpagebtn.Click += new System.EventHandler(this.postbtn_Click_1);
             // 
             // aboutbtn
             // 
@@ -141,10 +171,11 @@
             this.aboutbtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.aboutbtn.IconSize = 32;
             this.aboutbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.aboutbtn.Location = new System.Drawing.Point(0, 271);
+            this.aboutbtn.Location = new System.Drawing.Point(0, 334);
+            this.aboutbtn.Margin = new System.Windows.Forms.Padding(4);
             this.aboutbtn.Name = "aboutbtn";
-            this.aboutbtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.aboutbtn.Size = new System.Drawing.Size(151, 50);
+            this.aboutbtn.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
+            this.aboutbtn.Size = new System.Drawing.Size(201, 62);
             this.aboutbtn.TabIndex = 9;
             this.aboutbtn.Text = "About";
             this.aboutbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -164,10 +195,11 @@
             this.accountBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.accountBtn.IconSize = 32;
             this.accountBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.accountBtn.Location = new System.Drawing.Point(0, 221);
+            this.accountBtn.Location = new System.Drawing.Point(0, 272);
+            this.accountBtn.Margin = new System.Windows.Forms.Padding(4);
             this.accountBtn.Name = "accountBtn";
-            this.accountBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.accountBtn.Size = new System.Drawing.Size(151, 50);
+            this.accountBtn.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
+            this.accountBtn.Size = new System.Drawing.Size(201, 62);
             this.accountBtn.TabIndex = 8;
             this.accountBtn.Text = "Account";
             this.accountBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -187,10 +219,11 @@
             this.selltbtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.selltbtn.IconSize = 32;
             this.selltbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.selltbtn.Location = new System.Drawing.Point(0, 173);
+            this.selltbtn.Location = new System.Drawing.Point(0, 213);
+            this.selltbtn.Margin = new System.Windows.Forms.Padding(4);
             this.selltbtn.Name = "selltbtn";
-            this.selltbtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.selltbtn.Size = new System.Drawing.Size(151, 48);
+            this.selltbtn.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
+            this.selltbtn.Size = new System.Drawing.Size(201, 59);
             this.selltbtn.TabIndex = 4;
             this.selltbtn.Text = "Sell";
             this.selltbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -210,10 +243,11 @@
             this.Buybtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Buybtn.IconSize = 32;
             this.Buybtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Buybtn.Location = new System.Drawing.Point(0, 131);
+            this.Buybtn.Location = new System.Drawing.Point(0, 161);
+            this.Buybtn.Margin = new System.Windows.Forms.Padding(4);
             this.Buybtn.Name = "Buybtn";
-            this.Buybtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.Buybtn.Size = new System.Drawing.Size(151, 42);
+            this.Buybtn.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
+            this.Buybtn.Size = new System.Drawing.Size(201, 52);
             this.Buybtn.TabIndex = 3;
             this.Buybtn.Text = "Buy";
             this.Buybtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -233,10 +267,11 @@
             this.Dashboardbtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Dashboardbtn.IconSize = 32;
             this.Dashboardbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Dashboardbtn.Location = new System.Drawing.Point(0, 88);
+            this.Dashboardbtn.Location = new System.Drawing.Point(0, 108);
+            this.Dashboardbtn.Margin = new System.Windows.Forms.Padding(4);
             this.Dashboardbtn.Name = "Dashboardbtn";
-            this.Dashboardbtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.Dashboardbtn.Size = new System.Drawing.Size(151, 43);
+            this.Dashboardbtn.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
+            this.Dashboardbtn.Size = new System.Drawing.Size(201, 53);
             this.Dashboardbtn.TabIndex = 1;
             this.Dashboardbtn.Text = "Dashboard";
             this.Dashboardbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -250,16 +285,18 @@
             this.Logpanel.Controls.Add(this.btnHome);
             this.Logpanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.Logpanel.Location = new System.Drawing.Point(0, 0);
+            this.Logpanel.Margin = new System.Windows.Forms.Padding(4);
             this.Logpanel.Name = "Logpanel";
-            this.Logpanel.Size = new System.Drawing.Size(151, 88);
+            this.Logpanel.Size = new System.Drawing.Size(201, 108);
             this.Logpanel.TabIndex = 0;
             // 
             // btnHome
             // 
             this.btnHome.Image = global::AfroNFTs.Properties.Resources.th__2_;
-            this.btnHome.Location = new System.Drawing.Point(3, 0);
+            this.btnHome.Location = new System.Drawing.Point(4, 0);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(142, 88);
+            this.btnHome.Size = new System.Drawing.Size(189, 108);
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnHome.TabIndex = 0;
             this.btnHome.TabStop = false;
@@ -272,9 +309,10 @@
             this.Headerpan.Controls.Add(this.CurrntPage);
             this.Headerpan.Controls.Add(this.iconPic_current);
             this.Headerpan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Headerpan.Location = new System.Drawing.Point(151, 0);
+            this.Headerpan.Location = new System.Drawing.Point(201, 0);
+            this.Headerpan.Margin = new System.Windows.Forms.Padding(4);
             this.Headerpan.Name = "Headerpan";
-            this.Headerpan.Size = new System.Drawing.Size(779, 48);
+            this.Headerpan.Size = new System.Drawing.Size(1036, 59);
             this.Headerpan.TabIndex = 1;
             this.Headerpan.Paint += new System.Windows.Forms.PaintEventHandler(this.Headerpan_Paint);
             // 
@@ -285,9 +323,11 @@
             this.popChar.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.popChar.IconColor = System.Drawing.Color.IndianRed;
             this.popChar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.popChar.Location = new System.Drawing.Point(492, 16);
+            this.popChar.IconSize = 39;
+            this.popChar.Location = new System.Drawing.Point(656, 20);
+            this.popChar.Margin = new System.Windows.Forms.Padding(4);
             this.popChar.Name = "popChar";
-            this.popChar.Size = new System.Drawing.Size(32, 32);
+            this.popChar.Size = new System.Drawing.Size(43, 39);
             this.popChar.TabIndex = 2;
             this.popChar.TabStop = false;
             this.popChar.Visible = false;
@@ -297,9 +337,10 @@
             this.CurrntPage.AutoSize = true;
             this.CurrntPage.Font = new System.Drawing.Font("Rockwell", 11.25F);
             this.CurrntPage.ForeColor = System.Drawing.Color.IndianRed;
-            this.CurrntPage.Location = new System.Drawing.Point(54, 26);
+            this.CurrntPage.Location = new System.Drawing.Point(72, 32);
+            this.CurrntPage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CurrntPage.Name = "CurrntPage";
-            this.CurrntPage.Size = new System.Drawing.Size(50, 17);
+            this.CurrntPage.Size = new System.Drawing.Size(61, 21);
             this.CurrntPage.TabIndex = 1;
             this.CurrntPage.Text = "Home";
             this.CurrntPage.Visible = false;
@@ -311,9 +352,11 @@
             this.iconPic_current.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconPic_current.IconColor = System.Drawing.Color.IndianRed;
             this.iconPic_current.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPic_current.Location = new System.Drawing.Point(6, 12);
+            this.iconPic_current.IconSize = 39;
+            this.iconPic_current.Location = new System.Drawing.Point(8, 15);
+            this.iconPic_current.Margin = new System.Windows.Forms.Padding(4);
             this.iconPic_current.Name = "iconPic_current";
-            this.iconPic_current.Size = new System.Drawing.Size(32, 32);
+            this.iconPic_current.Size = new System.Drawing.Size(43, 39);
             this.iconPic_current.TabIndex = 0;
             this.iconPic_current.TabStop = false;
             this.iconPic_current.Visible = false;
@@ -322,22 +365,24 @@
             // 
             this.dashbord_pan.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.dashbord_pan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dashbord_pan.Location = new System.Drawing.Point(151, 48);
+            this.dashbord_pan.Location = new System.Drawing.Point(201, 59);
+            this.dashbord_pan.Margin = new System.Windows.Forms.Padding(4);
             this.dashbord_pan.Name = "dashbord_pan";
-            this.dashbord_pan.Size = new System.Drawing.Size(779, 529);
+            this.dashbord_pan.Size = new System.Drawing.Size(1036, 641);
             this.dashbord_pan.TabIndex = 2;
             this.dashbord_pan.Paint += new System.Windows.Forms.PaintEventHandler(this.dashbord_pan_Paint);
             this.dashbord_pan.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dashbord_pan_MouseDown);
             // 
             // mainPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 577);
+            this.ClientSize = new System.Drawing.Size(1237, 700);
             this.Controls.Add(this.dashbord_pan);
             this.Controls.Add(this.Headerpan);
             this.Controls.Add(this.Menupanel);
-            this.MaximumSize = new System.Drawing.Size(946, 616);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(1255, 747);
             this.Name = "mainPage";
             this.Text = "AfroNFTs";
             this.Menupanel.ResumeLayout(false);
@@ -361,13 +406,14 @@
         private System.Windows.Forms.Panel Headerpan;
         private System.Windows.Forms.Label CurrntPage;
         private System.Windows.Forms.PictureBox btnHome;
-        private System.Windows.Forms.Panel dashbord_pan;
         private FontAwesome.Sharp.IconButton accountBtn;
         private FontAwesome.Sharp.IconButton aboutbtn;
-        private FontAwesome.Sharp.IconButton postbtn;
+        private FontAwesome.Sharp.IconButton Creatpagebtn;
         private FontAwesome.Sharp.IconButton Siginupb;
         private FontAwesome.Sharp.IconButton Loginbtn;
         public FontAwesome.Sharp.IconPictureBox popChar;
         private FontAwesome.Sharp.IconPictureBox iconPic_current;
+        private FontAwesome.Sharp.IconButton MyPagebtn;
+        public System.Windows.Forms.Panel dashbord_pan;
     }
 }

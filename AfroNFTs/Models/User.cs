@@ -24,6 +24,6 @@ namespace AfroNFTs.Models
         public string email { get; set; }
         public string password { get; set; }
         public decimal balance { get; set; }
-
+        public int generatedNumber { get; set; }
     }
 }

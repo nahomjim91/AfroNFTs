@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 
+using Microsoft.Toolkit.Uwp.Notifications;
 using EASendMail;
 
 using AfroNFTs.Utils;
@@ -21,40 +23,44 @@ namespace AfroNFTs.Services
         {
             try
             {
+                
+
                 SmtpMail oMail = new SmtpMail("TryIt");
 
-                // Your yahoo email address
-                oMail.From = from;
-
+                // Your Hotmail email address
+                oMail.From = "ebenezertesfaye@outlook.com";
                 // Set recipient email address
                 oMail.To = to;
 
                 // Set email subject
                 oMail.Subject = subject;
-
                 // Set email body
                 oMail.TextBody = message;
 
-                // Yahoo SMTP server address
-                SmtpServer oServer = new SmtpServer("smtp.mail.yahoo.com");
+                // Hotmail SMTP server address
+                SmtpServer oServer = new SmtpServer("smtp.office365.com");
 
-                // For example: your email is "myid@yahoo.com", then the user should be "myid@yahoo.com"
-                oServer.User = from;
-                oServer.Password = "szhlqxsojmwtddhe";
-                
+                // Hotmail user authentication should use your
+                // email address as the user name.
+                oServer.User = "ebenezertesfaye@outlook.com";
 
-                // Because yahoo deploys SMTP server on 465 port with direct SSL connection.
-                // So we should change the port to 465. you can also use 25 or 587
-                oServer.Port = 465;
-                
-                // detect SSL type automatically
-                //oServer.ConnectType = SmtpConnectType.ConnectSSLAuto;
+                // If you got authentication error, try to create an app password instead of your user password.
+                // https://support.microsoft.com/en-us/account-billing/using-app-passwords-with-apps-that-don-t-support-two-step-verification-5896ed9b-4263-e681-128a-a6f2979a7944
+                oServer.Password = "ebenezerISCOOL1!";
 
-                Console.WriteLine("start to send email over SSL ...");
+                // Set 587 port, if you want to use 25 port, please change 587 to 25
+                oServer.Port = 587;
+
+                // detect SSL/TLS connection automatically
+                oServer.ConnectType = SmtpConnectType.ConnectSSLAuto;
+
+                Console.WriteLine("start to send email over SSL...");
 
                 SmtpClient oSmtp = new SmtpClient();
                 oSmtp.SendMail(oServer, oMail);
-                return false;
+
+
+                return true;
             }
             catch (Exception ex)
             {

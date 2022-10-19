@@ -68,10 +68,11 @@
             // Emailtxt
             // 
             this.Emailtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
-            this.Emailtxt.Location = new System.Drawing.Point(177, 110);
+            this.Emailtxt.Location = new System.Drawing.Point(177, 182);
             this.Emailtxt.Name = "Emailtxt";
             this.Emailtxt.Size = new System.Drawing.Size(159, 22);
             this.Emailtxt.TabIndex = 18;
+            this.Emailtxt.TextChanged += new System.EventHandler(this.Emailtxt_TextChanged);
             // 
             // Siginupbtn
             // 
@@ -104,11 +105,12 @@
             this.Emaillab.AutoSize = true;
             this.Emaillab.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Emaillab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.Emaillab.Location = new System.Drawing.Point(28, 110);
+            this.Emaillab.Location = new System.Drawing.Point(57, 182);
             this.Emaillab.Name = "Emaillab";
             this.Emaillab.Size = new System.Drawing.Size(81, 29);
             this.Emaillab.TabIndex = 14;
             this.Emaillab.Text = "Email :";
+            this.Emaillab.Click += new System.EventHandler(this.Emaillab_Click);
             // 
             // errorProviderLogin
             // 

@@ -4,13 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
-
 using System.Windows.Forms;
+
+using Microsoft.Toolkit.Uwp.Notifications;
 
 namespace AfroNFTs.Utils
 {
     public class AppEventUtils
     {
+        public static void showOutSideNotif(string title, string msg)
+        {
+            new ToastContentBuilder()
+           //.AddArgument("action", "viewConversation")
+           .AddArgument("conversationId", 9813)
+           .AddText(title)
+            .AddText(msg)
+            .Show();
+        }
         public delegate void AppEventHandler(object sender, string e);
 
         public static event AppEventHandler ShowInfoMessageEvent;

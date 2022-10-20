@@ -70,5 +70,13 @@ namespace AfroNFTs.View
         {
             iconButton2.BackgroundImage = AfroNFTs.Properties.Resources.like2;
         }
+
+        private void editBtn_Click(object sender, EventArgs e)
+        {
+            if (pageType)
+            {
+                Program.main.OpenchildFrom(new EditNfts( pageType, id), sender);
+            }
+        }
     }
 }

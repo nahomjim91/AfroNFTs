@@ -30,12 +30,12 @@
         {
             this.labPrice = new System.Windows.Forms.Label();
             this.labNFTsName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labNFTsRate = new System.Windows.Forms.Label();
-            this.pictureBoxNFTs = new System.Windows.Forms.PictureBox();
             this.seeDetailbtn = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBoxNFTs = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNFTs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // labPrice
@@ -63,17 +63,6 @@
             this.labNFTsName.Text = "label1";
             this.labNFTsName.Click += new System.EventHandler(this.labNFTsName_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::AfroNFTs.Properties.Resources.star;
-            this.pictureBox1.Location = new System.Drawing.Point(7, 243);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(23, 19);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // labNFTsRate
             // 
             this.labNFTsRate.AutoSize = true;
@@ -85,19 +74,6 @@
             this.labNFTsRate.TabIndex = 4;
             this.labNFTsRate.Text = "0.0";
             this.labNFTsRate.Click += new System.EventHandler(this.labNFTsRate_Click);
-            // 
-            // pictureBoxNFTs
-            // 
-            this.pictureBoxNFTs.Image = global::AfroNFTs.Properties.Resources.gettyimages_165604915_170667a;
-            this.pictureBoxNFTs.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxNFTs.MaximumSize = new System.Drawing.Size(230, 216);
-            this.pictureBoxNFTs.MinimumSize = new System.Drawing.Size(230, 216);
-            this.pictureBoxNFTs.Name = "pictureBoxNFTs";
-            this.pictureBoxNFTs.Size = new System.Drawing.Size(230, 216);
-            this.pictureBoxNFTs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBoxNFTs.TabIndex = 5;
-            this.pictureBoxNFTs.TabStop = false;
-            this.pictureBoxNFTs.Click += new System.EventHandler(this.pictureBoxNFTs_Click);
             // 
             // seeDetailbtn
             // 
@@ -116,6 +92,29 @@
             this.seeDetailbtn.UseVisualStyleBackColor = false;
             this.seeDetailbtn.Click += new System.EventHandler(this.seeDetailbtn_Click);
             // 
+            // pictureBoxNFTs
+            // 
+            this.pictureBoxNFTs.Image = global::AfroNFTs.Properties.Resources.gettyimages_165604915_170667a;
+            this.pictureBoxNFTs.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxNFTs.MaximumSize = new System.Drawing.Size(230, 216);
+            this.pictureBoxNFTs.MinimumSize = new System.Drawing.Size(230, 216);
+            this.pictureBoxNFTs.Name = "pictureBoxNFTs";
+            this.pictureBoxNFTs.Size = new System.Drawing.Size(230, 216);
+            this.pictureBoxNFTs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxNFTs.TabIndex = 5;
+            this.pictureBoxNFTs.TabStop = false;
+            this.pictureBoxNFTs.Click += new System.EventHandler(this.pictureBoxNFTs_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AfroNFTs.Properties.Resources.star;
+            this.pictureBox1.Location = new System.Drawing.Point(7, 243);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(23, 19);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // NFTs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -129,8 +128,8 @@
             this.MinimumSize = new System.Drawing.Size(230, 250);
             this.Name = "NFTs";
             this.Size = new System.Drawing.Size(230, 268);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNFTs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

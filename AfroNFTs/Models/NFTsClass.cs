@@ -16,6 +16,7 @@ namespace AfroNFTs.Models
 
         private byte[] _NftsPicture;
 
+        public bool isAvelebel { get; set; }     
         public byte[] NftsPicture
         {
             get { return _NftsPicture; }

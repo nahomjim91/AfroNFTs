@@ -57,6 +57,7 @@ namespace AfroNFTs.View
                     nfts.NFTsName = item.NFTsName;
                     nfts.NFTsRate = item.NFTsRate;
                     nfts.NFTsprice = item.NFTsprice;
+                    nfts.isAvel = item.isAvelebel;
                     flowLayoutPanel1.Controls.Add(nfts);
 
                 }

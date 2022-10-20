@@ -22,7 +22,7 @@ namespace AfroNFTs.View
         }
         public int NftsId;
         private Image _NftsPicture;
-
+        public bool isAvel;
         public Image NftsPicture
         {
             get { return _NftsPicture; }
@@ -54,14 +54,12 @@ namespace AfroNFTs.View
             set { _NFTsRate = value; labNFTsRate.Text = value.ToString(); }
         }
         bool pagetype = false;
+        
         public NFTs(bool pg)
         {
             pagetype = pg;
             InitializeComponent();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
+            if (!isAvel) { pictureBox1.Visible = false; }
 
         }
 
@@ -89,5 +87,6 @@ namespace AfroNFTs.View
         {
 
         }
+
     }
 }

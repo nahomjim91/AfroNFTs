@@ -35,6 +35,7 @@
             this.editBtn = new FontAwesome.Sharp.IconButton();
             this.sellOrBuyBtn = new FontAwesome.Sharp.IconButton();
             this.descriptionNFTs1 = new AfroNFTs.View.DescriptionNFTs();
+            this.adminCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // typeOfUserLable
@@ -117,6 +118,7 @@
             this.editBtn.Size = new System.Drawing.Size(33, 31);
             this.editBtn.TabIndex = 12;
             this.editBtn.UseVisualStyleBackColor = false;
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
             // 
             // sellOrBuyBtn
             // 
@@ -151,12 +153,26 @@
             this.descriptionNFTs1.Size = new System.Drawing.Size(635, 526);
             this.descriptionNFTs1.TabIndex = 9;
             // 
+            // adminCheckBox
+            // 
+            this.adminCheckBox.AutoSize = true;
+            this.adminCheckBox.Font = new System.Drawing.Font("Palatino Linotype", 9F);
+            this.adminCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
+            this.adminCheckBox.Location = new System.Drawing.Point(548, 154);
+            this.adminCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.adminCheckBox.Name = "adminCheckBox";
+            this.adminCheckBox.Size = new System.Drawing.Size(148, 21);
+            this.adminCheckBox.TabIndex = 16;
+            this.adminCheckBox.Text = "I want to be an admin";
+            this.adminCheckBox.UseVisualStyleBackColor = true;
+            // 
             // PreposOfPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(4)))), ((int)(((byte)(16)))));
             this.ClientSize = new System.Drawing.Size(778, 519);
+            this.Controls.Add(this.adminCheckBox);
             this.Controls.Add(this.iconButton3);
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.iconButton1);
@@ -180,5 +196,6 @@
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton3;
+        private System.Windows.Forms.CheckBox adminCheckBox;
     }
 }

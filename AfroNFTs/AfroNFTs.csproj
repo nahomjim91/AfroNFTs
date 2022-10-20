@@ -70,6 +70,14 @@
     <Compile Include="Migrations\202210200810057_nft-page.designer.cs">
       <DependentUpon>202210200810057_nft-page.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202210201438007_isAvel_theNFTs.cs" />
+    <Compile Include="Migrations\202210201438007_isAvel_theNFTs.designer.cs">
+      <DependentUpon>202210201438007_isAvel_theNFTs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210201444491_isAvel_theNFTs1.cs" />
+    <Compile Include="Migrations\202210201444491_isAvel_theNFTs1.designer.cs">
+      <DependentUpon>202210201444491_isAvel_theNFTs1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\DbService.cs" />
@@ -93,6 +101,12 @@
     </Compile>
     <Compile Include="View\CreatePage.Designer.cs">
       <DependentUpon>CreatePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\EditNfts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EditNfts.Designer.cs">
+      <DependentUpon>EditNfts.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ForgottenPassword.cs">
       <SubType>Form</SubType>
@@ -207,11 +221,20 @@
     <EmbeddedResource Include="Migrations\202210200810057_nft-page.resx">
       <DependentUpon>202210200810057_nft-page.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210201438007_isAvel_theNFTs.resx">
+      <DependentUpon>202210201438007_isAvel_theNFTs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210201444491_isAvel_theNFTs1.resx">
+      <DependentUpon>202210201444491_isAvel_theNFTs1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\AdminDashBord.resx">
       <DependentUpon>AdminDashBord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\CreatePage.resx">
       <DependentUpon>CreatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EditNfts.resx">
+      <DependentUpon>EditNfts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ForgottenPassword.resx">
       <DependentUpon>ForgottenPassword.cs</DependentUpon>
@@ -339,6 +362,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\like2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\not-available.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\not-available.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

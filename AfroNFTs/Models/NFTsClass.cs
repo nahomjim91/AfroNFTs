@@ -76,6 +76,7 @@ namespace AfroNFTs.Models
 
         private double _NFTsRate;
 
+        //public Page ownerPage;
         public double NFTsRate
         {
             get { return _NFTsRate; }

@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -39,18 +38,6 @@
     <Reference Include="ComponentFactory.Krypton.Toolkit">
       <HintPath>..\..\..\..\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
-    <Reference Include="EASendMail, Version=7.9.0.8, Culture=neutral, PublicKeyToken=88adb80ecd66540b, processorArchitecture=MSIL">
-      <HintPath>..\packages\EASendMail.7.9.0.8\lib\net461\EASendMail.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
-    <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
-      <HintPath>..\packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
-    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -58,9 +45,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Security" />
-    <Reference Include="System.Security.Cryptography.Pkcs, Version=6.0.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Security.Cryptography.Pkcs.6.0.1\lib\net461\System.Security.Cryptography.Pkcs.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -74,6 +58,15 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\202210191240549_generated_number2.cs" />
+    <Compile Include="Migrations\202210191240549_generated_number2.designer.cs">
+      <DependentUpon>202210191240549_generated_number2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210191401230_nft-page-and-page-admin.cs" />
+    <Compile Include="Migrations\202210191401230_nft-page-and-page-admin.designer.cs">
+      <DependentUpon>202210191401230_nft-page-and-page-admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\DbService.cs" />
     <Compile Include="Models\NFTsClass.cs" />
@@ -82,11 +75,48 @@
     <Compile Include="Models\User.cs" />
 
     <Compile Include="NFTAppException.cs" />
+    <Compile Include="NotifThread.cs" />
     <Compile Include="Services\EmailService.cs" />
 
    
 
     <Compile Include="Utils.cs" />
+    <Compile Include="View\AdminDashBord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdminDashBord.Designer.cs">
+      <DependentUpon>AdminDashBord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CreatePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CreatePage.Designer.cs">
+      <DependentUpon>CreatePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ForgottenPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ForgottenPassword.Designer.cs">
+      <DependentUpon>ForgottenPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MyPages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MyPages.Designer.cs">
+      <DependentUpon>MyPages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\NFTPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\NFTPage.Designer.cs">
+      <DependentUpon>NFTPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PageDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PageDetails.Designer.cs">
+      <DependentUpon>PageDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\SiginUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +197,30 @@
     <Compile Include="View\UserDashBord.Designer.cs">
       <DependentUpon>UserDashBord.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Migrations\202210191240549_generated_number2.resx">
+      <DependentUpon>202210191240549_generated_number2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210191401230_nft-page-and-page-admin.resx">
+      <DependentUpon>202210191401230_nft-page-and-page-admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AdminDashBord.resx">
+      <DependentUpon>AdminDashBord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CreatePage.resx">
+      <DependentUpon>CreatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ForgottenPassword.resx">
+      <DependentUpon>ForgottenPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MyPages.resx">
+      <DependentUpon>MyPages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\NFTPage.resx">
+      <DependentUpon>NFTPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PageDetails.resx">
+      <DependentUpon>PageDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\SiginUp.resx">
       <DependentUpon>SiginUp.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,7 +270,6 @@
     <EmbeddedResource Include="View\UserDashBord.resx">
       <DependentUpon>UserDashBord.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -251,13 +304,37 @@
   <ItemGroup>
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EASendMail">
+      <Version>7.9.0.8</Version>
+    </PackageReference>
+    <PackageReference Include="EntityFramework">
+      <Version>6.4.4</Version>
+    </PackageReference>
+    <PackageReference Include="FontAwesome.Sharp">
+      <Version>6.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications">
+      <Version>7.1.2</Version>
+    </PackageReference>
+    <PackageReference Include="System.Configuration.ConfigurationManager">
+      <Version>6.0.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\like1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disLike1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disLike2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\like2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
-    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
-  </Target>
-  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>

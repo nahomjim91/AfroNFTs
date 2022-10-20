@@ -202,5 +202,10 @@ namespace AfroNFTs
                 ConfirmPswordtxt.PasswordChar = '\0';
             else ConfirmPswordtxt.PasswordChar = '*';
         }
+
+        private void SiginUp_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

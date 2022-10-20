@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using AfroNFTs.Services;
+using AfroNFTs.Models;
 
 namespace AfroNFTs
 {
@@ -117,16 +118,71 @@ namespace AfroNFTs
             else Pswordtxt.PasswordChar = '*';
         }
 
+        private int generateInt()
+        {
+            Random random = new Random();
+
+            return random.Next(10000);
+        }
         private void forgottenPasswordButton_Click(object sender, EventArgs e)
         {
+            var num = generateInt();
+
+            using (var ctx = new DbService())
+            {
+                try
+                {
+                    if (isAdminCheckBox.Checked)
+                    {
+                        Admin u =  ctx.adminTB.Single((admin) => admin.email == Emailtxt.Text);
+                        u.generatedNumber = num;
+                        ctx.SaveChanges();
+                    }
+                    else
+                    {
+                       NormalUser u =  ctx.normalUserTB.Single(user => user.email == Emailtxt.Text);
+                        u.generatedNumber = num;
+                        ctx.SaveChanges();
+                    }
+                }
+                catch(Exception ex)
+                {
+                    AppEventUtils.ShowInfoMessage(this, ex.Message);
+                    return;
+                }
+            }
+            
             var result = EmailService.sendMail(
-                "ebenezertesfaye@yahoo.com",
-                "ebenezertesfaye@yahoo.com",
-                "ebenezertesfaye@yahoo.com",
-                "ebenezertesfaye@yahoo.com"
+                Emailtxt.Text,
+                "ebenezertesfaye@outlook.com",
+                "Reset Password",
+                "Your key is: " + num + " please don't give this to anyone!"
 
             );
-            AppEventUtils.ShowInfoMessage(this, result.ToString());
+            if (result) {
+                var form = new View.ForgottenPassword();
+                form.targetEmail = Emailtxt.Text;
+                form.isAdmin = isAdminCheckBox.Checked;
+                form.Visible = true;
+
+                AppEventUtils.ShowInfoMessage(this, result.ToString());
+
+            }
+            else
+            {
+                AppEventUtils.ShowInfoMessage(this, "This email does not exist or no internet");
+            }
+           
+        }
+
+        private void Emailtxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Emaillab_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

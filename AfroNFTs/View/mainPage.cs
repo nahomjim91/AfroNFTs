@@ -32,6 +32,7 @@ namespace AfroNFTs
         public mainPage()
         {
             InitializeComponent();
+            
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea ;
@@ -98,7 +99,7 @@ namespace AfroNFTs
         }
 
         
-        public  void OpenchildFrom(Form childForm , object btnSender)
+        public   void OpenchildFrom(Form childForm , object btnSender)
         {
             if(activeForm != null)
                 activeForm.Close();
@@ -121,20 +122,31 @@ namespace AfroNFTs
         {
             this.PageType = pageType;
             if (PageType)
-                postbtn.Visible = true;
+            {
+                MyPagebtn.Visible = true;
+                Creatpagebtn.Visible = true;
+            }
+            else
+            {
+                selltbtn.Visible = true;
+                Buybtn.Visible = true;
+            }
             aboutbtn.Visible = true;
             accountBtn.Visible = true;
-            selltbtn.Visible = true;
-            Buybtn.Visible = true;
+            MyPagebtn.Visible = true;
             Dashboardbtn.Visible = true;
             iconPic_current.Visible = true;
             CurrntPage.Visible = true;
             popChar.Visible = true;
+
             Dashboardbtn_Click(Dashboardbtn, EventArgs.Empty);
         }
         private void Dashboardbtn_Click(object sender, EventArgs e)
         {
-            OpenchildFrom( new UserDashBord(PageType),  sender);
+            if(PageType)
+                OpenchildFrom( new AdminDashBord(PageType),  sender);
+            else
+                OpenchildFrom(new UserDashBord(PageType), sender);
         }
 
 
@@ -191,7 +203,7 @@ namespace AfroNFTs
 
         private void postbtn_Click_1(object sender, EventArgs e)
         {
-            OpenchildFrom(new AddNfts(), sender);
+            OpenchildFrom(new CreatePage(), sender);
         }
 
         //public delegate void MainPageEventHandler(object sender, EventArgs args);
@@ -201,36 +213,45 @@ namespace AfroNFTs
         private void Siginupb_Click(object sender, EventArgs e)
         {
             OpenchildFrom(new SiginUp(), sender);
-            aboutbtn.Visible = false;
-            accountBtn.Visible = false;
-            selltbtn.Visible = false;
-            Buybtn.Visible = false;
             Dashboardbtn.Visible = false;
+            Buybtn.Visible = false;
+            selltbtn.Visible = false;
+            accountBtn.Visible = false;
+            aboutbtn.Visible = false;
+            Creatpagebtn.Visible = false;
+            MyPagebtn.Visible = false;
             iconPic_current.Visible = false;
             CurrntPage.Visible = false;
             popChar.Visible = false;
-            postbtn.Visible = false;
+            Creatpagebtn.Visible = false;
 
         }
 
         private void Loginbtn_Click_1(object sender, EventArgs e)
         {
             OpenchildFrom(new Login(), sender);
-            aboutbtn.Visible = false;
-            accountBtn.Visible = false;
-            selltbtn.Visible = false;
-            Buybtn.Visible = false;
             Dashboardbtn.Visible = false;
+            Buybtn.Visible = false;
+            selltbtn.Visible = false;
+            accountBtn.Visible = false;
+            aboutbtn.Visible = false;
+            Creatpagebtn.Visible = false;
+            MyPagebtn.Visible = false;
             iconPic_current.Visible = false;
             CurrntPage.Visible = false;
             popChar.Visible = false;
-            postbtn.Visible = false;
+            Creatpagebtn.Visible = false;
 
         }
 
         private void dashbord_pan_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void MyPagebtn_Click(object sender, EventArgs e)
+        {
+            OpenchildFrom(new MyPages(), sender);
         }
     }
 }

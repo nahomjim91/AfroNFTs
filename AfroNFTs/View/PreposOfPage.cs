@@ -38,5 +38,15 @@ namespace AfroNFTs.View
         {
 
         }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            iconButton1.BackgroundImage = AfroNFTs.Properties.Resources.disLike2;
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            iconButton2.BackgroundImage = AfroNFTs.Properties.Resources.like2;
+        }
     }
 }

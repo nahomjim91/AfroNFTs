@@ -166,6 +166,7 @@
             this.Controls.Add(this.txtSerachNFTS);
             this.Name = "UserDashBord";
             this.Text = "UserDashBord";
+            this.Load += new System.EventHandler(this.UserDashBord_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

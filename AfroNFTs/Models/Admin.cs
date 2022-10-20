@@ -9,6 +9,6 @@ namespace AfroNFTs.Models
     [Table("admin")]
     internal class Admin: User
     {
-        Page[] pages { get; set; }
+        public List<Page> pages { get; set; } = new List<Page>();
     }
 }

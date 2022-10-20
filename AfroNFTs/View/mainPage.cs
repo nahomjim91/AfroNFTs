@@ -26,7 +26,7 @@ namespace AfroNFTs
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form activeForm;
-        bool PageType = false; //by defualt user
+      public  bool PageType = false; //by defualt user
         public static int userID;
          
         public mainPage()
@@ -47,6 +47,11 @@ namespace AfroNFTs
             public static Color color5 = Color.FromArgb(249, 88, 155);
         }
         //IMethods
+        public void GoToPageInfo(Form f)
+        {
+            //dashbord_pan.Controls.Add(f);
+            OpenchildFrom(f, new Button());
+        }
         private void ActivateButton(object senderBtn )
         {   
 
@@ -203,7 +208,7 @@ namespace AfroNFTs
 
         private void postbtn_Click_1(object sender, EventArgs e)
         {
-            OpenchildFrom(new CreatePage(), sender);
+            OpenchildFrom(new CreatePage(PageType), sender);
         }
 
         //public delegate void MainPageEventHandler(object sender, EventArgs args);
@@ -251,7 +256,7 @@ namespace AfroNFTs
 
         private void MyPagebtn_Click(object sender, EventArgs e)
         {
-            OpenchildFrom(new MyPages(), sender);
+            OpenchildFrom(new MyPages(PageType), sender);
         }
     }
 }

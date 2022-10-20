@@ -18,10 +18,11 @@ namespace AfroNFTs.View
     public partial class AddNfts : Form
     {
         private byte[] imgByte;
-
+        public int PageId; 
         private static int IDNFTs = 0;
-        public AddNfts()
+        public AddNfts( int pageId)
         {
+            PageId = pageId;    
             InitializeComponent();
             IDNFTs++;   
 
@@ -88,9 +89,9 @@ namespace AfroNFTs.View
                 return ms.ToArray();
             }
         }
-        private void submitteBtn_Click(object sender, EventArgs e)
+        private void DeletePagebtn1_Click(object sender, EventArgs e)
         {
-            errorProvider.Clear();  
+            errorProvider.Clear();
             if (!hasError())
             {
 
@@ -108,8 +109,9 @@ namespace AfroNFTs.View
                 nfts.Group = this.txtGroupNFTs.Text;
                 nfts.OwnerID = mainPage.userID;
                 nfts.userType = "Admin";
+                nfts.pageId = PageId;
                 nfts.save();
-                Program.main.dashbord_pan.Controls.Add(new PageDetails());
+                Program.main.OpenchildFrom(new PageDetails(PageId), sender);
             }
         }
     }

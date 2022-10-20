@@ -16,8 +16,10 @@ namespace AfroNFTs.View
 {
     public partial class MyPages : Form
     {
-        public MyPages()
+        public bool PageType;
+        public MyPages(bool PageType)
         {
+            this.PageType = PageType;   
             InitializeComponent();
 
             try
@@ -43,22 +45,12 @@ namespace AfroNFTs.View
                         {
                             var p = new NFTPage();
                             p.NftsPicture = null;
+                            p.PageId = int.Parse(reader["PageId"].ToString());
                             p.NFTsName = reader["title"].ToString();
                             p.Click += PageDetialClicked;
 
                             FL.Controls.Add(p);
                         }
-                    }
-
-                    foreach(var nftPage in admin.pages.ToList())
-
-                    {
-                        //MessageBox.Show("LOOP");
-                        var p = new NFTPage();
-                        p.NftsPicture = null;
-                        p.NFTsName = nftPage.title;
-                        
-                        FL.Controls.Add(p);
                     }
 
                 }
@@ -69,6 +61,7 @@ namespace AfroNFTs.View
         }
         public void PageDetialClicked(object sender, EventArgs a) 
         {
+            throw new Exception("Let's finish this");
             MessageBox.Show("hello");
             //Program.main.dashbord_pan.Controls.Add(new PageDetails());
         }

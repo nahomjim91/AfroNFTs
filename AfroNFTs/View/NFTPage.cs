@@ -13,6 +13,7 @@ namespace AfroNFTs.View
     public partial class NFTPage : UserControl
     {
         private Image _NftsPicture;
+        public int PageId { get; set; }
 
         public Image NftsPicture
         {
@@ -32,6 +33,15 @@ namespace AfroNFTs.View
         public NFTPage()
         {
             InitializeComponent();
+        }
+
+        private void NFTPage_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            Program.main.OpenchildFrom(new PageDetails(PageId) , sender);
         }
     }
 }

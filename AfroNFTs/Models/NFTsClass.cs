@@ -9,7 +9,7 @@ using System.Windows;
 namespace AfroNFTs.Models
 {
     
-    internal class NFTsClass
+    public class NFTsClass
     {
         public string userType { get; set; }
         public int NFtsClassId { get; set; }
@@ -101,7 +101,7 @@ namespace AfroNFTs.Models
             return _nftsClass;
         }
 
-
+        public int pageId { get; set; }
 
     }
 

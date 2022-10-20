@@ -66,6 +66,10 @@
     <Compile Include="Migrations\202210191401230_nft-page-and-page-admin.designer.cs">
       <DependentUpon>202210191401230_nft-page-and-page-admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202210200810057_nft-page.cs" />
+    <Compile Include="Migrations\202210200810057_nft-page.designer.cs">
+      <DependentUpon>202210200810057_nft-page.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\DbService.cs" />
@@ -73,13 +77,10 @@
     <Compile Include="Models\NormalUser.cs" />
     <Compile Include="Models\Page.cs" />
     <Compile Include="Models\User.cs" />
-
     <Compile Include="NFTAppException.cs" />
     <Compile Include="NotifThread.cs" />
     <Compile Include="Services\EmailService.cs" />
-
-   
-
+    <Compile Include="Services\PageService.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="View\AdminDashBord.cs">
       <SubType>Form</SubType>
@@ -202,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202210191401230_nft-page-and-page-admin.resx">
       <DependentUpon>202210191401230_nft-page-and-page-admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210200810057_nft-page.resx">
+      <DependentUpon>202210200810057_nft-page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\AdminDashBord.resx">
       <DependentUpon>AdminDashBord.cs</DependentUpon>

@@ -39,8 +39,8 @@
             this.txtGroupNFTs = new System.Windows.Forms.TextBox();
             this.txtDescriptionNFTs = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.submitteBtn = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.DeletePagebtn1 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.NFTSpic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
@@ -146,25 +146,26 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // submitteBtn
-            // 
-            this.submitteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
-            this.submitteBtn.CausesValidation = false;
-            this.submitteBtn.FlatAppearance.BorderSize = 0;
-            this.submitteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.submitteBtn.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submitteBtn.ForeColor = System.Drawing.Color.Snow;
-            this.submitteBtn.Location = new System.Drawing.Point(367, 141);
-            this.submitteBtn.Name = "submitteBtn";
-            this.submitteBtn.Size = new System.Drawing.Size(101, 33);
-            this.submitteBtn.TabIndex = 18;
-            this.submitteBtn.Text = "Submitte";
-            this.submitteBtn.UseVisualStyleBackColor = false;
-            this.submitteBtn.Click += new System.EventHandler(this.submitteBtn_Click);
-            // 
             // errorProvider
             // 
             this.errorProvider.ContainerControl = this;
+            // 
+            // DeletePagebtn1
+            // 
+            this.DeletePagebtn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
+            this.DeletePagebtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeletePagebtn1.Font = new System.Drawing.Font("Modern No. 20", 18F);
+            this.DeletePagebtn1.ForeColor = System.Drawing.Color.White;
+            this.DeletePagebtn1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.DeletePagebtn1.IconColor = System.Drawing.Color.Black;
+            this.DeletePagebtn1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.DeletePagebtn1.Location = new System.Drawing.Point(367, 191);
+            this.DeletePagebtn1.Name = "DeletePagebtn1";
+            this.DeletePagebtn1.Size = new System.Drawing.Size(101, 34);
+            this.DeletePagebtn1.TabIndex = 45;
+            this.DeletePagebtn1.Text = "Submit";
+            this.DeletePagebtn1.UseVisualStyleBackColor = false;
+            this.DeletePagebtn1.Click += new System.EventHandler(this.DeletePagebtn1_Click);
             // 
             // AddNfts
             // 
@@ -172,7 +173,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(10)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(778, 519);
-            this.Controls.Add(this.submitteBtn);
+            this.Controls.Add(this.DeletePagebtn1);
             this.Controls.Add(this.txtDescriptionNFTs);
             this.Controls.Add(this.txtGroupNFTs);
             this.Controls.Add(this.txtPriceNFTs);
@@ -203,7 +204,7 @@
         private System.Windows.Forms.TextBox txtGroupNFTs;
         private System.Windows.Forms.TextBox txtDescriptionNFTs;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Button submitteBtn;
         public System.Windows.Forms.ErrorProvider errorProvider;
+        private FontAwesome.Sharp.IconButton DeletePagebtn1;
     }
 }

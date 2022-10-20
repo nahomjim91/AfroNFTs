@@ -20,7 +20,7 @@ namespace AfroNFTs.View
         {
             NFTsDetail.Invoke(this, e);
         }
-
+        public int NftsId;
         private Image _NftsPicture;
 
         public Image NftsPicture
@@ -53,10 +53,41 @@ namespace AfroNFTs.View
             get { return _NFTsRate; }
             set { _NFTsRate = value; labNFTsRate.Text = value.ToString(); }
         }
-
-        public NFTs()
+        bool pagetype = false;
+        public NFTs(bool pg)
         {
+            pagetype = pg;
             InitializeComponent();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void seeDetailbtn_Click(object sender, EventArgs e)
+        {
+            Program.main.OpenchildFrom(new PreposOfPage(pagetype,  NftsId), sender);
+        }
+
+        private void labNFTsName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labNFTsRate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxNFTs_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labPrice_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

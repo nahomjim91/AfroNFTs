@@ -35,7 +35,7 @@ namespace AfroNFTs
             //for test 
             foreach (var item in NFTsClass.getAllNFTs())
             {
-                NFTs nfts = new NFTs();
+                NFTs nfts = new NFTs(pageType);
                 nfts.NftsPicture = byteArrayToImage(item.NftsPicture);
                 nfts.NFTsName = item.NFTsName;
                 nfts.NFTsRate = item.NFTsRate;

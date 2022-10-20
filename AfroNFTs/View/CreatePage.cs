@@ -15,13 +15,15 @@ namespace AfroNFTs.View
 {
     public partial class CreatePage : Form
     {
-        public CreatePage()
+        bool pageType; 
+        public CreatePage( bool pg)
         {
+            pageType = pg;
             InitializeComponent();
         }
 
 
-        private void submitteBtn_Click(object sender, EventArgs e)
+        private void submitteBtn1_Click(object sender, EventArgs e)
         {
             var adminId = mainPage.userID;
             var page = new Page();
@@ -32,27 +34,27 @@ namespace AfroNFTs.View
 
             try
             {
-                using(var ctx = new DbService())
+                using (var ctx = new DbService())
                 {
                     ctx.pageTB.Add(page);
                     ctx.SaveChanges();
 
                     var admin = ctx.adminTB.Find(adminId);
 
-                    
+
                     admin.pages.Add(page);
 
                     ctx.SaveChanges();
-                    
+
 
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 return;
             }
-            Program.main.dashbord_pan.Controls.Add(new MyPages());
+            Program.main.OpenchildFrom(new MyPages(pageType) , sender);
         }
     }
 }

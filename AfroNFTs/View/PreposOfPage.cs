@@ -26,7 +26,9 @@ namespace AfroNFTs.View
         }
         public PreposOfPage(bool pageType , int id)
         {
-            this.pageType = pageType;
+            MessageBox.Show("I am Here!!");
+
+           this.pageType = pageType;
             this.id = id;   
             InitializeComponent();
             NFTsClass nft;
@@ -35,13 +37,24 @@ namespace AfroNFTs.View
                 {
                     try
                     {
-                        nft = ctx.nftTB.Find(id);
+                        nft = ctx.nftTB.Single(obj => obj.NFtsClassId == id);
+                        if (nft.OwnerID != mainPage.userID) { this.isAvel.Visible = false; }
+                        MessageBox.Show(nft.OwnerID.ToString() + "     " + id);
                         this.descriptionNFTs1.NFTsName = nft.NFTsName;
                         this.descriptionNFTs1.NftsPicture = byteArrayToImage(nft.NftsPicture);
                         this.descriptionNFTs1.NFTsprice = nft.NFTsprice;
                         this.descriptionNFTs1.NFTsRate = nft.NFTsRate;
                         this.descriptionNFTs1.Description = nft.description;
                         this.descriptionNFTs1.Group = nft.Group;
+                        this.isAvel.Checked = nft.isAvelebel;
+                        if (this.isAvel.Checked)
+                        {
+                            label1.Text = "This NFT is availibil for sell";
+                        }
+                        else
+                        {
+                            label1.Text = "This NFT is not availibil for sell";
+                        }
                     }
                     catch(Exception b)
                     {
@@ -55,12 +68,6 @@ namespace AfroNFTs.View
         {
 
         }
-
-        private void descriptionNFTs1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void iconButton3_Click(object sender, EventArgs e)
         {
             iconButton1.BackgroundImage = AfroNFTs.Properties.Resources.disLike2;
@@ -76,6 +83,23 @@ namespace AfroNFTs.View
             if (pageType)
             {
                 Program.main.OpenchildFrom(new EditNfts( pageType, id), sender);
+            }
+        }
+
+        private void isAvel_CheckedChanged(object sender, EventArgs e)
+        {
+
+            using (var ctx = new DbService())
+            {
+                try
+                {
+                    var nft = ctx.nftTB.Single(obj => obj.NFtsClassId == id);
+                    nft.isAvelebel = isAvel.Checked;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show( ex.Message);
+                }
             }
         }
     }

@@ -34,8 +34,9 @@
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.editBtn = new FontAwesome.Sharp.IconButton();
             this.sellOrBuyBtn = new FontAwesome.Sharp.IconButton();
+            this.isAvel = new System.Windows.Forms.CheckBox();
             this.descriptionNFTs1 = new AfroNFTs.View.DescriptionNFTs();
-            this.adminCheckBox = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // typeOfUserLable
@@ -137,6 +138,20 @@
             this.sellOrBuyBtn.UseVisualStyleBackColor = false;
             this.sellOrBuyBtn.Click += new System.EventHandler(this.sellOrBuyBtn_Click);
             // 
+            // isAvel
+            // 
+            this.isAvel.AutoSize = true;
+            this.isAvel.Font = new System.Drawing.Font("Palatino Linotype", 9F);
+            this.isAvel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
+            this.isAvel.Location = new System.Drawing.Point(534, 182);
+            this.isAvel.Margin = new System.Windows.Forms.Padding(2);
+            this.isAvel.Name = "isAvel";
+            this.isAvel.Size = new System.Drawing.Size(119, 21);
+            this.isAvel.TabIndex = 16;
+            this.isAvel.Text = "NFTs availability";
+            this.isAvel.UseVisualStyleBackColor = true;
+            this.isAvel.CheckedChanged += new System.EventHandler(this.isAvel_CheckedChanged);
+            // 
             // descriptionNFTs1
             // 
             this.descriptionNFTs1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(4)))), ((int)(((byte)(16)))));
@@ -153,18 +168,16 @@
             this.descriptionNFTs1.Size = new System.Drawing.Size(635, 526);
             this.descriptionNFTs1.TabIndex = 9;
             // 
-            // adminCheckBox
+            // label1
             // 
-            this.adminCheckBox.AutoSize = true;
-            this.adminCheckBox.Font = new System.Drawing.Font("Palatino Linotype", 9F);
-            this.adminCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.adminCheckBox.Location = new System.Drawing.Point(548, 154);
-            this.adminCheckBox.Margin = new System.Windows.Forms.Padding(2);
-            this.adminCheckBox.Name = "adminCheckBox";
-            this.adminCheckBox.Size = new System.Drawing.Size(148, 21);
-            this.adminCheckBox.TabIndex = 16;
-            this.adminCheckBox.Text = "I want to be an admin";
-            this.adminCheckBox.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Baskerville Old Face", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+            this.label1.Location = new System.Drawing.Point(442, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 22);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "availablity";
             // 
             // PreposOfPage
             // 
@@ -172,7 +185,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(4)))), ((int)(((byte)(16)))));
             this.ClientSize = new System.Drawing.Size(778, 519);
-            this.Controls.Add(this.adminCheckBox);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.isAvel);
             this.Controls.Add(this.iconButton3);
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.iconButton1);
@@ -196,6 +210,7 @@
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton3;
-        private System.Windows.Forms.CheckBox adminCheckBox;
+        private System.Windows.Forms.CheckBox isAvel;
+        private System.Windows.Forms.Label label1;
     }
 }

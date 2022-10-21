@@ -198,7 +198,7 @@ namespace AfroNFTs
 
         private void accountBtn_Click(object sender, EventArgs e)
         {
-            OpenchildFrom(new AccountPage(), sender);
+            OpenchildFrom(new AccountPage(PageType , userID), sender);
         }
 
         

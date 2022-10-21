@@ -31,13 +31,13 @@
             this.Emaillab = new System.Windows.Forms.Label();
             this.LastNamelab = new System.Windows.Forms.Label();
             this.FirstNamelab = new System.Windows.Forms.Label();
-            this.ProfileiconPictureBox = new FontAwesome.Sharp.IconPictureBox();
             this.editBtn = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.NumOfNFTs = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.TotalWorth = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.ProfileiconPictureBox)).BeginInit();
+            this.profileImagepic = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.profileImagepic)).BeginInit();
             this.SuspendLayout();
             // 
             // Emaillab
@@ -73,22 +73,6 @@
             this.FirstNamelab.TabIndex = 11;
             this.FirstNamelab.Text = "Frist name ";
             // 
-            // ProfileiconPictureBox
-            // 
-            this.ProfileiconPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(4)))), ((int)(((byte)(16)))));
-            this.ProfileiconPictureBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ProfileiconPictureBox.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.ProfileiconPictureBox.IconColor = System.Drawing.SystemColors.ControlText;
-            this.ProfileiconPictureBox.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ProfileiconPictureBox.IconSize = 143;
-            this.ProfileiconPictureBox.Location = new System.Drawing.Point(302, 74);
-            this.ProfileiconPictureBox.MaximumSize = new System.Drawing.Size(176, 143);
-            this.ProfileiconPictureBox.MinimumSize = new System.Drawing.Size(176, 143);
-            this.ProfileiconPictureBox.Name = "ProfileiconPictureBox";
-            this.ProfileiconPictureBox.Size = new System.Drawing.Size(176, 143);
-            this.ProfileiconPictureBox.TabIndex = 14;
-            this.ProfileiconPictureBox.TabStop = false;
-            // 
             // editBtn
             // 
             this.editBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(37)))), ((int)(((byte)(98)))));
@@ -104,6 +88,7 @@
             this.editBtn.Size = new System.Drawing.Size(33, 31);
             this.editBtn.TabIndex = 15;
             this.editBtn.UseVisualStyleBackColor = false;
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
             // 
             // label1
             // 
@@ -149,18 +134,28 @@
             this.TotalWorth.TabIndex = 19;
             this.TotalWorth.Text = "num";
             // 
+            // profileImagepic
+            // 
+            this.profileImagepic.Image = global::AfroNFTs.Properties.Resources.gettyimages_165604915_170667a;
+            this.profileImagepic.Location = new System.Drawing.Point(163, 12);
+            this.profileImagepic.Name = "profileImagepic";
+            this.profileImagepic.Size = new System.Drawing.Size(220, 182);
+            this.profileImagepic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.profileImagepic.TabIndex = 20;
+            this.profileImagepic.TabStop = false;
+            // 
             // AccountPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(4)))), ((int)(((byte)(16)))));
             this.ClientSize = new System.Drawing.Size(778, 519);
+            this.Controls.Add(this.profileImagepic);
             this.Controls.Add(this.TotalWorth);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.NumOfNFTs);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.editBtn);
-            this.Controls.Add(this.ProfileiconPictureBox);
             this.Controls.Add(this.Emaillab);
             this.Controls.Add(this.LastNamelab);
             this.Controls.Add(this.FirstNamelab);
@@ -169,7 +164,7 @@
             this.MinimumSize = new System.Drawing.Size(617, 390);
             this.Name = "AccountPage";
             this.Text = "AccountPage";
-            ((System.ComponentModel.ISupportInitialize)(this.ProfileiconPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profileImagepic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,11 +175,11 @@
         private System.Windows.Forms.Label Emaillab;
         private System.Windows.Forms.Label LastNamelab;
         private System.Windows.Forms.Label FirstNamelab;
-        private FontAwesome.Sharp.IconPictureBox ProfileiconPictureBox;
         private FontAwesome.Sharp.IconButton editBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label NumOfNFTs;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label TotalWorth;
+        private System.Windows.Forms.PictureBox profileImagepic;
     }
 }

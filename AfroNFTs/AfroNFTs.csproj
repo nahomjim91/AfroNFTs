@@ -87,6 +87,7 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="NFTAppException.cs" />
     <Compile Include="NotifThread.cs" />
+    <Compile Include="Services\ActionService.cs" />
     <Compile Include="Services\Comment.cs" />
     <Compile Include="Services\EmailService.cs" />
     <Compile Include="Services\NFTService.cs" />

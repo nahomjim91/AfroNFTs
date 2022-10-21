@@ -17,6 +17,7 @@ namespace AfroNFTs.Models
         
         [Key()]
         public int Id { get; set; }
+        public byte[] profileImage { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ConfirmPswordtxt = new System.Windows.Forms.TextBox();
             this.Pswordtxt = new System.Windows.Forms.TextBox();
             this.Emailtxt = new System.Windows.Forms.TextBox();
@@ -41,8 +42,10 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.recentlyPassword = new System.Windows.Forms.Label();
             this.sellOrBuyBtn = new FontAwesome.Sharp.IconButton();
-            this.ProfileiconPictureBox = new FontAwesome.Sharp.IconPictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ProfileiconPictureBox)).BeginInit();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.NFTSpic = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NFTSpic)).BeginInit();
             this.SuspendLayout();
             // 
             // ConfirmPswordtxt
@@ -174,22 +177,22 @@
             this.sellOrBuyBtn.TabIndex = 31;
             this.sellOrBuyBtn.Text = "Done";
             this.sellOrBuyBtn.UseVisualStyleBackColor = false;
+            this.sellOrBuyBtn.Click += new System.EventHandler(this.sellOrBuyBtn_Click);
             // 
-            // ProfileiconPictureBox
+            // errorProvider1
             // 
-            this.ProfileiconPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(4)))), ((int)(((byte)(16)))));
-            this.ProfileiconPictureBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ProfileiconPictureBox.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.ProfileiconPictureBox.IconColor = System.Drawing.SystemColors.ControlText;
-            this.ProfileiconPictureBox.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ProfileiconPictureBox.IconSize = 143;
-            this.ProfileiconPictureBox.Location = new System.Drawing.Point(283, 24);
-            this.ProfileiconPictureBox.MaximumSize = new System.Drawing.Size(176, 143);
-            this.ProfileiconPictureBox.MinimumSize = new System.Drawing.Size(176, 143);
-            this.ProfileiconPictureBox.Name = "ProfileiconPictureBox";
-            this.ProfileiconPictureBox.Size = new System.Drawing.Size(176, 143);
-            this.ProfileiconPictureBox.TabIndex = 18;
-            this.ProfileiconPictureBox.TabStop = false;
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // NFTSpic
+            // 
+            this.NFTSpic.Image = global::AfroNFTs.Properties.Resources.gettyimages_165604915_170667a;
+            this.NFTSpic.Location = new System.Drawing.Point(487, 12);
+            this.NFTSpic.Name = "NFTSpic";
+            this.NFTSpic.Size = new System.Drawing.Size(214, 208);
+            this.NFTSpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.NFTSpic.TabIndex = 32;
+            this.NFTSpic.TabStop = false;
+            this.NFTSpic.Click += new System.EventHandler(this.NFTSpic_Click);
             // 
             // EditAccount
             // 
@@ -197,6 +200,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(4)))), ((int)(((byte)(16)))));
             this.ClientSize = new System.Drawing.Size(778, 519);
+            this.Controls.Add(this.NFTSpic);
             this.Controls.Add(this.sellOrBuyBtn);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.recentlyPassword);
@@ -210,20 +214,18 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.ProfileiconPictureBox);
             this.MaximumSize = new System.Drawing.Size(794, 558);
             this.MinimumSize = new System.Drawing.Size(794, 558);
             this.Name = "EditAccount";
             this.Text = "EditAccount";
-            ((System.ComponentModel.ISupportInitialize)(this.ProfileiconPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NFTSpic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private FontAwesome.Sharp.IconPictureBox ProfileiconPictureBox;
         private System.Windows.Forms.TextBox ConfirmPswordtxt;
         private System.Windows.Forms.TextBox Pswordtxt;
         private System.Windows.Forms.TextBox Emailtxt;
@@ -237,5 +239,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label recentlyPassword;
         private FontAwesome.Sharp.IconButton sellOrBuyBtn;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.PictureBox NFTSpic;
     }
 }

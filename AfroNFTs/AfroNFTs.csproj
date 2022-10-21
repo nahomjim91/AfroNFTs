@@ -96,6 +96,12 @@
     <Compile Include="View\AdminDashBord.Designer.cs">
       <DependentUpon>AdminDashBord.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Balance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Balance.Designer.cs">
+      <DependentUpon>Balance.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\CreatePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,12 @@
     </Compile>
     <Compile Include="View\MyPages.Designer.cs">
       <DependentUpon>MyPages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\NFTInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\NFTInfo.Designer.cs">
+      <DependentUpon>NFTInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="View\NFTPage.cs">
       <SubType>UserControl</SubType>
@@ -230,6 +242,9 @@
     <EmbeddedResource Include="View\AdminDashBord.resx">
       <DependentUpon>AdminDashBord.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Balance.resx">
+      <DependentUpon>Balance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\CreatePage.resx">
       <DependentUpon>CreatePage.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\MyPages.resx">
       <DependentUpon>MyPages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\NFTInfo.resx">
+      <DependentUpon>NFTInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\NFTPage.resx">
       <DependentUpon>NFTPage.cs</DependentUpon>

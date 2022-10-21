@@ -11,6 +11,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace AfroNFTs
 {
     public partial class UserDashBord : Form
@@ -24,7 +26,7 @@ namespace AfroNFTs
                 return img;
             }
         }
-        public UserDashBord(bool pageType)
+        public UserDashBord(bool pageType, string searchTerm="")
         {
             MessageBox.Show(pageType.ToString());
             MessageBox.Show(mainPage.userID.ToString());
@@ -32,17 +34,34 @@ namespace AfroNFTs
             this.pageType = pageType;
 
             flowLayoutPanel1.Controls.Clear();
-            //for test 
-            foreach (var item in NFTsClass.getAllNFTs())
-            {
-                NFTs nfts = new NFTs(pageType);
-                nfts.NftsPicture = byteArrayToImage(item.NftsPicture);
-                nfts.NFTsName = item.NFTsName;
-                nfts.NFTsRate = item.NFTsRate;
-                nfts.NFTsprice = item.NFTsprice;
-                nfts.Click += new System.EventHandler(Deitail_click);
-                flowLayoutPanel1.Controls.Add(nfts);
 
+            //for test 
+
+            using (var ctx = new DbService()) {
+                try
+                {
+                    var nftss = ctx.nftTB.Where(
+                        nft => nft.isAvelebel == false && nft.NFTsName.Contains(searchTerm)
+                                                      && nft.userType == "Admin"
+                                                      && nft.description.Contains(searchTerm)
+                    );
+               //     MessageBox.Show("LOOP");
+                    foreach (var item in nftss) 
+                    {
+                 //       MessageBox.Show("LOOP");
+                        NFTs nfts = new NFTs(pageType);
+                        nfts.NftsPicture = byteArrayToImage(item.NftsPicture);
+                        nfts.NFTsName = item.NFTsName;
+                        nfts.NFTsRate = item.NFTsRate;
+                        nfts.NFTsprice = item.NFTsprice;
+                        nfts.Click += new System.EventHandler(Deitail_click);
+                        flowLayoutPanel1.Controls.Add(nfts);
+
+                    }
+                }catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
 
 
@@ -56,6 +75,11 @@ namespace AfroNFTs
         private void UserDashBord_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            Program.main.OpenchildFrom(new UserDashBord(pageType, txtSerachNFTS.Text), sender);
         }
     }
 }

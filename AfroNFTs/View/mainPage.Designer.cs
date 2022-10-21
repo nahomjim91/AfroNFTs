@@ -45,6 +45,7 @@
             this.CurrntPage = new System.Windows.Forms.Label();
             this.iconPic_current = new FontAwesome.Sharp.IconPictureBox();
             this.dashbord_pan = new System.Windows.Forms.Panel();
+            this.balanceBtn = new FontAwesome.Sharp.IconButton();
             this.Menupanel.SuspendLayout();
             this.Logpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -56,12 +57,14 @@
             // Menupanel
             // 
             this.Menupanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(11)))), ((int)(((byte)(45)))));
+            this.Menupanel.Controls.Add(this.balanceBtn);
             this.Menupanel.Controls.Add(this.MyPagebtn);
             this.Menupanel.Controls.Add(this.Loginbtn);
             this.Menupanel.Controls.Add(this.Siginupb);
             this.Menupanel.Controls.Add(this.Creatpagebtn);
             this.Menupanel.Controls.Add(this.aboutbtn);
             this.Menupanel.Controls.Add(this.accountBtn);
+            this.Menupanel.Controls.Add(this.balanceBtn);
             this.Menupanel.Controls.Add(this.selltbtn);
             this.Menupanel.Controls.Add(this.Buybtn);
             this.Menupanel.Controls.Add(this.Dashboardbtn);
@@ -373,6 +376,30 @@
             this.dashbord_pan.Paint += new System.Windows.Forms.PaintEventHandler(this.dashbord_pan_Paint);
             this.dashbord_pan.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dashbord_pan_MouseDown);
             // 
+            // balanceBtn
+            // 
+            this.balanceBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.balanceBtn.FlatAppearance.BorderSize = 0;
+            this.balanceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.balanceBtn.Font = new System.Drawing.Font("Rockwell", 12F);
+            this.balanceBtn.ForeColor = System.Drawing.Color.IndianRed;
+            this.balanceBtn.IconChar = FontAwesome.Sharp.IconChar.P;
+            this.balanceBtn.IconColor = System.Drawing.Color.IndianRed;
+            this.balanceBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.balanceBtn.IconSize = 32;
+            this.balanceBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.balanceBtn.Location = new System.Drawing.Point(0, 502);
+            this.balanceBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.balanceBtn.Name = "balanceBtn";
+            this.balanceBtn.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
+            this.balanceBtn.Size = new System.Drawing.Size(201, 53);
+            this.balanceBtn.TabIndex = 14;
+            this.balanceBtn.Text = "Balance";
+            this.balanceBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.balanceBtn.UseVisualStyleBackColor = true;
+            this.balanceBtn.Visible = false;
+            this.balanceBtn.Click += new System.EventHandler(this.balanceBtn_Click);
+            // 
             // mainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -415,5 +442,6 @@
         private FontAwesome.Sharp.IconPictureBox iconPic_current;
         private FontAwesome.Sharp.IconButton MyPagebtn;
         public System.Windows.Forms.Panel dashbord_pan;
+        private FontAwesome.Sharp.IconButton balanceBtn;
     }
 }

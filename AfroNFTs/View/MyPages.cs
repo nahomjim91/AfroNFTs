@@ -30,7 +30,7 @@ namespace AfroNFTs.View
                     var admin = ctx.adminTB.Find(adminId);
 
                     //  var totalPages = ctx.pageTB.Where(page => page.adminId == adminId);
-                    MessageBox.Show("INT LEN: " + admin.pages.ToList().Count());
+                 ///   MessageBox.Show("INT LEN: " + admin.pages.ToList().Count());
 
                     string conStr = ConfigurationManager.ConnectionStrings["DbService"].ConnectionString;
 

@@ -151,6 +151,7 @@
             this.iconButton1.Size = new System.Drawing.Size(43, 26);
             this.iconButton1.TabIndex = 20;
             this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // UserDashBord
             // 

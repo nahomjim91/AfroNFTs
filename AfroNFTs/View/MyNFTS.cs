@@ -39,7 +39,7 @@ namespace AfroNFTs.View
                         foreach(var item in nftsS)
                         {
                             NFTs nfts = new NFTs(false);
-                            nfts.NftsId = item.IDNFTs;
+                            nfts.NftsId = item.NFtsClassId;
                       //      nfts.NftsPicture = byteArrayToImage(item.NftsPicture);
                             nfts.NFTsName = item.NFTsName;
                             nfts.NFTsRate = item.NFTsRate;

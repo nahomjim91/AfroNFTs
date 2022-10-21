@@ -90,6 +90,7 @@
     <Compile Include="Services\EmailService.cs" />
     <Compile Include="Services\NFTService.cs" />
     <Compile Include="Services\PageService.cs" />
+    <Compile Include="Services\Reaction.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="View\AdminDashBord.cs">
       <SubType>Form</SubType>

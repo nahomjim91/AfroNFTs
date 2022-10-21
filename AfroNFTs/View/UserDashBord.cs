@@ -40,17 +40,18 @@ namespace AfroNFTs
             using (var ctx = new DbService()) {
                 try
                 {
-                    var nftss = ctx.nftTB.Where(
+                    /*var nftss = ctx.nftTB.Where(
                         nft => nft.isAvelebel == false && nft.NFTsName.Contains(searchTerm)
                                                       && nft.userType == "Admin"
+                                                      && nft.description.Contains(searchTerm)*/
+                    var nftss = ctx.nftTB.Where(
+                        nft => nft.isAvelebel == false && nft.NFTsName.Contains(searchTerm)
                                                       && nft.description.Contains(searchTerm)
                     );
-               //     MessageBox.Show("LOOP");
                     foreach (var item in nftss) 
                     {
-                 //       MessageBox.Show("LOOP");
                         NFTs nfts = new NFTs(pageType);
-                        nfts.NftsId = item.IDNFTs;
+                        nfts.NftsId = item.NFtsClassId;
                         nfts.NftsPicture = byteArrayToImage(item.NftsPicture);
                         nfts.NFTsName = item.NFTsName;
                         nfts.NFTsRate = item.NFTsRate;

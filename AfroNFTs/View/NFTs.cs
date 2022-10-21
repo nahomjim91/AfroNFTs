@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
+using AfroNFTs.Services;
 using AfroNFTs.Utils;
 using AfroNFTs.Models;
 namespace AfroNFTs.View
@@ -54,16 +54,32 @@ namespace AfroNFTs.View
         public double NFTsRate
         {
             get { return _NFTsRate; }
-            set { _NFTsRate = value; labNFTsRate.Text = value.ToString(); }
+            set { _NFTsRate = value; ; }
         }
         bool pagetype = false;
         int userUsingId;
+        
+        public int Likes
+        {
+            set
+            {
+                likesLabel.Text = value.ToString();
+            }
+        }
+        public int DisLikes
+        {
+            set
+            {
+                dislikesLabel.Text = value.ToString();
+            }
+        }
+
         public NFTs(bool pg)
         {
             this.userUsingId = mainPage.userID;
             pagetype = pg;
             InitializeComponent();
-            if (!isAvel) { pictureBox1.Visible = false; }
+          
 
         }
 
@@ -125,6 +141,50 @@ namespace AfroNFTs.View
 
                 }
             }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (var reactionService = new ReactionService())
+                {
+                    MessageBox.Show(NftsId.ToString());
+                    reactionService.like(mainPage.userID, NftsId, () =>
+                    {
+                        Task.Delay(3000);
+                        Program.main.OpenchildFrom(new UserDashBord(false), sender);
+                    });
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void NFTs_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (var reactionService = new ReactionService())
+                {
+                  reactionService.dislike (mainPage.userID, NftsId, () =>
+                  {
+                      //(new Timer()).Start();
+                      Task.Delay(3000);
+                      Program.main.OpenchildFrom(new UserDashBord(false), sender);
+                  });
+                }
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }

@@ -19,6 +19,7 @@ namespace AfroNFTs.Services
     }
     public class ReactionService: IDisposable
     {
+        public delegate void ReactionRefreshPage();
         public ReactionService()
         {
             try
@@ -80,13 +81,17 @@ namespace AfroNFTs.Services
             {
                 var reader = (new SqlCommand(sql, con).ExecuteReader());
 
-
+                if (!reader.Read()) {
+                    reader.Close();
+                    return null; 
+                }
+                
                 Reaction r = new Reaction();
                 r.id = (int)reader["id"];
                 r.objectId = (int)reader["objectid"];
                 r.reactionType = (string)reader["reaction_type"];
                 r.userId = (int)reader["userid"];
-
+                reader.Close();
                 return r;
             }
             catch(Exception e)
@@ -98,20 +103,48 @@ namespace AfroNFTs.Services
         }
         private  bool reactionExists(int userId, int objectId)
         {
-            return findByUserAndObjectId(userId, objectId) == null;
+            return findByUserAndObjectId(userId, objectId) != null;
         }
 
-        public bool like(int userId, int objectId)
+        public bool like(int userId, int objectId, ReactionRefreshPage refresher)
         {
             if(this.reactionExists(userId, objectId))
             {
-                return this.updateReaction(userId, objectId, "like");
+                MessageBox.Show("Updating reation");
+               
+                var r = this.updateReaction(userId, objectId, "like");
+                refresher();
+                return r;
+            }
+            else
+
+            {
+               
+                MessageBox.Show("Add reaction");
+                var r =  this.addReaction(userId, objectId, "like");
+                refresher();
+                return r;
+            }
+
+        }
+        public bool dislike(int userId, int objectId, ReactionRefreshPage refresh)
+        {
+            if (this.reactionExists(userId, objectId))
+            {
+               
+                var r = this.updateReaction(userId, objectId, "dislike");
+                refresh();
+                return r;
             }
             else
             {
-                return this.addReaction(userId, objectId, "dislike");
+               
+                var r = this.addReaction(userId, objectId, "dislike");
+                refresh();
+                return r;
             }
         }
+
 
         private bool updateReaction(int userId, int objectId, string reaction)
         {
@@ -152,6 +185,7 @@ namespace AfroNFTs.Services
 
         public void Dispose()
         {
+            MessageBox.Show("Closed!");
             con.Close();
             //throw new NotImplementedException();
         }

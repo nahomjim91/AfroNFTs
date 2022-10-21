@@ -11,12 +11,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using AfroNFTs.Services;
 
 
 namespace AfroNFTs
 {
     public partial class UserDashBord : Form
     {
+        
         bool pageType;
         public Image byteArrayToImage(byte[] bytesArr)
         {
@@ -57,8 +59,19 @@ namespace AfroNFTs
                         nfts.NFTsRate = item.NFTsRate;
                         nfts.NFTsprice = item.NFTsprice;
                         nfts.Click += new System.EventHandler(Deitail_click);
-                        flowLayoutPanel1.Controls.Add(nfts);
 
+                        using(var reactionService = new ReactionService())
+                        {
+                            int dislikes = reactionService.getDisLikes(nfts.NftsId);
+                            int likes = reactionService.getLikes(nfts.NftsId);
+
+                            nfts.Likes = likes;
+                            nfts.DisLikes = dislikes;
+
+                        }
+
+                        flowLayoutPanel1.Controls.Add(nfts);
+                        
                     }
                 }catch (Exception ex)
                 {

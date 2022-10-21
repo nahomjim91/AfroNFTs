@@ -57,17 +57,18 @@ namespace AfroNFTs
                         nfts.NftsPicture = byteArrayToImage(item.NftsPicture);
                         nfts.NFTsName = item.NFTsName;
                         nfts.NFTsRate = item.NFTsRate;
-                        nfts.NFTsprice = item.NFTsprice;
+                      
                         nfts.Click += new System.EventHandler(Deitail_click);
 
                         using(var reactionService = new ReactionService())
                         {
+                            nfts.NFTsprice = (double)reactionService.getPrice(nfts.NftsId, (decimal)item.NFTsprice);
                             int dislikes = reactionService.getDisLikes(nfts.NftsId);
                             int likes = reactionService.getLikes(nfts.NftsId);
 
                             nfts.Likes = likes;
                             nfts.DisLikes = dislikes;
-
+                           
                         }
 
                         flowLayoutPanel1.Controls.Add(nfts);

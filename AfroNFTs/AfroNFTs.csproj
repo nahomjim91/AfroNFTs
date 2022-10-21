@@ -87,11 +87,18 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="NFTAppException.cs" />
     <Compile Include="NotifThread.cs" />
+    <Compile Include="Services\Comment.cs" />
     <Compile Include="Services\EmailService.cs" />
     <Compile Include="Services\NFTService.cs" />
     <Compile Include="Services\PageService.cs" />
     <Compile Include="Services\Reaction.cs" />
     <Compile Include="Utils.cs" />
+    <Compile Include="View\AddComment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddComment.Designer.cs">
+      <DependentUpon>AddComment.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\AdminDashBord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +158,12 @@
     </Compile>
     <Compile Include="View\PageDetails.Designer.cs">
       <DependentUpon>PageDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SeeComments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SeeComments.Designer.cs">
+      <DependentUpon>SeeComments.cs</DependentUpon>
     </Compile>
     <Compile Include="View\SiginUp.cs">
       <SubType>Form</SubType>
@@ -247,6 +260,9 @@
     <EmbeddedResource Include="Migrations\202210201444491_isAvel_theNFTs1.resx">
       <DependentUpon>202210201444491_isAvel_theNFTs1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\AddComment.resx">
+      <DependentUpon>AddComment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\AdminDashBord.resx">
       <DependentUpon>AdminDashBord.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,6 +292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\PageDetails.resx">
       <DependentUpon>PageDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SeeComments.resx">
+      <DependentUpon>SeeComments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\SiginUp.resx">
       <DependentUpon>SiginUp.cs</DependentUpon>

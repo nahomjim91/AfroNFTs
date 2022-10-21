@@ -165,29 +165,19 @@ namespace AfroNFTs.View
             }
         }
 
-        private void NFTs_Load(object sender, EventArgs e)
+        private void iconButton2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void iconButton2_Click(object sender, EventArgs e)
+        private void iconButton3_Click(object sender, EventArgs e)
         {
-            try
-            {
-                using (var reactionService = new ReactionService())
-                {
-                  reactionService.dislike (mainPage.userID, NftsId, () =>
-                  {
-                      //(new Timer()).Start();
-                      Task.Delay(3000);
-                      Program.main.OpenchildFrom(new UserDashBord(false), sender);
-                  });
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            Program.main.OpenchildFrom(new SeeComments(NftsId), sender);
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            Program.main.OpenchildFrom(new AddComment(NftsId), sender);
         }
     }
 }

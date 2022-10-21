@@ -57,6 +57,17 @@ namespace AfroNFTs.Services
                 return 0;
             }
         }
+        public decimal getPrice(int objectId, decimal ammount)
+        {
+            decimal likes = this.getLikes(objectId);
+            decimal dislikes = this.getDisLikes(objectId);
+
+            decimal ratio = dislikes == 0 ? (1) : likes / dislikes;
+
+            return (ammount * ratio);
+            
+
+        }
         public int getDisLikes(int objectId)
         {
             var sql = "select count(*) as count from reactions where objectid = " + objectId

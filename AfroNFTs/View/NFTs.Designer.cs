@@ -30,14 +30,16 @@
         {
             this.labPrice = new System.Windows.Forms.Label();
             this.labNFTsName = new System.Windows.Forms.Label();
-            this.seeDetailbtn = new FontAwesome.Sharp.IconButton();
-            this.pictureBoxNFTs = new System.Windows.Forms.PictureBox();
-            this.buyButton = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.likesLabel = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.dislikesLabel = new System.Windows.Forms.Label();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.buyButton = new FontAwesome.Sharp.IconButton();
+            this.seeDetailbtn = new FontAwesome.Sharp.IconButton();
+            this.pictureBoxNFTs = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNFTs)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,87 +68,6 @@
             this.labNFTsName.Text = "label1";
             this.labNFTsName.Click += new System.EventHandler(this.labNFTsName_Click);
             // 
-            // seeDetailbtn
-            // 
-            this.seeDetailbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
-            this.seeDetailbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.seeDetailbtn.Font = new System.Drawing.Font("Modern No. 20", 10F);
-            this.seeDetailbtn.ForeColor = System.Drawing.Color.White;
-            this.seeDetailbtn.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.seeDetailbtn.IconColor = System.Drawing.Color.Black;
-            this.seeDetailbtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.seeDetailbtn.Location = new System.Drawing.Point(161, 286);
-            this.seeDetailbtn.Name = "seeDetailbtn";
-            this.seeDetailbtn.Size = new System.Drawing.Size(66, 30);
-            this.seeDetailbtn.TabIndex = 46;
-            this.seeDetailbtn.Text = "Details";
-            this.seeDetailbtn.UseVisualStyleBackColor = false;
-            this.seeDetailbtn.Click += new System.EventHandler(this.seeDetailbtn_Click);
-            // 
-            // pictureBoxNFTs
-            // 
-            this.pictureBoxNFTs.Image = global::AfroNFTs.Properties.Resources.gettyimages_165604915_170667a;
-            this.pictureBoxNFTs.Location = new System.Drawing.Point(-3, 0);
-            this.pictureBoxNFTs.MaximumSize = new System.Drawing.Size(230, 216);
-            this.pictureBoxNFTs.MinimumSize = new System.Drawing.Size(230, 216);
-            this.pictureBoxNFTs.Name = "pictureBoxNFTs";
-            this.pictureBoxNFTs.Size = new System.Drawing.Size(230, 216);
-            this.pictureBoxNFTs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBoxNFTs.TabIndex = 5;
-            this.pictureBoxNFTs.TabStop = false;
-            this.pictureBoxNFTs.Click += new System.EventHandler(this.pictureBoxNFTs_Click);
-            // 
-            // buyButton
-            // 
-            this.buyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
-            this.buyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buyButton.Font = new System.Drawing.Font("Modern No. 20", 10F);
-            this.buyButton.ForeColor = System.Drawing.Color.White;
-            this.buyButton.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.buyButton.IconColor = System.Drawing.Color.Black;
-            this.buyButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buyButton.Location = new System.Drawing.Point(161, 236);
-            this.buyButton.Name = "buyButton";
-            this.buyButton.Size = new System.Drawing.Size(66, 30);
-            this.buyButton.TabIndex = 47;
-            this.buyButton.Text = "Buy!";
-            this.buyButton.UseVisualStyleBackColor = false;
-            this.buyButton.Click += new System.EventHandler(this.buyButton_Click);
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Modern No. 20", 10F);
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(7, 236);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(70, 25);
-            this.iconButton1.TabIndex = 48;
-            this.iconButton1.Text = "UpVote";
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Modern No. 20", 10F);
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(7, 286);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(75, 27);
-            this.iconButton2.TabIndex = 49;
-            this.iconButton2.Text = "DownVote";
-            this.iconButton2.UseVisualStyleBackColor = false;
-            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
-            // 
             // likesLabel
             // 
             this.likesLabel.AutoSize = true;
@@ -172,10 +93,126 @@
             this.dislikesLabel.TabIndex = 52;
             this.dislikesLabel.Text = "Loading..";
             // 
+            // iconButton4
+            // 
+            this.iconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
+            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton4.Font = new System.Drawing.Font("Modern No. 20", 10F);
+            this.iconButton4.ForeColor = System.Drawing.Color.White;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton4.IconColor = System.Drawing.Color.Black;
+            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton4.Location = new System.Drawing.Point(112, 388);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Size = new System.Drawing.Size(105, 30);
+            this.iconButton4.TabIndex = 54;
+            this.iconButton4.Text = "Details";
+            this.iconButton4.UseVisualStyleBackColor = false;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.Font = new System.Drawing.Font("Modern No. 20", 10F);
+            this.iconButton3.ForeColor = System.Drawing.Color.White;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton3.IconColor = System.Drawing.Color.Black;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.Location = new System.Drawing.Point(7, 388);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(66, 30);
+            this.iconButton3.TabIndex = 53;
+            this.iconButton3.Text = "Details";
+            this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.Font = new System.Drawing.Font("Modern No. 20", 10F);
+            this.iconButton2.ForeColor = System.Drawing.Color.White;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton2.IconColor = System.Drawing.Color.Black;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.Location = new System.Drawing.Point(7, 286);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(75, 27);
+            this.iconButton2.TabIndex = 49;
+            this.iconButton2.Text = "DownVote";
+            this.iconButton2.UseVisualStyleBackColor = false;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Modern No. 20", 10F);
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.Location = new System.Drawing.Point(7, 236);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(70, 25);
+            this.iconButton1.TabIndex = 48;
+            this.iconButton1.Text = "UpVote";
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // buyButton
+            // 
+            this.buyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
+            this.buyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buyButton.Font = new System.Drawing.Font("Modern No. 20", 10F);
+            this.buyButton.ForeColor = System.Drawing.Color.White;
+            this.buyButton.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.buyButton.IconColor = System.Drawing.Color.Black;
+            this.buyButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buyButton.Location = new System.Drawing.Point(161, 236);
+            this.buyButton.Name = "buyButton";
+            this.buyButton.Size = new System.Drawing.Size(66, 30);
+            this.buyButton.TabIndex = 47;
+            this.buyButton.Text = "Buy!";
+            this.buyButton.UseVisualStyleBackColor = false;
+            this.buyButton.Click += new System.EventHandler(this.buyButton_Click);
+            // 
+            // seeDetailbtn
+            // 
+            this.seeDetailbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
+            this.seeDetailbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.seeDetailbtn.Font = new System.Drawing.Font("Modern No. 20", 10F);
+            this.seeDetailbtn.ForeColor = System.Drawing.Color.White;
+            this.seeDetailbtn.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.seeDetailbtn.IconColor = System.Drawing.Color.Black;
+            this.seeDetailbtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.seeDetailbtn.Location = new System.Drawing.Point(151, 286);
+            this.seeDetailbtn.Name = "seeDetailbtn";
+            this.seeDetailbtn.Size = new System.Drawing.Size(66, 30);
+            this.seeDetailbtn.TabIndex = 46;
+            this.seeDetailbtn.Text = "Details";
+            this.seeDetailbtn.UseVisualStyleBackColor = false;
+            this.seeDetailbtn.Click += new System.EventHandler(this.seeDetailbtn_Click);
+            // 
+            // pictureBoxNFTs
+            // 
+            this.pictureBoxNFTs.Image = global::AfroNFTs.Properties.Resources.gettyimages_165604915_170667a;
+            this.pictureBoxNFTs.Location = new System.Drawing.Point(-3, 0);
+            this.pictureBoxNFTs.MaximumSize = new System.Drawing.Size(230, 216);
+            this.pictureBoxNFTs.MinimumSize = new System.Drawing.Size(230, 216);
+            this.pictureBoxNFTs.Name = "pictureBoxNFTs";
+            this.pictureBoxNFTs.Size = new System.Drawing.Size(230, 216);
+            this.pictureBoxNFTs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxNFTs.TabIndex = 5;
+            this.pictureBoxNFTs.TabStop = false;
+            this.pictureBoxNFTs.Click += new System.EventHandler(this.pictureBoxNFTs_Click);
+            // 
             // NFTs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.iconButton4);
+            this.Controls.Add(this.iconButton3);
             this.Controls.Add(this.dislikesLabel);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.likesLabel);
@@ -188,8 +225,7 @@
             this.Controls.Add(this.labPrice);
             this.MinimumSize = new System.Drawing.Size(230, 250);
             this.Name = "NFTs";
-            this.Size = new System.Drawing.Size(230, 367);
-            this.Load += new System.EventHandler(this.NFTs_Load);
+            this.Size = new System.Drawing.Size(254, 449);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNFTs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -207,5 +243,7 @@
         private System.Windows.Forms.Label likesLabel;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label dislikesLabel;
+        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton iconButton4;
     }
 }

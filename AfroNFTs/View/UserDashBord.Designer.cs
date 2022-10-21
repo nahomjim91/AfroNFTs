@@ -31,9 +31,6 @@
             this.txtSerachNFTS = new System.Windows.Forms.TextBox();
             this.labLinkWorth = new System.Windows.Forms.LinkLabel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanelTreading = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnTopTreadind = new FontAwesome.Sharp.IconButton();
-            this.btnTreading = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
@@ -75,62 +72,14 @@
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(57)))), ((int)(((byte)(121)))));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 67);
-            this.flowLayoutPanel1.MaximumSize = new System.Drawing.Size(750, 250);
-            this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(236, 250);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(7, 67);
+            this.flowLayoutPanel1.MaximumSize = new System.Drawing.Size(750, 500);
+            this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(236, 200);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(750, 250);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(750, 440);
             this.flowLayoutPanel1.TabIndex = 23;
-            // 
-            // flowLayoutPanelTreading
-            // 
-            this.flowLayoutPanelTreading.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanelTreading.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(18)))), ((int)(((byte)(109)))));
-            this.flowLayoutPanelTreading.Location = new System.Drawing.Point(12, 368);
-            this.flowLayoutPanelTreading.MaximumSize = new System.Drawing.Size(760, 250);
-            this.flowLayoutPanelTreading.MinimumSize = new System.Drawing.Size(236, 25);
-            this.flowLayoutPanelTreading.Name = "flowLayoutPanelTreading";
-            this.flowLayoutPanelTreading.Size = new System.Drawing.Size(750, 139);
-            this.flowLayoutPanelTreading.TabIndex = 26;
-            // 
-            // btnTopTreadind
-            // 
-            this.btnTopTreadind.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTopTreadind.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTopTreadind.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTopTreadind.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.btnTopTreadind.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnTopTreadind.IconColor = System.Drawing.Color.Black;
-            this.btnTopTreadind.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTopTreadind.Location = new System.Drawing.Point(112, 335);
-            this.btnTopTreadind.MaximumSize = new System.Drawing.Size(79, 27);
-            this.btnTopTreadind.MinimumSize = new System.Drawing.Size(79, 27);
-            this.btnTopTreadind.Name = "btnTopTreadind";
-            this.btnTopTreadind.Size = new System.Drawing.Size(79, 27);
-            this.btnTopTreadind.TabIndex = 25;
-            this.btnTopTreadind.Text = "Top";
-            this.btnTopTreadind.UseVisualStyleBackColor = true;
-            // 
-            // btnTreading
-            // 
-            this.btnTreading.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTreading.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTreading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.btnTreading.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnTreading.IconColor = System.Drawing.Color.Black;
-            this.btnTreading.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnTreading.Location = new System.Drawing.Point(12, 335);
-            this.btnTreading.MaximumSize = new System.Drawing.Size(79, 27);
-            this.btnTreading.MinimumSize = new System.Drawing.Size(79, 27);
-            this.btnTreading.Name = "btnTreading";
-            this.btnTreading.Size = new System.Drawing.Size(79, 27);
-            this.btnTreading.TabIndex = 24;
-            this.btnTreading.Text = "Treading";
-            this.btnTreading.UseVisualStyleBackColor = true;
             // 
             // iconButton1
             // 
@@ -158,9 +107,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(10)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(778, 519);
-            this.Controls.Add(this.flowLayoutPanelTreading);
-            this.Controls.Add(this.btnTopTreadind);
-            this.Controls.Add(this.btnTreading);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.labLinkWorth);
             this.Controls.Add(this.iconButton1);
@@ -179,8 +125,5 @@
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.LinkLabel labLinkWorth;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private FontAwesome.Sharp.IconButton btnTreading;
-        private FontAwesome.Sharp.IconButton btnTopTreadind;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelTreading;
     }
 }

@@ -88,6 +88,7 @@
     <Compile Include="NFTAppException.cs" />
     <Compile Include="NotifThread.cs" />
     <Compile Include="Services\EmailService.cs" />
+    <Compile Include="Services\NFTService.cs" />
     <Compile Include="Services\PageService.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="View\AdminDashBord.cs">
@@ -119,6 +120,12 @@
     </Compile>
     <Compile Include="View\ForgottenPassword.Designer.cs">
       <DependentUpon>ForgottenPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MyNFTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MyNFTS.Designer.cs">
+      <DependentUpon>MyNFTS.cs</DependentUpon>
     </Compile>
     <Compile Include="View\MyPages.cs">
       <SubType>Form</SubType>
@@ -253,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ForgottenPassword.resx">
       <DependentUpon>ForgottenPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MyNFTS.resx">
+      <DependentUpon>MyNFTS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MyPages.resx">
       <DependentUpon>MyPages.cs</DependentUpon>

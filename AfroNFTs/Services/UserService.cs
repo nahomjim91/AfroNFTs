@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Configuration;
 
 using AfroNFTs.Models;
 using AfroNFTs.Utils;
@@ -11,8 +13,62 @@ using AfroNFTs.Utils;
 
 namespace AfroNFTs.Services
 {
-    public static class UserService
+    public  class UserService : IDisposable
     {
+        private int userId;
+
+        private SqlConnection con;
+
+        public UserService(int id)
+        {
+            this.userId = id;
+            try
+            {
+                con = new SqlConnection(
+                              ConfigurationManager.ConnectionStrings["DbService"].ConnectionString
+                );
+                con.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+       public List<NFTsClass> GetNFTs()
+        {
+            List<NFTsClass> li = new List<NFTsClass>();
+
+            try
+            {
+                var sql = "select* from NFTsClasses where OwnerID = " + userId;
+                var reader = (new SqlCommand(sql, con)).ExecuteReader();
+                while (reader.Read())
+                {
+                    var nft = new NFTsClass();
+                    nft.NFTsprice = double.Parse(reader["NFTSprice"].ToString());
+                    nft.description = reader["description"].ToString();
+                    nft.NFTsName = reader["NFTsName"].ToString();
+                    string photoString = (reader["NftsPicture"].ToString());
+                    var photo = new byte[photoString.Length];
+                    int len = 0;
+                    foreach (byte b in photoString)
+                    {
+                        photo[len] = b;
+                        len++;
+                    }
+
+                    nft.NftsPicture = photo;
+                    li.Add(nft);
+                }
+                return li;
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+            return li;
+        }
         public static bool registerNormalUser(
                string firstName,
                string lastName,
@@ -82,6 +138,10 @@ namespace AfroNFTs.Services
                 return false;
             }
         }
-        
+
+        public void Dispose()
+        {
+            con.Close();
+        }
     }
 }

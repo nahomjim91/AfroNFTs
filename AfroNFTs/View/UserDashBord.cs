@@ -50,6 +50,7 @@ namespace AfroNFTs
                     {
                  //       MessageBox.Show("LOOP");
                         NFTs nfts = new NFTs(pageType);
+                        nfts.NftsId = item.IDNFTs;
                         nfts.NftsPicture = byteArrayToImage(item.NftsPicture);
                         nfts.NFTsName = item.NFTsName;
                         nfts.NFTsRate = item.NFTsRate;

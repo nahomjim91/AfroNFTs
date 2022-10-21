@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+using AfroNFTs.Utils;
+using AfroNFTs.Models;
 namespace AfroNFTs.View
 {
     public partial class NFTs : UserControl
@@ -54,9 +57,10 @@ namespace AfroNFTs.View
             set { _NFTsRate = value; labNFTsRate.Text = value.ToString(); }
         }
         bool pagetype = false;
-        
+        int userUsingId;
         public NFTs(bool pg)
         {
+            this.userUsingId = mainPage.userID;
             pagetype = pg;
             InitializeComponent();
             if (!isAvel) { pictureBox1.Visible = false; }
@@ -88,5 +92,42 @@ namespace AfroNFTs.View
 
         }
 
+        private void buyButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+              
+                using(var ctx = new DbService())
+                {
+                    var user = ctx.normalUserTB.Find(mainPage.userID);
+                    if(decimal.Parse(labPrice.Text) > user.balance)
+                    {
+                        AppEventUtils.ShowInfoMessage(this, "You cannot buy this please recharge!");
+                        return;
+                    }
+                    var nft = ctx.nftTB.Find(this.NftsId);
+
+                    if(nft == null)
+                    {
+                        AppEventUtils.ShowInfoMessage(this, "The NFT ID is not given");
+                        return;
+                    }
+                    user.balance -= (decimal)nft.NFTsprice;
+                    nft.userType = "User";
+                    nft.isAvelebel = true;
+                    nft.OwnerID = mainPage.userID;
+
+                    ctx.SaveChanges();
+
+                    AppEventUtils.ShowInfoMessage(this, "Bought!");
+
+
+
+                }
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

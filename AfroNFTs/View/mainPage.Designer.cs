@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.Menupanel = new System.Windows.Forms.Panel();
+            this.balanceBtn = new FontAwesome.Sharp.IconButton();
             this.MyPagebtn = new FontAwesome.Sharp.IconButton();
             this.Loginbtn = new FontAwesome.Sharp.IconButton();
             this.Siginupb = new FontAwesome.Sharp.IconButton();
@@ -45,7 +46,7 @@
             this.CurrntPage = new System.Windows.Forms.Label();
             this.iconPic_current = new FontAwesome.Sharp.IconPictureBox();
             this.dashbord_pan = new System.Windows.Forms.Panel();
-            this.balanceBtn = new FontAwesome.Sharp.IconButton();
+            this.myNFTsButton = new FontAwesome.Sharp.IconButton();
             this.Menupanel.SuspendLayout();
             this.Logpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -57,7 +58,7 @@
             // Menupanel
             // 
             this.Menupanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(11)))), ((int)(((byte)(45)))));
-            this.Menupanel.Controls.Add(this.balanceBtn);
+            this.Menupanel.Controls.Add(this.myNFTsButton);
             this.Menupanel.Controls.Add(this.MyPagebtn);
             this.Menupanel.Controls.Add(this.Loginbtn);
             this.Menupanel.Controls.Add(this.Siginupb);
@@ -76,6 +77,30 @@
             this.Menupanel.Size = new System.Drawing.Size(201, 700);
             this.Menupanel.TabIndex = 0;
             // 
+            // balanceBtn
+            // 
+            this.balanceBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.balanceBtn.FlatAppearance.BorderSize = 0;
+            this.balanceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.balanceBtn.Font = new System.Drawing.Font("Rockwell", 12F);
+            this.balanceBtn.ForeColor = System.Drawing.Color.IndianRed;
+            this.balanceBtn.IconChar = FontAwesome.Sharp.IconChar.P;
+            this.balanceBtn.IconColor = System.Drawing.Color.IndianRed;
+            this.balanceBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.balanceBtn.IconSize = 32;
+            this.balanceBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.balanceBtn.Location = new System.Drawing.Point(0, 272);
+            this.balanceBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.balanceBtn.Name = "balanceBtn";
+            this.balanceBtn.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
+            this.balanceBtn.Size = new System.Drawing.Size(201, 53);
+            this.balanceBtn.TabIndex = 14;
+            this.balanceBtn.Text = "Balance";
+            this.balanceBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.balanceBtn.UseVisualStyleBackColor = true;
+            this.balanceBtn.Visible = false;
+            this.balanceBtn.Click += new System.EventHandler(this.balanceBtn_Click);
+            // 
             // MyPagebtn
             // 
             this.MyPagebtn.Dock = System.Windows.Forms.DockStyle.Top;
@@ -88,7 +113,7 @@
             this.MyPagebtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.MyPagebtn.IconSize = 32;
             this.MyPagebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MyPagebtn.Location = new System.Drawing.Point(0, 449);
+            this.MyPagebtn.Location = new System.Drawing.Point(0, 502);
             this.MyPagebtn.Margin = new System.Windows.Forms.Padding(4);
             this.MyPagebtn.Name = "MyPagebtn";
             this.MyPagebtn.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
@@ -150,7 +175,7 @@
             this.Creatpagebtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Creatpagebtn.IconSize = 32;
             this.Creatpagebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Creatpagebtn.Location = new System.Drawing.Point(0, 396);
+            this.Creatpagebtn.Location = new System.Drawing.Point(0, 449);
             this.Creatpagebtn.Margin = new System.Windows.Forms.Padding(4);
             this.Creatpagebtn.Name = "Creatpagebtn";
             this.Creatpagebtn.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
@@ -174,7 +199,7 @@
             this.aboutbtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.aboutbtn.IconSize = 32;
             this.aboutbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.aboutbtn.Location = new System.Drawing.Point(0, 334);
+            this.aboutbtn.Location = new System.Drawing.Point(0, 387);
             this.aboutbtn.Margin = new System.Windows.Forms.Padding(4);
             this.aboutbtn.Name = "aboutbtn";
             this.aboutbtn.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
@@ -198,7 +223,7 @@
             this.accountBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.accountBtn.IconSize = 32;
             this.accountBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.accountBtn.Location = new System.Drawing.Point(0, 272);
+            this.accountBtn.Location = new System.Drawing.Point(0, 325);
             this.accountBtn.Margin = new System.Windows.Forms.Padding(4);
             this.accountBtn.Name = "accountBtn";
             this.accountBtn.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
@@ -376,29 +401,29 @@
             this.dashbord_pan.Paint += new System.Windows.Forms.PaintEventHandler(this.dashbord_pan_Paint);
             this.dashbord_pan.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dashbord_pan_MouseDown);
             // 
-            // balanceBtn
+            // myNFTsButton
             // 
-            this.balanceBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.balanceBtn.FlatAppearance.BorderSize = 0;
-            this.balanceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.balanceBtn.Font = new System.Drawing.Font("Rockwell", 12F);
-            this.balanceBtn.ForeColor = System.Drawing.Color.IndianRed;
-            this.balanceBtn.IconChar = FontAwesome.Sharp.IconChar.P;
-            this.balanceBtn.IconColor = System.Drawing.Color.IndianRed;
-            this.balanceBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.balanceBtn.IconSize = 32;
-            this.balanceBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.balanceBtn.Location = new System.Drawing.Point(0, 502);
-            this.balanceBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.balanceBtn.Name = "balanceBtn";
-            this.balanceBtn.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
-            this.balanceBtn.Size = new System.Drawing.Size(201, 53);
-            this.balanceBtn.TabIndex = 14;
-            this.balanceBtn.Text = "Balance";
-            this.balanceBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.balanceBtn.UseVisualStyleBackColor = true;
-            this.balanceBtn.Visible = false;
-            this.balanceBtn.Click += new System.EventHandler(this.balanceBtn_Click);
+            this.myNFTsButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.myNFTsButton.FlatAppearance.BorderSize = 0;
+            this.myNFTsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.myNFTsButton.Font = new System.Drawing.Font("Rockwell", 12F);
+            this.myNFTsButton.ForeColor = System.Drawing.Color.IndianRed;
+            this.myNFTsButton.IconChar = FontAwesome.Sharp.IconChar.P;
+            this.myNFTsButton.IconColor = System.Drawing.Color.IndianRed;
+            this.myNFTsButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.myNFTsButton.IconSize = 32;
+            this.myNFTsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.myNFTsButton.Location = new System.Drawing.Point(0, 555);
+            this.myNFTsButton.Margin = new System.Windows.Forms.Padding(4);
+            this.myNFTsButton.Name = "myNFTsButton";
+            this.myNFTsButton.Padding = new System.Windows.Forms.Padding(13, 0, 27, 0);
+            this.myNFTsButton.Size = new System.Drawing.Size(201, 53);
+            this.myNFTsButton.TabIndex = 15;
+            this.myNFTsButton.Text = "My NFTS";
+            this.myNFTsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.myNFTsButton.UseVisualStyleBackColor = true;
+            this.myNFTsButton.Visible = false;
+            this.myNFTsButton.Click += new System.EventHandler(this.myNFTsButton_Click);
             // 
             // mainPage
             // 
@@ -443,5 +468,6 @@
         private FontAwesome.Sharp.IconButton MyPagebtn;
         public System.Windows.Forms.Panel dashbord_pan;
         private FontAwesome.Sharp.IconButton balanceBtn;
+        private FontAwesome.Sharp.IconButton myNFTsButton;
     }
 }

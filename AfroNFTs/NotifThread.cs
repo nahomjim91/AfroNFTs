@@ -4,20 +4,46 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
 using AfroNFTs.Utils;
 namespace AfroNFTs
 {
     public class NotifThread : Task
     {
         
-        public NotifThread(Action action) : base(action)
+        public NotifThread(Action action, bool pageType) : base(action)
         {
             var task = Task.Run(async () => {
                 for (; ; )
                 {
                     await Task.Delay(10000);
-             //       AppEventUtils.showOutSideNotif("Hi", "THis is aw");
-                          
+                    if (mainPage.userID == null) return;
+                    
+                    //       AppEventUtils.showOutSideNotif("Hi", "THis is aw");
+                    if (pageType)
+                    {
+                        using(var actionService = new Services.ActionService(mainPage.userID))
+                        {
+                            var allActions = actionService.getAllActionsForAdmin(mainPage.userID)
+                            ;
+                            if (allActions == null) return;
+                            foreach (var act in allActions)
+                            {
+                                string str;
+                                if (act.act == "com") str = "Comment";
+                                else if (act.act == "Li") str = "Liked";
+                                else if (act.act == "Di") str = "Disliked";
+                                else str = "uknown";
+
+
+                                int userId = act.userId;
+                                
+                                AppEventUtils.showOutSideNotif("Notification", $"Action: {str}, user Id: ${userId}");
+                                actionService.makeActionSeen(act.id);
+                            }
+                        }
+                    }
                 }
             });
         }

@@ -171,12 +171,21 @@ namespace AfroNFTs.View
             {
                 using (var reactionService = new ReactionService())
                 {
-                    MessageBox.Show(NftsId.ToString());
+                   // MessageBox.Show(NftsId.ToString());
                     reactionService.like(mainPage.userID, NftsId, () =>
                     {
                         Task.Delay(3000);
                         if (!pagetype) Program.main.OpenchildFrom(new UserDashBord(false), sender);
                     });
+                }
+                using(var ac = new ActionService(pagetype, mainPage.userID))
+                {
+                    using (var ctx = new DbService())
+                    {
+                        var nft = ctx.nftTB.Find(NftsId);
+                        ac.registerAction("Li", nft.OwnerID);
+                    }
+                   
                 }
             }catch(Exception ex)
             {
@@ -197,6 +206,15 @@ namespace AfroNFTs.View
         private void iconButton4_Click(object sender, EventArgs e)
         {
             Program.main.OpenchildFrom(new AddComment(NftsId), sender);
+            using (var ac = new ActionService(pagetype, mainPage.userID))
+            {
+                using (var ctx = new DbService())
+                {
+                    var nft = ctx.nftTB.Find(NftsId);
+                    ac.registerAction("co", nft.OwnerID);
+                }
+
+            }
         }
 
         private void iconButton2_Click_1(object sender, EventArgs e)
@@ -211,6 +229,15 @@ namespace AfroNFTs.View
                         Task.Delay(3000);
                        if(!pagetype) Program.main.OpenchildFrom(new UserDashBord(false), sender);
                     });
+                }
+                using (var ac = new ActionService(pagetype, mainPage.userID))
+                {
+                    using (var ctx = new DbService())
+                    {
+                        var nft = ctx.nftTB.Find(NftsId);
+                        ac.registerAction("Di", nft.OwnerID);
+                    }
+
                 }
             }
             catch (Exception ex)

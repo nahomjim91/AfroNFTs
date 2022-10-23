@@ -61,6 +61,8 @@ namespace AfroNFTs
                 NormalUser normalUser = new NormalUser();
                 b = isAdminCheckBox.Checked;
 
+                NotifThread n = new NotifThread(() => { }, b);
+                n.Start();
                 if (b)
                 {
                     try

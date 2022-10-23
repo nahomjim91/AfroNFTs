@@ -11,31 +11,30 @@ using System.Windows.Forms;
 namespace AfroNFTs.Services
 {
     /*
-     create table actions( id int primary key identity, 
-                     whenn datetime not null,
-                     act int not null,
-                     s_one int,
-                     s_two int);
-    alter table actions add userId int not null
-alter table actions add userType tinyint not null
-);
+        create table actions(id int primary key identity, act varchar(4) not null,
+                             is_seen tinyint not null default 0)
+    alter table actions add wn Datetime
+    alter table actions add user_id int not null
+    
+alter table actions add for_admin int not null
      */
     public class Action
     {
         public int id;
+        public string act;
+        public bool isSeen;
         public DateTime when;
-        public int action;
-        public int sateOne;
-        public int sateTwo;
+        public int forAdmin;
         public int userId;
-        public bool  userType;
+
+
     }
     public class ActionService : IDisposable
     {
-        public List<Action> getAllActions()
+        public List<Action> getAllActionsForAdmin(int forAdmin)
         {
             var li = new List<Action>();
-            var sql = "select * from actions where userId = " + userId;
+            var sql = "select * from actions where for_admin = " + forAdmin;
 
             try
             {
@@ -44,12 +43,11 @@ alter table actions add userType tinyint not null
                 {
                     var act = new Action();
                     act.id = (int)reader["id"];
-                    act.when = (DateTime)reader["whenn"];
-                    act.action = (int)reader["act"];
-                    act.sateOne = (int)reader["s_one"];
-                    act.sateTwo = (int)reader["s_two"];
-                    act.userId = userId;
-                    act.userType = userType;
+                    act.when = (DateTime)reader["wn"];
+                    act.act = (string)reader["act"];
+                    act.userId = (int)reader["user_id"];
+                    act.isSeen = (int)reader["is_seen"] == 0? false : true;
+                    act.forAdmin = (int)reader["for_admin"];
                 }
                 reader.Close();
             }
@@ -64,10 +62,8 @@ alter table actions add userType tinyint not null
         private SqlConnection _con;
         private int userId;
         private bool userType;
-        public ActionService(bool userType, int userId)
+        public ActionService(int adminId)
         {
-            this.userId = userId;
-            this.userType = userType;
             try
             {
                 _con = new SqlConnection(ConfigurationManager.ConnectionStrings["DbService"].ConnectionString);
@@ -77,15 +73,46 @@ alter table actions add userType tinyint not null
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        public ActionService(bool userType, int userId)
+        {
+            this.userId = userId;
+            this.userType = userType;
 
+            try
+            {
+                _con = new SqlConnection(ConfigurationManager.ConnectionStrings["DbService"].ConnectionString);
+                _con.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public bool makeActionSeen(int actionId)
+        {
+            var sql = "update actions set is_seen = 1 where id = " + actionId;
+            try
+            {
+                int rows = (new SqlCommand(sql, _con).ExecuteNonQuery());
+                if (rows == 0) return false;
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return false;
+            }
         }
         public bool registerAction(
-            int act, int s_one, int s_two 
+            string action,
+            int forAdmin
         )
         {
-            int ty = userType ? 1 : 0;
-            var sql = "insert into actions(s_one, s_two, act, whenn, userId, userType)" +
-                      $" values({s_one}, {s_two}, {act}, {new DateTime()}, {userId}, {ty})";
+            
+            var sql = "insert into actions(act, user_id, for_admin)" +
+                      $" values('{action}', {userId}, {forAdmin})";
             try
             {
                 int rows = (new SqlCommand(sql, _con).ExecuteNonQuery());

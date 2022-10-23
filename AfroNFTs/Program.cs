@@ -19,8 +19,7 @@ namespace AfroNFTs
        [STAThread]
         static void Main()
         {
-            NotifThread n = new NotifThread(() => { });
-            n.Start();
+           
             try
             {
                 AppEventUtils.AppEventHandler messageHandler = (object sender, string a) =>

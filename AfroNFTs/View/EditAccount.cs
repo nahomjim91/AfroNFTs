@@ -11,6 +11,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Windows.System.UserProfile;
 
+using AForge.Video;
+using AForge.Video.DirectShow;
+
+
 using AfroNFTs.Utils;
 using System.IO;
 
@@ -18,14 +22,87 @@ namespace AfroNFTs.View
 {
     public partial class EditAccount : Form
     {
+        private bool isCameraOn = false;
         bool pageType;
         int id;
         byte[] imgByte;
+        VideoCaptureDevice frame;
+        FilterInfoCollection devs;
+
+        public Image byteArrayToImage(byte[] bytesArr)
+        {
+            using (MemoryStream memstr = new MemoryStream(bytesArr))
+            {
+                Image img = Image.FromStream(memstr);
+                return img;
+            }
+        }
         public EditAccount(bool pageType ,int id)
         {
+
+         
+
             this.pageType = pageType; 
             this.id = id;
             InitializeComponent();
+            using (var ctx = new DbService())
+            {
+                User u;
+                if (pageType)
+                {
+                     u = ctx.adminTB.Single(admin => admin.Id == id);
+                }
+                else
+                {
+                     u= ctx.normalUserTB.Single(user => user.Id == id);
+                }
+                Fnametxt.Text = u.firstName;
+                LNametxt.Text = u.lastName;
+                Emailtxt.Text = u.email;
+                NFTSpic.Image = byteArrayToImage(u.profileImage);
+
+
+            }
+        }
+
+       public void startCamera()
+        {
+            devs = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            frame = new VideoCaptureDevice(devs[0].MonikerString);
+
+            frame.NewFrame += NFrameEvent;
+            frame.Start();
+            isCameraOn = true;
+
+        }
+        public void stopCamera()
+        {
+            frame.NewFrame -= NFrameEvent;
+            frame.Stop();
+            isCameraOn = false;
+
+        }
+        public void NFrameEvent(object sender,NewFrameEventArgs  args)
+        {
+            try
+            {
+               // var mem = ImageToByteArray((Image)args.Frame.Clone());
+                using (var ms = new MemoryStream())
+                {
+                    var img=  ((Image)args.Frame.Clone());
+                    img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                  //  imageIn.Save(ms, imageIn.RawFormat);
+                    NFTSpic.Image = System.Drawing.Bitmap.FromStream(ms);
+                    //return ms.ToArray();
+                }
+               
+                NFTSpic.SizeMode = PictureBoxSizeMode.StretchImage;
+              //  NFTSpic.Image = (Image)args.Frame.Clone();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Camera Error: " + ex.Message);
+            }
         }
 
         private void sellOrBuyBtn_Click(object sender, EventArgs e)
@@ -39,10 +116,12 @@ namespace AfroNFTs.View
                         Admin u = ctx.adminTB.Single(admin => admin.Id == id);
                         if (u.password != Utils.PasswordUtils.HashPassword(textBox1.Text))
                         {
+                            AppEventUtils.ShowInfoMessage(this, "Error");
                             return;
                         }
                         if(Pswordtxt.Text != ConfirmPswordtxt.Text)
                         {
+                            AppEventUtils.ShowInfoMessage(this, "Error");
                             return;
                         }
                         u.firstName = Fnametxt.Text;
@@ -56,12 +135,14 @@ namespace AfroNFTs.View
                     else
                     {
                         NormalUser u = ctx.normalUserTB.Single(admin => admin.Id == id);
-                        if (u.password != Utils.PasswordUtils.HashPassword(textBox1.Text))
+                        if (PasswordUtils.isPasswordCorrect(recentlyPassword.Text, u.password))
                         {
+                            AppEventUtils.ShowInfoMessage(this, "Error in Recent Password");
                             return;
                         }
                         if (Pswordtxt.Text != ConfirmPswordtxt.Text)
                         {
+                            AppEventUtils.ShowInfoMessage(this, "Error the passwords are not the same");
                             return;
                         }
                         u.firstName = Fnametxt.Text;
@@ -69,7 +150,11 @@ namespace AfroNFTs.View
                         u.lastName = LNametxt.Text;
                         u.password = Utils.PasswordUtils.HashPassword(Pswordtxt.Text);
                         u.profileImage = ImageToByteArray(this.NFTSpic.Image);
+                        if (isCameraOn)
+                        {
 
+                        }
+                        
 
                     }
                     ctx.SaveChanges();
@@ -77,7 +162,7 @@ namespace AfroNFTs.View
                 }
             }catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Save Error: " +  ex.Message);
             }
         }
 
@@ -114,6 +199,18 @@ namespace AfroNFTs.View
                 string str = "";
                 str += imgByte;
                 MessageBox.Show(str);
+        }
+
+        private void startCameraButton_Click(object sender, EventArgs e)
+        {
+            snapButton.Visible = true;
+            startCamera();
+        }
+
+        private void snapButton_Click(object sender, EventArgs e)
+        {
+            stopCamera();
+            //NFTSpic.Image
         }
     }
 }

@@ -16,7 +16,7 @@ namespace AfroNFTs
                 for (; ; )
                 {
                     await Task.Delay(10000);
-                    AppEventUtils.showOutSideNotif("Hi", "THis is aw");
+             //       AppEventUtils.showOutSideNotif("Hi", "THis is aw");
                           
                 }
             });

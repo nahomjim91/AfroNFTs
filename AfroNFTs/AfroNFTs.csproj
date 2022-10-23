@@ -78,6 +78,10 @@
     <Compile Include="Migrations\202210201444491_isAvel_theNFTs1.designer.cs">
       <DependentUpon>202210201444491_isAvel_theNFTs1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202210221517037_after-error.cs" />
+    <Compile Include="Migrations\202210221517037_after-error.designer.cs">
+      <DependentUpon>202210221517037_after-error.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\DbService.cs" />
@@ -261,6 +265,9 @@
     <EmbeddedResource Include="Migrations\202210201444491_isAvel_theNFTs1.resx">
       <DependentUpon>202210201444491_isAvel_theNFTs1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210221517037_after-error.resx">
+      <DependentUpon>202210221517037_after-error.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\AddComment.resx">
       <DependentUpon>AddComment.cs</DependentUpon>
     </EmbeddedResource>
@@ -381,6 +388,15 @@
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="AForge">
+      <Version>2.2.5</Version>
+    </PackageReference>
+    <PackageReference Include="AForge.Video">
+      <Version>2.2.5</Version>
+    </PackageReference>
+    <PackageReference Include="AForge.Video.DirectShow">
+      <Version>2.2.5</Version>
+    </PackageReference>
     <PackageReference Include="EASendMail">
       <Version>7.9.0.8</Version>
     </PackageReference>

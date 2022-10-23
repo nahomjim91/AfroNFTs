@@ -25,12 +25,22 @@ namespace AfroNFTs.View
 
                 foreach(Comment com in comments)
                 {
-                    MessageBox.Show(com.comment);
+                    var l = new CommentWidget(com.userId, com.comment);
+                   
+                    l.AutoSize = true;
+                  //  l.AutoScrollOffset = new Point(0, 10);
+                    this.Controls.Add(l);
+                   // MessageBox.Show(com.comment);
                 }
             }
         }
 
         private void SeeComments_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

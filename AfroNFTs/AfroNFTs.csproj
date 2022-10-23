@@ -117,6 +117,12 @@
     <Compile Include="View\Balance.Designer.cs">
       <DependentUpon>Balance.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\CommentWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CommentWidget.Designer.cs">
+      <DependentUpon>CommentWidget.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\CreatePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -289,6 +295,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Balance.resx">
       <DependentUpon>Balance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CommentWidget.resx">
+      <DependentUpon>CommentWidget.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\CreatePage.resx">
       <DependentUpon>CreatePage.cs</DependentUpon>

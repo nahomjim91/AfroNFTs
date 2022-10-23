@@ -79,7 +79,8 @@ namespace AfroNFTs.View
             this.userUsingId = mainPage.userID;
             pagetype = pg;
             InitializeComponent();
-          
+            
+
 
         }
 
@@ -138,9 +139,14 @@ namespace AfroNFTs.View
                     {
                         transcationService.register(mainPage.userID, nft.NFTsName, nft.NFTsprice);
                     }
+                    decimal price = 0;
+                    using(var reactionService =new ReactionService())
+                    {
+                        price = reactionService.getPrice(NftsId, (decimal)nft.NFTsprice);
+                    }
                     var admin = ctx.adminTB.Find(nft.OwnerID);
-                    admin.balance += (decimal)nft.NFTsprice;
-                    user.balance -= (decimal)nft.NFTsprice;
+                    admin.balance += (decimal)price;
+                    user.balance -= (decimal)price;
                     nft.userType = "User";
                     nft.isAvelebel = true;
                     nft.OwnerID = mainPage.userID;
@@ -169,7 +175,7 @@ namespace AfroNFTs.View
                     reactionService.like(mainPage.userID, NftsId, () =>
                     {
                         Task.Delay(3000);
-                        Program.main.OpenchildFrom(new UserDashBord(false), sender);
+                        if (!pagetype) Program.main.OpenchildFrom(new UserDashBord(false), sender);
                     });
                 }
             }catch(Exception ex)
@@ -191,6 +197,26 @@ namespace AfroNFTs.View
         private void iconButton4_Click(object sender, EventArgs e)
         {
             Program.main.OpenchildFrom(new AddComment(NftsId), sender);
+        }
+
+        private void iconButton2_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                using (var reactionService = new ReactionService())
+                {
+                    MessageBox.Show(NftsId.ToString());
+                    reactionService.dislike(mainPage.userID, NftsId, () =>
+                    {
+                        Task.Delay(3000);
+                       if(!pagetype) Program.main.OpenchildFrom(new UserDashBord(false), sender);
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

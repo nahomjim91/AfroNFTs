@@ -30,8 +30,8 @@ namespace AfroNFTs
         }
         public UserDashBord(bool pageType, string searchTerm="")
         {
-            MessageBox.Show(pageType.ToString());
-            MessageBox.Show(mainPage.userID.ToString());
+          //  MessageBox.Show(pageType.ToString());
+         //   MessageBox.Show(mainPage.userID.ToString());
             InitializeComponent();
             this.pageType = pageType;
 

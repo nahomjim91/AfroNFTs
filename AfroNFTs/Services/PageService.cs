@@ -29,27 +29,30 @@ namespace AfroNFTs.Services
             string sql = "select * from NFTsClasses where PageId = " + pageId;
 
             List<NFTsClass> list = new List<NFTsClass>() { };
+            DbService dbService = new DbService();
             try
             {
-               var reader = (new SqlCommand(sql, con)).ExecuteReader();
-                while (reader.Read())
-                {
-                    var nft = new NFTsClass();
-                    nft.NFTsprice = double.Parse(reader["NFTSprice"].ToString());
-                    nft.description = reader["description"].ToString();
-                    nft.NFTsName = reader["NFTsName"].ToString();
-                    string photoString = (reader["NftsPicture"].ToString());
-                    var photo = new byte[photoString.Length];
-                    int len = 0;
-                    foreach(byte b in photoString)
-                    {
-                        photo[len] = b;
-                        len++;
-                    }
+                /* var reader = (new SqlCommand(sql, con)).ExecuteReader();
+                  while (reader.Read())
+                  {
+                      var nft = new NFTsClass();
+                      nft.NFTsprice = double.Parse(reader["NFTSprice"].ToString());
+                      nft.description = reader["description"].ToString();
+                      nft.NFTsName = reader["NFTsName"].ToString();
+                      string photoString = (reader["NftsPicture"].ToString());
+                      var photo = new byte[photoString.Length];
+                      int len = 0;
+                      foreach(byte b in photoString)
+                      {
+                          photo[len] = b;
+                          len++;
+                      }
 
-                    nft.NftsPicture = photo;
-                    list.Add(nft);
-                }
+                      nft.NftsPicture = photo;
+                      list.Add(nft);
+                }*/
+                list = dbService.nftTB.Where(n => n.pageId == pageId).ToList();
+                
                 return list;
             }
             catch (Exception e)

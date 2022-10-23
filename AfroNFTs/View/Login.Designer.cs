@@ -72,7 +72,6 @@
             this.Emailtxt.Name = "Emailtxt";
             this.Emailtxt.Size = new System.Drawing.Size(159, 20);
             this.Emailtxt.TabIndex = 18;
-            this.Emailtxt.TextChanged += new System.EventHandler(this.Emailtxt_TextChanged);
             // 
             // Siginupbtn
             // 
@@ -110,7 +109,6 @@
             this.Emaillab.Size = new System.Drawing.Size(67, 24);
             this.Emaillab.TabIndex = 14;
             this.Emaillab.Text = "Email :";
-            this.Emaillab.Click += new System.EventHandler(this.Emaillab_Click);
             // 
             // errorProviderLogin
             // 

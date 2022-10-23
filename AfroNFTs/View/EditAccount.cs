@@ -116,11 +116,12 @@ namespace AfroNFTs.View
                         Admin u = ctx.adminTB.Single(admin => admin.Id == id);
                         if (u.password != Utils.PasswordUtils.HashPassword(textBox1.Text))
                         {
-                            AppEventUtils.ShowInfoMessage(this, "Error");
+                            AppEventUtils.ShowInfoMessage(this, "Error_priveousPassWord");
                             return;
                         }
                         if(Pswordtxt.Text != ConfirmPswordtxt.Text)
                         {
+
                             AppEventUtils.ShowInfoMessage(this, "Error");
                             return;
                         }
@@ -158,6 +159,7 @@ namespace AfroNFTs.View
 
                     }
                     ctx.SaveChanges();
+                    Program.main.OpenchildFrom(new AccountPage(pageType, id), sender);
 
                 }
             }catch(Exception ex)

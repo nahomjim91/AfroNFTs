@@ -38,14 +38,11 @@ namespace AfroNFTs.View
                         MessageBox.Show("PA");
                         foreach(var item in nftsS)
                         {
-                            NFTs nfts = new NFTs(false);
-                            nfts.NftsId = item.NFtsClassId;
-                      //      nfts.NftsPicture = byteArrayToImage(item.NftsPicture);
+                            NFTs nfts = new NFTs(false , item.NFtsClassId);
+                            nfts.NftsPicture = byteArrayToImage(item.NftsPicture);
                             nfts.NFTsName = item.NFTsName;
                             nfts.NFTsRate = item.NFTsRate;
-                            nfts.NFTsprice = item.NFTsprice;
-                           // nfts.Click += new System.EventHandler(Deitail_click);
-                           flowLayoutPanel1.Controls.Add(nfts);
+                            nfts.NFTsprice = item.NFTsprice;flowLayoutPanel1.Controls.Add(nfts);
 
                         }
                     }

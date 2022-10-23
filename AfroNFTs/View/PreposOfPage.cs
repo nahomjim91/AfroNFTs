@@ -26,7 +26,7 @@ namespace AfroNFTs.View
         }
         public PreposOfPage(bool pageType , int id)
         {
-            MessageBox.Show("I am Here!!");
+            MessageBox.Show("I am Here!!" + id.ToString());
 
            this.pageType = pageType;
             this.id = id;   

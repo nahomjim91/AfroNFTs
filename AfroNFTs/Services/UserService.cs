@@ -9,7 +9,7 @@ using System.Configuration;
 
 using AfroNFTs.Models;
 using AfroNFTs.Utils;
-
+using System.IO;
 
 namespace AfroNFTs.Services
 {
@@ -104,6 +104,14 @@ namespace AfroNFTs.Services
                 return false;
             }
         }
+        public static byte[] ImageToByteArray(System.Drawing.Image imageIn)
+        {
+            using (var ms = new MemoryStream())
+            {
+                imageIn.Save(ms, imageIn.RawFormat);
+                return ms.ToArray();
+            }
+        }
         public static bool registerAdminUser(
               string firstName,
               string lastName,
@@ -123,7 +131,9 @@ namespace AfroNFTs.Services
                         password = PasswordUtils.HashPassword(password),
                         balance = 100,
 
+
                     };
+                    admin.profileImage = ImageToByteArray(AfroNFTs.Properties.Resources.th__2_);
                     dbService.adminTB.Add(admin);
 
                     dbService.SaveChanges();

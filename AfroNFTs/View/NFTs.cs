@@ -19,10 +19,6 @@ namespace AfroNFTs.View
     {
         public event EventHandler NFTsDetail ;
 
-        protected virtual void OnClickNFTs(EventArgs e)
-        {
-            NFTsDetail.Invoke(this, e);
-        }
         public int NftsId;
         private Image _NftsPicture;
         public bool isAvel;
@@ -74,10 +70,11 @@ namespace AfroNFTs.View
             }
         }
 
-        public NFTs(bool pg)
+        public NFTs(bool pg, int Id)
         {
             this.userUsingId = mainPage.userID;
             pagetype = pg;
+            NftsId = Id;
             InitializeComponent();
             
 
@@ -182,7 +179,7 @@ namespace AfroNFTs.View
                 {
                     using (var ctx = new DbService())
                     {
-                        var nft = ctx.nftTB.Find(NftsId);
+                        var nft = ctx.nftTB.Single(Nfts => Nfts.NFtsClassId == NftsId);
                         ac.registerAction("Li", nft.OwnerID);
                     }
                    
@@ -234,7 +231,7 @@ namespace AfroNFTs.View
                 {
                     using (var ctx = new DbService())
                     {
-                        var nft = ctx.nftTB.Find(NftsId);
+                        var nft = ctx.nftTB.Single(Nfts => Nfts.IDNFTs == NftsId);
                         ac.registerAction("Di", nft.OwnerID);
                     }
 

@@ -53,7 +53,7 @@ namespace AfroNFTs.View
 
                     using (var con = new SqlConnection(conStr))
                     {
-                        var sql = "UPDATE  NFTsClasses SET NFTsName = "+ txtNameNFTS.Text +" NFTsprice"+ txtPriceNFTs.Text +" where NFtsClasseid = " + id;
+                        var sql = "UPDATE  NFTsClasses SET NFTsName ='"+ txtNameNFTS.Text + "',NFTsprice = "+ double.Parse( txtPriceNFTs.Text) + " where NFtsClassId = " + id;
                         con.Open();
                         var cmd = new SqlCommand(sql, con);
                             cmd.ExecuteNonQuery();

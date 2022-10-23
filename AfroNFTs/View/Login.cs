@@ -176,15 +176,5 @@ namespace AfroNFTs
             }
            
         }
-
-        private void Emailtxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Emaillab_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

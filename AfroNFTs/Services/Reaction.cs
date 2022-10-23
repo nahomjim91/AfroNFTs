@@ -196,7 +196,7 @@ namespace AfroNFTs.Services
 
         public void Dispose()
         {
-            MessageBox.Show("Closed!");
+        //    MessageBox.Show("Closed!");
             con.Close();
             //throw new NotImplementedException();
         }

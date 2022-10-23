@@ -97,6 +97,7 @@
     <Compile Include="Services\NFTService.cs" />
     <Compile Include="Services\PageService.cs" />
     <Compile Include="Services\Reaction.cs" />
+    <Compile Include="Services\TranscationService.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="View\AddComment.cs">
       <SubType>Form</SubType>
@@ -244,6 +245,18 @@
     <Compile Include="View\SellPage.Designer.cs">
       <DependentUpon>SellPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\TransactionInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\TransactionInfo.Designer.cs">
+      <DependentUpon>TransactionInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Transactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Transactions.Designer.cs">
+      <DependentUpon>Transactions.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UserDashBord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -349,6 +362,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\SellPage.resx">
       <DependentUpon>SellPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TransactionInfo.resx">
+      <DependentUpon>TransactionInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Transactions.resx">
+      <DependentUpon>Transactions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserDashBord.resx">
       <DependentUpon>UserDashBord.cs</DependentUpon>

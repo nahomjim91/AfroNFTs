@@ -134,7 +134,7 @@ namespace AfroNFTs
             else
             {
                 selltbtn.Visible = true;
-                Buybtn.Visible = true;
+                //Buybtn.Visible = true;
             }
             aboutbtn.Visible = true;
             accountBtn.Visible = true;
@@ -144,6 +144,7 @@ namespace AfroNFTs
             CurrntPage.Visible = true;
             popChar.Visible = true;
             balanceBtn.Visible = true;
+            transactionsBtn.Visible = true;
            if(!pageType)  myNFTsButton.Visible = true;
 
             Dashboardbtn_Click(Dashboardbtn, EventArgs.Empty);
@@ -221,7 +222,7 @@ namespace AfroNFTs
         {
             OpenchildFrom(new SiginUp(), sender);
             Dashboardbtn.Visible = false;
-            Buybtn.Visible = false;
+         //   Buybtn.Visible = false;
             selltbtn.Visible = false;
             accountBtn.Visible = false;
             aboutbtn.Visible = false;
@@ -233,13 +234,14 @@ namespace AfroNFTs
             Creatpagebtn.Visible = false;
             myNFTsButton.Visible = false;
             accountBtn.Visible = false;
+            transactionsBtn.Visible = false;
         }
 
         private void Loginbtn_Click_1(object sender, EventArgs e)
         {
             OpenchildFrom(new Login(), sender);
             Dashboardbtn.Visible = false;
-            Buybtn.Visible = false;
+            //Buybtn.Visible = false;
             selltbtn.Visible = false;
             accountBtn.Visible = false;
             aboutbtn.Visible = false;
@@ -271,6 +273,11 @@ namespace AfroNFTs
         private void myNFTsButton_Click(object sender, EventArgs e)
         {
             Program.main.OpenchildFrom(new MyNFTS(userID), sender);
+        }
+
+        private void transactionsBtn_Click(object sender, EventArgs e)
+        {
+            Program.main.OpenchildFrom(new Transactions(PageType), sender);
         }
     }
 }

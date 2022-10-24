@@ -104,28 +104,28 @@
             // txtNameNFTS
             // 
             this.txtNameNFTS.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtNameNFTS.Font = new System.Drawing.Font("Bookman Old Style", 15.75F);
+            this.txtNameNFTS.Font = new System.Drawing.Font("Bookman Old Style", 13.75F);
             this.txtNameNFTS.Location = new System.Drawing.Point(147, 290);
             this.txtNameNFTS.Name = "txtNameNFTS";
-            this.txtNameNFTS.Size = new System.Drawing.Size(192, 32);
+            this.txtNameNFTS.Size = new System.Drawing.Size(192, 29);
             this.txtNameNFTS.TabIndex = 5;
             // 
             // txtPriceNFTs
             // 
             this.txtPriceNFTs.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtPriceNFTs.Font = new System.Drawing.Font("Bookman Old Style", 15.75F);
+            this.txtPriceNFTs.Font = new System.Drawing.Font("Bookman Old Style", 12.75F);
             this.txtPriceNFTs.Location = new System.Drawing.Point(147, 343);
             this.txtPriceNFTs.Name = "txtPriceNFTs";
-            this.txtPriceNFTs.Size = new System.Drawing.Size(192, 32);
+            this.txtPriceNFTs.Size = new System.Drawing.Size(192, 27);
             this.txtPriceNFTs.TabIndex = 6;
             // 
             // txtGroupNFTs
             // 
             this.txtGroupNFTs.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtGroupNFTs.Font = new System.Drawing.Font("Bookman Old Style", 15.75F);
+            this.txtGroupNFTs.Font = new System.Drawing.Font("Bookman Old Style", 12.75F);
             this.txtGroupNFTs.Location = new System.Drawing.Point(147, 401);
             this.txtGroupNFTs.Name = "txtGroupNFTs";
-            this.txtGroupNFTs.Size = new System.Drawing.Size(192, 32);
+            this.txtGroupNFTs.Size = new System.Drawing.Size(192, 27);
             this.txtGroupNFTs.TabIndex = 7;
             // 
             // txtDescriptionNFTs
@@ -133,7 +133,7 @@
             this.txtDescriptionNFTs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescriptionNFTs.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtDescriptionNFTs.Font = new System.Drawing.Font("Bookman Old Style", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescriptionNFTs.Font = new System.Drawing.Font("Bookman Old Style", 12.75F);
             this.txtDescriptionNFTs.Location = new System.Drawing.Point(422, 312);
             this.txtDescriptionNFTs.MaximumSize = new System.Drawing.Size(518, 111);
             this.txtDescriptionNFTs.Multiline = true;
@@ -159,9 +159,9 @@
             this.DeletePagebtn1.IconChar = FontAwesome.Sharp.IconChar.None;
             this.DeletePagebtn1.IconColor = System.Drawing.Color.Black;
             this.DeletePagebtn1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.DeletePagebtn1.Location = new System.Drawing.Point(367, 191);
+            this.DeletePagebtn1.Location = new System.Drawing.Point(372, 194);
             this.DeletePagebtn1.Name = "DeletePagebtn1";
-            this.DeletePagebtn1.Size = new System.Drawing.Size(101, 34);
+            this.DeletePagebtn1.Size = new System.Drawing.Size(101, 39);
             this.DeletePagebtn1.TabIndex = 45;
             this.DeletePagebtn1.Text = "Submit";
             this.DeletePagebtn1.UseVisualStyleBackColor = false;

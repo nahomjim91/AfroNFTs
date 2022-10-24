@@ -29,17 +29,17 @@ namespace AfroNFTs
                            
                             var allActions = actionService.getAllActionsForAdmin(mainPage.userID)
                             ;
-                            MessageBox.Show("running");
+                           // MessageBox.Show("running");
                             if (allActions == null)
                             {
-                                MessageBox.Show("NULL ACTIONS");
+                             //   MessageBox.Show("NULL ACTIONS");
                                 return; 
                             }
                             foreach (var act in allActions)
                             {
-                                MessageBox.Show("LOOP!");
+                               // MessageBox.Show("LOOP!");
                                 string str;
-                                if (act.act == "com") str = "Comment";
+                                if (act.act == "co") str = "Comment";
                                 else if (act.act == "Li") str = "Liked";
                                 else if (act.act == "Di") str = "Disliked";
                                 else str = "uknown";

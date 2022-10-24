@@ -30,15 +30,34 @@ alter table actions add for_admin int not null
 
 
     }
+
     public class ActionService : IDisposable
     {
         DbService DbService;
+        public int getLikesNo(int adminId)
+        {
+            var sql = $"select count(*) as count from actions where act ='Li' and for_admin = {adminId}";
+            return (int)(new SqlCommand(sql, _con).ExecuteScalar());
+
+
+        }
+        public int getDislikesNo(int adminId)
+        {
+            var sql = $"select count(*) as count from actions where act ='Di' and for_admin = {adminId}";
+            return (int)(new SqlCommand(sql, _con).ExecuteScalar());
+        }
+        public int getCommentsNo(int adminId)
+        {
+
+            var sql = $"select count(*) as count from actions where act ='co' and for_admin = {adminId}";
+            return (int)(new SqlCommand(sql, _con).ExecuteScalar());
+        }
         public List<Action> getAllActionsForAdmin(int forAdmin)
         {
             var li = new List<Action>();
            
             var sql = "select * from actions where for_admin = " + forAdmin + " and is_seen = 0";
-            MessageBox.Show("sql: " + sql);
+         //   MessageBox.Show("sql: " + sql);
             try
             {
                 var reader = (new SqlCommand(sql, _con).ExecuteReader());
@@ -60,7 +79,7 @@ alter table actions add for_admin int not null
                 MessageBox.Show(e.Message);
                 return null;
             }
-            MessageBox.Show("Length: " + li.Count());
+            //MessageBox.Show("Length: " + li.Count());
             return li;
         }
         private SqlConnection _con;
@@ -68,6 +87,7 @@ alter table actions add for_admin int not null
         private bool userType;
         public ActionService(int adminId)
         {
+            
             try
             {
                 _con = new SqlConnection(ConfigurationManager.ConnectionStrings["DbService"].ConnectionString);

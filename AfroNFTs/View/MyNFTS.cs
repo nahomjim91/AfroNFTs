@@ -35,7 +35,7 @@ namespace AfroNFTs.View
                     nftsS = userService.GetNFTs();
                     if(nftsS != null)
                     {
-                        MessageBox.Show("PA");
+                       // MessageBox.Show("PA");
                         foreach(var item in nftsS)
                         {
                             NFTs nfts = new NFTs(false , item.NFtsClassId);

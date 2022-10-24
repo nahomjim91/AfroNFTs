@@ -85,13 +85,15 @@ namespace AfroNFTs.Services
                         firstName = firstName,
                         lastName = lastName,
 
-                        email= email,
-                        password =PasswordUtils.HashPassword (password),
+                        email = email,
+                        password = PasswordUtils.HashPassword(password),
 
                         balance = 100
-                    };
-                    dbService.normalUserTB.Add(normalUser);
+                };
+                   
 
+                    normalUser.profileImage = ImageToByteArray(AfroNFTs.Properties.Resources.th__2_);
+                    dbService.normalUserTB.Add(normalUser);
                     dbService.SaveChanges();
 
 

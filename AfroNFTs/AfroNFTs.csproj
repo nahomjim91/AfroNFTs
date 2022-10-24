@@ -153,12 +153,6 @@
     <Compile Include="View\MyPages.Designer.cs">
       <DependentUpon>MyPages.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\NFTInfo.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\NFTInfo.Designer.cs">
-      <DependentUpon>NFTInfo.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\NFTPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -313,9 +307,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\MyPages.resx">
       <DependentUpon>MyPages.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\NFTInfo.resx">
-      <DependentUpon>NFTInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\NFTPage.resx">
       <DependentUpon>NFTPage.cs</DependentUpon>

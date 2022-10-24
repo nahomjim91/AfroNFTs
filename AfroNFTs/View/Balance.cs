@@ -66,6 +66,12 @@ namespace AfroNFTs.View
                        
                         ctx.SaveChanges();
                     }
+                    using(var actionService = new Services.ActionService( false, mainPage.userID))
+                    {
+
+                        actionService.registerAction("rec", 0);
+                    }
+                    Program.main.OpenchildFrom(new Balance(mainPage.userID, false), sender); ;
                 }
             }catch (Exception ex)
             {

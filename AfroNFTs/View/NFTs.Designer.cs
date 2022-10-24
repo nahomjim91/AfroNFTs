@@ -48,10 +48,9 @@
             this.labPrice.AutoSize = true;
             this.labPrice.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labPrice.ForeColor = System.Drawing.Color.Coral;
-            this.labPrice.Location = new System.Drawing.Point(223, 406);
-            this.labPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labPrice.Location = new System.Drawing.Point(167, 330);
             this.labPrice.Name = "labPrice";
-            this.labPrice.Size = new System.Drawing.Size(71, 25);
+            this.labPrice.Size = new System.Drawing.Size(57, 21);
             this.labPrice.TabIndex = 1;
             this.labPrice.Text = "label1";
             this.labPrice.Click += new System.EventHandler(this.labPrice_Click);
@@ -61,11 +60,10 @@
             this.labNFTsName.AutoSize = true;
             this.labNFTsName.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labNFTsName.ForeColor = System.Drawing.Color.Coral;
-            this.labNFTsName.Location = new System.Drawing.Point(4, 406);
-            this.labNFTsName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labNFTsName.MaximumSize = new System.Drawing.Size(200, 0);
+            this.labNFTsName.Location = new System.Drawing.Point(3, 330);
+            this.labNFTsName.MaximumSize = new System.Drawing.Size(150, 0);
             this.labNFTsName.Name = "labNFTsName";
-            this.labNFTsName.Size = new System.Drawing.Size(71, 25);
+            this.labNFTsName.Size = new System.Drawing.Size(57, 21);
             this.labNFTsName.TabIndex = 2;
             this.labNFTsName.Text = "label1";
             this.labNFTsName.Click += new System.EventHandler(this.labNFTsName_Click);
@@ -73,28 +71,25 @@
             // likesLabel
             // 
             this.likesLabel.AutoSize = true;
-            this.likesLabel.Location = new System.Drawing.Point(111, 302);
-            this.likesLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.likesLabel.Location = new System.Drawing.Point(83, 245);
             this.likesLabel.Name = "likesLabel";
-            this.likesLabel.Size = new System.Drawing.Size(62, 16);
+            this.likesLabel.Size = new System.Drawing.Size(51, 13);
             this.likesLabel.TabIndex = 50;
             this.likesLabel.Text = "Loading..";
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(149, 304);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(112, 247);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(11, 10);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 8);
             this.flowLayoutPanel1.TabIndex = 51;
             // 
             // dislikesLabel
             // 
             this.dislikesLabel.AutoSize = true;
-            this.dislikesLabel.Location = new System.Drawing.Point(117, 352);
-            this.dislikesLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.dislikesLabel.Location = new System.Drawing.Point(88, 286);
             this.dislikesLabel.Name = "dislikesLabel";
-            this.dislikesLabel.Size = new System.Drawing.Size(62, 16);
+            this.dislikesLabel.Size = new System.Drawing.Size(51, 13);
             this.dislikesLabel.TabIndex = 52;
             this.dislikesLabel.Text = "Loading..";
             // 
@@ -107,10 +102,9 @@
             this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton4.IconColor = System.Drawing.Color.Black;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.Location = new System.Drawing.Point(195, 478);
-            this.iconButton4.Margin = new System.Windows.Forms.Padding(4);
+            this.iconButton4.Location = new System.Drawing.Point(146, 354);
             this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(140, 37);
+            this.iconButton4.Size = new System.Drawing.Size(105, 30);
             this.iconButton4.TabIndex = 54;
             this.iconButton4.Text = "Add Comment";
             this.iconButton4.UseVisualStyleBackColor = false;
@@ -125,10 +119,9 @@
             this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton3.IconColor = System.Drawing.Color.Black;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.Location = new System.Drawing.Point(9, 478);
-            this.iconButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.iconButton3.Location = new System.Drawing.Point(7, 354);
             this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(132, 37);
+            this.iconButton3.Size = new System.Drawing.Size(99, 30);
             this.iconButton3.TabIndex = 53;
             this.iconButton3.Text = "See Comments";
             this.iconButton3.UseVisualStyleBackColor = false;
@@ -143,10 +136,9 @@
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton2.IconColor = System.Drawing.Color.Black;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(9, 352);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.iconButton2.Location = new System.Drawing.Point(7, 286);
             this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(100, 33);
+            this.iconButton2.Size = new System.Drawing.Size(75, 27);
             this.iconButton2.TabIndex = 49;
             this.iconButton2.Text = "DownVote";
             this.iconButton2.UseVisualStyleBackColor = false;
@@ -161,10 +153,9 @@
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(9, 290);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.iconButton1.Location = new System.Drawing.Point(7, 236);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(93, 31);
+            this.iconButton1.Size = new System.Drawing.Size(70, 25);
             this.iconButton1.TabIndex = 48;
             this.iconButton1.Text = "UpVote";
             this.iconButton1.UseVisualStyleBackColor = false;
@@ -179,10 +170,9 @@
             this.buyButton.IconChar = FontAwesome.Sharp.IconChar.None;
             this.buyButton.IconColor = System.Drawing.Color.Black;
             this.buyButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buyButton.Location = new System.Drawing.Point(215, 294);
-            this.buyButton.Margin = new System.Windows.Forms.Padding(4);
+            this.buyButton.Location = new System.Drawing.Point(161, 239);
             this.buyButton.Name = "buyButton";
-            this.buyButton.Size = new System.Drawing.Size(88, 37);
+            this.buyButton.Size = new System.Drawing.Size(66, 30);
             this.buyButton.TabIndex = 47;
             this.buyButton.Text = "Buy!";
             this.buyButton.UseVisualStyleBackColor = false;
@@ -197,10 +187,9 @@
             this.seeDetailbtn.IconChar = FontAwesome.Sharp.IconChar.None;
             this.seeDetailbtn.IconColor = System.Drawing.Color.Black;
             this.seeDetailbtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.seeDetailbtn.Location = new System.Drawing.Point(215, 352);
-            this.seeDetailbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.seeDetailbtn.Location = new System.Drawing.Point(161, 286);
             this.seeDetailbtn.Name = "seeDetailbtn";
-            this.seeDetailbtn.Size = new System.Drawing.Size(88, 37);
+            this.seeDetailbtn.Size = new System.Drawing.Size(66, 30);
             this.seeDetailbtn.TabIndex = 46;
             this.seeDetailbtn.Text = "Details";
             this.seeDetailbtn.UseVisualStyleBackColor = false;
@@ -209,12 +198,9 @@
             // pictureBoxNFTs
             // 
             this.pictureBoxNFTs.Image = global::AfroNFTs.Properties.Resources.gettyimages_165604915_170667a;
-            this.pictureBoxNFTs.Location = new System.Drawing.Point(-4, 0);
-            this.pictureBoxNFTs.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBoxNFTs.MaximumSize = new System.Drawing.Size(307, 266);
-            this.pictureBoxNFTs.MinimumSize = new System.Drawing.Size(307, 266);
+            this.pictureBoxNFTs.Location = new System.Drawing.Point(-3, 0);
             this.pictureBoxNFTs.Name = "pictureBoxNFTs";
-            this.pictureBoxNFTs.Size = new System.Drawing.Size(307, 266);
+            this.pictureBoxNFTs.Size = new System.Drawing.Size(254, 233);
             this.pictureBoxNFTs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxNFTs.TabIndex = 5;
             this.pictureBoxNFTs.TabStop = false;
@@ -222,7 +208,7 @@
             // 
             // NFTs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.iconButton4);
             this.Controls.Add(this.iconButton3);
@@ -236,10 +222,9 @@
             this.Controls.Add(this.pictureBoxNFTs);
             this.Controls.Add(this.labNFTsName);
             this.Controls.Add(this.labPrice);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(307, 308);
+            this.MinimumSize = new System.Drawing.Size(230, 250);
             this.Name = "NFTs";
-            this.Size = new System.Drawing.Size(339, 553);
+            this.Size = new System.Drawing.Size(256, 398);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNFTs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

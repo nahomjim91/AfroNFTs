@@ -133,12 +133,12 @@ namespace AfroNFTs
             }
             else
             {
-                selltbtn.Visible = true;
+                MyPagebtn.Visible = false;
+
                 //Buybtn.Visible = true;
             }
             aboutbtn.Visible = true;
             accountBtn.Visible = true;
-            MyPagebtn.Visible = true;
             Dashboardbtn.Visible = true;
             iconPic_current.Visible = true;
             CurrntPage.Visible = true;
@@ -222,8 +222,6 @@ namespace AfroNFTs
         {
             OpenchildFrom(new SiginUp(), sender);
             Dashboardbtn.Visible = false;
-         //   Buybtn.Visible = false;
-            selltbtn.Visible = false;
             accountBtn.Visible = false;
             aboutbtn.Visible = false;
             Creatpagebtn.Visible = false;
@@ -241,8 +239,6 @@ namespace AfroNFTs
         {
             OpenchildFrom(new Login(), sender);
             Dashboardbtn.Visible = false;
-            //Buybtn.Visible = false;
-            selltbtn.Visible = false;
             accountBtn.Visible = false;
             aboutbtn.Visible = false;
             Creatpagebtn.Visible = false;

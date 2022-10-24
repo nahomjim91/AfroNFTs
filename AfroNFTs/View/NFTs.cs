@@ -145,7 +145,7 @@ namespace AfroNFTs.View
                     admin.balance += (decimal)price;
                     user.balance -= (decimal)price;
                     nft.userType = "User";
-                    nft.isAvelebel = true;
+                    nft.isAvelebel = false;
                     nft.OwnerID = mainPage.userID;
 
                     ctx.SaveChanges();

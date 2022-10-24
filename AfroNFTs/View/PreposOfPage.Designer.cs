@@ -119,6 +119,7 @@
             this.editBtn.Size = new System.Drawing.Size(33, 31);
             this.editBtn.TabIndex = 12;
             this.editBtn.UseVisualStyleBackColor = false;
+            this.editBtn.Visible = false;
             this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
             // 
             // sellOrBuyBtn
@@ -150,6 +151,7 @@
             this.isAvel.TabIndex = 16;
             this.isAvel.Text = "NFTs availability";
             this.isAvel.UseVisualStyleBackColor = true;
+            this.isAvel.Visible = false;
             this.isAvel.CheckedChanged += new System.EventHandler(this.isAvel_CheckedChanged);
             // 
             // descriptionNFTs1

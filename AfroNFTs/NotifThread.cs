@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 
 
 using AfroNFTs.Utils;
@@ -23,13 +23,21 @@ namespace AfroNFTs
                     //       AppEventUtils.showOutSideNotif("Hi", "THis is aw");
                     if (pageType)
                     {
+                       
                         using(var actionService = new Services.ActionService(mainPage.userID))
                         {
+                           
                             var allActions = actionService.getAllActionsForAdmin(mainPage.userID)
                             ;
-                            if (allActions == null) return;
+                            MessageBox.Show("running");
+                            if (allActions == null)
+                            {
+                                MessageBox.Show("NULL ACTIONS");
+                                return; 
+                            }
                             foreach (var act in allActions)
                             {
+                                MessageBox.Show("LOOP!");
                                 string str;
                                 if (act.act == "com") str = "Comment";
                                 else if (act.act == "Li") str = "Liked";

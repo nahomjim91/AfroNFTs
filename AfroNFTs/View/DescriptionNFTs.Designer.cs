@@ -136,6 +136,7 @@
             this.NFTsiconPictureBox.Location = new System.Drawing.Point(22, 31);
             this.NFTsiconPictureBox.Name = "NFTsiconPictureBox";
             this.NFTsiconPictureBox.Size = new System.Drawing.Size(210, 209);
+            this.NFTsiconPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.NFTsiconPictureBox.TabIndex = 0;
             this.NFTsiconPictureBox.TabStop = false;
             // 
@@ -162,13 +163,12 @@
         }
 
         #endregion
-
-        private FontAwesome.Sharp.IconPictureBox NFTsiconPictureBox;
         private System.Windows.Forms.Label nameLable;
         private System.Windows.Forms.Label GroupLable;
         private System.Windows.Forms.Label priceLabel;
         private System.Windows.Forms.Label descriptionLabel;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label rateLabel;
+        public FontAwesome.Sharp.IconPictureBox NFTsiconPictureBox;
     }
 }

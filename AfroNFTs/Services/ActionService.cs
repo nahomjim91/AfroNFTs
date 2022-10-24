@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using AfroNFTs.Models;
 
 namespace AfroNFTs.Services
 {
@@ -31,11 +32,13 @@ alter table actions add for_admin int not null
     }
     public class ActionService : IDisposable
     {
+        DbService DbService;
         public List<Action> getAllActionsForAdmin(int forAdmin)
         {
             var li = new List<Action>();
-            var sql = "select * from actions where for_admin = " + forAdmin;
-
+           
+            var sql = "select * from actions where for_admin = " + forAdmin + " and is_seen = 0";
+            MessageBox.Show("sql: " + sql);
             try
             {
                 var reader = (new SqlCommand(sql, _con).ExecuteReader());
@@ -43,11 +46,12 @@ alter table actions add for_admin int not null
                 {
                     var act = new Action();
                     act.id = (int)reader["id"];
-                    act.when = (DateTime)reader["wn"];
+                  //  act.when = (DateTime)reader["wn"];
                     act.act = (string)reader["act"];
                     act.userId = (int)reader["user_id"];
-                    act.isSeen = (int)reader["is_seen"] == 0? false : true;
+                   //  act.isSeen = ((int)reader["is_seen"]) == 0? false : true;
                     act.forAdmin = (int)reader["for_admin"];
+                    li.Add(act);
                 }
                 reader.Close();
             }
@@ -56,7 +60,7 @@ alter table actions add for_admin int not null
                 MessageBox.Show(e.Message);
                 return null;
             }
-            
+            MessageBox.Show("Length: " + li.Count());
             return li;
         }
         private SqlConnection _con;

@@ -16,6 +16,8 @@ namespace AfroNFTs.View
     {
         bool pageType;
         int id;
+        NFTsClass nft;
+
         public Image byteArrayToImage(byte[] bytesArr)
         {
             using (MemoryStream memstr = new MemoryStream(bytesArr))
@@ -31,22 +33,28 @@ namespace AfroNFTs.View
            this.pageType = pageType;
             this.id = id;   
             InitializeComponent();
-            NFTsClass nft;
+
+                
             if(pageType){
                using(var ctx = new DbService())
                 {
                     try
                     {
                         nft = ctx.nftTB.Single(obj => obj.NFtsClassId == id);
-                        if (nft.OwnerID != mainPage.userID) { this.isAvel.Visible = false; }
+                        if (nft.OwnerID == mainPage.userID) { 
+                            this.isAvel.Visible = true;
+                            this.editBtn.Visible = true;
+                        }
                         MessageBox.Show(nft.OwnerID.ToString() + "     " + id);
                         this.descriptionNFTs1.NFTsName = nft.NFTsName;
                         this.descriptionNFTs1.NftsPicture = byteArrayToImage(nft.NftsPicture);
+                        //this.descriptionNFTs1.NftsPicture.
                         this.descriptionNFTs1.NFTsprice = nft.NFTsprice;
                         this.descriptionNFTs1.NFTsRate = nft.NFTsRate;
                         this.descriptionNFTs1.Description = nft.description;
                         this.descriptionNFTs1.Group = nft.Group;
                         this.isAvel.Checked = nft.isAvelebel;
+
                         if (this.isAvel.Checked)
                         {
                             label1.Text = "This NFT is availibil for sell";
@@ -80,7 +88,7 @@ namespace AfroNFTs.View
 
         private void editBtn_Click(object sender, EventArgs e)
         {
-            if (pageType)
+            if (nft.OwnerID == mainPage.userID)
             {
                 Program.main.OpenchildFrom(new EditNfts( pageType, id), sender);
             }

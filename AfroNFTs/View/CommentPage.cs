@@ -29,7 +29,7 @@ namespace AfroNFTs.View
                     l.AutoSize = true;
                     //  l.AutoScrollOffset = new Point(0, 10);
                     this.flowLayoutPanel1.Controls.Add(l);
-                   // this.Controls.Add(l);
+                    // this.Controls.Add(l);
                     MessageBox.Show(com.comment);
                 }
             }

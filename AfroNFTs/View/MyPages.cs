@@ -41,17 +41,28 @@ namespace AfroNFTs.View
                         var cmd = new SqlCommand(sql, con);
 
                         var reader = cmd.ExecuteReader();
+                        byte[] im; 
                         while (reader.Read())
                         {
                             var p = new NFTPage();
                             p.NftsPicture = null;
                             p.PageId = int.Parse(reader["PageId"].ToString());
                             p.NFTsName = reader["title"].ToString();
+                            im = (byte[])reader["pageImage"];
+                            p.NftsPicture = Utils.ConverterImage.byteArrayToImage(im);
                             p.Click += PageDetialClicked;
 
                             FL.Controls.Add(p);
                         }
                     }
+                    /*DbService dbService = new DbService();
+                    try {
+                        dbService.pageTB.Where(n => n.AdminId == pageId).ToList();
+
+                    }
+                    catch(Exception ex) {
+                        MessageBox.Show(ex.Message);
+                    }*/
 
                 }
             }catch (Exception ex)

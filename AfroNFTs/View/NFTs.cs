@@ -54,6 +54,7 @@ namespace AfroNFTs.View
         }
         bool pagetype = false;
         int userUsingId;
+        bool visbleOfAddCommentBtn = true;
         
         public int Likes
         {
@@ -70,13 +71,14 @@ namespace AfroNFTs.View
             }
         }
 
-        public NFTs(bool pg, int Id)
+        public NFTs(bool pg, int Id , bool haveTovisbile)
         {
+            this.visbleOfAddCommentBtn = haveTovisbile;
             this.userUsingId = mainPage.userID;
             pagetype = pg;
             NftsId = Id;
             InitializeComponent();
-            
+            this.iconButton4.Visible = visbleOfAddCommentBtn;
 
 
         }
@@ -197,7 +199,7 @@ namespace AfroNFTs.View
 
         private void iconButton3_Click(object sender, EventArgs e)
         {
-            Program.main.OpenchildFrom(new SeeComments(NftsId), sender);
+            Program.main.OpenchildFrom(new CommentPage(NftsId), sender);
         }
 
         private void iconButton4_Click(object sender, EventArgs e)

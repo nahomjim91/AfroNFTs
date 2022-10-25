@@ -29,14 +29,7 @@ namespace AfroNFTs.View
         VideoCaptureDevice frame;
         FilterInfoCollection devs;
 
-        public Image byteArrayToImage(byte[] bytesArr)
-        {
-            using (MemoryStream memstr = new MemoryStream(bytesArr))
-            {
-                Image img = Image.FromStream(memstr);
-                return img;
-            }
-        }
+       
         public EditAccount(bool pageType ,int id)
         {
 
@@ -59,12 +52,47 @@ namespace AfroNFTs.View
                 Fnametxt.Text = u.firstName;
                 LNametxt.Text = u.lastName;
                 Emailtxt.Text = u.email;
-                NFTSpic.Image = byteArrayToImage(u.profileImage);
+                NFTSpic.Image = Utils.ConverterImage.byteArrayToImage(u.profileImage);
 
 
             }
         }
+        bool hasError()
+        {
+            bool Errorhas = false;
+            if (string.IsNullOrEmpty(Fnametxt.Text))
+            {
+                errorProvider1.SetError(Fnametxt, "Requierd!!");
+                Errorhas = true;
+            }
+            if (string.IsNullOrEmpty(LNametxt.Text))
+            {
+                errorProvider1.SetError(LNametxt, "Requierd!!");
+                Errorhas = true;
+            }
+            if (string.IsNullOrEmpty(Emailtxt.Text))
+            {
+                errorProvider1.SetError(Emailtxt, "Requierd!!");
+                Errorhas = true;
+            }
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                errorProvider1.SetError(textBox1, "Requierd!!");
+                Errorhas = true;
+            }
+            if (string.IsNullOrEmpty(Pswordtxt.Text))
+            {
+                errorProvider1.SetError(Pswordtxt, "Requierd!!");
+                Errorhas = true;
+            }
+            if (string.IsNullOrEmpty(ConfirmPswordtxt.Text))
+            {
+                errorProvider1.SetError(ConfirmPswordtxt, "Requierd!!");
+                Errorhas = true;
+            }
 
+            return Errorhas;
+        }
        public void startCamera()
         {
             devs = new FilterInfoCollection(FilterCategory.VideoInputDevice);
@@ -86,18 +114,14 @@ namespace AfroNFTs.View
         {
             try
             {
-               // var mem = ImageToByteArray((Image)args.Frame.Clone());
                 using (var ms = new MemoryStream())
                 {
                     var img=  ((Image)args.Frame.Clone());
                     img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                  //  imageIn.Save(ms, imageIn.RawFormat);
                     NFTSpic.Image = System.Drawing.Bitmap.FromStream(ms);
-                    //return ms.ToArray();
                 }
                
                 NFTSpic.SizeMode = PictureBoxSizeMode.StretchImage;
-              //  NFTSpic.Image = (Image)args.Frame.Clone();
             }
             catch(Exception ex)
             {
@@ -105,80 +129,77 @@ namespace AfroNFTs.View
             }
         }
 
-        private void sellOrBuyBtn_Click(object sender, EventArgs e)
+        private void EditBtnClick(object sender, EventArgs e)
         {
-            try
+            if (hasError())
             {
-                using (var ctx = new DbService())
+
+            }
+            else
+            {
+                errorProvider1.Clear();
+                try
                 {
-                    if (pageType)
+                    using (var ctx = new DbService())
                     {
-                        Admin u = ctx.adminTB.Single(admin => admin.Id == id);
-                        if (u.password != Utils.PasswordUtils.HashPassword(textBox1.Text))
+                        if (pageType)
                         {
-                            AppEventUtils.ShowInfoMessage(this, "Error_priveousPassWord");
-                            return;
+                            Admin u = ctx.adminTB.Single(admin => admin.Id == id);
+                            if (u.password != Utils.PasswordUtils.HashPassword(textBox1.Text))
+                            {
+                                AppEventUtils.ShowInfoMessage(this, "Error_priveousPassWord");
+                                return;
+                            }
+                            if (Pswordtxt.Text != ConfirmPswordtxt.Text)
+                            {
+
+                                AppEventUtils.ShowInfoMessage(this, "Error");
+                                return;
+                            }
+                            u.firstName = Fnametxt.Text;
+                            u.email = Emailtxt.Text;
+                            u.lastName = LNametxt.Text;
+                            u.password = Utils.PasswordUtils.HashPassword(Pswordtxt.Text);
+                            u.profileImage = Utils.ConverterImage.ImageToByteArray(this.NFTSpic.Image);
+
+
                         }
-                        if(Pswordtxt.Text != ConfirmPswordtxt.Text)
+                        else
                         {
+                            NormalUser u = ctx.normalUserTB.Single(admin => admin.Id == id);
+                            if (PasswordUtils.isPasswordCorrect(recentlyPassword.Text, u.password))
+                            {
+                                AppEventUtils.ShowInfoMessage(this, "Error in Recent Password");
+                                return;
+                            }
+                            if (Pswordtxt.Text != ConfirmPswordtxt.Text)
+                            {
+                                AppEventUtils.ShowInfoMessage(this, "Error the passwords are not the same");
+                                return;
+                            }
+                            u.firstName = Fnametxt.Text;
+                            u.email = Emailtxt.Text;
+                            u.lastName = LNametxt.Text;
+                            u.password = Utils.PasswordUtils.HashPassword(Pswordtxt.Text);
+                            u.profileImage = Utils.ConverterImage.ImageToByteArray(this.NFTSpic.Image);
+                            if (isCameraOn)
+                            {
 
-                            AppEventUtils.ShowInfoMessage(this, "Error");
-                            return;
+                            }
+
+
                         }
-                        u.firstName = Fnametxt.Text;
-                        u.email = Emailtxt.Text;
-                        u.lastName = LNametxt.Text;
-                        u.password = Utils.PasswordUtils.HashPassword(Pswordtxt.Text);
-                        u.profileImage = ImageToByteArray(this.NFTSpic.Image);
-
+                        ctx.SaveChanges();
+                        Program.main.OpenchildFrom(new AccountPage(pageType, id), sender);
 
                     }
-                    else
-                    {
-                        NormalUser u = ctx.normalUserTB.Single(admin => admin.Id == id);
-                        if (PasswordUtils.isPasswordCorrect(recentlyPassword.Text, u.password))
-                        {
-                            AppEventUtils.ShowInfoMessage(this, "Error in Recent Password");
-                            return;
-                        }
-                        if (Pswordtxt.Text != ConfirmPswordtxt.Text)
-                        {
-                            AppEventUtils.ShowInfoMessage(this, "Error the passwords are not the same");
-                            return;
-                        }
-                        u.firstName = Fnametxt.Text;
-                        u.email = Emailtxt.Text;
-                        u.lastName = LNametxt.Text;
-                        u.password = Utils.PasswordUtils.HashPassword(Pswordtxt.Text);
-                        u.profileImage = ImageToByteArray(this.NFTSpic.Image);
-                        if (isCameraOn)
-                        {
-
-                        }
-                        
-
-                    }
-                    ctx.SaveChanges();
-                    Program.main.OpenchildFrom(new AccountPage(pageType, id), sender);
-
                 }
-            }catch(Exception ex)
-            {
-                MessageBox.Show("Save Error: " +  ex.Message);
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Save Error: " + ex.Message);
+                }
             }
-        }
-
-        public byte[] ImageToByteArray(System.Drawing.Image imageIn)
-        {
-            using (var ms = new MemoryStream())
-            {
-                imageIn.Save(ms, imageIn.RawFormat);
-                return ms.ToArray();
-            }
-        }
-        private void ProfileiconPictureBox_Click(object sender, EventArgs e)
-        {
-            
+           
         }
 
         private void NFTSpic_Click(object sender, EventArgs e)

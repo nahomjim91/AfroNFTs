@@ -36,6 +36,8 @@ namespace AfroNFTs
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea ;
+            OpenchildFrom(new StartPage(), aboutbtn);
+
         }
         //Stracte
         private struct RGBcolors 
@@ -116,6 +118,7 @@ namespace AfroNFTs
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
+           // childForm.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             this.dashbord_pan.Controls.Add(childForm);
             this.dashbord_pan.Tag = childForm;
             childForm.BringToFront();
@@ -158,17 +161,14 @@ namespace AfroNFTs
         }
 
 
-        private void Buybtn_Click(object sender, EventArgs e)
-        {
-            OpenchildFrom(new BuyPage(PageType), sender);
-        }
-
         
 
 
         private void btnHome_Click(object sender, EventArgs e)
         {
             Reset();
+            OpenchildFrom(new StartPage() , aboutbtn);
+            
         }
 
         private void Reset()
@@ -233,6 +233,7 @@ namespace AfroNFTs
             myNFTsButton.Visible = false;
             accountBtn.Visible = false;
             transactionsBtn.Visible = false;
+
         }
 
         private void Loginbtn_Click_1(object sender, EventArgs e)

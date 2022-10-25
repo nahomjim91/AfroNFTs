@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ namespace AfroNFTs.View
         {
             pageType = pg;
             InitializeComponent();
+            this.pageImagepic.Image = AfroNFTs.Properties.Resources.th__2_;
         }
 
 
@@ -30,6 +32,7 @@ namespace AfroNFTs.View
 
             page.title = Titeltxt.Text;
             page.description = descrTxt.Text;
+            page.pageImage = Utils.ConverterImage.ImageToByteArray(this.pageImagepic.Image);
 
 
             try
@@ -55,6 +58,29 @@ namespace AfroNFTs.View
                 return;
             }
             Program.main.OpenchildFrom(new MyPages(pageType) , sender);
+        }
+
+        private void pageImagepic_Click(object sender, EventArgs e)
+        {
+
+            string sFile;
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+             byte [] imgByte = null;
+            openFileDialog1.Filter = "Image File (*.jpg;*.bmp;*.gif)|*.jpg;*.bmp;*.gif";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                sFile = openFileDialog1.FileName;
+                pageImagepic.Image = System.Drawing.Bitmap.FromFile(sFile);
+                pageImagepic.SizeMode = PictureBoxSizeMode.StretchImage;
+                using (MemoryStream mStream = new MemoryStream())
+                {
+                    pageImagepic.Image.Save(mStream, pageImagepic.Image.RawFormat);
+                    imgByte = mStream.ToArray();
+                }
+            }
+            string str = "";
+            str += imgByte;
+            MessageBox.Show(str);
         }
     }
 }

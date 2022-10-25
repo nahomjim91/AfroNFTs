@@ -12,18 +12,12 @@ using System.IO;
 
 using AfroNFTs.Services;
 using AfroNFTs.Models;
+using AfroNFTs.Utils;
 namespace AfroNFTs.View
 {
     public partial class MyNFTS : Form
     {
-        public Image byteArrayToImage(byte[] bytesArr)
-        {
-            using (MemoryStream memstr = new MemoryStream(bytesArr))
-            {
-                Image img = Image.FromStream(memstr);
-                return img;
-            }
-        }
+       
         public MyNFTS(int userId)
         {
             InitializeComponent();
@@ -38,8 +32,8 @@ namespace AfroNFTs.View
                        // MessageBox.Show("PA");
                         foreach(var item in nftsS)
                         {
-                            NFTs nfts = new NFTs(false , item.NFtsClassId);
-                            nfts.NftsPicture = byteArrayToImage(item.NftsPicture);
+                            NFTs nfts = new NFTs(false , item.NFtsClassId , true);
+                            nfts.NftsPicture = Utils.ConverterImage.byteArrayToImage(item.NftsPicture);
                             nfts.NFTsName = item.NFTsName;
                             nfts.NFTsRate = item.NFTsRate;
                             nfts.NFTsprice = item.NFTsprice;flowLayoutPanel1.Controls.Add(nfts);

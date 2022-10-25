@@ -28,19 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.AddNFTsbtn2 = new FontAwesome.Sharp.IconButton();
             this.DeletePagebtn1 = new FontAwesome.Sharp.IconButton();
             this.pageTitel = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 63);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(516, 301);
-            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // AddNFTsbtn2
             // 
@@ -51,7 +43,7 @@
             this.AddNFTsbtn2.IconChar = FontAwesome.Sharp.IconChar.None;
             this.AddNFTsbtn2.IconColor = System.Drawing.Color.Black;
             this.AddNFTsbtn2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.AddNFTsbtn2.Location = new System.Drawing.Point(523, 233);
+            this.AddNFTsbtn2.Location = new System.Drawing.Point(660, 235);
             this.AddNFTsbtn2.Name = "AddNFTsbtn2";
             this.AddNFTsbtn2.Size = new System.Drawing.Size(87, 34);
             this.AddNFTsbtn2.TabIndex = 43;
@@ -68,7 +60,7 @@
             this.DeletePagebtn1.IconChar = FontAwesome.Sharp.IconChar.None;
             this.DeletePagebtn1.IconColor = System.Drawing.Color.Black;
             this.DeletePagebtn1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.DeletePagebtn1.Location = new System.Drawing.Point(523, 101);
+            this.DeletePagebtn1.Location = new System.Drawing.Point(660, 103);
             this.DeletePagebtn1.Name = "DeletePagebtn1";
             this.DeletePagebtn1.Size = new System.Drawing.Size(87, 34);
             this.DeletePagebtn1.TabIndex = 44;
@@ -87,16 +79,30 @@
             this.pageTitel.TabIndex = 46;
             this.pageTitel.Text = "PageTitel";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(57)))), ((int)(((byte)(121)))));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 51);
+            this.flowLayoutPanel1.MaximumSize = new System.Drawing.Size(750, 500);
+            this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(236, 200);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(642, 406);
+            this.flowLayoutPanel1.TabIndex = 47;
+            // 
             // PageDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(10)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(620, 366);
+            this.ClientSize = new System.Drawing.Size(855, 458);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.pageTitel);
             this.Controls.Add(this.DeletePagebtn1);
             this.Controls.Add(this.AddNFTsbtn2);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PageDetails";
             this.Text = "PageDetails";
@@ -106,10 +112,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private FontAwesome.Sharp.IconButton AddNFTsbtn2;
         private FontAwesome.Sharp.IconButton DeletePagebtn1;
         private System.Windows.Forms.Label pageTitel;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

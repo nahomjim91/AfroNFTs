@@ -69,7 +69,7 @@
             this.pictureBoxNFTs.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxNFTs.Name = "pictureBoxNFTs";
             this.pictureBoxNFTs.Size = new System.Drawing.Size(212, 287);
-            this.pictureBoxNFTs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxNFTs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxNFTs.TabIndex = 6;
             this.pictureBoxNFTs.TabStop = false;
             // 
@@ -81,7 +81,7 @@
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.pictureBoxNFTs);
             this.Controls.Add(this.labNFTsName);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(212, 323);
             this.MinimumSize = new System.Drawing.Size(212, 323);
             this.Name = "NFTPage";

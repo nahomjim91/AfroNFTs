@@ -10,14 +10,11 @@ using System.Windows.Forms;
 
 namespace AfroNFTs.View
 {
-    public partial class BuyPage : Form
+    public partial class StartPage : Form
     {
-        bool pageType;
-        public BuyPage(bool pageType)
+        public StartPage()
         {
-            this.pageType = pageType;
             InitializeComponent();
         }
-
     }
 }

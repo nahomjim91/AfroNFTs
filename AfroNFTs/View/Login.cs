@@ -107,7 +107,7 @@ namespace AfroNFTs
                         return;
                     }
                 }
-                Program.main.popChar.IconChar = IconChar.A;
+                Program.main.popChar.IconChar = IconChar.Question;
                 Program.main.GoToDashbord(b);
             }
            

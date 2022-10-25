@@ -200,8 +200,8 @@
             this.pictureBoxNFTs.Image = global::AfroNFTs.Properties.Resources.gettyimages_165604915_170667a;
             this.pictureBoxNFTs.Location = new System.Drawing.Point(-3, 0);
             this.pictureBoxNFTs.Name = "pictureBoxNFTs";
-            this.pictureBoxNFTs.Size = new System.Drawing.Size(254, 233);
-            this.pictureBoxNFTs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxNFTs.Size = new System.Drawing.Size(259, 233);
+            this.pictureBoxNFTs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxNFTs.TabIndex = 5;
             this.pictureBoxNFTs.TabStop = false;
             this.pictureBoxNFTs.Click += new System.EventHandler(this.pictureBoxNFTs_Click);

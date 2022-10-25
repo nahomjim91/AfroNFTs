@@ -92,7 +92,7 @@ namespace AfroNFTs.Services
                 };
                    
 
-                    normalUser.profileImage = ImageToByteArray(AfroNFTs.Properties.Resources.th__2_);
+                    normalUser.profileImage =Utils.ConverterImage.ImageToByteArray(AfroNFTs.Properties.Resources.th__2_);
                     dbService.normalUserTB.Add(normalUser);
                     dbService.SaveChanges();
 
@@ -106,14 +106,7 @@ namespace AfroNFTs.Services
                 return false;
             }
         }
-        public static byte[] ImageToByteArray(System.Drawing.Image imageIn)
-        {
-            using (var ms = new MemoryStream())
-            {
-                imageIn.Save(ms, imageIn.RawFormat);
-                return ms.ToArray();
-            }
-        }
+        
         public static bool registerAdminUser(
               string firstName,
               string lastName,
@@ -135,7 +128,7 @@ namespace AfroNFTs.Services
 
 
                     };
-                    admin.profileImage = ImageToByteArray(AfroNFTs.Properties.Resources.th__2_);
+                    admin.profileImage = Utils.ConverterImage.ImageToByteArray(AfroNFTs.Properties.Resources.th__2_);
                     dbService.adminTB.Add(admin);
 
                     dbService.SaveChanges();

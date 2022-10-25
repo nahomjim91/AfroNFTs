@@ -18,14 +18,7 @@ namespace AfroNFTs.View
         int id;
         NFTsClass nft;
 
-        public Image byteArrayToImage(byte[] bytesArr)
-        {
-            using (MemoryStream memstr = new MemoryStream(bytesArr))
-            {
-                Image img = Image.FromStream(memstr);
-                return img;
-            }
-        }
+       
         public PreposOfPage(bool pageType , int id)
         {
             MessageBox.Show("I am Here!!" + id.ToString());
@@ -34,41 +27,47 @@ namespace AfroNFTs.View
             this.id = id;   
             InitializeComponent();
 
-                
-            if(pageType){
+
+           // if (pageType) { }
                using(var ctx = new DbService())
                 {
-                    try
+                try
+                {
+                    nft = ctx.nftTB.Single(obj => obj.NFtsClassId == id);
+                    if (nft.OwnerID == mainPage.userID)
                     {
-                        nft = ctx.nftTB.Single(obj => obj.NFtsClassId == id);
-                        if (nft.OwnerID == mainPage.userID) { 
-                            this.isAvel.Visible = true;
-                            this.editBtn.Visible = true;
-                        }
-                        MessageBox.Show(nft.OwnerID.ToString() + "     " + id);
-                        this.descriptionNFTs1.NFTsName = nft.NFTsName;
-                        this.descriptionNFTs1.NftsPicture = byteArrayToImage(nft.NftsPicture);
-                        //this.descriptionNFTs1.NftsPicture.
-                        this.descriptionNFTs1.NFTsprice = nft.NFTsprice;
-                        this.descriptionNFTs1.NFTsRate = nft.NFTsRate;
-                        this.descriptionNFTs1.Description = nft.description;
-                        this.descriptionNFTs1.Group = nft.Group;
-                        this.isAvel.Checked = nft.isAvelebel;
-
-                        if (this.isAvel.Checked)
-                        {
-                            label1.Text = "This NFT is availibil for sell";
-                        }
-                        else
-                        {
-                            label1.Text = "This NFT is not availibil for sell";
-                        }
+                        this.isAvel.Visible = true;
+                        this.editBtn.Visible = true;
                     }
-                    catch(Exception b)
+                    else
                     {
-                        MessageBox.Show(b.Message);
+                        this.editBtn.Visible = false;
+                        this.isAvel.Visible = false;
+                    }
+                    MessageBox.Show(nft.OwnerID.ToString() + "     " + id);
+                    this.descriptionNFTs1.NFTsName = nft.NFTsName;
+                    this.descriptionNFTs1.NftsPicture = Utils.ConverterImage.byteArrayToImage(nft.NftsPicture);
+                    //this.descriptionNFTs1.NftsPicture.
+                    this.descriptionNFTs1.NFTsprice = nft.NFTsprice;
+                    this.descriptionNFTs1.NFTsRate = nft.NFTsRate;
+                    this.descriptionNFTs1.Description = nft.description;
+                    this.descriptionNFTs1.Group = nft.Group;
+                    this.isAvel.Checked = nft.isAvelebel;
+
+                    if (this.isAvel.Checked)
+                    {
+                        label1.Text = "This NFT is availibil for sell";
+                    }
+                    else
+                    {
+                        label1.Text = "This NFT is not availibil for sell";
                     }
                 }
+                catch (Exception b)
+                {
+                    MessageBox.Show(b.Message);
+                }
+                
             } 
         }
 
@@ -109,6 +108,11 @@ namespace AfroNFTs.View
                     MessageBox.Show( ex.Message);
                 }
             }
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            Program.main.OpenchildFrom(new CommentPage(id), sender);
         }
     }
 }

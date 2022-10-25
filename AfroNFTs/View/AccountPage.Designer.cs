@@ -48,10 +48,9 @@
             this.Emaillab.AutoSize = true;
             this.Emaillab.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Emaillab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.Emaillab.Location = new System.Drawing.Point(167, 395);
-            this.Emaillab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Emaillab.Location = new System.Drawing.Point(125, 321);
             this.Emaillab.Name = "Emaillab";
-            this.Emaillab.Size = new System.Drawing.Size(81, 29);
+            this.Emaillab.Size = new System.Drawing.Size(67, 24);
             this.Emaillab.TabIndex = 13;
             this.Emaillab.Text = "Email :";
             // 
@@ -60,10 +59,9 @@
             this.LastNamelab.AutoSize = true;
             this.LastNamelab.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastNamelab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.LastNamelab.Location = new System.Drawing.Point(167, 343);
-            this.LastNamelab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LastNamelab.Location = new System.Drawing.Point(125, 279);
             this.LastNamelab.Name = "LastNamelab";
-            this.LastNamelab.Size = new System.Drawing.Size(128, 29);
+            this.LastNamelab.Size = new System.Drawing.Size(103, 24);
             this.LastNamelab.TabIndex = 12;
             this.LastNamelab.Text = "Last name :";
             // 
@@ -72,10 +70,9 @@
             this.FirstNamelab.AutoSize = true;
             this.FirstNamelab.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstNamelab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.FirstNamelab.Location = new System.Drawing.Point(167, 298);
-            this.FirstNamelab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.FirstNamelab.Location = new System.Drawing.Point(125, 242);
             this.FirstNamelab.Name = "FirstNamelab";
-            this.FirstNamelab.Size = new System.Drawing.Size(125, 29);
+            this.FirstNamelab.Size = new System.Drawing.Size(100, 24);
             this.FirstNamelab.TabIndex = 11;
             this.FirstNamelab.Text = "Frist name ";
             // 
@@ -89,10 +86,9 @@
             this.editBtn.IconChar = FontAwesome.Sharp.IconChar.None;
             this.editBtn.IconColor = System.Drawing.Color.Black;
             this.editBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.editBtn.Location = new System.Drawing.Point(924, 36);
-            this.editBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.editBtn.Location = new System.Drawing.Point(693, 29);
             this.editBtn.Name = "editBtn";
-            this.editBtn.Size = new System.Drawing.Size(44, 38);
+            this.editBtn.Size = new System.Drawing.Size(33, 31);
             this.editBtn.TabIndex = 15;
             this.editBtn.UseVisualStyleBackColor = false;
             this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
@@ -102,10 +98,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.label1.Location = new System.Drawing.Point(519, 298);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(389, 242);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 27);
+            this.label1.Size = new System.Drawing.Size(170, 22);
             this.label1.TabIndex = 16;
             this.label1.Text = "Number of NFTs own : ";
             // 
@@ -114,10 +109,9 @@
             this.NumOfNFTs.AutoSize = true;
             this.NumOfNFTs.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NumOfNFTs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.NumOfNFTs.Location = new System.Drawing.Point(792, 298);
-            this.NumOfNFTs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.NumOfNFTs.Location = new System.Drawing.Point(594, 242);
             this.NumOfNFTs.Name = "NumOfNFTs";
-            this.NumOfNFTs.Size = new System.Drawing.Size(59, 29);
+            this.NumOfNFTs.Size = new System.Drawing.Size(49, 24);
             this.NumOfNFTs.TabIndex = 17;
             this.NumOfNFTs.Text = "num";
             // 
@@ -126,10 +120,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.label3.Location = new System.Drawing.Point(519, 330);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(389, 268);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(232, 27);
+            this.label3.Size = new System.Drawing.Size(177, 22);
             this.label3.TabIndex = 18;
             this.label3.Text = "Total Worth NFTs own : ";
             // 
@@ -138,21 +131,19 @@
             this.TotalWorth.AutoSize = true;
             this.TotalWorth.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalWorth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.TotalWorth.Location = new System.Drawing.Point(792, 330);
-            this.TotalWorth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TotalWorth.Location = new System.Drawing.Point(594, 268);
             this.TotalWorth.Name = "TotalWorth";
-            this.TotalWorth.Size = new System.Drawing.Size(59, 29);
+            this.TotalWorth.Size = new System.Drawing.Size(49, 24);
             this.TotalWorth.TabIndex = 19;
             this.TotalWorth.Text = "num";
             // 
             // profileImagepic
             // 
             this.profileImagepic.Image = global::AfroNFTs.Properties.Resources.gettyimages_165604915_170667a;
-            this.profileImagepic.Location = new System.Drawing.Point(217, 15);
-            this.profileImagepic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.profileImagepic.Location = new System.Drawing.Point(163, 12);
             this.profileImagepic.Name = "profileImagepic";
-            this.profileImagepic.Size = new System.Drawing.Size(293, 224);
-            this.profileImagepic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.profileImagepic.Size = new System.Drawing.Size(220, 182);
+            this.profileImagepic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.profileImagepic.TabIndex = 20;
             this.profileImagepic.TabStop = false;
             // 
@@ -161,10 +152,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.label2.Location = new System.Drawing.Point(13, 298);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(10, 242);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 29);
+            this.label2.Size = new System.Drawing.Size(100, 24);
             this.label2.TabIndex = 21;
             this.label2.Text = "Frist name ";
             // 
@@ -173,10 +163,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.label4.Location = new System.Drawing.Point(13, 343);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(10, 279);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 29);
+            this.label4.Size = new System.Drawing.Size(103, 24);
             this.label4.TabIndex = 22;
             this.label4.Text = "Last name :";
             // 
@@ -185,19 +174,18 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.label5.Location = new System.Drawing.Point(13, 395);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(10, 321);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 29);
+            this.label5.Size = new System.Drawing.Size(67, 24);
             this.label5.TabIndex = 23;
             this.label5.Text = "Email :";
             // 
             // AccountPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(4)))), ((int)(((byte)(16)))));
-            this.ClientSize = new System.Drawing.Size(1035, 629);
+            this.ClientSize = new System.Drawing.Size(776, 511);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -211,9 +199,8 @@
             this.Controls.Add(this.LastNamelab);
             this.Controls.Add(this.FirstNamelab);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MaximumSize = new System.Drawing.Size(1053, 676);
-            this.MinimumSize = new System.Drawing.Size(817, 469);
+            this.MaximumSize = new System.Drawing.Size(794, 557);
+            this.MinimumSize = new System.Drawing.Size(617, 388);
             this.Name = "AccountPage";
             this.Text = "AccountPage";
             ((System.ComponentModel.ISupportInitialize)(this.profileImagepic)).EndInit();

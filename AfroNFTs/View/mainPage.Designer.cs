@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.Menupanel = new System.Windows.Forms.Panel();
+            this.Logpanel = new System.Windows.Forms.Panel();
+            this.Headerpan = new System.Windows.Forms.Panel();
+            this.CurrntPage = new System.Windows.Forms.Label();
+            this.dashbord_pan = new System.Windows.Forms.Panel();
+            this.popChar = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPic_current = new FontAwesome.Sharp.IconPictureBox();
             this.transactionsBtn = new FontAwesome.Sharp.IconButton();
             this.myNFTsButton = new FontAwesome.Sharp.IconButton();
             this.MyPagebtn = new FontAwesome.Sharp.IconButton();
@@ -39,19 +45,13 @@
             this.accountBtn = new FontAwesome.Sharp.IconButton();
             this.balanceBtn = new FontAwesome.Sharp.IconButton();
             this.Dashboardbtn = new FontAwesome.Sharp.IconButton();
-            this.Logpanel = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
-            this.Headerpan = new System.Windows.Forms.Panel();
-            this.popChar = new FontAwesome.Sharp.IconPictureBox();
-            this.CurrntPage = new System.Windows.Forms.Label();
-            this.iconPic_current = new FontAwesome.Sharp.IconPictureBox();
-            this.dashbord_pan = new System.Windows.Forms.Panel();
             this.Menupanel.SuspendLayout();
             this.Logpanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.Headerpan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popChar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPic_current)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.SuspendLayout();
             // 
             // Menupanel
@@ -73,6 +73,79 @@
             this.Menupanel.Name = "Menupanel";
             this.Menupanel.Size = new System.Drawing.Size(151, 569);
             this.Menupanel.TabIndex = 0;
+            // 
+            // Logpanel
+            // 
+            this.Logpanel.Controls.Add(this.btnHome);
+            this.Logpanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Logpanel.Location = new System.Drawing.Point(0, 0);
+            this.Logpanel.Name = "Logpanel";
+            this.Logpanel.Size = new System.Drawing.Size(151, 88);
+            this.Logpanel.TabIndex = 0;
+            // 
+            // Headerpan
+            // 
+            this.Headerpan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(11)))), ((int)(((byte)(45)))));
+            this.Headerpan.Controls.Add(this.popChar);
+            this.Headerpan.Controls.Add(this.CurrntPage);
+            this.Headerpan.Controls.Add(this.iconPic_current);
+            this.Headerpan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Headerpan.Location = new System.Drawing.Point(151, 0);
+            this.Headerpan.Name = "Headerpan";
+            this.Headerpan.Size = new System.Drawing.Size(816, 48);
+            this.Headerpan.TabIndex = 1;
+            this.Headerpan.Paint += new System.Windows.Forms.PaintEventHandler(this.Headerpan_Paint);
+            // 
+            // CurrntPage
+            // 
+            this.CurrntPage.AutoSize = true;
+            this.CurrntPage.Font = new System.Drawing.Font("Rockwell", 11.25F);
+            this.CurrntPage.ForeColor = System.Drawing.Color.IndianRed;
+            this.CurrntPage.Location = new System.Drawing.Point(54, 26);
+            this.CurrntPage.Name = "CurrntPage";
+            this.CurrntPage.Size = new System.Drawing.Size(50, 17);
+            this.CurrntPage.TabIndex = 1;
+            this.CurrntPage.Text = "Home";
+            this.CurrntPage.Visible = false;
+            // 
+            // dashbord_pan
+            // 
+            this.dashbord_pan.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dashbord_pan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dashbord_pan.Location = new System.Drawing.Point(151, 48);
+            this.dashbord_pan.Name = "dashbord_pan";
+            this.dashbord_pan.Size = new System.Drawing.Size(816, 521);
+            this.dashbord_pan.TabIndex = 2;
+            this.dashbord_pan.Paint += new System.Windows.Forms.PaintEventHandler(this.dashbord_pan_Paint);
+            this.dashbord_pan.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dashbord_pan_MouseDown);
+            // 
+            // popChar
+            // 
+            this.popChar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(4)))), ((int)(((byte)(47)))));
+            this.popChar.ForeColor = System.Drawing.Color.IndianRed;
+            this.popChar.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.popChar.IconColor = System.Drawing.Color.IndianRed;
+            this.popChar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.popChar.Location = new System.Drawing.Point(492, 16);
+            this.popChar.Name = "popChar";
+            this.popChar.Size = new System.Drawing.Size(32, 32);
+            this.popChar.TabIndex = 2;
+            this.popChar.TabStop = false;
+            this.popChar.Visible = false;
+            // 
+            // iconPic_current
+            // 
+            this.iconPic_current.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(4)))), ((int)(((byte)(47)))));
+            this.iconPic_current.ForeColor = System.Drawing.Color.IndianRed;
+            this.iconPic_current.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconPic_current.IconColor = System.Drawing.Color.IndianRed;
+            this.iconPic_current.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPic_current.Location = new System.Drawing.Point(6, 12);
+            this.iconPic_current.Name = "iconPic_current";
+            this.iconPic_current.Size = new System.Drawing.Size(32, 32);
+            this.iconPic_current.TabIndex = 0;
+            this.iconPic_current.TabStop = false;
+            this.iconPic_current.Visible = false;
             // 
             // transactionsBtn
             // 
@@ -295,108 +368,37 @@
             this.Dashboardbtn.Visible = false;
             this.Dashboardbtn.Click += new System.EventHandler(this.Dashboardbtn_Click);
             // 
-            // Logpanel
-            // 
-            this.Logpanel.Controls.Add(this.btnHome);
-            this.Logpanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Logpanel.Location = new System.Drawing.Point(0, 0);
-            this.Logpanel.Name = "Logpanel";
-            this.Logpanel.Size = new System.Drawing.Size(151, 88);
-            this.Logpanel.TabIndex = 0;
-            // 
             // btnHome
             // 
-            this.btnHome.Image = global::AfroNFTs.Properties.Resources.th__2_;
+            this.btnHome.Image = global::AfroNFTs.Properties.Resources.online_market_1;
+            this.btnHome.InitialImage = global::AfroNFTs.Properties.Resources.online_market_1;
             this.btnHome.Location = new System.Drawing.Point(3, 0);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(142, 88);
-            this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnHome.TabIndex = 0;
             this.btnHome.TabStop = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // Headerpan
-            // 
-            this.Headerpan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(11)))), ((int)(((byte)(45)))));
-            this.Headerpan.Controls.Add(this.popChar);
-            this.Headerpan.Controls.Add(this.CurrntPage);
-            this.Headerpan.Controls.Add(this.iconPic_current);
-            this.Headerpan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Headerpan.Location = new System.Drawing.Point(151, 0);
-            this.Headerpan.Name = "Headerpan";
-            this.Headerpan.Size = new System.Drawing.Size(777, 48);
-            this.Headerpan.TabIndex = 1;
-            this.Headerpan.Paint += new System.Windows.Forms.PaintEventHandler(this.Headerpan_Paint);
-            // 
-            // popChar
-            // 
-            this.popChar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(4)))), ((int)(((byte)(47)))));
-            this.popChar.ForeColor = System.Drawing.Color.IndianRed;
-            this.popChar.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.popChar.IconColor = System.Drawing.Color.IndianRed;
-            this.popChar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.popChar.Location = new System.Drawing.Point(492, 16);
-            this.popChar.Name = "popChar";
-            this.popChar.Size = new System.Drawing.Size(32, 32);
-            this.popChar.TabIndex = 2;
-            this.popChar.TabStop = false;
-            this.popChar.Visible = false;
-            // 
-            // CurrntPage
-            // 
-            this.CurrntPage.AutoSize = true;
-            this.CurrntPage.Font = new System.Drawing.Font("Rockwell", 11.25F);
-            this.CurrntPage.ForeColor = System.Drawing.Color.IndianRed;
-            this.CurrntPage.Location = new System.Drawing.Point(54, 26);
-            this.CurrntPage.Name = "CurrntPage";
-            this.CurrntPage.Size = new System.Drawing.Size(50, 17);
-            this.CurrntPage.TabIndex = 1;
-            this.CurrntPage.Text = "Home";
-            this.CurrntPage.Visible = false;
-            // 
-            // iconPic_current
-            // 
-            this.iconPic_current.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(4)))), ((int)(((byte)(47)))));
-            this.iconPic_current.ForeColor = System.Drawing.Color.IndianRed;
-            this.iconPic_current.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconPic_current.IconColor = System.Drawing.Color.IndianRed;
-            this.iconPic_current.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPic_current.Location = new System.Drawing.Point(6, 12);
-            this.iconPic_current.Name = "iconPic_current";
-            this.iconPic_current.Size = new System.Drawing.Size(32, 32);
-            this.iconPic_current.TabIndex = 0;
-            this.iconPic_current.TabStop = false;
-            this.iconPic_current.Visible = false;
-            // 
-            // dashbord_pan
-            // 
-            this.dashbord_pan.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dashbord_pan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dashbord_pan.Location = new System.Drawing.Point(151, 48);
-            this.dashbord_pan.Name = "dashbord_pan";
-            this.dashbord_pan.Size = new System.Drawing.Size(777, 521);
-            this.dashbord_pan.TabIndex = 2;
-            this.dashbord_pan.Paint += new System.Windows.Forms.PaintEventHandler(this.dashbord_pan_Paint);
-            this.dashbord_pan.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dashbord_pan_MouseDown);
             // 
             // mainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 569);
+            this.ClientSize = new System.Drawing.Size(967, 569);
             this.Controls.Add(this.dashbord_pan);
             this.Controls.Add(this.Headerpan);
             this.Controls.Add(this.Menupanel);
-            this.MaximumSize = new System.Drawing.Size(945, 614);
+            this.MaximumSize = new System.Drawing.Size(983, 608);
+            this.MinimumSize = new System.Drawing.Size(983, 608);
             this.Name = "mainPage";
             this.Text = "AfroNFTs";
             this.Menupanel.ResumeLayout(false);
             this.Logpanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             this.Headerpan.ResumeLayout(false);
             this.Headerpan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popChar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPic_current)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -415,11 +417,11 @@
         private FontAwesome.Sharp.IconButton Siginupb;
         private FontAwesome.Sharp.IconButton Loginbtn;
         public FontAwesome.Sharp.IconPictureBox popChar;
-        private FontAwesome.Sharp.IconPictureBox iconPic_current;
         private FontAwesome.Sharp.IconButton MyPagebtn;
         public System.Windows.Forms.Panel dashbord_pan;
         private FontAwesome.Sharp.IconButton balanceBtn;
         private FontAwesome.Sharp.IconButton myNFTsButton;
         private FontAwesome.Sharp.IconButton transactionsBtn;
+        public FontAwesome.Sharp.IconPictureBox iconPic_current;
     }
 }

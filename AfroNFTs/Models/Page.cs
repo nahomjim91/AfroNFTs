@@ -13,6 +13,8 @@ namespace AfroNFTs.Models
         public string title { get; set; }
         public string description { get; set; }
 
+        public byte [] pageImage { get; set; } 
+
         public List<NFTsClass> nfts;
 
     }

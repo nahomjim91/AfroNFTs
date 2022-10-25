@@ -7,11 +7,14 @@ using System.Security.Cryptography;
 using System.Windows.Forms;
 
 using Microsoft.Toolkit.Uwp.Notifications;
+using System.IO;
+using System.Drawing;
 
 namespace AfroNFTs.Utils
 {
     public class AppEventUtils
     {
+        
         public static void showOutSideNotif(string title, string msg)
         {
             new ToastContentBuilder()
@@ -30,6 +33,26 @@ namespace AfroNFTs.Utils
            // MessageBox.Show(message);
             if (ShowInfoMessageEvent != null)
                 ShowInfoMessageEvent(sender, message);
+        }
+    }
+
+    public static class ConverterImage
+    {
+        public static Image byteArrayToImage(byte[] bytesArr)
+        {
+            using (MemoryStream memstr = new MemoryStream(bytesArr))
+            {
+                Image img = Image.FromStream(memstr);
+                return img;
+            }
+        }
+        public static byte[] ImageToByteArray(System.Drawing.Image imageIn)
+        {
+            using (var ms = new MemoryStream())
+            {
+                imageIn.Save(ms, imageIn.RawFormat);
+                return ms.ToArray();
+            }
         }
     }
     

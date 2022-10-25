@@ -17,14 +17,7 @@ namespace AfroNFTs.View
     {
 
         private int pageId;
-        public Image byteArrayToImage(byte[] bytesArr)
-        {
-            using (MemoryStream memstr = new MemoryStream(bytesArr))
-            {
-                Image img = Image.FromStream(memstr);
-                return img;
-            }
-        }
+       
 
         public PageDetails(int pd)
         {
@@ -51,8 +44,8 @@ namespace AfroNFTs.View
 
                 foreach (var item in nftss)
                 {
-                    NFTs nfts = new NFTs(true , item.NFtsClassId);
-                    nfts.NftsPicture = byteArrayToImage(item.NftsPicture);
+                    NFTs nfts = new NFTs(true , item.NFtsClassId, false);
+                    nfts.NftsPicture = Utils.ConverterImage.byteArrayToImage(item.NftsPicture);
                     nfts.NFTsName = item.NFTsName;
                     nfts.NFTsRate = item.NFTsRate;
                     nfts.NFTsprice = item.NFTsprice;
@@ -87,7 +80,7 @@ namespace AfroNFTs.View
 
         private void AddNFTsbtn2_Click(object sender, EventArgs e)
         {
-            Program.main.OpenchildFrom(new AddNfts(pageId), sender);
+            Program.main.OpenchildFrom(new AddNfts(pageId ,pageTitel.Text), sender);
         }
     }
 }

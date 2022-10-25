@@ -20,14 +20,7 @@ namespace AfroNFTs
     {
         
         bool pageType;
-        public Image byteArrayToImage(byte[] bytesArr)
-        {
-            using (MemoryStream memstr = new MemoryStream(bytesArr))
-            {
-                Image img = Image.FromStream(memstr);
-                return img;
-            }
-        }
+       
         public UserDashBord(bool pageType, string searchTerm="")
         {
           //  MessageBox.Show(pageType.ToString());
@@ -52,8 +45,8 @@ namespace AfroNFTs
                     );
                     foreach (var item in nftss) 
                     {
-                        NFTs nfts = new NFTs(pageType , item.NFtsClassId);
-                        nfts.NftsPicture = byteArrayToImage(item.NftsPicture);
+                        NFTs nfts = new NFTs(pageType , item.NFtsClassId , true);
+                        nfts.NftsPicture = Utils.ConverterImage.byteArrayToImage(item.NftsPicture);
                         nfts.NFTsName = item.NFTsName;
                         nfts.NFTsRate = item.NFTsRate;
                       

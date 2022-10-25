@@ -20,8 +20,10 @@ namespace AfroNFTs.View
         private byte[] imgByte;
         public int PageId; 
         private static int IDNFTs = 0;
-        public AddNfts( int pageId)
+        string GroupName;
+        public AddNfts( int pageId , string GroupName)
         {
+            this.GroupName = GroupName;
             PageId = pageId;    
             InitializeComponent();
             IDNFTs++;   
@@ -41,11 +43,7 @@ namespace AfroNFTs.View
                 errorProvider.SetError(txtDescriptionNFTs, "Required");
                 hasError = false;
             }
-            if (string.IsNullOrEmpty(txtGroupNFTs.Text))
-            {
-                errorProvider.SetError(txtGroupNFTs, "Required");
-                hasError = false;
-            }
+            
             if (string.IsNullOrEmpty(txtPriceNFTs.Text))
             {
                 errorProvider.SetError(txtPriceNFTs, "Required");
@@ -106,7 +104,7 @@ namespace AfroNFTs.View
                 nfts.description = this.txtDescriptionNFTs.Text;
                 nfts.NFTsName = this.txtNameNFTS.Text;
                 nfts.NFTsprice = double.Parse(this.txtPriceNFTs.Text);
-                nfts.Group = this.txtGroupNFTs.Text;
+                nfts.Group = GroupName;
                 nfts.OwnerID = mainPage.userID;
                 nfts.userType = "Admin";
                 nfts.pageId = PageId;

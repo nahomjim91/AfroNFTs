@@ -1,6 +1,6 @@
 ﻿namespace AfroNFTs.View
 {
-    partial class SeeComments
+    partial class CommentPage
     {
         /// <summary>
         /// Required designer variable.
@@ -33,24 +33,27 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(98, 119);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(57)))), ((int)(((byte)(121)))));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(27, 36);
+            this.flowLayoutPanel1.MaximumSize = new System.Drawing.Size(750, 500);
+            this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(236, 200);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(933, 400);
-            this.flowLayoutPanel1.TabIndex = 0;
-            this.flowLayoutPanel1.WrapContents = false;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(750, 378);
+            this.flowLayoutPanel1.TabIndex = 24;
             // 
-            // SeeComments
+            // CommentPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(4)))), ((int)(((byte)(16)))));
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "SeeComments";
-            this.Text = "SeeComments";
-            this.Load += new System.EventHandler(this.SeeComments_Load);
+            this.Name = "CommentPage";
+            this.Text = "CommentPage";
             this.ResumeLayout(false);
 
         }

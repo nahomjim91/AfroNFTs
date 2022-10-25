@@ -225,23 +225,11 @@
     <Compile Include="View\PreposOfPage.Designer.cs">
       <DependentUpon>PreposOfPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\SearchNFTs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\SearchNFTs.Designer.cs">
-      <DependentUpon>SearchNFTs.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\DescriptionNFTs.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\DescriptionNFTs.Designer.cs">
       <DependentUpon>DescriptionNFTs.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\SellPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\SellPage.Designer.cs">
-      <DependentUpon>SellPage.cs</DependentUpon>
     </Compile>
     <Compile Include="View\StartPage.cs">
       <SubType>Form</SubType>
@@ -358,14 +346,8 @@
     <EmbeddedResource Include="View\PreposOfPage.resx">
       <DependentUpon>PreposOfPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\SearchNFTs.resx">
-      <DependentUpon>SearchNFTs.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\DescriptionNFTs.resx">
       <DependentUpon>DescriptionNFTs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\SellPage.resx">
-      <DependentUpon>SellPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\StartPage.resx">
       <DependentUpon>StartPage.cs</DependentUpon>

@@ -192,10 +192,6 @@ namespace AfroNFTs
             //SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void selltbtn_Click(object sender, EventArgs e)
-        {
-            OpenchildFrom(new SellPage(PageType), sender);
-        }
 
         private void accountBtn_Click(object sender, EventArgs e)
         {

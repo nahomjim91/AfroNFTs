@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserDashBord));
             this.txtSerachNFTS = new System.Windows.Forms.TextBox();
             this.labLinkWorth = new System.Windows.Forms.LinkLabel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -49,6 +50,7 @@
             // 
             // labLinkWorth
             // 
+            this.labLinkWorth.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
             this.labLinkWorth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labLinkWorth.AutoSize = true;
@@ -73,7 +75,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(57)))), ((int)(((byte)(121)))));
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(50)))), ((int)(((byte)(57)))));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(7, 67);
             this.flowLayoutPanel1.MaximumSize = new System.Drawing.Size(750, 500);
             this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(236, 200);
@@ -105,12 +107,13 @@
             // UserDashBord
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(10)))), ((int)(((byte)(66)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(4)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(778, 519);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.labLinkWorth);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.txtSerachNFTS);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserDashBord";
             this.Text = "UserDashBord";
             this.Load += new System.EventHandler(this.UserDashBord_Load);

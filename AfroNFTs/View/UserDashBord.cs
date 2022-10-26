@@ -29,9 +29,17 @@ namespace AfroNFTs
             this.pageType = pageType;
 
             flowLayoutPanel1.Controls.Clear();
-
-            //for test 
-
+            try
+            {
+                using (var ctx = new DbService())
+                {
+                    this.labLinkWorth.Text = (ctx.normalUserTB.Find(mainPage.userID)).balance.ToString();
+                }
+            }
+            catch (Exception y)
+            {
+                MessageBox.Show(y.Message);
+            }
             using (var ctx = new DbService()) {
                 try
                 {

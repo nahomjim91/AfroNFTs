@@ -166,10 +166,10 @@
             // 
             // sellOrBuyBtn
             // 
-            this.sellOrBuyBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(49)))), ((int)(((byte)(36)))));
-            this.sellOrBuyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sellOrBuyBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
+            this.sellOrBuyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.sellOrBuyBtn.Font = new System.Drawing.Font("Palatino Linotype", 13F);
-            this.sellOrBuyBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
+            this.sellOrBuyBtn.ForeColor = System.Drawing.Color.Snow;
             this.sellOrBuyBtn.IconChar = FontAwesome.Sharp.IconChar.None;
             this.sellOrBuyBtn.IconColor = System.Drawing.Color.Black;
             this.sellOrBuyBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -198,30 +198,36 @@
             // 
             // startCameraButton
             // 
+            this.startCameraButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(14)))));
+            this.startCameraButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.startCameraButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(226)))), ((int)(((byte)(227)))));
             this.startCameraButton.IconChar = FontAwesome.Sharp.IconChar.None;
             this.startCameraButton.IconColor = System.Drawing.Color.Black;
             this.startCameraButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.startCameraButton.Location = new System.Drawing.Point(448, 248);
-            this.startCameraButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.startCameraButton.Margin = new System.Windows.Forms.Padding(2);
             this.startCameraButton.Name = "startCameraButton";
             this.startCameraButton.Size = new System.Drawing.Size(247, 24);
             this.startCameraButton.TabIndex = 33;
             this.startCameraButton.Text = "Take Photo From Camera(can be used for login)";
-            this.startCameraButton.UseVisualStyleBackColor = true;
+            this.startCameraButton.UseVisualStyleBackColor = false;
             this.startCameraButton.Click += new System.EventHandler(this.startCameraButton_Click);
             // 
             // snapButton
             // 
+            this.snapButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
+            this.snapButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.snapButton.ForeColor = System.Drawing.Color.Snow;
             this.snapButton.IconChar = FontAwesome.Sharp.IconChar.None;
             this.snapButton.IconColor = System.Drawing.Color.Black;
             this.snapButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.snapButton.Location = new System.Drawing.Point(448, 292);
-            this.snapButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.snapButton.Margin = new System.Windows.Forms.Padding(2);
             this.snapButton.Name = "snapButton";
-            this.snapButton.Size = new System.Drawing.Size(247, 19);
+            this.snapButton.Size = new System.Drawing.Size(247, 29);
             this.snapButton.TabIndex = 34;
             this.snapButton.Text = "Snap";
-            this.snapButton.UseVisualStyleBackColor = true;
+            this.snapButton.UseVisualStyleBackColor = false;
             this.snapButton.Visible = false;
             this.snapButton.Click += new System.EventHandler(this.snapButton_Click);
             // 

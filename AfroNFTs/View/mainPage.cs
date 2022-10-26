@@ -19,8 +19,10 @@ namespace AfroNFTs
     {   
         public static List<string> colorList = new List<string>()
         {
-            "#064663","#041c32","#04293a","#160040","#1c0c5b","#4E1A6C","#56103C",
-            "#56171F  "
+            /*"#064663","#041c32","#04293a","#160040","#1c0c5b","#4E1A6C","#56103C",
+            "#56171F  "*/
+            "#120A0A" , "#0B121E" , "#2A200E" , "#1C311B" , "#140F21" , "#0A191C" ,
+            "#200C18" , "#0C201C"
         };
 
         private IconButton currentBtn;
@@ -39,21 +41,7 @@ namespace AfroNFTs
             OpenchildFrom(new StartPage(), aboutbtn);
 
         }
-        //Stracte
-        private struct RGBcolors 
-        {
-            public static Color color1 = Color.FromArgb(172, 126, 241);
-            public static Color color2 = Color.FromArgb(249, 113 ,176);
-            public static Color color3 = Color.FromArgb(253, 153 ,114);
-            public static Color color4 = Color.FromArgb(95, 77, 221);
-            public static Color color5 = Color.FromArgb(249, 88, 155);
-        }
-        //IMethods
-        public void GoToPageInfo(Form f)
-        {
-            //dashbord_pan.Controls.Add(f);
-            OpenchildFrom(f, new Button());
-        }
+       
         private void ActivateButton(object senderBtn )
         {   
 

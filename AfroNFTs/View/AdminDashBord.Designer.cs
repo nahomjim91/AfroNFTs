@@ -250,7 +250,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(7)))), ((int)(((byte)(38)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(3)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(778, 519);
             this.Controls.Add(this.txtBalance);
             this.Controls.Add(this.txtNumberOfCommentPer);

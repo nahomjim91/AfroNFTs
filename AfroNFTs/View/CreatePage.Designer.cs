@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreatePage));
             this.Titeltxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.descrTxt = new System.Windows.Forms.RichTextBox();
@@ -98,7 +99,7 @@
             // submitteBtn1
             // 
             this.submitteBtn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
-            this.submitteBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.submitteBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.submitteBtn1.Font = new System.Drawing.Font("Modern No. 20", 18F);
             this.submitteBtn1.ForeColor = System.Drawing.Color.White;
             this.submitteBtn1.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -127,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(10)))), ((int)(((byte)(66)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(6)))), ((int)(((byte)(16)))));
             this.ClientSize = new System.Drawing.Size(765, 443);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pageImagepic);
@@ -136,6 +137,7 @@
             this.Controls.Add(this.descriptionLabel);
             this.Controls.Add(this.Titeltxt);
             this.Controls.Add(this.label4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CreatePage";
             this.Text = "CreatePage";

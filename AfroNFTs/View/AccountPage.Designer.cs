@@ -78,9 +78,9 @@
             // 
             // editBtn
             // 
-            this.editBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(37)))), ((int)(((byte)(98)))));
+            this.editBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(53)))), ((int)(((byte)(9)))));
             this.editBtn.BackgroundImage = global::AfroNFTs.Properties.Resources.edit;
-            this.editBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.editBtn.Font = new System.Drawing.Font("Palatino Linotype", 13F);
             this.editBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
             this.editBtn.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -184,7 +184,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(4)))), ((int)(((byte)(16)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(8)))), ((int)(((byte)(13)))));
             this.ClientSize = new System.Drawing.Size(776, 511);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.Clearbtn = new System.Windows.Forms.Button();
             this.Pswordtxt = new System.Windows.Forms.TextBox();
             this.Emailtxt = new System.Windows.Forms.TextBox();
@@ -47,6 +48,7 @@
             this.Clearbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
             this.Clearbtn.CausesValidation = false;
             this.Clearbtn.FlatAppearance.BorderSize = 0;
+            this.Clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Clearbtn.Font = new System.Drawing.Font("Modern No. 20", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Clearbtn.ForeColor = System.Drawing.Color.Snow;
             this.Clearbtn.Location = new System.Drawing.Point(237, 404);
@@ -78,6 +80,7 @@
             this.Siginupbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
             this.Siginupbtn.CausesValidation = false;
             this.Siginupbtn.FlatAppearance.BorderSize = 0;
+            this.Siginupbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Siginupbtn.Font = new System.Drawing.Font("Modern No. 20", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Siginupbtn.ForeColor = System.Drawing.Color.Snow;
             this.Siginupbtn.Location = new System.Drawing.Point(35, 404);
@@ -117,7 +120,7 @@
             // isAdminCheckBox
             // 
             this.isAdminCheckBox.AutoSize = true;
-            this.isAdminCheckBox.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.isAdminCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
             this.isAdminCheckBox.Location = new System.Drawing.Point(28, 342);
             this.isAdminCheckBox.Name = "isAdminCheckBox";
             this.isAdminCheckBox.Size = new System.Drawing.Size(93, 17);
@@ -127,7 +130,9 @@
             // 
             // forgottenPasswordButton
             // 
-            this.forgottenPasswordButton.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.forgottenPasswordButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
+            this.forgottenPasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.forgottenPasswordButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(163)))), ((int)(((byte)(110)))));
             this.forgottenPasswordButton.IconChar = FontAwesome.Sharp.IconChar.None;
             this.forgottenPasswordButton.IconColor = System.Drawing.Color.LightSeaGreen;
             this.forgottenPasswordButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -136,7 +141,7 @@
             this.forgottenPasswordButton.Size = new System.Drawing.Size(159, 35);
             this.forgottenPasswordButton.TabIndex = 29;
             this.forgottenPasswordButton.Text = "Forgotten Password?";
-            this.forgottenPasswordButton.UseVisualStyleBackColor = true;
+            this.forgottenPasswordButton.UseVisualStyleBackColor = false;
             this.forgottenPasswordButton.Click += new System.EventHandler(this.forgottenPasswordButton_Click);
             // 
             // showPasswordButton
@@ -156,7 +161,7 @@
             // Login
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(4)))), ((int)(((byte)(47)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(5)))), ((int)(((byte)(19)))));
             this.ClientSize = new System.Drawing.Size(442, 512);
             this.Controls.Add(this.showPasswordButton);
             this.Controls.Add(this.forgottenPasswordButton);
@@ -167,6 +172,7 @@
             this.Controls.Add(this.Siginupbtn);
             this.Controls.Add(this.Pswordlab);
             this.Controls.Add(this.Emaillab);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.Text = "AfroNFTs";
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderLogin)).EndInit();

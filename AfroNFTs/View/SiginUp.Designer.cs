@@ -31,6 +31,7 @@ namespace AfroNFTs
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SiginUp));
             this.FirstNamelab = new System.Windows.Forms.Label();
             this.LastNamelab = new System.Windows.Forms.Label();
             this.Emaillab = new System.Windows.Forms.Label();
@@ -258,7 +259,7 @@ namespace AfroNFTs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(4)))), ((int)(((byte)(47)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(4)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(454, 526);
             this.Controls.Add(this.showPassword);
             this.Controls.Add(this.showConfirm);
@@ -276,6 +277,7 @@ namespace AfroNFTs
             this.Controls.Add(this.LastNamelab);
             this.Controls.Add(this.FirstNamelab);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SiginUp";
             this.Text = "AfroNFTs";
             this.groupBox1.ResumeLayout(false);

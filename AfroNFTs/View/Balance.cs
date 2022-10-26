@@ -41,7 +41,7 @@ namespace AfroNFTs.View
                         this.user = ctx.normalUserTB.Find(userId);
                         this.balance = user.balance;
                     }
-                    this.balanceLabel.Text = this.balance.ToString();
+                    this.balanceLabel.Text = this.balance.ToString()+"$";
                 }
                
             }catch (Exception ex)
@@ -79,5 +79,6 @@ namespace AfroNFTs.View
             }
 
         }
+
     }
 }

@@ -131,9 +131,10 @@ namespace AfroNFTs.View
                         AppEventUtils.ShowInfoMessage(this, "The NFT ID is not given");
                         return;
                     }
-                  
+                    if (nft.OwnerID == mainPage.userID) return;
 
-                    using(var transcationService = new TranscationService(mainPage.userID,  !pagetype))
+
+                    using (var transcationService = new TranscationService(mainPage.userID,  !pagetype))
                     {
                         transcationService.register(nft.OwnerID, nft.NFTsName, nft.NFTsprice);
                     }
@@ -146,7 +147,7 @@ namespace AfroNFTs.View
                     {
                         price = reactionService.getPrice(NftsId, (decimal)nft.NFTsprice);
                     }
-                    var admin = ctx.adminTB.Find(nft.OwnerID);
+                    var admin = ctx.adminTB.Single(n => n.Id ==nft.OwnerID); ;
                     admin.balance += (decimal)price;
                     user.balance -= (decimal)price;
                     nft.userType = "User";

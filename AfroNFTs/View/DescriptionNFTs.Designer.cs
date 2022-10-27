@@ -136,7 +136,7 @@
             this.NFTsiconPictureBox.Location = new System.Drawing.Point(22, 31);
             this.NFTsiconPictureBox.Name = "NFTsiconPictureBox";
             this.NFTsiconPictureBox.Size = new System.Drawing.Size(210, 209);
-            this.NFTsiconPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.NFTsiconPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.NFTsiconPictureBox.TabIndex = 0;
             this.NFTsiconPictureBox.TabStop = false;
             // 

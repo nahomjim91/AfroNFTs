@@ -10,13 +10,14 @@ using System.Data;
 
 namespace AfroNFTs.Services
 {
-    /*
-     create table transcations(
+    
+    /* create table transcations(
                             id int not null primary key identity, 
                             from_user int not null, 
                             from_admin int not null,
-                            nft_title varchar(20) not null);
-     */
+                            nft_title varchar(20) not null,
+                            price double not null)*/
+    
     public class Transcation
     {
         public int id;

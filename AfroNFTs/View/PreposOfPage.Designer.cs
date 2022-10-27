@@ -123,14 +123,14 @@
             // 
             this.descriptionNFTs1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(4)))), ((int)(((byte)(16)))));
             this.descriptionNFTs1.Description = "xascdvfghj";
-            this.descriptionNFTs1.Group = "car";
+            this.descriptionNFTs1.Group = "group";
             this.descriptionNFTs1.Location = new System.Drawing.Point(0, -9);
             this.descriptionNFTs1.MaximumSize = new System.Drawing.Size(635, 555);
             this.descriptionNFTs1.MinimumSize = new System.Drawing.Size(435, 355);
             this.descriptionNFTs1.Name = "descriptionNFTs1";
-            this.descriptionNFTs1.NFTsName = "sdfghjkl";
+            this.descriptionNFTs1.NFTsName = "name";
             this.descriptionNFTs1.NftsPicture = global::AfroNFTs.Properties.Resources.th__2_;
-            this.descriptionNFTs1.NFTsprice = 0D;
+            this.descriptionNFTs1.NFTsprice = 10D;
             this.descriptionNFTs1.NFTsRate = 0D;
             this.descriptionNFTs1.Size = new System.Drawing.Size(635, 526);
             this.descriptionNFTs1.TabIndex = 9;

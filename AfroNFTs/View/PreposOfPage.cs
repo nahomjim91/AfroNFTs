@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using AfroNFTs.Models;
+using AfroNFTs.Services;
+using AfroNFTs.Utils;
+
 namespace AfroNFTs.View
 {
     public partial class PreposOfPage : Form
@@ -74,6 +77,61 @@ namespace AfroNFTs.View
         private void sellOrBuyBtn_Click(object sender, EventArgs e)
         {
 
+            
+            try
+            {
+
+                using (var ctx = new DbService())
+                {
+                    var user = ctx.normalUserTB.Find(mainPage.userID);
+                    if (decimal.Parse(descriptionNFTs1.NFTsprice.ToString()) > user.balance)
+                    {
+                        AppEventUtils.ShowInfoMessage(this, "You cannot buy this please recharge!");
+                        return;
+                    }
+                    var nft = ctx.nftTB.Find(this.id);
+
+                    if (nft == null)
+                    {
+                        AppEventUtils.ShowInfoMessage(this, "The NFT ID is not given");
+                        return;
+                    }
+                    if (nft.OwnerID == mainPage.userID) return;
+
+
+                    using (var transcationService = new TranscationService(mainPage.userID, !pageType))
+                    {
+                        transcationService.register(nft.OwnerID, nft.NFTsName, nft.NFTsprice);
+                    }
+                    using (var transcationService = new TranscationService(nft.OwnerID, pageType))
+                    {
+                        transcationService.register(mainPage.userID, nft.NFTsName, nft.NFTsprice);
+                    }
+                    decimal price = 0;
+                    using (var reactionService = new ReactionService())
+                    {
+                        price = reactionService.getPrice(id, (decimal)nft.NFTsprice);
+                    }
+                    var admin = ctx.adminTB.Single(n => n.Id == nft.OwnerID);
+                    admin.balance += (decimal)price;
+                    user.balance -= (decimal)price;
+                    nft.userType = "User";
+                    nft.isAvelebel = false;
+                    nft.OwnerID = mainPage.userID;
+
+                    ctx.SaveChanges();
+
+
+                    AppEventUtils.ShowInfoMessage(this, "Bought!");
+
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
        
 

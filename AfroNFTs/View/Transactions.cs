@@ -26,12 +26,12 @@ namespace AfroNFTs.View
                     {
                         if (pageType)
                         {
-                            var user = ctx.adminTB.Find(t.userId);
+                            var user = ctx.adminTB.Single( n => n.Id== t.adminId);
                             usersName = user.firstName + " " + user.lastName;
                         }
                         else
                         {
-                            var user = ctx.normalUserTB.Find(t.adminId);
+                            var user = ctx.normalUserTB.Single(n => n.Id == t.userId); ;
                             usersName = user.firstName + " " + user.lastName;
                         }
                     }

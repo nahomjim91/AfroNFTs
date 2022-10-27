@@ -24,6 +24,7 @@ namespace AfroNFTs.View
         {
             this.userId = userId;
             InitializeComponent();
+            this.label2.Visible = (isAdmin) ? false :true; 
             try
             {
                 using (var ctx = new DbService())

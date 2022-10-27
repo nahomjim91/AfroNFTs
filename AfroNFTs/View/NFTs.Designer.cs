@@ -71,6 +71,7 @@
             // likesLabel
             // 
             this.likesLabel.AutoSize = true;
+            this.likesLabel.ForeColor = System.Drawing.Color.Snow;
             this.likesLabel.Location = new System.Drawing.Point(83, 245);
             this.likesLabel.Name = "likesLabel";
             this.likesLabel.Size = new System.Drawing.Size(51, 13);
@@ -87,6 +88,7 @@
             // dislikesLabel
             // 
             this.dislikesLabel.AutoSize = true;
+            this.dislikesLabel.ForeColor = System.Drawing.Color.Snow;
             this.dislikesLabel.Location = new System.Drawing.Point(88, 286);
             this.dislikesLabel.Name = "dislikesLabel";
             this.dislikesLabel.Size = new System.Drawing.Size(51, 13);
@@ -96,7 +98,7 @@
             // iconButton4
             // 
             this.iconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.iconButton4.Font = new System.Drawing.Font("Modern No. 20", 10F);
             this.iconButton4.ForeColor = System.Drawing.Color.White;
             this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -113,7 +115,7 @@
             // iconButton3
             // 
             this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.iconButton3.Font = new System.Drawing.Font("Modern No. 20", 10F);
             this.iconButton3.ForeColor = System.Drawing.Color.White;
             this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -130,7 +132,7 @@
             // iconButton2
             // 
             this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.iconButton2.Font = new System.Drawing.Font("Modern No. 20", 10F);
             this.iconButton2.ForeColor = System.Drawing.Color.White;
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -147,7 +149,7 @@
             // iconButton1
             // 
             this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.iconButton1.Font = new System.Drawing.Font("Modern No. 20", 10F);
             this.iconButton1.ForeColor = System.Drawing.Color.White;
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -164,7 +166,7 @@
             // buyButton
             // 
             this.buyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
-            this.buyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buyButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buyButton.Font = new System.Drawing.Font("Modern No. 20", 10F);
             this.buyButton.ForeColor = System.Drawing.Color.White;
             this.buyButton.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -181,7 +183,7 @@
             // seeDetailbtn
             // 
             this.seeDetailbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
-            this.seeDetailbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.seeDetailbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.seeDetailbtn.Font = new System.Drawing.Font("Modern No. 20", 10F);
             this.seeDetailbtn.ForeColor = System.Drawing.Color.White;
             this.seeDetailbtn.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -198,9 +200,9 @@
             // pictureBoxNFTs
             // 
             this.pictureBoxNFTs.Image = global::AfroNFTs.Properties.Resources.gettyimages_165604915_170667a;
-            this.pictureBoxNFTs.Location = new System.Drawing.Point(-3, 0);
+            this.pictureBoxNFTs.Location = new System.Drawing.Point(-13, 3);
             this.pictureBoxNFTs.Name = "pictureBoxNFTs";
-            this.pictureBoxNFTs.Size = new System.Drawing.Size(259, 233);
+            this.pictureBoxNFTs.Size = new System.Drawing.Size(279, 233);
             this.pictureBoxNFTs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxNFTs.TabIndex = 5;
             this.pictureBoxNFTs.TabStop = false;
@@ -210,6 +212,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(3)))), ((int)(((byte)(23)))));
             this.Controls.Add(this.iconButton4);
             this.Controls.Add(this.iconButton3);
             this.Controls.Add(this.dislikesLabel);

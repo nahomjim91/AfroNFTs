@@ -34,6 +34,7 @@
             // FL
             // 
             this.FL.AutoScroll = true;
+            this.FL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(11)))), ((int)(((byte)(26)))));
             this.FL.Location = new System.Drawing.Point(11, 11);
             this.FL.Margin = new System.Windows.Forms.Padding(2);
             this.FL.Name = "FL";
@@ -44,7 +45,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(10)))), ((int)(((byte)(66)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(6)))), ((int)(((byte)(16)))));
             this.ClientSize = new System.Drawing.Size(778, 519);
             this.Controls.Add(this.FL);
             this.Margin = new System.Windows.Forms.Padding(2);

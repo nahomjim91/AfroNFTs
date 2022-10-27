@@ -24,40 +24,60 @@ namespace AfroNFTs.View
             this.pageImagepic.Image = AfroNFTs.Properties.Resources.th__2_;
         }
 
-
+        bool hasError()
+        {
+            bool result = false;
+            if (string.IsNullOrEmpty(descrTxt.Text)) {
+                result = true; errorProvider1.SetError(descrTxt, "Required");
+            }
+            if (string.IsNullOrEmpty(Titeltxt.Text))
+            {
+                result = true; errorProvider1.SetError(Titeltxt, "Required");
+            }
+            return result;
+        }
         private void submitteBtn1_Click(object sender, EventArgs e)
         {
-            var adminId = mainPage.userID;
-            var page = new Page();
-
-            page.title = Titeltxt.Text;
-            page.description = descrTxt.Text;
-            page.pageImage = Utils.ConverterImage.ImageToByteArray(this.pageImagepic.Image);
-
-
-            try
+            if (hasError())
             {
-                using (var ctx = new DbService())
+
+            }
+            else
+            {
+                var adminId = mainPage.userID;
+                var page = new Page();
+
+                page.title = Titeltxt.Text;
+                page.description = descrTxt.Text;
+                page.pageImage = Utils.ConverterImage.ImageToByteArray(this.pageImagepic.Image);
+
+
+                try
                 {
-                    ctx.pageTB.Add(page);
-                    ctx.SaveChanges();
+                    using (var ctx = new DbService())
+                    {
+                        ctx.pageTB.Add(page);
+                        ctx.SaveChanges();
 
-                    var admin = ctx.adminTB.Find(adminId);
-
-
-                    admin.pages.Add(page);
-
-                    ctx.SaveChanges();
+                        var admin = ctx.adminTB.Find(adminId);
 
 
+                        admin.pages.Add(page);
+
+                        ctx.SaveChanges();
+
+
+                    }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return;
+                }
+                Program.main.OpenchildFrom(new MyPages(pageType) , sender);
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return;
-            }
-            Program.main.OpenchildFrom(new MyPages(pageType) , sender);
+
+           
         }
 
         private void pageImagepic_Click(object sender, EventArgs e)

@@ -1,4 +1,5 @@
-﻿using AfroNFTs.Services;
+﻿using AfroNFTs.Models;
+using AfroNFTs.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,10 +22,13 @@ namespace AfroNFTs.View
             using (var commentService = new CommentService())
             {
                 var comments = commentService.getCommentsOn(objectId);
-
+                DbService dbService = new DbService();
                 foreach (Comment com in comments)
                 {
-                    var l = new CommentWidget(com.userId, com.comment);
+                   var user= dbService.normalUserTB.Find(com.userId).firstName;
+                    char firstLatter = user[0];
+                    
+                    var l = new CommentWidget(com.userId, com.comment ,firstLatter );
 
                     l.AutoSize = true;
                     //  l.AutoScrollOffset = new Point(0, 10);

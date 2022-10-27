@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreatePage));
             this.Titeltxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -36,7 +37,9 @@
             this.pageImagepic = new System.Windows.Forms.PictureBox();
             this.submitteBtn1 = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pageImagepic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // Titeltxt
@@ -124,6 +127,10 @@
             this.label1.TabIndex = 47;
             this.label1.Text = "Clike The Image To Add Page Image";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // CreatePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -142,6 +149,7 @@
             this.Name = "CreatePage";
             this.Text = "CreatePage";
             ((System.ComponentModel.ISupportInitialize)(this.pageImagepic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,5 +163,6 @@
         private FontAwesome.Sharp.IconButton submitteBtn1;
         private System.Windows.Forms.PictureBox pageImagepic;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

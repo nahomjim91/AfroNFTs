@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CommentPage));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
@@ -37,12 +38,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(57)))), ((int)(((byte)(121)))));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(27, 36);
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(69)))), ((int)(((byte)(52)))));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 38);
             this.flowLayoutPanel1.MaximumSize = new System.Drawing.Size(750, 500);
             this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(236, 200);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(750, 378);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(725, 400);
             this.flowLayoutPanel1.TabIndex = 24;
             // 
             // CommentPage
@@ -52,6 +53,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(4)))), ((int)(((byte)(16)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CommentPage";
             this.Text = "CommentPage";
             this.ResumeLayout(false);

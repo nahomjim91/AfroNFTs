@@ -12,9 +12,25 @@ namespace AfroNFTs.View
 {
     public partial class CommentWidget : UserControl
     {
-        public CommentWidget(int fromUserId, string comment)
+        List<string> colorList = new List<string>() {
+            "#593765" , "#643765" , "#57673B" , "#3B675B" , "#67673B"
+        };
+
+        private Color SelectColorSelection() // rondom color selection
+        {
+            Random ren = new Random();
+            int index = ren.Next(colorList.Count);
+            string color = colorList[index];
+
+            return ColorTranslator.FromHtml(color);
+        }
+        public CommentWidget(int fromUserId, string comment , char x)
         {
             InitializeComponent();
+            this.iconlab.Text = x.ToString().ToUpper();
+            this.iconlab.BackColor = SelectColorSelection();
+            this.BackColor = SelectColorSelection();
+
             this.commentLabel.Text = comment;
             this.userIdLabel.Text = fromUserId.ToString();
         }

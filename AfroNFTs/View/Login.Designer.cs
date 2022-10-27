@@ -148,7 +148,7 @@
             // 
             this.showPasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showPasswordButton.IconChar = FontAwesome.Sharp.IconChar.Eye;
-            this.showPasswordButton.IconColor = System.Drawing.Color.Black;
+            this.showPasswordButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(26)))), ((int)(((byte)(9)))));
             this.showPasswordButton.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.showPasswordButton.IconSize = 30;
             this.showPasswordButton.Location = new System.Drawing.Point(335, 245);

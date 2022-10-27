@@ -38,8 +38,8 @@
             // 
             this.labNFTsName.AutoSize = true;
             this.labNFTsName.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labNFTsName.ForeColor = System.Drawing.Color.Coral;
-            this.labNFTsName.Location = new System.Drawing.Point(56, 290);
+            this.labNFTsName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(3)))), ((int)(((byte)(23)))));
+            this.labNFTsName.Location = new System.Drawing.Point(17, 294);
             this.labNFTsName.MaximumSize = new System.Drawing.Size(150, 0);
             this.labNFTsName.Name = "labNFTsName";
             this.labNFTsName.Size = new System.Drawing.Size(57, 21);
@@ -49,13 +49,13 @@
             // iconButton1
             // 
             this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.iconButton1.Font = new System.Drawing.Font("Modern No. 20", 10F);
             this.iconButton1.ForeColor = System.Drawing.Color.White;
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(128, 290);
+            this.iconButton1.Location = new System.Drawing.Point(128, 295);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(81, 25);
             this.iconButton1.TabIndex = 42;

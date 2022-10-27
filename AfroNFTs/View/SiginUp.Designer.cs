@@ -228,7 +228,7 @@ namespace AfroNFTs
             // 
             this.showConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showConfirm.IconChar = FontAwesome.Sharp.IconChar.Eye;
-            this.showConfirm.IconColor = System.Drawing.Color.Black;
+            this.showConfirm.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(26)))), ((int)(((byte)(9)))));
             this.showConfirm.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.showConfirm.IconSize = 30;
             this.showConfirm.Location = new System.Drawing.Point(350, 271);
@@ -244,7 +244,7 @@ namespace AfroNFTs
             this.showPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showPassword.Flip = FontAwesome.Sharp.FlipOrientation.Vertical;
             this.showPassword.IconChar = FontAwesome.Sharp.IconChar.Eye;
-            this.showPassword.IconColor = System.Drawing.Color.Black;
+            this.showPassword.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(26)))), ((int)(((byte)(9)))));
             this.showPassword.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.showPassword.IconSize = 30;
             this.showPassword.Location = new System.Drawing.Point(350, 244);

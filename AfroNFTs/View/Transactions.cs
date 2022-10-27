@@ -35,8 +35,7 @@ namespace AfroNFTs.View
                             usersName = user.firstName + " " + user.lastName;
                         }
                     }
-                //    this.Controls.Add(new Button());
-                    this.Controls.Add(new TransactionInfo((decimal)t.price,usersName,  t.nftTitle));
+                    this.flowLayoutPanel1.Controls.Add(new TransactionInfo((decimal)t.price,usersName,  t.nftTitle));
                     MessageBox.Show("HEELLO");
                 }
             }
@@ -47,5 +46,6 @@ namespace AfroNFTs.View
         {
 
         }
+
     }
 }

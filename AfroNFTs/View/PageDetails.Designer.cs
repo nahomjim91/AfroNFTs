@@ -81,24 +81,21 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(57)))), ((int)(((byte)(121)))));
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(16)))), ((int)(((byte)(11)))));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 51);
             this.flowLayoutPanel1.MaximumSize = new System.Drawing.Size(750, 500);
             this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(236, 200);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(642, 406);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(637, 429);
             this.flowLayoutPanel1.TabIndex = 47;
             // 
             // PageDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(10)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(855, 458);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(11)))), ((int)(((byte)(26)))));
+            this.ClientSize = new System.Drawing.Size(850, 481);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.pageTitel);
             this.Controls.Add(this.DeletePagebtn1);

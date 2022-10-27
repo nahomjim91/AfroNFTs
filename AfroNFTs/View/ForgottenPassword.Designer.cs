@@ -52,7 +52,7 @@
             // 
             this.Codetxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
             this.Codetxt.Location = new System.Drawing.Point(162, 36);
-            this.Codetxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Codetxt.Margin = new System.Windows.Forms.Padding(2);
             this.Codetxt.Name = "Codetxt";
             this.Codetxt.Size = new System.Drawing.Size(120, 20);
             this.Codetxt.TabIndex = 21;
@@ -85,7 +85,7 @@
             // 
             this.psstxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
             this.psstxt.Location = new System.Drawing.Point(162, 74);
-            this.psstxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.psstxt.Margin = new System.Windows.Forms.Padding(2);
             this.psstxt.Name = "psstxt";
             this.psstxt.Size = new System.Drawing.Size(120, 20);
             this.psstxt.TabIndex = 22;
@@ -98,7 +98,7 @@
             this.Clearbtn.Font = new System.Drawing.Font("Modern No. 20", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Clearbtn.ForeColor = System.Drawing.Color.Snow;
             this.Clearbtn.Location = new System.Drawing.Point(162, 119);
-            this.Clearbtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Clearbtn.Margin = new System.Windows.Forms.Padding(2);
             this.Clearbtn.Name = "Clearbtn";
             this.Clearbtn.Size = new System.Drawing.Size(94, 30);
             this.Clearbtn.TabIndex = 23;
@@ -114,6 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(43)))), ((int)(((byte)(9)))));
             this.ClientSize = new System.Drawing.Size(478, 178);
             this.Controls.Add(this.Clearbtn);
             this.Controls.Add(this.psstxt);
@@ -121,7 +122,7 @@
             this.Controls.Add(this.Pswordlab);
             this.Controls.Add(this.Emaillab);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ForgottenPassword";
             this.Text = "ForgottenPassword";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

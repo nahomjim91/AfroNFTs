@@ -71,7 +71,7 @@ namespace AfroNFTs.View
             }
         }
 
-        public NFTs(bool pg, int Id , bool haveTovisbile)
+        public NFTs(bool pg, int Id , bool haveTovisbile , bool btnenabelity)
         {
             this.visbleOfAddCommentBtn = haveTovisbile;
             this.userUsingId = mainPage.userID;
@@ -79,6 +79,9 @@ namespace AfroNFTs.View
             NftsId = Id;
             InitializeComponent();
             this.iconButton4.Visible = visbleOfAddCommentBtn;
+            this.buyButton.Visible = haveTovisbile;
+            this.iconButton1.Enabled = btnenabelity;
+            this.iconButton2.Enabled = btnenabelity;
 
 
         }

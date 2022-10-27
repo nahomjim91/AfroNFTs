@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.typeOfUserLable = new System.Windows.Forms.Label();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.editBtn = new FontAwesome.Sharp.IconButton();
             this.sellOrBuyBtn = new FontAwesome.Sharp.IconButton();
@@ -53,40 +51,6 @@
             this.typeOfUserLable.Size = new System.Drawing.Size(56, 24);
             this.typeOfUserLable.TabIndex = 10;
             this.typeOfUserLable.Text = "label1";
-            // 
-            // iconButton3
-            // 
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(56)))), ((int)(((byte)(38)))));
-            this.iconButton3.BackgroundImage = global::AfroNFTs.Properties.Resources.disLike1;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Palatino Linotype", 13F);
-            this.iconButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton3.IconColor = System.Drawing.Color.Black;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.Location = new System.Drawing.Point(632, 231);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(50, 40);
-            this.iconButton3.TabIndex = 15;
-            this.iconButton3.UseVisualStyleBackColor = false;
-            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(56)))), ((int)(((byte)(38)))));
-            this.iconButton2.BackgroundImage = global::AfroNFTs.Properties.Resources.like1;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Palatino Linotype", 13F);
-            this.iconButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(569, 231);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(45, 40);
-            this.iconButton2.TabIndex = 14;
-            this.iconButton2.UseVisualStyleBackColor = false;
-            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // iconButton1
             // 
@@ -190,8 +154,6 @@
             this.ClientSize = new System.Drawing.Size(778, 519);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.isAvel);
-            this.Controls.Add(this.iconButton3);
-            this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.editBtn);
             this.Controls.Add(this.sellOrBuyBtn);
@@ -211,8 +173,6 @@
         private FontAwesome.Sharp.IconButton sellOrBuyBtn;
         private FontAwesome.Sharp.IconButton editBtn;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton3;
         private System.Windows.Forms.CheckBox isAvel;
         private System.Windows.Forms.Label label1;
     }

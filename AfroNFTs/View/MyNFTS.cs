@@ -21,6 +21,7 @@ namespace AfroNFTs.View
         public MyNFTS(int userId)
         {
             InitializeComponent();
+            
             try
             {
                List<NFTsClass> nftsS = new List<NFTsClass>();
@@ -32,11 +33,12 @@ namespace AfroNFTs.View
                        // MessageBox.Show("PA");
                         foreach(var item in nftsS)
                         {
-                            NFTs nfts = new NFTs(false , item.NFtsClassId , true);
+                            NFTs nfts = new NFTs(false , item.NFtsClassId , false , false);
                             nfts.NftsPicture = Utils.ConverterImage.byteArrayToImage(item.NftsPicture);
                             nfts.NFTsName = item.NFTsName;
                             nfts.NFTsRate = item.NFTsRate;
                             nfts.NFTsprice = item.NFTsprice;flowLayoutPanel1.Controls.Add(nfts);
+                            
 
                         }
                     }

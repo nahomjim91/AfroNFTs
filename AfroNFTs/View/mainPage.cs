@@ -85,7 +85,7 @@ namespace AfroNFTs
         }
 
         private Color SelectColorSelection() // rondom color selection
-        {   
+        {
             Random ren = new Random();
             int index = ren.Next(colorList.Count);
             string color = colorList[index];
@@ -93,7 +93,7 @@ namespace AfroNFTs
             return ColorTranslator.FromHtml(color);
         }
 
-        
+
         public   void OpenchildFrom(Form childForm , object btnSender)
         {
             if(activeForm != null)

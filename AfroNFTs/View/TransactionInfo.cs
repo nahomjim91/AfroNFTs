@@ -12,17 +12,30 @@ namespace AfroNFTs.View
 {
     public partial class TransactionInfo : UserControl
     {
+        List<string> colorList = new List<string>()
+        {
+             "#593765" , "#643765" , "#57673B" , "#3B675B" , "#67673B"
+        };
+        private Color SelectColorSelection() // rondom color selection
+        {
+            Random ren = new Random();
+            int index = ren.Next(colorList.Count);
+            string color = colorList[index];
+
+            return ColorTranslator.FromHtml(color);
+        }
         public TransactionInfo(decimal price, string userName, string title)
         {
             InitializeComponent();
+
+            char x = userName[0];
+            this.label4.Text = x.ToString().ToUpper();
+            this.label4.BackColor = SelectColorSelection();
+            this.BackColor = SelectColorSelection();
             titleLabel.Text = title;
             priceLabel.Text = price.ToString();
             usersNameLabel.Text = userName;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

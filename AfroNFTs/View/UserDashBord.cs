@@ -48,9 +48,9 @@ namespace AfroNFTs
                                                       && nft.userType == "Admin"
                                                       && nft.description.Contains(searchTerm)*/
                     var nftss = ctx.nftTB.Where(
-                        nft => nft.isAvelebel == false && nft.NFTsName.Contains(searchTerm)
-                                                      && nft.description.Contains(searchTerm)
-                    );
+                        nft => nft.NFTsName.Contains(searchTerm)
+                                                      || nft.description.Contains(searchTerm)
+                    ).ToList();
                     foreach (var item in nftss) 
                     {
                         NFTs nfts = new NFTs(pageType , item.NFtsClassId , true , true);

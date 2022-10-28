@@ -118,6 +118,8 @@
             this.isAvel.UseVisualStyleBackColor = true;
             this.isAvel.Visible = false;
             this.isAvel.CheckedChanged += new System.EventHandler(this.isAvel_CheckedChanged);
+            this.isAvel.Click += new System.EventHandler(this.isAvel_CheckedChanged);
+            this.isAvel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.isAvel_CheckedChanged);
             // 
             // descriptionNFTs1
             // 

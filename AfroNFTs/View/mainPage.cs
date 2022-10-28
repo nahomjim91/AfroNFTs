@@ -190,7 +190,7 @@ namespace AfroNFTs
 
         private void aboutbtn_Click_1(object sender, EventArgs e)
         {
-
+            OpenchildFrom(new About(), sender);
         }
 
         private void postbtn_Click_1(object sender, EventArgs e)

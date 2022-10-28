@@ -34,14 +34,14 @@
             this.usersNameLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.priceLabel = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 14.25F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(3)))), ((int)(((byte)(23)))));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label2.Location = new System.Drawing.Point(226, 15);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
@@ -53,7 +53,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 14.25F);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(3)))), ((int)(((byte)(23)))));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label3.Location = new System.Drawing.Point(20, 51);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
@@ -78,7 +78,7 @@
             this.usersNameLabel.AutoSize = true;
             this.usersNameLabel.Font = new System.Drawing.Font("Modern No. 20", 14.25F);
             this.usersNameLabel.ForeColor = System.Drawing.Color.Black;
-            this.usersNameLabel.Location = new System.Drawing.Point(432, 15);
+            this.usersNameLabel.Location = new System.Drawing.Point(454, 15);
             this.usersNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.usersNameLabel.Name = "usersNameLabel";
             this.usersNameLabel.Size = new System.Drawing.Size(57, 21);
@@ -89,7 +89,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 14.25F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(3)))), ((int)(((byte)(23)))));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Location = new System.Drawing.Point(20, 15);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
@@ -109,17 +109,19 @@
             this.priceLabel.TabIndex = 3;
             this.priceLabel.Text = "label4";
             // 
-            // label4
+            // iconButton1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Stencil", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(402, 10);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 29);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "l";
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.iconButton1.Font = new System.Drawing.Font("Stencil", 18F);
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.Location = new System.Drawing.Point(395, 5);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(32, 42);
+            this.iconButton1.TabIndex = 7;
+            this.iconButton1.Text = "I";
+            this.iconButton1.UseVisualStyleBackColor = true;
             // 
             // TransactionInfo
             // 
@@ -127,7 +129,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.usersNameLabel);
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.priceLabel);
@@ -149,6 +151,6 @@
         private System.Windows.Forms.Label usersNameLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label priceLabel;
-        private System.Windows.Forms.Label label4;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

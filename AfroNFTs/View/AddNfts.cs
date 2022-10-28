@@ -51,8 +51,15 @@ namespace AfroNFTs.View
             }
             if (double.Parse(txtPriceNFTs.Text) < 0)
             {
-                errorProvider.SetError(txtPriceNFTs, "Required");
-                hasError = false;
+                try {
+                    errorProvider.SetError(txtPriceNFTs, "Required");
+                    hasError = false;
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+                
             }
             return hasError;
         }

@@ -27,9 +27,10 @@ namespace AfroNFTs.View
         public CommentWidget(int fromUserId, string comment , char x)
         {
             InitializeComponent();
-            this.iconlab.Text = x.ToString().ToUpper();
-            this.iconlab.BackColor = SelectColorSelection();
+            this.iconButton1.Text = x.ToString().ToUpper();
             this.BackColor = SelectColorSelection();
+            this.iconButton1.BackColor = SelectColorSelection();
+            
 
             this.commentLabel.Text = comment;
             this.userIdLabel.Text = fromUserId.ToString();

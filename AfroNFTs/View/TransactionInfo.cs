@@ -29,9 +29,9 @@ namespace AfroNFTs.View
             InitializeComponent();
 
             char x = userName[0];
-            this.label4.Text = x.ToString().ToUpper();
-            this.label4.BackColor = SelectColorSelection();
+            this.iconButton1.Text = x.ToString().ToUpper();
             this.BackColor = SelectColorSelection();
+            this.iconButton1.BackColor = SelectColorSelection();
             titleLabel.Text = title;
             priceLabel.Text = price.ToString();
             usersNameLabel.Text = userName;

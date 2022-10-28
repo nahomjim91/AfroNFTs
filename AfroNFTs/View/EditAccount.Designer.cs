@@ -31,9 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.ConfirmPswordtxt = new System.Windows.Forms.TextBox();
             this.Pswordtxt = new System.Windows.Forms.TextBox();
-            this.Emailtxt = new System.Windows.Forms.TextBox();
-            this.LNametxt = new System.Windows.Forms.TextBox();
-            this.Fnametxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Pswordlab = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,6 +43,9 @@
             this.NFTSpic = new System.Windows.Forms.PictureBox();
             this.startCameraButton = new FontAwesome.Sharp.IconButton();
             this.snapButton = new FontAwesome.Sharp.IconButton();
+            this.EmailLable = new System.Windows.Forms.Label();
+            this.LNametxt = new System.Windows.Forms.TextBox();
+            this.Fnametxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NFTSpic)).BeginInit();
             this.SuspendLayout();
@@ -65,30 +65,6 @@
             this.Pswordtxt.Name = "Pswordtxt";
             this.Pswordtxt.Size = new System.Drawing.Size(159, 20);
             this.Pswordtxt.TabIndex = 27;
-            // 
-            // Emailtxt
-            // 
-            this.Emailtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
-            this.Emailtxt.Location = new System.Drawing.Point(185, 252);
-            this.Emailtxt.Name = "Emailtxt";
-            this.Emailtxt.Size = new System.Drawing.Size(159, 20);
-            this.Emailtxt.TabIndex = 26;
-            // 
-            // LNametxt
-            // 
-            this.LNametxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
-            this.LNametxt.Location = new System.Drawing.Point(185, 226);
-            this.LNametxt.Name = "LNametxt";
-            this.LNametxt.Size = new System.Drawing.Size(159, 20);
-            this.LNametxt.TabIndex = 25;
-            // 
-            // Fnametxt
-            // 
-            this.Fnametxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
-            this.Fnametxt.Location = new System.Drawing.Point(185, 200);
-            this.Fnametxt.Name = "Fnametxt";
-            this.Fnametxt.Size = new System.Drawing.Size(159, 20);
-            this.Fnametxt.TabIndex = 24;
             // 
             // label1
             // 
@@ -117,7 +93,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.label2.Location = new System.Drawing.Point(112, 248);
+            this.label2.Location = new System.Drawing.Point(111, 195);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 24);
             this.label2.TabIndex = 21;
@@ -128,7 +104,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.label3.Location = new System.Drawing.Point(76, 220);
+            this.label3.Location = new System.Drawing.Point(76, 249);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 24);
             this.label3.TabIndex = 20;
@@ -139,7 +115,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
-            this.label4.Location = new System.Drawing.Point(74, 196);
+            this.label4.Location = new System.Drawing.Point(74, 225);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 24);
             this.label4.TabIndex = 19;
@@ -231,12 +207,42 @@
             this.snapButton.Visible = false;
             this.snapButton.Click += new System.EventHandler(this.snapButton_Click);
             // 
+            // EmailLable
+            // 
+            this.EmailLable.AutoSize = true;
+            this.EmailLable.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(79)))), ((int)(((byte)(34)))));
+            this.EmailLable.Location = new System.Drawing.Point(198, 195);
+            this.EmailLable.Name = "EmailLable";
+            this.EmailLable.Size = new System.Drawing.Size(57, 24);
+            this.EmailLable.TabIndex = 37;
+            this.EmailLable.Text = "Email";
+            // 
+            // LNametxt
+            // 
+            this.LNametxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
+            this.LNametxt.Location = new System.Drawing.Point(185, 253);
+            this.LNametxt.Name = "LNametxt";
+            this.LNametxt.Size = new System.Drawing.Size(159, 20);
+            this.LNametxt.TabIndex = 38;
+            // 
+            // Fnametxt
+            // 
+            this.Fnametxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(167)))), ((int)(((byte)(168)))));
+            this.Fnametxt.Location = new System.Drawing.Point(185, 227);
+            this.Fnametxt.Name = "Fnametxt";
+            this.Fnametxt.Size = new System.Drawing.Size(159, 20);
+            this.Fnametxt.TabIndex = 39;
+            // 
             // EditAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(4)))), ((int)(((byte)(16)))));
             this.ClientSize = new System.Drawing.Size(778, 518);
+            this.Controls.Add(this.Fnametxt);
+            this.Controls.Add(this.LNametxt);
+            this.Controls.Add(this.EmailLable);
             this.Controls.Add(this.snapButton);
             this.Controls.Add(this.startCameraButton);
             this.Controls.Add(this.NFTSpic);
@@ -245,9 +251,6 @@
             this.Controls.Add(this.recentlyPassword);
             this.Controls.Add(this.ConfirmPswordtxt);
             this.Controls.Add(this.Pswordtxt);
-            this.Controls.Add(this.Emailtxt);
-            this.Controls.Add(this.LNametxt);
-            this.Controls.Add(this.Fnametxt);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Pswordlab);
             this.Controls.Add(this.label2);
@@ -267,9 +270,6 @@
         #endregion
         private System.Windows.Forms.TextBox ConfirmPswordtxt;
         private System.Windows.Forms.TextBox Pswordtxt;
-        private System.Windows.Forms.TextBox Emailtxt;
-        private System.Windows.Forms.TextBox LNametxt;
-        private System.Windows.Forms.TextBox Fnametxt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Pswordlab;
         private System.Windows.Forms.Label label2;
@@ -282,5 +282,8 @@
         private System.Windows.Forms.PictureBox NFTSpic;
         private FontAwesome.Sharp.IconButton startCameraButton;
         private FontAwesome.Sharp.IconButton snapButton;
+        private System.Windows.Forms.Label EmailLable;
+        private System.Windows.Forms.TextBox Fnametxt;
+        private System.Windows.Forms.TextBox LNametxt;
     }
 }

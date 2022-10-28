@@ -51,7 +51,7 @@ namespace AfroNFTs.View
                 }
                 Fnametxt.Text = u.firstName;
                 LNametxt.Text = u.lastName;
-                Emailtxt.Text = u.email;
+                EmailLable.Text = u.email;
                 NFTSpic.Image = Utils.ConverterImage.byteArrayToImage(u.profileImage);
 
 
@@ -68,11 +68,6 @@ namespace AfroNFTs.View
             if (string.IsNullOrEmpty(LNametxt.Text))
             {
                 errorProvider1.SetError(LNametxt, "Requierd!!");
-                Errorhas = true;
-            }
-            if (string.IsNullOrEmpty(Emailtxt.Text))
-            {
-                errorProvider1.SetError(Emailtxt, "Requierd!!");
                 Errorhas = true;
             }
             if (string.IsNullOrEmpty(textBox1.Text))
@@ -157,7 +152,6 @@ namespace AfroNFTs.View
                                 return;
                             }
                             u.firstName = Fnametxt.Text;
-                            u.email = Emailtxt.Text;
                             u.lastName = LNametxt.Text;
                             u.password = Utils.PasswordUtils.HashPassword(Pswordtxt.Text);
                             u.profileImage = Utils.ConverterImage.ImageToByteArray(this.NFTSpic.Image);
@@ -178,7 +172,6 @@ namespace AfroNFTs.View
                                 return;
                             }
                             u.firstName = Fnametxt.Text;
-                            u.email = Emailtxt.Text;
                             u.lastName = LNametxt.Text;
                             u.password = Utils.PasswordUtils.HashPassword(Pswordtxt.Text);
                             u.profileImage = Utils.ConverterImage.ImageToByteArray(this.NFTSpic.Image);
@@ -235,5 +228,6 @@ namespace AfroNFTs.View
             stopCamera();
             //NFTSpic.Image
         }
+
     }
 }

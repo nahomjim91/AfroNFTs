@@ -32,13 +32,16 @@ namespace AfroNFTs.Services
         private int userId;
         private int adminId;
         private bool mode; //true for admin false for normal user mdoe;
-
+        private SqlTransaction _trans;
         public TranscationService(int id, bool mode)
         {
             try
             {
                 _con = new SqlConnection(ConfigurationManager.ConnectionStrings["DbService"].ConnectionString);
                 _con.Open();
+                _trans = _con.BeginTransaction();
+
+
             }
             catch (Exception ex)
             {
@@ -52,6 +55,7 @@ namespace AfroNFTs.Services
 
         public void Dispose()
         {
+            _trans.Commit();
             _con.Close();
         }
 

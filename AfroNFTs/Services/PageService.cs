@@ -64,7 +64,39 @@ namespace AfroNFTs.Services
         }
         public bool deleteAllNfts()
         {
+            string sqlReactions;
+            string sqlComment;
+            foreach (var n in GetAllNfts())
+            {
+                
+                sqlReactions = "delete from reactions where objectid = " + n.NFtsClassId;
+                MessageBox.Show("f$#% i a her" + sqlReactions);
+                try
+                {
+                    (new SqlCommand(sqlReactions, con))
+                    .ExecuteNonQuery();
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                    return false;
+                }
+                sqlComment = "delete from comments where objectid = " + n.NFtsClassId;
+
+                try
+                {
+                    (new SqlCommand(sqlReactions, con))
+                    .ExecuteNonQuery();
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                    return false;
+                }
+            }
+            
             var sql = "delete from NFTsClasses where pageId = " + pageId ;
+            MessageBox.Show("f$#% i am her nft#2"+ sql);
             try
             {
                 (new SqlCommand(sql, con))

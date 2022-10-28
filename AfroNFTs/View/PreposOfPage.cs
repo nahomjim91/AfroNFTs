@@ -21,19 +21,21 @@ namespace AfroNFTs.View
         int id;
         NFTsClass nft;
 
-       
-        public PreposOfPage(bool pageType , int id)
+
+        public PreposOfPage(bool pageType, int id)
         {
             MessageBox.Show("I am Here!!" + id.ToString());
 
-           this.pageType = pageType;
-            this.id = id;   
+            this.pageType = pageType;
+            this.id = id;
             InitializeComponent();
 
 
-           // if (pageType) { }
-               using(var ctx = new DbService())
-                {
+
+
+            // if (pageType) { }
+            using (var ctx = new DbService())
+            {
                 try
                 {
                     nft = ctx.nftTB.Single(obj => obj.NFtsClassId == id);
@@ -41,9 +43,11 @@ namespace AfroNFTs.View
                     {
                         this.isAvel.Visible = true;
                         this.editBtn.Visible = true;
+                        this.sellOrBuyBtn.Visible =false;
                     }
                     else
                     {
+                        this.sellOrBuyBtn.Visible = true;
                         this.editBtn.Visible = false;
                         this.isAvel.Visible = false;
                     }
@@ -70,69 +74,84 @@ namespace AfroNFTs.View
                 {
                     MessageBox.Show(b.Message);
                 }
-                
-            } 
+
+            }
         }
 
         private void sellOrBuyBtn_Click(object sender, EventArgs e)
         {
-
-            
-            try
+            if (isAvel.Checked)
             {
-
-                using (var ctx = new DbService())
+                try
                 {
-                    var user = ctx.normalUserTB.Find(mainPage.userID);
-                    if (decimal.Parse(descriptionNFTs1.NFTsprice.ToString()) > user.balance)
+
+                    using (var ctx = new DbService())
                     {
-                        AppEventUtils.ShowInfoMessage(this, "You cannot buy this please recharge!");
-                        return;
+                        
+                        var user = ctx.normalUserTB.SingleOrDefault(n => n.Id== mainPage.userID);
+                        if (decimal.Parse(descriptionNFTs1.NFTsprice.ToString()) > user.balance)
+                        {
+                            AppEventUtils.ShowInfoMessage(this, "You cannot buy this please recharge!");
+                            return;
+                        }
+                        var nft = ctx.nftTB.Find(this.id);
+
+                        if (nft == null)
+                        {
+                            AppEventUtils.ShowInfoMessage(this, "The NFT ID is not given");
+                            return;
+                        }
+                        if (nft.OwnerID == mainPage.userID) return;
+
+
+                        using (var transcationService = new TranscationService(mainPage.userID, !pageType))
+                        {
+                            transcationService.register(nft.OwnerID, nft.NFTsName, nft.NFTsprice);
+                        }
+                        using (var transcationService = new TranscationService(nft.OwnerID, pageType))
+                        {
+                            transcationService.register(mainPage.userID, nft.NFTsName, nft.NFTsprice);
+                        }
+                        decimal price = 0;
+                        using (var reactionService = new ReactionService())
+                        {
+                            price = reactionService.getPrice(id, (decimal)nft.NFTsprice);
+                        }
+                        var admin = ctx.adminTB.Single(n => n.Id == nft.OwnerID);
+                        admin.balance += (decimal)price;
+                        user.balance -= (decimal)price;
+                        nft.userType = "User";
+                        nft.isAvelebel = false;
+                        nft.OwnerID = mainPage.userID;
+
+                        ctx.SaveChanges();
+
+
+                        AppEventUtils.ShowInfoMessage(this, "Bought!");
+                        if(pageType)
+                            Program.main.OpenchildFrom(new MyPages(true), sender);
+                        else
+                            Program.main.OpenchildFrom(new MyNFTS(mainPage.userID), sender);
+
+
+
                     }
-                    var nft = ctx.nftTB.Find(this.id);
-
-                    if (nft == null)
-                    {
-                        AppEventUtils.ShowInfoMessage(this, "The NFT ID is not given");
-                        return;
-                    }
-                    if (nft.OwnerID == mainPage.userID) return;
-
-
-                    using (var transcationService = new TranscationService(mainPage.userID, !pageType))
-                    {
-                        transcationService.register(nft.OwnerID, nft.NFTsName, nft.NFTsprice);
-                    }
-                    using (var transcationService = new TranscationService(nft.OwnerID, pageType))
-                    {
-                        transcationService.register(mainPage.userID, nft.NFTsName, nft.NFTsprice);
-                    }
-                    decimal price = 0;
-                    using (var reactionService = new ReactionService())
-                    {
-                        price = reactionService.getPrice(id, (decimal)nft.NFTsprice);
-                    }
-                    var admin = ctx.adminTB.Single(n => n.Id == nft.OwnerID);
-                    admin.balance += (decimal)price;
-                    user.balance -= (decimal)price;
-                    nft.userType = "User";
-                    nft.isAvelebel = false;
-                    nft.OwnerID = mainPage.userID;
-
-                    ctx.SaveChanges();
-
-
-                    AppEventUtils.ShowInfoMessage(this, "Bought!");
-
-
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
 
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Sorry !! sir this NFTs is not for Sell!!!");
             }
+
+
         }
+    
+        
        
 
         private void editBtn_Click(object sender, EventArgs e)
@@ -152,6 +171,15 @@ namespace AfroNFTs.View
                 {
                     var nft = ctx.nftTB.Single(obj => obj.NFtsClassId == id);
                     nft.isAvelebel = isAvel.Checked;
+                    if (this.isAvel.Checked)
+                    {
+                        label1.Text = "This NFT is availibil for sell";
+                    }
+                    else
+                    {
+                        label1.Text = "This NFT is not availibil for sell";
+                    }
+                    ctx.SaveChanges();
                 }
                 catch (Exception ex)
                 {
@@ -163,6 +191,31 @@ namespace AfroNFTs.View
         private void iconButton1_Click(object sender, EventArgs e)
         {
             Program.main.OpenchildFrom(new CommentPage(id), sender);
+        }
+
+        private void isAvel_CheckedChanged(object sender, MouseEventArgs e)
+        {
+            using (var ctx = new DbService())
+            {
+                try
+                {
+                    var nft = ctx.nftTB.Single(obj => obj.NFtsClassId == id);
+                    nft.isAvelebel = isAvel.Checked;
+                    if (this.isAvel.Checked)
+                    {
+                        label1.Text = "This NFT is availibil for sell";
+                    }
+                    else
+                    {
+                        label1.Text = "This NFT is not availibil for sell";
+                    }
+                    ctx.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }

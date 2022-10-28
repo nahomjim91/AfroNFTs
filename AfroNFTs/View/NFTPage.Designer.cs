@@ -39,7 +39,7 @@
             this.labNFTsName.AutoSize = true;
             this.labNFTsName.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labNFTsName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(3)))), ((int)(((byte)(23)))));
-            this.labNFTsName.Location = new System.Drawing.Point(17, 294);
+            this.labNFTsName.Location = new System.Drawing.Point(3, 277);
             this.labNFTsName.MaximumSize = new System.Drawing.Size(150, 0);
             this.labNFTsName.Name = "labNFTsName";
             this.labNFTsName.Size = new System.Drawing.Size(57, 21);
@@ -55,7 +55,7 @@
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(128, 295);
+            this.iconButton1.Location = new System.Drawing.Point(128, 277);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(81, 25);
             this.iconButton1.TabIndex = 42;
@@ -68,7 +68,7 @@
             this.pictureBoxNFTs.Image = global::AfroNFTs.Properties.Resources.gettyimages_165604915_170667a;
             this.pictureBoxNFTs.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxNFTs.Name = "pictureBoxNFTs";
-            this.pictureBoxNFTs.Size = new System.Drawing.Size(212, 287);
+            this.pictureBoxNFTs.Size = new System.Drawing.Size(212, 271);
             this.pictureBoxNFTs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxNFTs.TabIndex = 6;
             this.pictureBoxNFTs.TabStop = false;

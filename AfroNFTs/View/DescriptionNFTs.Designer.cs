@@ -102,6 +102,8 @@
             // 
             this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.richTextBox1.Font = new System.Drawing.Font("Bookman Old Style", 12.75F);
             this.richTextBox1.Location = new System.Drawing.Point(22, 287);
             this.richTextBox1.MaximumSize = new System.Drawing.Size(550, 215);
             this.richTextBox1.MinimumSize = new System.Drawing.Size(250, 215);

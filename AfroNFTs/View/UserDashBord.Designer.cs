@@ -79,7 +79,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(7, 67);
             this.flowLayoutPanel1.MinimumSize = new System.Drawing.Size(236, 200);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(799, 440);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(829, 440);
             this.flowLayoutPanel1.TabIndex = 23;
             // 
             // iconButton1
@@ -107,7 +107,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(4)))), ((int)(((byte)(18)))));
-            this.ClientSize = new System.Drawing.Size(818, 519);
+            this.ClientSize = new System.Drawing.Size(848, 519);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.labLinkWorth);
             this.Controls.Add(this.iconButton1);

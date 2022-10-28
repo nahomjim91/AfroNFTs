@@ -53,6 +53,8 @@
             // 
             // richTextBox1
             // 
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.richTextBox1.Font = new System.Drawing.Font("Bookman Old Style", 10.75F);
             this.richTextBox1.Location = new System.Drawing.Point(28, 81);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(429, 96);

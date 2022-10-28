@@ -326,7 +326,7 @@
             this.Headerpan.Dock = System.Windows.Forms.DockStyle.Top;
             this.Headerpan.Location = new System.Drawing.Point(151, 0);
             this.Headerpan.Name = "Headerpan";
-            this.Headerpan.Size = new System.Drawing.Size(816, 48);
+            this.Headerpan.Size = new System.Drawing.Size(838, 48);
             this.Headerpan.TabIndex = 1;
             this.Headerpan.Paint += new System.Windows.Forms.PaintEventHandler(this.Headerpan_Paint);
             // 
@@ -376,7 +376,7 @@
             this.dashbord_pan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dashbord_pan.Location = new System.Drawing.Point(151, 48);
             this.dashbord_pan.Name = "dashbord_pan";
-            this.dashbord_pan.Size = new System.Drawing.Size(816, 521);
+            this.dashbord_pan.Size = new System.Drawing.Size(838, 521);
             this.dashbord_pan.TabIndex = 2;
             this.dashbord_pan.Paint += new System.Windows.Forms.PaintEventHandler(this.dashbord_pan_Paint);
             this.dashbord_pan.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dashbord_pan_MouseDown);
@@ -385,13 +385,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(967, 569);
+            this.ClientSize = new System.Drawing.Size(989, 569);
             this.Controls.Add(this.dashbord_pan);
             this.Controls.Add(this.Headerpan);
             this.Controls.Add(this.Menupanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(983, 608);
-            this.MinimumSize = new System.Drawing.Size(983, 608);
+            this.MaximumSize = new System.Drawing.Size(1005, 608);
+            this.MinimumSize = new System.Drawing.Size(1005, 608);
             this.Name = "mainPage";
             this.Text = "AfroNFTs";
             this.Menupanel.ResumeLayout(false);

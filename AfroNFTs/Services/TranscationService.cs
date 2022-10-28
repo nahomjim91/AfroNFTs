@@ -93,7 +93,7 @@ namespace AfroNFTs.Services
             else sql = "select * from transcations where from_user = " + userId;
             SqlDataAdapter ad = new SqlDataAdapter(sql, _con);
             DataSet s = new DataSet();
-
+            MessageBox.Show(s.ToString());
             ad.Fill(s, "transcations");
 
             foreach(DataRow row in s.Tables[0].Rows)

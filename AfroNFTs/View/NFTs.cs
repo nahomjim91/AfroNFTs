@@ -173,6 +173,7 @@ namespace AfroNFTs.View
                     reactionService.like(mainPage.userID, NftsId, () =>
                     {
                         Task.Delay(3000);
+
                         if (!pagetype) Program.main.OpenchildFrom(new UserDashBord(false), sender);
                     });
                 }
@@ -237,7 +238,8 @@ namespace AfroNFTs.View
                 {
                     using (var ctx = new DbService())
                     {
-                        var nft = ctx.nftTB.Single(Nfts => Nfts.IDNFTs == NftsId);
+                        var nft = ctx.nftTB.Single(Nfts => Nfts.NFtsClassId == NftsId);
+                        if (nft == null) return;
                         ac.registerAction("Di", nft.OwnerID);
                     }
 

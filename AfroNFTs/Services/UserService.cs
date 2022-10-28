@@ -34,15 +34,16 @@ namespace AfroNFTs.Services
                 MessageBox.Show(ex.Message);
             }
         }
-
+        DbService dbService = new DbService();
        public List<NFTsClass> GetNFTs()
         {
             List<NFTsClass> li = new List<NFTsClass>();
 
             try
             {
-                var sql = "select* from NFTsClasses where OwnerID = " + userId;
+                /*var sql = "select* from NFTsClasses where OwnerID = " + userId;
                 var reader = (new SqlCommand(sql, con)).ExecuteReader();
+               
                 while (reader.Read())
                 {
                     var nft = new NFTsClass();
@@ -50,17 +51,12 @@ namespace AfroNFTs.Services
                     nft.description = reader["description"].ToString();
                     nft.NFTsName = reader["NFTsName"].ToString();
                     string photoString = (reader["NftsPicture"].ToString());
-                    var photo = new byte[photoString.Length];
-                    int len = 0;
-                    foreach (byte b in photoString)
-                    {
-                        photo[len] = b;
-                        len++;
-                    }
-
-                    nft.NftsPicture = photo;
+                   byte[] im = (byte[])reader["pageImage"];
+                    nft.NftsPicture =im ;
                     li.Add(nft);
-                }
+                }*/
+
+                li = dbService.nftTB.Where(n => n.OwnerID == userId).ToList();
                 return li;
             }catch (Exception ex)
             {

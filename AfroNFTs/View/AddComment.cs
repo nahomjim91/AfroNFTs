@@ -14,17 +14,19 @@ namespace AfroNFTs.View
     public partial class AddComment : Form
     {
         private int objectId;
-        public AddComment(int  objectId)
+        public AddComment(int  objectId , Image im )
         {
             this.objectId = objectId;
             InitializeComponent();
+            this.iconPictureBox1.Image = im;
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            using(var commentService = new CommentService())
+            using (var commentService = new CommentService())
             {
                 commentService.writeComment(mainPage.userID, objectId, richTextBox1.Text);
+                Program.main.OpenchildFrom(new UserDashBord(false), sender);
             }
         }
 

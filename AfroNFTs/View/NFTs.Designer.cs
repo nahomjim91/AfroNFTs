@@ -53,7 +53,6 @@
             this.labPrice.Size = new System.Drawing.Size(57, 21);
             this.labPrice.TabIndex = 1;
             this.labPrice.Text = "label1";
-            this.labPrice.Click += new System.EventHandler(this.labPrice_Click);
             // 
             // labNFTsName
             // 
@@ -66,7 +65,6 @@
             this.labNFTsName.Size = new System.Drawing.Size(57, 21);
             this.labNFTsName.TabIndex = 2;
             this.labNFTsName.Text = "label1";
-            this.labNFTsName.Click += new System.EventHandler(this.labNFTsName_Click);
             // 
             // likesLabel
             // 
@@ -206,7 +204,6 @@
             this.pictureBoxNFTs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxNFTs.TabIndex = 5;
             this.pictureBoxNFTs.TabStop = false;
-            this.pictureBoxNFTs.Click += new System.EventHandler(this.pictureBoxNFTs_Click);
             // 
             // NFTs
             // 

@@ -70,14 +70,16 @@ namespace AfroNFTs.View
                 dislikesLabel.Text = value.ToString();
             }
         }
-
+        int ownerId;
         public NFTs(bool pg, int Id , bool haveTovisbile , bool btnenabelity)
         {
+            DbService dbService = new DbService();
             this.visbleOfAddCommentBtn = haveTovisbile;
             this.userUsingId = mainPage.userID;
             pagetype = pg;
             NftsId = Id;
             InitializeComponent();
+            ownerId = dbService.nftTB.Find(Id).OwnerID;
             this.iconButton4.Visible = visbleOfAddCommentBtn;
             this.buyButton.Visible = haveTovisbile;
             this.iconButton1.Enabled = btnenabelity;
@@ -91,25 +93,6 @@ namespace AfroNFTs.View
             Program.main.OpenchildFrom(new PreposOfPage(pagetype,  NftsId), sender);
         }
 
-        private void labNFTsName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labNFTsRate_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBoxNFTs_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labPrice_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void buyButton_Click(object sender, EventArgs e)
         {
@@ -170,6 +153,8 @@ namespace AfroNFTs.View
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
+
+            if (ownerId == mainPage.userID) return;
             try
             {
                 using (var reactionService = new ReactionService())
@@ -208,7 +193,9 @@ namespace AfroNFTs.View
 
         private void iconButton4_Click(object sender, EventArgs e)
         {
-            Program.main.OpenchildFrom(new AddComment(NftsId), sender);
+
+            if (ownerId == mainPage.userID) return;
+            Program.main.OpenchildFrom(new AddComment(NftsId , this._NftsPicture), sender);
             using (var ac = new ActionService(pagetype, mainPage.userID))
             {
                 using (var ctx = new DbService())
@@ -222,6 +209,9 @@ namespace AfroNFTs.View
 
         private void iconButton2_Click_1(object sender, EventArgs e)
         {
+
+            if (ownerId == mainPage.userID) return;
+
             try
             {
                 using (var reactionService = new ReactionService())

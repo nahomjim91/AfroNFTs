@@ -20,7 +20,7 @@ namespace AfroNFTs
     {
         
         bool pageType;
-       
+        Random rand = new  Random();
         public UserDashBord(bool pageType, string searchTerm="")
         {
           //  MessageBox.Show(pageType.ToString());
@@ -51,13 +51,16 @@ namespace AfroNFTs
                         nft => nft.NFTsName.Contains(searchTerm)
                                                       || nft.description.Contains(searchTerm)
                     ).ToList();
-                    foreach (var item in nftss) 
+                    
+                    for (int i = 0; i <nftss.Count(); i++)
                     {
+                        int j = rand.Next(0 , nftss.Count);
+                        var item = nftss[j];
                         NFTs nfts = new NFTs(pageType , item.NFtsClassId , true , true);
                         nfts.NftsPicture = Utils.ConverterImage.byteArrayToImage(item.NftsPicture);
                         nfts.NFTsName = item.NFTsName;
                         nfts.NFTsRate = item.NFTsRate;
-                      
+                        nfts.isAvel = item.isAvelebel;
                         nfts.Click += new System.EventHandler(Deitail_click);
 
                         using(var reactionService = new ReactionService())

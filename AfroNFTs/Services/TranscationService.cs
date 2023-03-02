@@ -32,14 +32,14 @@ namespace AfroNFTs.Services
         private int userId;
         private int adminId;
         private bool mode; //true for admin false for normal user mdoe;
-        private SqlTransaction _trans;
+       // private SqlTransaction _trans;
         public TranscationService(int id, bool mode)
         {
             try
             {
                 _con = new SqlConnection(ConfigurationManager.ConnectionStrings["DbService"].ConnectionString);
                 _con.Open();
-                _trans = _con.BeginTransaction();
+                //_trans = _con.BeginTransaction();
 
 
             }
@@ -55,7 +55,7 @@ namespace AfroNFTs.Services
 
         public void Dispose()
         {
-            _trans.Commit();
+         //   _trans.Commit();
             _con.Close();
         }
 
@@ -88,29 +88,35 @@ namespace AfroNFTs.Services
         public List<Transcation> getAllTrans()
         {
             List<Transcation> list = new List<Transcation>();
-            string sql = "";
-            if (mode) sql = "select * from transcations where from_admin = " + adminId;
-            else sql = "select * from transcations where from_user = " + userId;
-            SqlDataAdapter ad = new SqlDataAdapter(sql, _con);
-            DataSet s = new DataSet();
-            MessageBox.Show(s.ToString());
-            ad.Fill(s, "transcations");
-
-            foreach(DataRow row in s.Tables[0].Rows)
+            try
             {
-                list.Add(new Transcation()
-                {
-                    adminId = (int)row["from_admin"],
-                    userId = (int)row["from_user"],
-                    nftTitle = (string)row["nft_title"],
-                    price = 1000
+                
+                string sql = "";
+                if (mode) sql = "select * from transcations where from_admin = " + adminId;
+                else sql = "select * from transcations where from_user = " + userId;
+                SqlDataAdapter ad = new SqlDataAdapter(sql, _con);
+                DataSet s = new DataSet();
+                MessageBox.Show(s.ToString());
+                ad.Fill(s, "transcations");
 
-                });
-                
-                
+                foreach (DataRow row in s.Tables[0].Rows)
+                {
+                    list.Add(new Transcation()
+                    {
+                        adminId = (int)row["from_admin"],
+                        userId = (int)row["from_user"],
+                        nftTitle = (string)row["nft_title"],
+                        price = 1000
+
+                    });
+
+
+                }
+                s.Dispose();
+                ad.Dispose();
             }
-            s.Dispose();
-            ad.Dispose();
+            catch { }
+           
             return list;
         }
     }

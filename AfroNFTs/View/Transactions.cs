@@ -36,7 +36,7 @@ namespace AfroNFTs.View
                         }
                     }
                     this.flowLayoutPanel1.Controls.Add(new TransactionInfo((decimal)t.price,usersName,  t.nftTitle));
-                    MessageBox.Show("HEELLO");
+                   // MessageBox.Show("HEELLO");
                 }
             }
 

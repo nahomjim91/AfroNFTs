@@ -38,9 +38,12 @@
             this.Emaillab = new System.Windows.Forms.Label();
             this.errorProviderLogin = new System.Windows.Forms.ErrorProvider(this.components);
             this.isAdminCheckBox = new System.Windows.Forms.CheckBox();
-            this.forgottenPasswordButton = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBoxNFTs = new System.Windows.Forms.PictureBox();
             this.showPasswordButton = new FontAwesome.Sharp.IconButton();
+            this.forgottenPasswordButton = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderLogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNFTs)).BeginInit();
             this.SuspendLayout();
             // 
             // Clearbtn
@@ -128,6 +131,41 @@
             this.isAdminCheckBox.Text = "I am an Admin";
             this.isAdminCheckBox.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(24)))), ((int)(((byte)(144)))));
+            this.label1.Location = new System.Drawing.Point(18, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(416, 76);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "AFRO NFTS MARKET \r\n          PLACE";
+            // 
+            // pictureBoxNFTs
+            // 
+            this.pictureBoxNFTs.Image = global::AfroNFTs.Properties.Resources.user;
+            this.pictureBoxNFTs.Location = new System.Drawing.Point(184, 134);
+            this.pictureBoxNFTs.Name = "pictureBoxNFTs";
+            this.pictureBoxNFTs.Size = new System.Drawing.Size(70, 68);
+            this.pictureBoxNFTs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxNFTs.TabIndex = 32;
+            this.pictureBoxNFTs.TabStop = false;
+            // 
+            // showPasswordButton
+            // 
+            this.showPasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showPasswordButton.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.showPasswordButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(26)))), ((int)(((byte)(9)))));
+            this.showPasswordButton.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.showPasswordButton.IconSize = 30;
+            this.showPasswordButton.Location = new System.Drawing.Point(335, 245);
+            this.showPasswordButton.Name = "showPasswordButton";
+            this.showPasswordButton.Size = new System.Drawing.Size(32, 20);
+            this.showPasswordButton.TabIndex = 30;
+            this.showPasswordButton.UseVisualStyleBackColor = true;
+            this.showPasswordButton.Click += new System.EventHandler(this.showPasswordButton_Click);
+            // 
             // forgottenPasswordButton
             // 
             this.forgottenPasswordButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(76)))), ((int)(((byte)(94)))));
@@ -144,25 +182,13 @@
             this.forgottenPasswordButton.UseVisualStyleBackColor = false;
             this.forgottenPasswordButton.Click += new System.EventHandler(this.forgottenPasswordButton_Click);
             // 
-            // showPasswordButton
-            // 
-            this.showPasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showPasswordButton.IconChar = FontAwesome.Sharp.IconChar.Eye;
-            this.showPasswordButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(26)))), ((int)(((byte)(9)))));
-            this.showPasswordButton.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.showPasswordButton.IconSize = 30;
-            this.showPasswordButton.Location = new System.Drawing.Point(335, 245);
-            this.showPasswordButton.Name = "showPasswordButton";
-            this.showPasswordButton.Size = new System.Drawing.Size(32, 20);
-            this.showPasswordButton.TabIndex = 30;
-            this.showPasswordButton.UseVisualStyleBackColor = true;
-            this.showPasswordButton.Click += new System.EventHandler(this.showPasswordButton_Click);
-            // 
             // Login
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(5)))), ((int)(((byte)(19)))));
             this.ClientSize = new System.Drawing.Size(442, 512);
+            this.Controls.Add(this.pictureBoxNFTs);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.showPasswordButton);
             this.Controls.Add(this.forgottenPasswordButton);
             this.Controls.Add(this.isAdminCheckBox);
@@ -176,6 +202,7 @@
             this.Name = "Login";
             this.Text = "AfroNFTs";
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNFTs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,5 +219,7 @@
         private System.Windows.Forms.CheckBox isAdminCheckBox;
         private FontAwesome.Sharp.IconButton showPasswordButton;
         private FontAwesome.Sharp.IconButton forgottenPasswordButton;
+        private System.Windows.Forms.PictureBox pictureBoxNFTs;
+        private System.Windows.Forms.Label label1;
     }
 }

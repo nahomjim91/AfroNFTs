@@ -99,12 +99,12 @@ namespace AfroNFTs.View
             if (isAvel)
             {
                 try
-                {
+               {
 
                     using (var ctx = new DbService())
                     {
                         var user = ctx.normalUserTB.Find(mainPage.userID);
-                        if (decimal.Parse(labPrice.Text) > user.balance)
+                        if (NFTsprice > (double) user.balance)
                         {
                             AppEventUtils.ShowInfoMessage(this, "You cannot buy this please recharge!");
                             return;
@@ -147,10 +147,10 @@ namespace AfroNFTs.View
 
 
                     }
-                }
+                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("buy err" + ex.Message);
                 }
             }
             else
